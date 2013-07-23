@@ -67,14 +67,37 @@
 .sidebar__nav
   font-size: 14px
 
-ul.post__list li
-  list-style-image: image-url('diamond.png')
-  padding-bottom: .2em
-  list-style-position: outside
-  font-size: 17px
-  margin-left: 1em
-  a
-    font-weight: bold
+ol.post__list 
+  margin-left: 0
+  padding-left: 0
+  list-style: none
+  counter-reset: post-counter
+  li
+    margin: 20px 0px
+    &:before
+      content: counter(post-counter)
+      counter-increment: post-counter
+      display: inline-block
+      color: #aaa
+      font-size: 30px
+      float: left
+    .information
+      padding-left: 20px
+      margin-left: 15px
+      .post__list__link
+        font-weight: 600
+        color: #222
+        text-transform: uppercase
+        letter-spacing: 0.1em
+        display: inline-block
+        &:hover
+          color: #57c0e8
+      .post__author, .post__time
+        color: #aaa
+        font-size: 14px
+        display: inline-block
+        &:hover
+          color: #2aafe2
 
 li.related-post__list
   border-bottom: 1px solid #eee
@@ -182,6 +205,7 @@ li.related-post__list
     p:last-child
       margin-bottom: 0
     cite:before
+
       content: "\2014"
   .full-width
     width: 100%

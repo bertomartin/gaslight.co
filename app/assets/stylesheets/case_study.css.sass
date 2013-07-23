@@ -1,22 +1,48 @@
-#main
-  > section.casestudy--featured
-    margin: 0px -50px $sectionMargin -50px
-    height: 475px
-    overflow: hidden
-    background-repeat: no-repeat
-    background-image: image-url("casestudy/lumbee_hero.jpg")
+%casestudy
+  margin-left: -50px
+  margin-right: -50px 
+  overflow: hidden
+  background-repeat: no-repeat
 
-    .headline
-      color: #fff
-      background-color: rgba(0,0,0,0.5)
-      padding: 25px 0
-      @include transition-duration(0.5s)
-      &:hover
-        padding: 160px 0
-        background-color: rgba(239,199,3,0.5)
+%casestudy--heading
+  font-weight: bold
 
-    h1
-      font-weight: bolder
-      line-height: 0.75em
-    h3
-      font-weight: 400
+%casestudy--subheading
+  font-weight: 400
+
+.row.casestudy--featured
+  @extend %casestudy
+  height: 475px
+  background-image: image-url("casestudy/lumbee_hero.jpg")
+
+  .headline
+    color: #fff
+    background-color: rgba(0,0,0,0.5)
+    padding: 25px 0
+    @include transition(all 0.5s)
+    &:hover
+      padding: 160px 0
+      background-color: rgba(239,199,3,0.5)
+  h1
+    @extend %casestudy--heading
+    line-height: 0.75em
+  h3
+    @extend %casestudy--subheading
+
+.row.casestudy__heading--lumbee
+  @extend %casestudy
+  margin-top: -40px
+  height: 450px
+  background-image: image-url("casestudy/lumbee_hero.jpg")
+
+  .headline
+    color: #fff
+    background-color: rgba(87,192,232,0.9)
+    padding: 50px 0
+
+  h1
+    @extend %casestudy--heading
+    line-height: 1.1em
+  h3
+    @extend %casestudy--subheading
+    line-height: 0.25em

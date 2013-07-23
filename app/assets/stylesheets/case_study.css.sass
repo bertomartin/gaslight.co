@@ -1,7 +1,22 @@
-.casestudy--featured
-  margin: 0px -75px 60px -75px
-  height: 25em
-  overflow: hidden
+#main
+  > section.casestudy--featured
+    margin: 0px -50px $sectionMargin -50px
+    height: 475px
+    overflow: hidden
+    background-repeat: no-repeat
+    background-image: image-url("casestudy/lumbee_hero.jpg")
 
-img.casestudy__header
-  width: 100%
+    .headline
+      color: #fff
+      background-color: rgba(0,0,0,0.5)
+      padding: 25px 0
+      @include transition-duration(0.5s)
+      &:hover
+        padding: 160px 0
+        background-color: rgba(239,199,3,0.5)
+
+    h1
+      font-weight: bolder
+      line-height: 0.75em
+    h3
+      font-weight: 400

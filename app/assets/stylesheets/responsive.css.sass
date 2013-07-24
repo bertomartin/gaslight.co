@@ -103,6 +103,8 @@
       font-size: $blog-mobile-heading-font-size * .5
     ul, ol
       margin-left: 1.5em
+  h3
+    font-size: 23px
 
   .clientsList li
     display: block
@@ -114,6 +116,7 @@
   .madeincincy
     margin-top: 10px
 
+//iPad and down
 @media only screen and (max-width : 1024px)
   .post__avatar
     top: auto
@@ -125,3 +128,9 @@
   .post__author
     margin-top: 18px
     margin-left: 45px 
+
+  ol.post__list li
+    .post__list__information
+      .post__author, .post__time
+        margin: 0px
+        font-size: 13px

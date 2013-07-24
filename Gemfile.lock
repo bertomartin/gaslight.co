@@ -10,11 +10,11 @@ GIT
 
 GIT
   remote: git://github.com/gaslight/engagement.git
-  revision: 235d667a46d26457c3bb9bf6db631a8d334a083c
+  revision: 56bdcd24e349f3224bcf6c2f467fec9bd9a794e6
   specs:
     engagement (0.0.1)
       disqus
-      hacker_news_search
+      hacker_news_search (~> 0.0.6)
       snoo
 
 GIT
@@ -183,7 +183,7 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
-    faraday (0.8.4)
+    faraday (0.8.7)
       multipart-post (~> 1.1)
     faraday_middleware (0.8.8)
       faraday (>= 0.7.4, < 0.9)
@@ -256,7 +256,7 @@ GEM
       sassy-math (>= 1.2)
     multi_json (1.7.7)
     multi_xml (0.5.4)
-    multipart-post (1.1.5)
+    multipart-post (1.2.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.8)

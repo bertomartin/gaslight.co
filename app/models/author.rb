@@ -1,13 +1,29 @@
 require 'json'
+require 'super_struct'
 
-class Author
+class Author < SuperStruct.new(:id, :name, :first_name, :github, :tumblr, :twitter, :google_plus, :avatar, :email)
   
   def self.find_by_tumblr(handle)
-    people.find { |person| person[:tumblr] == handle }
+    people.find { |person| person.tumblr == handle }
   end
 
   def self.all
-    people.collect { |person| person[:tumblr] }.sort
+    people.sort_by(&:tumblr)
+  end
+
+  def display_name
+    tumblr
+  end
+
+  def external_comments_count
+    Post.where(author: tumblr).sum('external_comments_count')
+  end
+
+  def as_json(*)
+    {
+      tumblr: tumblr,
+      external_comments_count: external_comments_count,
+    }
   end
 
   private
@@ -193,6 +209,6 @@ class Author
   end
 
   def self.people
-    json_hash[:people]
+    json_hash[:people].map { |person| Author.new(person) }
   end
 end

@@ -18,15 +18,15 @@ gem 'asset_sync'
 gem 'redcarpet', require: false
 gem 'pygments.rb', require: false
 
-gem 'foundation_rails_helper', github: 'sgruhier/foundation_rails_helper'
+gem 'foundation_rails_helper', github: 'sgruhier/foundation_rails_helper', ref: 'ed5b2903'
 gem 'sentry-raven', git: 'https://github.com/getsentry/raven-ruby.git'
 
 gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
 gem 'ransack',             github: 'ernie/ransack',         branch: 'rails-4'
-gem 'inherited_resources', github: 'josevalim/inherited_resources'
-gem 'formtastic',          github: 'justinfrench/formtastic'
+gem 'inherited_resources', github: 'josevalim/inherited_resources', ref: '2656ca0c'
+gem 'formtastic',          github: 'justinfrench/formtastic', ref: 'cd6cb88f'
 gem 'compass-rails',       github: 'milgner/compass-rails', branch: 'rails4'
-gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
+gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', ref: '2f2768f8'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -38,7 +38,7 @@ gem 'zurb-foundation'
 group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
-  gem 'dotenv'
+  gem 'dotenv-rails'
   gem 'konacha'
 end
 

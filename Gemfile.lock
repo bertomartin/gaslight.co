@@ -30,6 +30,7 @@ GIT
 GIT
   remote: git://github.com/josevalim/inherited_resources.git
   revision: 2656ca0cea51cc7469be1d30cace24752d5b4e3b
+  ref: 2656ca0c
   specs:
     inherited_resources (1.4.0)
       has_scope (~> 0.6.0.rc)
@@ -38,6 +39,7 @@ GIT
 GIT
   remote: git://github.com/justinfrench/formtastic.git
   revision: cd6cb88f28ea7444267802ced8e5ec0f5cfd0f90
+  ref: cd6cb88f
   specs:
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
@@ -45,6 +47,7 @@ GIT
 GIT
   remote: git://github.com/mbleigh/acts-as-taggable-on.git
   revision: 2f2768f854324000ea28d441ef3c0a378158ed40
+  ref: 2f2768f8
   specs:
     acts-as-taggable-on (2.4.2.pre)
       rails (>= 3, < 5)
@@ -60,6 +63,7 @@ GIT
 GIT
   remote: git://github.com/sgruhier/foundation_rails_helper.git
   revision: ed5b290313edeb5343f214338f8bb822ffcefb52
+  ref: ed5b2903
   specs:
     foundation_rails_helper (0.3)
       actionpack (>= 3.0)
@@ -154,7 +158,9 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
-    dotenv (0.2.0)
+    dotenv (0.8.0)
+    dotenv-rails (0.8.0)
+      dotenv (= 0.8.0)
     ejs (1.0.0)
     erubis (2.7.0)
     eventmachine (1.0.0)
@@ -355,7 +361,7 @@ DEPENDENCIES
   compass-rails!
   database_cleaner
   decent_exposure
-  dotenv
+  dotenv-rails
   factory_girl_rails
   formtastic!
   foundation_rails_helper!

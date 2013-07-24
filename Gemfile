@@ -27,6 +27,7 @@ gem 'inherited_resources', github: 'josevalim/inherited_resources', ref: '2656ca
 gem 'formtastic',          github: 'justinfrench/formtastic', ref: 'cd6cb88f'
 gem 'compass-rails',       github: 'milgner/compass-rails', branch: 'rails4'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', ref: '2f2768f8'
+gem 'engagement',          github: 'gaslight/engagement', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.

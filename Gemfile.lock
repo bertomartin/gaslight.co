@@ -9,6 +9,15 @@ GIT
       polyamorous (~> 0.6.0)
 
 GIT
+  remote: git://github.com/gaslight/engagement.git
+  revision: 235d667a46d26457c3bb9bf6db631a8d334a083c
+  specs:
+    engagement (0.0.1)
+      disqus
+      hacker_news_search
+      snoo
+
+GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 54fb71c5415f7b1a7aa0cdde680ee882fa3b2d6f
   branch: rails4
@@ -158,6 +167,8 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
+    disqus (1.0.4)
+      json
     dotenv (0.8.0)
     dotenv-rails (0.8.0)
       dotenv (= 0.8.0)
@@ -174,6 +185,8 @@ GEM
       railties (>= 3.0.0)
     faraday (0.8.4)
       multipart-post (~> 1.1)
+    faraday_middleware (0.8.8)
+      faraday (>= 0.7.4, < 0.9)
     faye-websocket (0.4.6)
       eventmachine (>= 0.12.0)
     ffi (1.9.0)
@@ -189,6 +202,12 @@ GEM
       ruby-hmac
     formatador (0.2.4)
     fssm (0.2.9)
+    hacker_news_search (0.0.6)
+      faraday (~> 0.8.4)
+      faraday_middleware (~> 0.8.4)
+      hashie (~> 1.2.0)
+      multi_json (~> 1.7.7)
+      rash (~> 0.3.0)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -203,6 +222,9 @@ GEM
     high_voltage (1.2.3)
     hike (1.2.3)
     http_parser.rb (0.5.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
@@ -210,6 +232,7 @@ GEM
     jquery-ui-rails (4.0.3)
       jquery-rails
       railties (>= 3.1.0)
+    json (1.8.0)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -232,6 +255,7 @@ GEM
       compass (>= 0.11.5)
       sassy-math (>= 1.2)
     multi_json (1.7.7)
+    multi_xml (0.5.4)
     multipart-post (1.1.5)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -286,6 +310,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.0)
+    rash (0.3.2)
+      hashie (~> 1.2.0)
     redcarpet (2.3.0)
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
@@ -315,6 +341,9 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     slop (3.4.5)
+    snoo (0.1.2)
+      httparty
+      nokogiri
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -362,6 +391,7 @@ DEPENDENCIES
   database_cleaner
   decent_exposure
   dotenv-rails
+  engagement!
   factory_girl_rails
   formtastic!
   foundation_rails_helper!

@@ -44,6 +44,15 @@ class Post < ActiveRecord::Base
   acts_as_taggable
   acts_as_url :title, url_attribute: :slug, sync_url: true
 
+  include Rails.application.routes.url_helpers
+  self.default_url_options = {
+    :host => 'blog.gaslight.co'
+  }
+
+  def url
+    post_url(self)
+  end
+
   def to_param
     slug
   end

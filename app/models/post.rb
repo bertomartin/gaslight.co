@@ -46,7 +46,7 @@ class Post < ActiveRecord::Base
 
   include Rails.application.routes.url_helpers
   self.default_url_options = {
-    :host => 'blog.gaslight.co'
+    :host => 'gaslight.co'
   }
 
   def url

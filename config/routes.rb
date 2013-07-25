@@ -5,6 +5,7 @@ Gaslight::Application.routes.draw do
 
   resource :contact, controller: :contact, only: :create
 
+  resources :authors, only: :index
   resources :posts, path: '/blog', except: :show do
     collection do
       get "/:year(/:month(/:day))" => "posts#for_date", constraints: { year: /\d{4}/, month: /\d{2}/, day: /\d{2}/ }

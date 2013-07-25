@@ -9,6 +9,15 @@ GIT
       polyamorous (~> 0.6.0)
 
 GIT
+  remote: git://github.com/gaslight/engagement.git
+  revision: 8ebba37bbad854a222806c395d30ff203afd41b9
+  specs:
+    engagement (0.0.1)
+      disqus
+      hacker_news_search (~> 0.0.6)
+      snoo
+
+GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 54fb71c5415f7b1a7aa0cdde680ee882fa3b2d6f
   branch: rails4
@@ -30,6 +39,7 @@ GIT
 GIT
   remote: git://github.com/josevalim/inherited_resources.git
   revision: 2656ca0cea51cc7469be1d30cace24752d5b4e3b
+  ref: 2656ca0c
   specs:
     inherited_resources (1.4.0)
       has_scope (~> 0.6.0.rc)
@@ -38,6 +48,7 @@ GIT
 GIT
   remote: git://github.com/justinfrench/formtastic.git
   revision: cd6cb88f28ea7444267802ced8e5ec0f5cfd0f90
+  ref: cd6cb88f
   specs:
     formtastic (2.3.0.rc2)
       actionpack (>= 3.0)
@@ -45,6 +56,7 @@ GIT
 GIT
   remote: git://github.com/mbleigh/acts-as-taggable-on.git
   revision: 2f2768f854324000ea28d441ef3c0a378158ed40
+  ref: 2f2768f8
   specs:
     acts-as-taggable-on (2.4.2.pre)
       rails (>= 3, < 5)
@@ -60,6 +72,7 @@ GIT
 GIT
   remote: git://github.com/sgruhier/foundation_rails_helper.git
   revision: ed5b290313edeb5343f214338f8bb822ffcefb52
+  ref: ed5b2903
   specs:
     foundation_rails_helper (0.3)
       actionpack (>= 3.0)
@@ -154,7 +167,11 @@ GEM
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
     diff-lcs (1.2.4)
-    dotenv (0.2.0)
+    disqus (1.0.4)
+      json
+    dotenv (0.8.0)
+    dotenv-rails (0.8.0)
+      dotenv (= 0.8.0)
     ejs (1.0.0)
     erubis (2.7.0)
     eventmachine (1.0.0)
@@ -166,8 +183,10 @@ GEM
     factory_girl_rails (4.1.0)
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
-    faraday (0.8.4)
+    faraday (0.8.7)
       multipart-post (~> 1.1)
+    faraday_middleware (0.8.8)
+      faraday (>= 0.7.4, < 0.9)
     faye-websocket (0.4.6)
       eventmachine (>= 0.12.0)
     ffi (1.9.0)
@@ -183,6 +202,12 @@ GEM
       ruby-hmac
     formatador (0.2.4)
     fssm (0.2.9)
+    hacker_news_search (0.0.6)
+      faraday (~> 0.8.4)
+      faraday_middleware (~> 0.8.4)
+      hashie (~> 1.2.0)
+      multi_json (~> 1.7.7)
+      rash (~> 0.3.0)
     haml (4.0.3)
       tilt
     haml-rails (0.4)
@@ -197,6 +222,9 @@ GEM
     high_voltage (1.2.3)
     hike (1.2.3)
     http_parser.rb (0.5.3)
+    httparty (0.11.0)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
     i18n (0.6.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
@@ -204,6 +232,7 @@ GEM
     jquery-ui-rails (4.0.3)
       jquery-rails
       railties (>= 3.1.0)
+    json (1.8.0)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -226,7 +255,8 @@ GEM
       compass (>= 0.11.5)
       sassy-math (>= 1.2)
     multi_json (1.7.7)
-    multipart-post (1.1.5)
+    multi_xml (0.5.4)
+    multipart-post (1.2.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.6.8)
@@ -280,6 +310,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.1.0)
+    rash (0.3.2)
+      hashie (~> 1.2.0)
     redcarpet (2.3.0)
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
@@ -309,6 +341,9 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     slop (3.4.5)
+    snoo (0.1.2)
+      httparty
+      nokogiri
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -355,7 +390,8 @@ DEPENDENCIES
   compass-rails!
   database_cleaner
   decent_exposure
-  dotenv
+  dotenv-rails
+  engagement!
   factory_girl_rails
   formtastic!
   foundation_rails_helper!

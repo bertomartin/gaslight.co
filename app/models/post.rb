@@ -53,6 +53,15 @@ class Post < ActiveRecord::Base
     post_url(self)
   end
 
+  def legacy_url
+    tumblr_posts_hash = Rewrite.tumblr_posts_hash.invert
+    if tumblr_post_id = tumblr_posts_hash[slug]
+      "http://blog.gaslight.co/post/#{tumblr_post_id}/#{slug}"
+    else
+      nil
+    end
+  end
+
   def to_param
     slug
   end

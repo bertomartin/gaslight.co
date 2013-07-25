@@ -11,7 +11,7 @@
     <%= f.input :description, label: 'Description (TL;DR)', hint: 'A paragraph, maybe. This shows up when links are shared and on search engines.' %>
     <%= f.input :audio_url, label: 'Audio File URL', hint: 'Only useful for Podcasts.' %>
     <%= f.input :slug, hint: 'This is automatically created based on your title, but you can override it here.' %>
-    <%= f.input :tag_list, hint: 'Comma separated. Ex: "cincinnati, javascript"' %>
+    <%= f.input :tag_list, as: :select, input_html: { class: "chzn-select", multiple: "true" }, collection: Post.tags  %>
     <%= f.input :published_at, as: :datetime_picker, hint: 'You can set this to a future date, too! Anything prior to now is "published".' %>
   <% end %>
   <%= f.actions do %>

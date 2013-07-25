@@ -1,5 +1,6 @@
 #= require active_admin/base
 #= require epiceditor/js/epiceditor.min
+#= require chosen.jquery
 
 $ ->
   if $('#editor').length > 0
@@ -10,3 +11,8 @@ $ ->
       clientSideStorage: false
 
     editor = new EpicEditor(opts).load()
+
+  $('.chzn-select').chosen
+      allow_single_deselect: true
+      no_results_text: 'No results matched'
+      width: '79%'

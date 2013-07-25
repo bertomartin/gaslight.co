@@ -28,6 +28,7 @@ class PostCommentCounter
 
     [post.url, post.legacy_url].compact.each do |url|
       count += @counter.comments_count(url)
+      # reddit has a limit of 30 requests per minute
       sleep 2
     end
 

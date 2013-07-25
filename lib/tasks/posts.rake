@@ -1,8 +1,5 @@
 namespace :posts do
   task :update_comments_count => :environment do
-    require 'rewrite'
-    require 'engagement'
-
     comment_counter = PostCommentCounter.from_env
     
     Post.find_each do |post|
@@ -11,6 +8,9 @@ namespace :posts do
     end
   end
 end
+
+require 'rewrite'
+require 'engagement'
 
 class PostCommentCounter
 

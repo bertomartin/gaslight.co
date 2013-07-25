@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/gaslight/engagement.git
-  revision: 56bdcd24e349f3224bcf6c2f467fec9bd9a794e6
+  revision: 8ebba37bbad854a222806c395d30ff203afd41b9
   specs:
     engagement (0.0.1)
       disqus

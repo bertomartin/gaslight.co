@@ -1,5 +1,9 @@
 class Post < ActiveRecord::Base
 
+  def self.tags
+    all.inject([]) {|tags,post| tags | post.tag_list}
+  end
+
   def self.published
     where('posts.published_at <= ?', Time.now)
   end

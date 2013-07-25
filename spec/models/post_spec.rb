@@ -6,6 +6,16 @@ describe Post do
   its(:tag_list) { should be_empty }
   it { should_not be_published}
 
+  describe 'tags' do
+    let!(:postA) { FactoryGirl.create(:post, tag_list: "a,b") }
+    let!(:postB) { FactoryGirl.create(:post, tag_list: "b,c") }
+    it "should return a set of sorted tags" do
+      tags = Post.tags
+      tags.count.should == 3
+      tags.should include("a","b","c")
+    end
+  end
+
   describe 'validation' do
     it { should have(1).error_on(:title) }
     it { should have(1).error_on(:body) }

@@ -9,6 +9,11 @@ ActiveAdmin.register Post do
       new!
     end
 
+    def update
+      params[:post][:tag_list] = params[:post][:tag_list].join(",")
+      update!
+    end
+
     def permitted_params
       params.permit(post: [:title, :body, :author, :audio_url, :slug, :tag_list, :published_at, :description])
     end

@@ -113,8 +113,21 @@
     height: 100%
     margin-bottom: 25px
 
-  .madeincincy
-    margin-top: 10px
+  .socialLinks
+    .madeincincy
+      margin-top: 10px
+      float: none
+      padding: 0px 11px
+      a
+        width: 90%
+        padding: 5px 15px
+        margin: 0px
+
+@media only screen and (max-width: 767px) and (orientation: landscape)
+  .socialLinks
+    .madeincincy
+      a
+        width: 70%
 
 //iPad and down
 @media only screen and (max-width : 1024px)
@@ -134,3 +147,9 @@
       .post__author, .post__time
         margin: 0px
         font-size: 13px
+
+@media only screen and (min-width : 768px) and (max-width: 1023px)and (orientation: landscape)
+  .socialLinks
+    .madeincincy
+      a
+        width: auto

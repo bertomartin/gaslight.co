@@ -1,48 +1,88 @@
-%casestudy
+
+%hero__heading
+  margin-top: 0
+  margin-bottom: 0
+  color: #fff
+
+%hero__header
+  padding: 25px 0
+  h1
+    @extend %hero__heading
+    font-weight: bold
+  h3
+    @extend %hero__heading
+    font-weight: normal
+  h4
+    @extend %hero__heading
+  p
+    color: #fff
+
+.hero__header
+  @extend %hero__header
+
+.hero__header--animated
+  @extend %hero__header
+  background-color: rgba(0,0,0,0.65)
+  @include transition(all 0.5s)
+  &:hover
+    padding: 176px 0
+    background-color: rgba(239,199,3,0.65)
+
+.hero__header--brand1
+  @extend %hero__header
+  background-color: rgba(87,192,232,0.9)
+
+
+%hero
   margin-left: -50px
-  margin-right: -50px 
+  margin-right: -50px
   overflow: hidden
   background-repeat: no-repeat
+  margin-bottom: $sectionMargin
+  &.first
+    margin-top: -40px
+  .row
+    padding-left: 25px
+    padding-right: 25px
 
-%casestudy--heading
-  font-weight: bold
-
-%casestudy--subheading
-  font-weight: 400
-
-.row.casestudy--featured
-  @extend %casestudy
+.hero--featured
+  @extend %hero
   height: 475px
   background-image: image-url("casestudy/lumbee_hero.jpg")
 
-  .headline
-    color: #fff
-    background-color: rgba(0,0,0,0.5)
-    padding: 25px 0
-    @include transition(all 0.5s)
-    &:hover
-      padding: 160px 0
-      background-color: rgba(239,199,3,0.5)
-  h1
-    @extend %casestudy--heading
-    line-height: 0.75em
-  h3
-    @extend %casestudy--subheading
+.hero--secondary
+  @extend %hero
+  min-height: 350px
+  background-image: image-url("casestudy/lumbee_video.jpg")
+  background-color: #000
 
-.row.casestudy__heading--lumbee
-  @extend %casestudy
-  margin-top: -40px
-  height: 450px
-  background-image: image-url("casestudy/lumbee_hero.jpg")
+.hero--ba
+  @extend %hero
+  min-height: 350px
+  background-image: image-url("casestudy/lumbee_ba.jpg")
 
-  .headline
-    color: #fff
-    background-color: rgba(87,192,232,0.9)
-    padding: 50px 0
 
-  h1
-    @extend %casestudy--heading
-    line-height: 1.1em
-  h3
-    @extend %casestudy--subheading
-    line-height: 0.25em
+%casestudy__sidebar
+  border-top-width: 8px
+  border-top-style: solid
+  h4
+    font-weight: bold
+  p
+    font-size: 14px
+
+  li
+    list-style: none
+
+.casestudy__sidebar
+  @extend %casestudy__sidebar
+  border-top-color: $brand1
+  h4
+    color: $brand1
+
+.casestudy__sidebar--something
+  @extend %casestudy__sidebar
+  border-top-color: $brand2
+  h4
+    color: $brand2
+
+

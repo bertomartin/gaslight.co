@@ -2,14 +2,15 @@
 = render partial: 'application/nav'
 
 #main.container.row
-  %section.row.casestudy__heading--lumbee
-    .headline.twelve.columns
+  %section.hero--featured.first
+    .hero__header--brand1
       .row
         .ten.columns.offset-by-one
           %h1 A Software Overhaul That Drives Business Results
           %h3 Lumbee Enterprises
+    
   %section.row
-    .casestudy__content.four.columns
+    .casestudy__sidebar.three.columns
       %h4 Client
       %p Lumbee Enterprises
       %h4 Engagement
@@ -20,72 +21,81 @@
         %li Ruby on Rails
         %li HTML/CSS
         %li Heroku
-    .eight.columns
-      %p.casestudy__maindivider Lumbee Enterprises specializes in quality control for the automotive manufacturing industry. The company works with such clients as BMW, Volkswagen, Caterpillar and Volvo Truck to inspect or re-work 20 million parts a year. We partnered with Lumbee to overhaul a web-based software application that runs the entire business. This software follows every single project from kick-off to status reports to the ﬁnal invoice. 
+    .eight.offeset-by-one.columns
+      %p.lead.casestudy__maindivider Lumbee Enterprises specializes in quality control for the automotive manufacturing industry. The company works with such clients as BMW, Volkswagen, Caterpillar and Volvo Truck to inspect or re-work 20 million parts a year. We partnered with Lumbee to overhaul a web-based software application that runs the entire business. This software follows every single project from kick-off to status reports to the ﬁnal invoice. 
       %h4 The Power of Team Development
       %p.casestudy Lumbee worked with a solo developer to build this app over four years. With a team of developers and designers, Gaslight made signiﬁcant improvements in just 12 weeks. These software upgrades improved Lumbee’s productivity, proﬁts and client relationships.
 
-  %section.row.casestudy__testimonial--lumbee
-    .six.columns
-      %video This is the video
-    .six.columns
-      %p.casestudy__quote  “Gaslight is a partner because they really, truly understand the issues we’re trying to overcome to help our customers.” 
-      %h4.casestudy__quote--author Fran Coughlin
-      %h4.casestudy__quote--title Partner at Lumbee, CEO WORDS
+  .hero--secondary
+    .row.hero__header
+      .seven.columns
+        .flex-video
+          %iframe{ id: "ytplayer", type: "text/html", src: "//www.youtube.com/embed/hfrcN7UptYw", frameborder:"0", allowfullscreen: "allowfullscreen"}
+      .five.columns
+        %p.casestudy__quote  “Gaslight is a partner because they really, truly understand the issues we’re trying to overcome to help our customers.” 
+        %h4.casestudy__quote--author Fran Coughlin
+        %h4.casestudy__quote--title Partner at Lumbee Enterprises
 
   %section.row.casestudy__design--lumbee
     .twelve.columns
       .row
-        .casestudy__overview--design.four.columns
+        .casestudy__sidebar.three.columns
           %h4 User Interface
           %h4.casestudy--subheading Polishing Up a Dashboard
           %p A new at-a-glance dashboard pulls together all the most important statistics on one screen.
-        .eight.columns
+        .eight.offset-by-one.columns
           %image
       .row
-        .casestudy__overview--design.four.columns
+        .casestudy__sidebar.three.columns
           %h4 Responsive Web
           %h4.casestudy--subheading Mobile Friendly
           %p We made the app mobile-friendly, so employees and clients can track projects on the factory ﬂoor. 
-        .eight.columns
+        .eight.offset-by-one.columns
           %image
           %image
-  %section.row.casestudy__comparison--lumbee
-    .four.columns.offset-by-two
-      %table
-        %tr
-          %th Lumbee App Before
-        %tr
-          %td Data took days to appear in the app
-        %tr
-          %td Available only to Lumbee employees
-        %tr
-          %td Slow page load times hurt productivity
-        %tr
-          %td Only ran on desktop or laptop computers
-        %tr
-          %td Out-of-date code
-    .four.columns.end
-      %table
-        %tr
-          %th Lumbee App After
-        %tr
-          %td Real-time business results available 24/7
-        %tr
-          %td Enabled client access for better workﬂow
-        %tr
-          %td A X% improvement in page load times
-        %tr
-          %td Mobile friendly for on-the-go access
-        %tr
-          %td Updated code = increased security
+  
+  %section.hero--ba
+    .row.hero__header
+      .four.offset-by-two.columns
+        %table
+          %thead
+            %tr
+              %th Lumbee App Before
+          %tbody
+            %tr
+              %td Data took days to appear in the app
+            %tr
+              %td Available only to Lumbee employees
+            %tr
+              %td Slow page load times hurt productivity
+            %tr
+              %td Only ran on desktop or laptop computers
+            %tr
+              %td Out-of-date code
+
+      .four.columns.end
+        %table
+          %thead
+            %tr
+              %th Lumbee App After
+          %tbody
+            %tr
+              %td Real-time business results available 24/7
+            %tr
+              %td Enabled client access for better workﬂow
+            %tr
+              %td A X% improvement in page load times
+            %tr
+              %td Mobile friendly for on-the-go access
+            %tr
+              %td Updated code = increased security
 
   %section.row
-    .casestudy__content.four.columns
+    .casestudy__sidebar.three.columns
       %h4 Does Your Software Need a Makeover? 
       %p Let’s talk. We know how to upgrade technology, so it upgrades your business results, too.
       %button.button Contact us
-    .eight.columns
+    .eight.offset-by-one.columns
       %h4 Spending a Development Budget Where It Counts Most
       %p.casestudy__maindivider Gaslight builds custom software, but we know that custom isn’t always the best—or only—solution. For this app, we leveraged open-source code to create off-the-shelf solutions for certain parts of the software. This allowed us to create bigger business results with less time and money. Before writing a line of code, we took the time to learn how Lumbee works and what business goals the company wanted to accomplish. Then we focused our custom development time on the features that mattered most. 
       %h4 The Technology

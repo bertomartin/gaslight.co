@@ -1,36 +1,41 @@
 namespace :posts do
   task :update_comments_count => :environment do
-    def sources(env = ENV)
-      sources = [
-        reddit = Engagement::CommentCounter::Reddit.new,
-        hacker_news = Engagement::CommentCounter::HackerNews.new,
-      ]
-
-      if (disqus_forum_api_key = env['DISQUS_FORUM_API_KEY'])
-        disqus = Engagement::CommentCounter::Disqus.new(disqus_forum_api_key)
-        sources << disqus
-      end
-
-      sources
-    end
-
     require 'rewrite'
     require 'engagement'
 
-    counter = Engagement::CommentCounter::Threaded.new(sources)
-
+    task_comment_counter = TaskCommentCounter.new
+    
     Post.find_each do |post|
-      post_url = post.url
-
-      tumblr_posts_hash = Rewrite.tumblr_posts_hash.invert
-      if tumblr_post_id = tumblr_posts_hash[post.slug]
-        post_url = "http://blog.gaslight.co/post/#{tumblr_post_id}/#{post.slug}"
-      end
-      puts post_url
-
-      comments_count = counter.comments_count(post_url)
+      comments_count = task_comment_counter.count(post)
       post.update_attribute(:external_comments_count, comments_count)
       sleep 2
+    end
+  end
+end
+
+class TaskCommentCounter
+
+  def initialize(env = ENV)
+    @reddit = Engagement::CommentCounter::Reddit.new
+    @hacker_news = Engagement::CommentCounter::HackerNews.new
+    if (disqus_forum_api_key = env['DISQUS_FORUM_API_KEY'])
+      @disqus = Engagement::CommentCounter::Disqus.new(disqus_forum_api_key)
+    end
+  end
+  
+  def count(post)
+    if @disqus
+      if legacy_post_url = post.legacy_url
+        legacy_counter = Engagement::CommentCounter::Threaded.new([@hacker_news,@reddit])
+        counter = @disqus
+        legacy_counter.comments_count(legacy_post_url) + counter.comments_count(post.url)
+      else
+        counter = Engagement::CommentCounter::Threaded.new([@hacker_news,@reddit,@disqus])
+        counter.comments_count(post.url)
+      end
+    else
+      counter = Engagement::CommentCounter::Threaded.new([@hacker_news,@reddit])
+      counter.comments_count(post.url)
     end
   end
 end

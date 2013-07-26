@@ -25,7 +25,7 @@
   background-color: rgba(0,0,0,0.65)
   @include transition(all 0.5s)
   &:hover
-    padding: 176px 0
+    padding: 155px 0
     background-color: rgba(239,199,3,0.65)
 
 .hero__header--brand1
@@ -47,7 +47,7 @@
 
 .hero--featured
   @extend %hero
-  height: 475px
+  height: 450px
   background-image: image-url("casestudy/lumbee_hero.jpg")
 
 .hero--secondary
@@ -61,12 +61,18 @@
   min-height: 350px
   background-image: image-url("casestudy/lumbee_ba.jpg")
 
+.casestudy__design .row
+  margin-bottom: $sectionMargin
+  &:last-child
+    margin-bottom: 0
 
 %casestudy__sidebar
   border-top-width: 8px
   border-top-style: solid
   h4
     font-weight: bold
+    margin-bottom: 0
+    line-height: 1.3em
   p
     font-size: 14px
 
@@ -78,11 +84,51 @@
   border-top-color: $brand1
   h4
     color: $brand1
+  .button
+    width: 100%
 
-.casestudy__sidebar--something
+.casestudy__sidebar--design
   @extend %casestudy__sidebar
   border-top-color: $brand2
+
+h4.casestudy__design-subheading 
+  color: $brand2
+  margin-top: 0
+  margin-bottom: 10px
+
+.casestudy__design-heading
+  color: #000
+  text-transform: uppercase
+  margin-top: 10px
+  margin-bottom: 0
+
+%casestudy__quote
+  p
+    font-size: 24px
+    margin-top: 50%
+    @include translateY(-50%)
   h4
-    color: $brand2
+    color: #eee
+    font-size: 16px
+    .casestudy__quote--title
+      font-weight: 400
 
+.casestudy__quote
+  @extend %casestudy__quote
 
+.casestudy__beforeafter
+  margin-top: 40px
+
+@media only screen and (min-width : 320px) and (max-width: 767px)
+  .hero__header--brand1
+    h1
+      font-size: 36px
+  .hero--featured, .hero--secondary, .hero--ba
+    margin-left: -25px
+    margin-right: -25px
+    padding: 0 5px
+  %casestudy__quote
+    p
+      font-size: 24px
+      margin-top: 25px
+      @include translateY(0%)

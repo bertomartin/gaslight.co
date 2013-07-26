@@ -2,13 +2,17 @@ require 'json'
 require 'super_struct'
 
 class Author < SuperStruct.new(:id, :name, :first_name, :github, :tumblr, :twitter, :google_plus, :avatar, :email)
-  
+
   def self.find_by_tumblr(handle)
     people.find { |person| person.tumblr == handle }
   end
 
   def self.all
     people.sort_by(&:tumblr)
+  end
+
+  def id
+    tumblr
   end
 
   def display_name

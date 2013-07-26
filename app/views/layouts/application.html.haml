@@ -6,9 +6,12 @@
   %head
     /[if lt IE 9]
       = javascript_include_tag "html5shiv"
-    %title= content_for?(:title) ? content_for(:title) : "Gaslight: Ruby on Rails, iOS and JavaScript development"
+    %title= content_for?(:title) ? content_for(:title) : "Gaslight: Ruby on Rails, iOS and JavaScript Consultants | Cincinnati, OH"
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
+    %meta{content: 'Gaslight, an experienced and trusted agile software development shop, offers custom Ruby on Rails, iOS, and JavaScript web and mobile application development.', name: 'description'}
+    %meta{content: 'Gaslight LLC', name: 'author'}
+
     = auto_discovery_link_tag(:rss, posts_url(format: :rss))
     = favicon_link_tag "32x32icon.png"
     = stylesheet_link_tag "application"

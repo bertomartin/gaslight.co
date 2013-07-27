@@ -29,5 +29,5 @@ Gaslight::Application.routes.draw do
 
   # redirect to /home. Lets the app rewrite requests
   # and caches the page(s).
-  root to: redirect("/home")
+  root to: 'pages#show', id: 'home'
 end

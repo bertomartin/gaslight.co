@@ -9,7 +9,7 @@
     - elsif params[:q].present?
       %h2 #{pluralize(posts.count, 'post')} containing '#{params[:q]}'
       = render partial: 'post_list', locals: { posts: posts }
-    - elsif params[:author].present?
+    - elsif author.present?
       %h2 #{pluralize(posts.count, 'post')} written by #{author[:name]}
       = render partial: 'post_list', locals: { posts: posts }
     - else

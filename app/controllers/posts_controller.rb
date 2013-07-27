@@ -8,10 +8,10 @@ class PostsController < ApplicationController
   expose(:post) { Post.published.find_by_slug(params[:slug] || params[:id]) }
   expose(:popular_tags) { Post.tag_counts.order('count desc').limit(20) }
   expose(:authors) { Post.authors }
-  expose(:author) { Author.find_by_tumblr(params[:author]) }
+  expose(:author) { Author.find_by_tumblr(params[:author].to_s.downcase) }
 
   def index
-    self.posts = self.posts.written_by([params[:author]]) if params[:author]
+    self.posts = self.posts.written_by(author[:tumblr]) if author
     self.posts = self.posts.tagged_with([params[:tagged]]) if params[:tagged]
     self.posts = self.posts.page(params[:page]).per(items_per_page)
     respond_with posts

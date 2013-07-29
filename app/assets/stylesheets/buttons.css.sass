@@ -1,4 +1,6 @@
-.button
+
+
+%button
   @include border-radius(5px)
   @include brandColors(background-color)
   width: auto
@@ -19,3 +21,14 @@
   &:hover
     color: #fff
     @include opacity(0.8)
+
+.button
+  @extend %button
+
+.button--bloglink
+  @extend %button
+  background-color: #000
+  font-size: 14px
+  font-weight: bold
+  margin: 15px 
+

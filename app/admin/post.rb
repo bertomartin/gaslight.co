@@ -9,9 +9,18 @@ ActiveAdmin.register Post do
       new!
     end
 
+    def create
+      munge_tag_list
+      create!
+    end
+
     def update
-      params[:post][:tag_list] = params[:post][:tag_list].join(",")
+      munge_tag_list
       update!
+    end
+
+    def munge_tag_list
+      params[:post][:tag_list] = params[:post][:tag_list].join(",")
     end
 
     def permitted_params

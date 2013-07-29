@@ -5,7 +5,7 @@ a:hover, a:active, a:focus
   outline: none
   color: darken($brand1,10)
 
-p 
+%body
   font-family: inherit
   font-weight: $bodyFontWeight
   font-size: 18px
@@ -17,12 +17,16 @@ p
     font-size: ms(2)
     margin-bottom: 35px
 
+p
+  @extend %body
+
 aside p 
+  @extend %body
   font-size: ms(0) - 1 
   line-height: 1.35 
   font-style: italic
 
-h1, h2, h3, h4, h5, h6 
+%headline
   font-family: $headerFontFamily
   font-weight: $headerFontWeight
   font-style: $headerFontStyle
@@ -35,25 +39,30 @@ h1, h2, h3, h4, h5, h6
     line-height: 0
 
 h1 
-  font-size: ms(6)
-  font-weight: normal
-  line-height: 1.2em
-  color: #fff
+  @extend %headline
+  font-size: ms(3)
+  font-weight: bolder
+  line-height: 1.3em
 h2  
+  @extend %headline
   font-size: ms(4)
   font-weight: bold
 h3  
+  @extend %headline
   font-size: ms(3)
   font-weight: bolder
   line-height: 1.3em
 h4  
+  @extend %headline
   font-size: ms(0)
   font-weight: bold
 h5  
+  @extend %headline
   font-size: ms(0) * 1.5
   font-weight: bolder
   margin: 0
 h6  
+  @extend %headline
   font-size: ms(0) 
 
 hr 
@@ -69,19 +78,34 @@ hr
   font-weight: 300
   margin-bottom: ms(1)
 
+.headline__buzzword
+  @extend %headline
+  font-size: ms(6)
+  font-weight: normal
+  line-height: 1.2em
+  color: #fff
+  strong
+    font-weight: bold
 i 
   font-style: italic
   line-height: inherit 
 
-strong, b 
+strong, b
   font-weight: bold
   line-height: inherit
 small 
+  @extend %body
   font-size: 60%
   line-height: inherit
 code
+  @extend %body
   font-weight: bold
   background: $highlightColor
+
+h1.title--expertise 
+  @extend %body
+  font-weight: bold
+  margin-bottom: 10px
 
 /* Lists ---------------------- */
 ul, ol, dl

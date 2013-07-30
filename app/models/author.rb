@@ -23,10 +23,15 @@ class Author < SuperStruct.new(:id, :name, :first_name, :github, :tumblr, :twitt
     Post.where(author: tumblr).sum('external_comments_count')
   end
 
+  def contributions
+    Post.where(author: tumblr).count
+  end
+
   def as_json(*)
     {
       tumblr: tumblr,
       external_comments_count: external_comments_count,
+      contributions: contributions,
     }
   end
 

@@ -44,7 +44,13 @@ module Gaslight
       rewrite %r{.*}, '$&', if: Proc.new { |rack_env|
         blog_domains.include?(rack_env['SERVER_NAME'])
       }
+    end
 
+    config.middleware.use Rack::Cors do
+      allow do
+        origins 'localhost:3000','gaslight.co'
+        resource '/authors', :headers => :any, :methods => [:get]
+      end
     end
   end
 end

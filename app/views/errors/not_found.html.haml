@@ -5,7 +5,10 @@
 = render partial: 'application/nav'
 
 #guides
-
+  .row
+    .columns.twelve
+      %img.wendell{ src: image_path('wendell-lost.png') }
+      
   .intro
     %h1.hide-for-small
       What? Where'd it go??
@@ -25,4 +28,6 @@
     %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
     %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
     %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
+
+  
 

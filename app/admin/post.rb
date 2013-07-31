@@ -20,7 +20,7 @@ ActiveAdmin.register Post do
     end
 
     def munge_tag_list
-      params[:post][:tag_list] = params[:post][:tag_list].join(",")
+      params[:post][:tag_list] = params[:tag_list_string]
     end
 
     def permitted_params

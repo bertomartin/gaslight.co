@@ -77,14 +77,25 @@ describe Post do
 
   describe "related" do
     let(:post) { FactoryGirl.create(:post, tag_list: "cincinnati, qcmerge, culture") }
-    let(:similar_post) { FactoryGirl.create(:post, tag_list: "cincinnati") }
-    let!(:similar_post2) { FactoryGirl.create(:post, tag_list: "cincinnati") }
-    let!(:similar_post3) { FactoryGirl.create(:post, tag_list: "cincinnati") }
+    let!(:very_similar_post) { FactoryGirl.create(:post, tag_list: "cincinnati, qcmerge, culture") }
+    let!(:similar_post) { FactoryGirl.create(:post, tag_list: "cincinnati") }
+    let!(:related_post) { FactoryGirl.create(:post, tag_list: "qcmerge") }
+    let!(:unrelated_post) { FactoryGirl.create(:post, tag_list: "detroit") }
 
     it "returns limit to x number of similar posts" do
       # this will make you a sad panda:
       # https://github.com/mbleigh/acts-as-taggable-on/issues/139
-      post.related.should have(2).items
+      post.related.should have(3).items
+    end
+
+    it "exlcudes itself" do 
+      post.related.should_not include(post)
+    end
+
+    it "returns posts in related order" do
+      post.related.first.should == very_similar_post
+      post.related.second.should == similar_post
+      post.related.last.should == related_post
     end
   end
 

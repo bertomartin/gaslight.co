@@ -16,3 +16,10 @@ $ ->
       allow_single_deselect: true
       no_results_text: 'No results matched'
       width: '79%'
+
+  $(".chzn-choices").bind("DOMSubtreeModified", ->
+    $(".tag-list-as-string").val(
+      $(".search-choice span").toArray().map(
+        (elem) -> return elem.innerHTML
+      ).join(','))
+  );

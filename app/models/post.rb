@@ -52,7 +52,7 @@ class Post < ActiveRecord::Base
   after_validation :update_html
   before_save :update_changed_slugs
 
-  acts_as_taggable
+  acts_as_ordered_taggable
   acts_as_url :title, url_attribute: :slug, sync_url: true
 
   include Rails.application.routes.url_helpers
@@ -99,7 +99,12 @@ class Post < ActiveRecord::Base
   end
 
   def related(limit = 10)
-    find_related_tags.limit(limit).to_a
+    related_posts = [] | 
+      Post.tagged_with(tags, match_all: true) | 
+      Post.tagged_with([tags.first]) | 
+      find_related_tags
+
+    related_posts.reject!{|p| p == self}.slice(0,limit)
   end
 
   def author_info

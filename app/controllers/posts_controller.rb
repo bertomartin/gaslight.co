@@ -74,7 +74,7 @@ class PostsController < ApplicationController
 
   def old_post?
     if old = OldSlug.where(old_slug: params[:id] || params[:slug]).first
-      redirect_to post_url(old.new_slug)
+      redirect_to post_url(old.new_slug), status: 301
     end
   end
 end

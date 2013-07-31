@@ -30,7 +30,7 @@ class PostsController < ApplicationController
   end
 
   def search
-    self.posts = Post.search(params[:q])
+    self.posts = Post.search(params[:q]).page(params[:page]).per(items_per_page)
     respond_with posts, template: 'posts/index'
   end
 
@@ -57,7 +57,7 @@ class PostsController < ApplicationController
 
   def items_per_page
     return 15 if request.format == 'rss'
-    index? ? 3 : 100
+    index? ? 3 : 20
   end
 
   def index?

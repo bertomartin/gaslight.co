@@ -21,7 +21,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.search(query)
-    published.where('lower(posts.body) like lower(?)', "% #{query} %")
+    published.where('lower(posts.body) like lower(:q) or lower(posts.body) like lower(:q)', q: "%#{query}%")
   end
 
   def self.written_by(author)

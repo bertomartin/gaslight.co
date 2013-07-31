@@ -4,14 +4,20 @@
 #main.container.row
   .columns.eight
     - if params[:tagged].present?
-      %h2 #{pluralize(posts.count, 'post')} tagged with #{params[:tagged]}
+      %h2 Posts tagged with #{params[:tagged]}
+      = page_entries_info posts
       = render partial: 'post_list', locals: { posts: posts }
-    - elsif params[:q].present?
-      %h2 #{pluralize(posts.count, 'post')} containing '#{params[:q]}'
+      = paginate posts
+    - elsif request.fullpath =~ /#{search_posts_path}/
+      %h2 All posts containing '#{params[:q]}'
+      = page_entries_info posts
       = render partial: 'post_list', locals: { posts: posts }
+      = paginate posts
     - elsif author.present?
-      %h2 #{pluralize(posts.count, 'post')} written by #{author[:name]}
+      %h2 #{author[:name]}'s Posts
+      = page_entries_info posts
       = render partial: 'post_list', locals: { posts: posts }
+      = paginate posts
     - else
       = render posts
       = paginate posts

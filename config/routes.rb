@@ -3,6 +3,7 @@ Gaslight::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  get '/contact', to: 'contact#new'
   resource :contact, controller: :contact, only: :create
 
   resources :authors, only: :index

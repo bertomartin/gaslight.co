@@ -6,8 +6,7 @@ describe AuthorsController do
     it 'returns a collection of all authors as JSON' do
       get :index, format: 'json'
       json = JSON.parse(response.body)
-      json.should have_key('authors')
-      json['authors'].size.should == Author.all.size
+      json.size.should == Author.all.size
     end
   end
 

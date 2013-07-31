@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130724153805) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20130731130121) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -56,6 +56,16 @@ ActiveRecord::Schema.define(version: 20130724153805) do
 
   add_index "alias_tags", ["alias_id"], name: "index_alias_tags_on_alias_id", using: :btree
   add_index "alias_tags", ["tag_id"], name: "index_alias_tags_on_tag_id", using: :btree
+
+  create_table "old_slugs", force: true do |t|
+    t.string   "old_slug"
+    t.string   "new_slug"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "old_slugs", ["old_slug"], name: "index_old_slugs_on_old_slug", using: :btree
 
   create_table "posts", force: true do |t|
     t.string   "title"

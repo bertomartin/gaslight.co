@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
 
+  has_many :old_slugs
+
   def self.tags
     all.inject([]) {|tags,post| tags | post.tag_list}
   end
@@ -40,10 +42,15 @@ class Post < ActiveRecord::Base
     published.select('posts.author, count(posts.id) as post_count').group('posts.author').order('post_count desc')
   end
 
+  def self.slugged(slug)
+    published.find_by_slug(slug)
+  end
+
   validates_presence_of :title, :body, :author
   validates_length_of :title, maximum: 255
 
   after_validation :update_html
+  before_save :update_changed_slugs
 
   acts_as_taggable
   acts_as_url :title, url_attribute: :slug, sync_url: true
@@ -121,6 +128,12 @@ class Post < ActiveRecord::Base
   def update_html
     return true if body.nil?
     self.html = Renderer.render(body)
+  end
+
+  def update_changed_slugs
+    if self.slug_changed?
+      self.old_slugs.build(old_slug: self.slug_was, new_slug: self.slug)
+    end
   end
 end
 

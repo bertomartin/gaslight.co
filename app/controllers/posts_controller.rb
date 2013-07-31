@@ -4,8 +4,10 @@ class PostsController < ApplicationController
 
   respond_to :html, :rss, :json
 
+  before_filter :old_post?, only: :show
+
   expose(:posts) { Post.published.by_publish_date }
-  expose(:post) { Post.published.find_by_slug(params[:slug] || params[:id]) }
+  expose(:post) { Post.slugged(params[:slug] || params[:id]) }
   expose(:popular_tags) { Post.tag_counts.order('count desc').limit(20) }
   expose(:authors) { Post.authors }
   expose(:author) { Author.find_by_tumblr(params[:author].to_s.downcase) }
@@ -15,6 +17,11 @@ class PostsController < ApplicationController
     self.posts = self.posts.tagged_with([params[:tagged]]) if params[:tagged]
     self.posts = self.posts.page(params[:page]).per(items_per_page)
     respond_with posts
+  end
+
+  def show
+    redirect_to posts_path and return if post.nil?
+    respond_with post
   end
 
   def for_date
@@ -63,6 +70,12 @@ class PostsController < ApplicationController
   def index?
     actions = %w(q tagged author year)
     (params.keys & actions).none?
+  end
+
+  def old_post?
+    if old = OldSlug.where(old_slug: params[:id] || params[:slug]).first
+      redirect_to post_url(old.new_slug)
+    end
   end
 end
 

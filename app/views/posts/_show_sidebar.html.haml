@@ -1,7 +1,7 @@
 .columns.three.prepend-1.sidebar
   = render partial: 'search_form'
-  %a.button.brand3.button--bloglink{href: "http://gaslight.co/coffee", rel: "Coffee Friday"} Get Coffee With Us
-  %a.button.button--bloglink{href: "http://gaslight.co/blog?tagged=podcast", rel: "Podcast"} Check Out Our Podcast
+  %a.button.brand3.button--bloglink{href: "/coffee", rel: "Coffee Friday"} Get Coffee With Us
+  %a.button.button--bloglink{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
   %h3.sidebar__heading Tags
   .tag-container
     = popular_tag_links(post.tag_counts)

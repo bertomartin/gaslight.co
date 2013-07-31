@@ -3,6 +3,7 @@ Gaslight::Application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config
 
+  get '/contact', to: 'contact#new'
   resource :contact, controller: :contact, only: :create
 
   resources :authors, only: :index
@@ -23,11 +24,7 @@ Gaslight::Application.routes.draw do
 
   get 'sitemap.xml' => 'sitemaps#index', as: 'sitemap', defaults: { format: "xml" }
 
-  # catch all the pages
-  get '/:id', to: 'pages#show', as: :static
-  get '/home', to: 'pages#show', id: 'home', as: :home
+  root to: 'high_voltage/pages#show', id: 'home'
 
-  # redirect to /home. Lets the app rewrite requests
-  # and caches the page(s).
-  root to: 'pages#show', id: 'home'
+  get "/404", to: "errors#not_found"
 end

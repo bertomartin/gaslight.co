@@ -8,8 +8,8 @@ class ContactController < ApplicationController
         format.html { redirect_to contact_path }
         format.js
       else
-        format.html { render template: 'pages/contact', layout: false }
-        format.js { render template: 'contact/create' }
+        format.html { render :new }
+        format.js
       end
     end
   end

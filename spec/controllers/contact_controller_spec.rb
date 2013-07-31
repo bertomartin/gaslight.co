@@ -17,8 +17,7 @@ describe ContactController do
       end
 
       it { should respond_with(:success) }
-      it { should render_template('pages/contact') }
-      it { should_not render_with_layout }
+      it { should render_template('contact/new') }
       it { should_not set_the_flash }
     end
   end

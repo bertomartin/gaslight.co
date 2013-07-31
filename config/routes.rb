@@ -27,4 +27,5 @@ Gaslight::Application.routes.draw do
   root to: 'high_voltage/pages#show', id: 'home'
 
   get "/404", to: "errors#not_found"
+  get "/500", to: "errors#server_error"
 end

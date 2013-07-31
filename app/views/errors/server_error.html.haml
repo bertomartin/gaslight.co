@@ -1,0 +1,29 @@
+- content_for :javascript do
+  :javascript
+    new Gaslight.Views.SvgView({el: "#guides"}).render()
+
+= render partial: 'application/nav'
+
+#guides
+  .row
+    .columns.twelve
+      %img.wendell{ src: image_path('wendell-broken.png') }
+      
+  .intro
+    %h1.hide-for-small
+      Oh no! You broke it!
+    %p.hide-for-small 
+      Just kidding. It's probably our fault. We'll get that taken care of
+      shortly. While we're working on that, why not send us an email?
+    %p.lead.show-for-small 
+      %strong Oh no! You broke it!
+      %br/
+      Just kidding. It's probably our fault. We'll get that taken care of
+      shortly. While we're working on that, why not send us an email?
+    %a.button.brand3.hide-for-small{href: 'mailto:hello@gaslight.co', rel: "Homepage Lets Talk button" } Email Us
+
+  .buttonLinks.show-for-small
+    %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
+    %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
+    %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
+

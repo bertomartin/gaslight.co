@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :course do
+  factory :course, class: TrainingApp::Course do
     title "My Awesome Class"
     description_main "A great technology to learn with!"
     description_close "Why not try it?"

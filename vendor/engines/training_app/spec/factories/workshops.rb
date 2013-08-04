@@ -1,7 +1,7 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :workshop do
+  factory :workshop, class: TrainingApp::Workshop do
     venue
     course
     price 1

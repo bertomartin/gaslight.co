@@ -98,6 +98,12 @@ GIT
       multi_json (~> 1.0)
       uuidtools
 
+PATH
+  remote: vendor/engines/training_app
+  specs:
+    training_app (0.0.1)
+      rails (~> 4.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -434,5 +440,6 @@ DEPENDENCIES
   shoulda-matchers!
   stringex
   timecop
+  training_app!
   uglifier (~> 2.1.0)
   zurb-foundation

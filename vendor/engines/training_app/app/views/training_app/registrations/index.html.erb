@@ -1,0 +1,621 @@
+<%- content_for(:title) { "JavaScript and Ruby on Rails Training from Gaslight | Cincinnati, OH" } %>
+<%= render partial: 'application/nav' %>
+
+<div class="container row" id="main">
+  <header class="row brand1">
+    <div class="headline five offset-by-one columns">
+      <h1>Helping You <br /><span>Do Great Things</span></h1>
+    </div>
+    <div class="intro six columns end">
+      <% if @registration %>
+        <h3>
+          Thanks for purchasing our<br />Backbone and Ember training course.
+        </h3>
+        <p>We'd love to hear your thoughts on this course. We're excited to
+          share what we learn and your opinion is helpful.</p>
+        <p>We're Gaslight. We build web and mobile apps in Cincinnati,
+          Ohio. We're available for consulting and training. You can find more
+          about us at <%= link_to('http://gaslight.co') %> or by emailing us at
+          <%= mail_to('hello@gaslight.co') %>.</p>
+      <% else %>
+        <h3>Backbone and Ember</h3>
+        <p>Picking a client side MVC framework isn't easy, and seeing a trivial
+          Todo app just doesn't show how much these frameworks bring to the
+          table. In this workshop, we'll dive into two popular frameworks:
+          <%= link_to('Backbone.js', 'http://backbonejs.org/') %> and
+          <%= link_to('Ember', 'http://emberjs.com/') %>.</p>
+        <p>We'll cover the features of each framework and dig in with code
+          examples and labs that give you a solid understanding of the strengths
+          and weaknesses of each. After completing this workshop, you should be
+          armed to the teeth with the knowledge you need to pick the best
+          framework for your next rich client web app.</p>
+        <p>About us: We're Gaslight. We build web and mobile apps in Cincinnati,
+          Ohio. We're available for consulting and training. You can find more
+          about us at <%= link_to('http://gaslight.co') %> or by emailing us at
+          <%= mail_to('hello@gaslight.co') %>.</p>
+        <%= link_to "<img src='/images/cap.png' alt='open lock' /><span>Purchase the full course</span>".html_safe, (new_registration_path), :class=>"purchase" %>
+      <% end %>
+    </div>
+  </header>
+
+  <div class="row">
+     <div class="six columns">
+        <h2>
+          Backbone
+        </h2>
+        <ul class="accordion">
+          <li class="active">
+            <div class="title">
+              <h5>Intro</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Introduction</h6>
+                </li>
+                <li>
+                  <%= link_to "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/01%20Introduction.mp4", :class=>"button", :target => '_blank' %>
+                </li>
+                <li>
+                  <h6>Intro to Coffeescript</h6>
+                </li>
+                <li>
+                  <%= link_to "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/02%20Coffeescript.mp4", :class => "button", :target => '_blank' %>
+                </li>
+                <li>
+                  <h6>Why Backbone?</h6>
+                </li>
+                <li>
+                  <%= link_to "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/03%20Why%20Backbone%3F.mp4", :class => "button", :target => '_blank' %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 1</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Views</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/04%20Views.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 1</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/05%20Example%201.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/etokim/12/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 1</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/06%20Lab%201.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/etokim/13/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 2</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Events</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/07%20View%20Events.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 2</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/08%20Example%202.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/akipaz/2/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 2</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/09%20Lab%202.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ixewel/2/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 3</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Templates</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/10%20Templates.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 3</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/11%20Example%203.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/uxuxam/2/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 3</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/12%20Lab%203.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ajuxet/3/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 4</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Models</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/13%20Models.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 4</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/14%20Example%204.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/aqoxav/4/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 4</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/15%20Lab%204.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ematup/4/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 4 Solution</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/16%20Lab%204%20Solution.mp4" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 5</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Events</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/17%20Events.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 5</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/18%20Example%205.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ugodek/3/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 5</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/19%20Lab%205.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ekanos/64/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 6</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Collections and REST</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/20%20Collections%20and%20REST.mp4" %>
+                </li>
+                <li>
+                  <h6>Lab 6</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/21%20Lab%206.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/akurel/5/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 7</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Routers</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/22%20Routers.mp4" %>
+                </li>
+                <li>
+                  <h6>Lab 7</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/23%20Lab%207.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/uzubuc/6/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 7 Solution</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/24%20Lab%207%20Solution.mp4" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 8</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Lab 8</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/25%20Lab%208.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ilufek/4/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 8 Solution</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/backbone/26%20Lab%208%20Solution.mp4" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+     </div>
+     <div class="six columns">
+       <h2>
+        Ember
+       </h2>
+       <ul class="accordion">
+          <li class="active">
+            <div class="title">
+              <h5>Intro</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Introduction</h6>
+                </li>
+                <li>
+                  <%= link_to "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/01%20Introduction.mp4", :class=>"button", :target => '_blank' %>
+                </li>
+                <li>
+                  <h6>Why Ember?</h6>
+                </li>
+                <li>
+                  <%= link_to "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/02%20Why%20Ember%3F.mp4", :class => "button", :target => '_blank' %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 1</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>The Pieces</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/03%20The%20Pieces.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 1</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/04%20Example%200.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/onimin/12/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 1</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/05%20Lab%200.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/olarew/29/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 2</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Bindings</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/06%20Bindings.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 2</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/07%20Example%200.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ehejel/11/edit" %>
+                </li>
+                <li>
+                  <h6>BindAttr & Action</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/08%20BindAttr%20and%20Action.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/oxekox/44/edit" %>
+                </li>
+                <li>
+                  <h6>Example 2.5</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/09%20Example%201.mp4" %>
+                </li>
+                <li>
+                  <h6>Lab 2</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/10%20Lab%201.mp4" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 3</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Outlets & Routes</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/11%20Outlets%20and%20Routes.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 3</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/12%20Example%202.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/obudav/30/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 3</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/13%20Lab%202.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/evujas/64/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 4</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Resources</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/14%20Resources.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 4</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/15%20Example%203.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/unized/19/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 4</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/16%20Lab%203.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/aparar/32/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 5</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Ember Data</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/17%20Ember%20Data.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 5</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/18%20Example%204.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/aganes/2/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 5</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/19%20Lab%204.mp4" %>
+                </li>
+                 <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ofiguj/76/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 6</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Custom Views</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/20%20Custom%20Views.mp4" %>
+                </li>
+                <li>
+                  <h6>Example 6</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/21%20Example%205.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/ulofax/2/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 6</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/22%20Lab%205.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/erirez/14/edit" %>
+                </li>
+                <li>
+                  <h6>Lab 6 Solution</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/23%20Lab%205%20Solution.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/utodik/18/edit" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="title">
+              <h5>Chapter 7</h5>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <h6>Associations</h6>
+                </li>
+                <li>
+                  <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/24%20Associations.mp4" %>
+                </li>
+                <li>
+                  <%= purchased_link "Code", "http://jsbin.com/azukaj/3/edit" %>
+                </li>
+                <li>
+                  <h6>Conclusion & Questions</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/25%20Conclusion%20and%20Questions.mp4" %>
+                </li>
+                <li>
+                  <h6>In Practice</h6>
+                </li>
+                <li>
+                 <%= purchased_link "Video", "http://gaslight-cdn.s3.amazonaws.com/training/video/ember/26%20In%20Practice.mp4" %>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+     </div>
+  </div>
+</div>
+<%= render partial: 'application/footer' %>
+
+<%= content_for(:modal) do %>
+  <div id="myModal" class="reveal-modal medium">
+    <div class="row">
+      <div class="twelve columns centered">
+        <h2>Want more lessons?</h2>
+        <h3>Purchase the course for $10.00!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="ten columns centered">
+        <%= link_to "<span>Purchase the full course</span>".html_safe, (new_registration_path), :class=>"purchase" %>
+      </div>
+    </div>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+<% end %>

@@ -4,20 +4,73 @@
 
 = render partial: 'application/nav'
 
-#guides
+/ #guides
+.row
+  .ten.columns.centered
+    %h1 We build apps that build businesses.
+.row
+  .eight.columns.centered
+    %p Gaslight partners with you to create custom software, web apps and mobile apps. Let’s work together to create something that takes your business new places.
+.row
+  .two.columns.offset-by-three
+    %h3 Learn
+    %p We want to learn all the best news things. 
+  .two.columns
+    %h3 Build
+    %p We want to build all the best news things.
+  .two.columns.end
+    %h3 Share
+    %p We want to share all the best news things.
+.row
+  .one.columns.centered
+    v
+%section
+  .row
+    .three.columns
+      %h2 We Are
+    .nine.columns
+      %p.lead Aliqua fixie occupy helvetica ea, magna disrupt consectetur nihil Qui quis blog Marfa vegan. IPhone bespoke mumblecore hashtag 8-bit. Aliqua fixie occupy helvetica ea, magna disrupt consectetur nihil. Qui quis blog Marfa vegan.
+  .row
+    .five.columns.offset-by-three
+      %p Aliqua fixie occupy helvetica ea, magna disrupt sectetur nihil. Qui quis blog Marfa vegan. IPhone bespoke mumblecore hashtag 8-bit.
+    .three.columns
+      %a.button.brand1 See Who We Are
 
-  %img.logo{src: image_path("logoLarge.png")}
+%section
+  .row
+    .three.columns
+      %h2 Our Process
+    .five.columns.end
+      %h3 The igniter
+      %h4 Let’s Start This on the Right Foot
+      %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide
+  .row
+    .five.columns.offset-by-three.end
+      %h3 Team approach
+      %h4 All Project Gets a Project Guide, Pair of Developers, and a Designer
+      %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide. Aliqua.
+  .row
+    .five.columns.offset-by-three.end
+      %h3 Best in technology 
+      %h4 It’s What all the Cool Startups are Doings
+      %p We push the boundary at Gaslight and have a wide skillset for your project. We have experience in Ruby, Ruby on Rails, Backbone.js, Ember.js, Angular, user experienece, and iOS... to name a few.
+      %a.button.brand3 See Our Other Talents
 
-  .intro
-    %h1.hide-for-small Hi, We're Gaslight
-    %p.hide-for-small As a design and development shop, we're passionate about building your best ideas. We partner with you to create custom software, web apps and mobile apps. Let’s work together to create something that takes your business new places.
+%section
+  .row
+    .three.columns
+      %h2 Let's Work Together
+    .five.columns
+      %p Say hello, talk to us about a project, want to join our team, check out this link to get in contact with us.
+    .four.columns
+      Email
+      Twitter
+      Github
+      Facebook
 
-    %p.lead.show-for-small <strong>Hi, we're Gaslight.</strong> <br/> We create web and mobile apps for your business.
-    %a.button.brand3.hide-for-small{href: page_path("contact"), rel: "Homepage Lets Talk button" } Let's Talk
 
-  .buttonLinks.show-for-small
-    %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
-    %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
-    %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
 
-  %h2 Let’s Build<br/> Great Things
+.buttonLinks.show-for-small
+  %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
+  %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
+  %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact

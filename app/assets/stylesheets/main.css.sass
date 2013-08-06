@@ -6,17 +6,20 @@
   background: #fff
   @include background-image(radial-gradient(center center, #eee 0%, #fff 100%))
   h1
-    padding-top: 60px
+    padding-top: 200px
     text-align: center
+    font-size: 325%
+  p
+    text-align: center
+    font-size: 20px
   .wendell
     margin-top: 100px
   svg
-    position: fixed !important
+    position: absolute !important
     top: 0px
 
 #main
   background: #fff
-  @include box-shadow(0 -10px 10px #ddd)
   padding: 100px 50px 100px 50px
   min-height: 100%
   margin-bottom: - $footerHeight
@@ -90,6 +93,47 @@
     margin-bottom: $sectionMargin
     p.emphasize
       margin-bottom: 40px
+
+// Landing Page
+#main.landing--page
+  padding: 0
+
+  .hero--weare
+    background: $brandBase
+    background-image: image-url("landing/group.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 450px
+    padding-top: 75px
+    color: #fff
+
+  .hero--worktogether
+    background: $brandBase
+    background-image: image-url("landing/contact.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    height: 344px
+    padding-top: 75px
+    color: #fff
+
+  %landingpage__sidebar
+    border-top-width: 8px
+    border-top-style: solid
+
+  .landingpage__sidebar--about
+    @extend %landingpage__sidebar
+    border-top-color: $brand1
+    color: #fff
+
+  .landingpage__sidebar--contact
+    @extend %landingpage__sidebar
+    border-top-color: $brand2
+    color: #fff
+
+  .landingpage__sidebar--process
+    @extend %landingpage__sidebar
+    border-top-color: $brand3
+
 
 h2.title
   text-align: center

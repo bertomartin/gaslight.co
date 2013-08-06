@@ -1,23 +1,23 @@
 Gaslight.Data.guideData = [
-  # Yellow Box
+  # Blue Box Left
   {
-    color: "#a7a7a7"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, top: 400, left: 200 }
       {x: 2000, y: -2000}
     ]
   }
   {
-    color: "#a7a7a7"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, top: 200, left: 400 }
       {x: 600, y: 600}
     ]
   }
   {
-    color: "#ffdd00"
+    color: "#eee"
     width: 2
     points: [
       {start: true, top: 100, left: -100 }
@@ -25,45 +25,47 @@ Gaslight.Data.guideData = [
     ]
     dot: {
       size: 20
-      fill: "#ffdd00"
-      speed: 8000
+      fill: "#57c0e8"
+      stroke: "#57c0e8"
+      speed: 10000
       easing: "<>"
     }
   }
   
-  # Red Box
+  # Yellow Box Center
   {
-    color: "#a7a7a7"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, top: 550, right: 500 }
       {x: -2000, y: -2000}
     ]
   }
   {
-    color: "#a7a7a7"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, top: 200, right: 150 }
       {x: -200, y: -200}
     ]
   }
   {
-    color: "#dadada"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, top: 200, right: 850 }
       {x: -300, y: 300}
     ]
     dot: {
       size: 10
-      fill: "#dadada"
-      speed: 6000
+      fill: "#efc703"
+      stroke: "#efc703"
+      speed: 12000
       easing: "<>"
     }
   }
   {
-    color: "#dadada"
+    color: "#eee"
     width: 2
     points: [
       {start: true, top: 250, right: 400 }
@@ -71,14 +73,15 @@ Gaslight.Data.guideData = [
     ]
     dot: {
       size: 20
-      fill: "#dadada"
+      fill: "#e53c2e"
+      stroke: "#e53c2e"
       speed: 8000
       easing: "<>"
     }
   }
-  # Red Line
+  # Grey Line
   {
-    color: "#e53c2e"
+    color: "#eee"
     width: 2
     points: [
       {start: true, top: 200, right: 150 }
@@ -86,29 +89,31 @@ Gaslight.Data.guideData = [
     ]
     dot: {
       size: 20
-      fill: "#e53c2e"
+      fill: "#000"
+      stroke: "#000"
       speed: 8000
       easing: "<>"
     }
   }
   
-  # Blue Box
+  # Red Box Bottom
   {
-    color: "#dadada"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, right: 760, bottom: 340 }
       {x: -400, y: 400}
     ]
     dot: {
       size: 20
-      fill: "#dadada"
-      speed: 8000
+      fill: "#57c0e8"
+      stroke: "#57c0e8"
+      speed: 18000
       easing: "<>"
     }
   }
   {
-    color: "#57c0e8"
+    color: "#eee"
     width: 2
     points: [
       {start: true, right: 400, bottom: -100 }
@@ -116,15 +121,16 @@ Gaslight.Data.guideData = [
     ]
     dot: {
       size: 40
-      fill: "#57c0e8"
-      speed: 5000
+      fill: "#e53c2e"
+      stroke: "#e53c2e"
+      speed: 10000
       easing: "<>"
     }
   }
   # Bottom Left
   {
-    color: "#a7a7a7"
-    width: 1
+    color: "#eee"
+    width: 2
     points: [
       {start: true, left: 0, bottom: 400 }
       {x: 420, y: 420}
@@ -133,7 +139,8 @@ Gaslight.Data.guideData = [
     ]
     dot: {
       size: 20
-      fill: "#a7a7a7"
+      fill: "#efc703"
+      stroke: "#efc703"
       speed: 12000
       easing: "<>"
     }
@@ -141,7 +148,7 @@ Gaslight.Data.guideData = [
   
   # Lets built great things
   {
-    color: "#dadada"
+    color: "#eee"
     width: 3
     points: [
       {start: true, right: 0, bottom: 300 }

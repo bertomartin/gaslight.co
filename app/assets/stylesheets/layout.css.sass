@@ -11,10 +11,11 @@ html, body
   height: 100%
 
 body
-  background: image-url('texture-bg.jpg')
+  background: #fff
+  @include background-image(radial-gradient(center center, #eee 0%, #fff 100%))
 
 ::selection
-  background: $brand2
+  background: lighten($brand2,10)
 
 ::-moz-selection
-  background: $brand2
+  background: lighten($brand2,10)

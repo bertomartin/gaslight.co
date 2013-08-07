@@ -17,6 +17,8 @@ module TrainingApp
       where(id: id.split('-').first).first
     end
 
+    delegate :title, to: :course, allow_nil: true, prefix: :course
+
     def to_s
       course.title
     end
@@ -29,7 +31,7 @@ module TrainingApp
     end
 
     def location
-      venue.city
+      (venue && venue.city) || ""
     end
 
     def full?

@@ -3,9 +3,11 @@ module TrainingApp
 
     respond_to :json, :html
 
+    expose(:workshops)
+
     def index
-      workshop = current_or_last_workshop
-      # redirect_to workshop_url(workshop) if workshop
+      featured_workshop = current_or_last_workshop
+      respond_with workshops
     end
 
     def show

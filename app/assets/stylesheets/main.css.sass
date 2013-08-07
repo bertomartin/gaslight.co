@@ -12,6 +12,67 @@
   p
     text-align: center
     font-size: 20px
+
+  %lbs
+    display: block
+    margin: auto
+    text-align: center
+
+  %lbs-link
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+
+  %lbs-link__image
+    @extend %lbs-link
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 100%
+
+  %lbs-link__overlay
+    @extend %lbs-link
+    opacity: 0.6
+
+  .lbs
+    .lbs__l
+      @extend %lbs
+    .lbs__b
+      @extend %lbs
+    .lbs__s
+      @extend %lbs
+    .lbs-link
+      width: 100%
+      height: 60px
+      position: relative
+      overflow: hidden
+      display: block
+    .lbs-link__image--l
+      @extend %lbs-link__image
+    .lbs-link__image--b
+      @extend %lbs-link__image
+    .lbs-link__image--s
+      @extend %lbs-link__image
+
+    .lbs-link__overlay--l
+      @extend %lbs-link__overlay
+      background-color: $brand1
+    .lbs-link__overlay--b
+      @extend %lbs-link__overlay
+      background-color: $brand2
+    .lbs-link__overlay--s
+      @extend %lbs-link__overlay
+      background-color: $brand3
+
+  .arrow-down
+    width: 0
+    height: 0
+    margin-top: 20px
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid $brandBase
+
   .wendell
     margin-top: 100px
   svg
@@ -107,14 +168,24 @@
     padding-top: 75px
     color: #fff
 
+  .hero--process
+    padding: 75px 0
   .hero--worktogether
     background: $brandBase
     background-image: image-url("landing/contact.jpg")
     background-repeat: no-repeat
     background-size: cover
-    height: 344px
+    height: 260px
     padding-top: 75px
     color: #fff
+    li
+      list-style: none
+      display: inline-block
+    ul
+      text-align: justify
+    .justifylist--last
+      width: 100%
+      height: 0
 
   %landingpage__sidebar
     border-top-width: 8px
@@ -134,6 +205,25 @@
     @extend %landingpage__sidebar
     border-top-color: $brand3
 
+  h4.landingpage__subheading 
+    color: $brand3
+    font-size: 18px
+    margin-top: 0
+    margin-bottom: 10px
+
+  .landingpage__heading
+    color: $brandBase
+    font-size: 18px
+    text-transform: uppercase
+    font-weight: bolder
+    margin-top: 10px
+    margin-bottom: 5px
+  .hero--process
+    p
+      color: lighten($brandBase,30)
+
+  ul.landingpage__contact
+    margin-top: 20px
 
 h2.title
   text-align: center

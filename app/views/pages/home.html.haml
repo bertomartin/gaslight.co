@@ -13,18 +13,32 @@
       .six.columns.centered
         %p Gaslight partners with you to create custom software, web apps and mobile apps. Let’s work together to create something that takes your business new places.
     .row
-      .two.columns.offset-by-three
-        %h3 Learn
-        %p We want to learn all the best news things. 
-      .two.columns
-        %h3 Build
-        %p We want to build all the best news things.
-      .two.columns.end
-        %h3 Share
-        %p We want to share all the best news things.
+      .six.column.centered.lbs
+        .row
+          .four.columns
+            .lbs__l
+              %a.lbs-link
+                .lbs-link__image--l
+                .lbs-link__overlay--l
+              %h3 Learn
+              %a{href: "http://gaslight.co/blog", rel: "Landing Page"} We want to learn all the best new things. 
+          .four.columns
+            .lbs__b
+              %a.lbs-link
+                .lbs-link__image--b
+                .lbs-link__overlay--b
+              %h3 Build
+              %a{href: "http://gaslight.co/work", rel: "Landing Page"} We want to build all the best new things. 
+          .four.columns
+            .lbs__s
+              %a.lbs-link
+                .lbs-link__image--s
+                .lbs-link__overlay--s
+              %h3 Share
+              %a{href: "http://gaslight.co/work", rel: "Landing Page"} We want to share all the best new things.
     .row
       .one.columns.centered
-        v
+        .arrow-down
 
 #main.landing--page
   %section.hero--weare
@@ -39,26 +53,25 @@
       .three.columns
         %a.button.brand1 See Who We Are
 
-  %section.row
-    .twelve.columns
-      .row
-        .three.columns.landingpage__sidebar--process
-          %h2 Our Process
-        .six.columns.end.offset-by-one
-          %h3 The igniter
-          %h4 Let’s Start This on the Right Foot
-          %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide
-      .row
-        .six.columns.offset-by-four.end
-          %h3 Team approach
-          %h4 All Project Gets a Project Guide, Pair of Developers, and a Designer
-          %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide. Aliqua.
-      .row
-        .six.columns.offset-by-four.end
-          %h3 Best in technology 
-          %h4 It’s What all the Cool Startups are Doings
-          %p We push the boundary at Gaslight and have a wide skillset for your project. We have experience in Ruby, Ruby on Rails, Backbone.js, Ember.js, Angular, user experienece, and iOS... to name a few.
-          %a.button.brand3 See Our Other Talents
+  %section.hero--process
+    .row
+      .three.columns.landingpage__sidebar--process
+        %h2 Our Process
+      .six.columns.end.offset-by-one
+        .landingpage__heading The igniter
+        %h4.landingpage__subheading  Let’s Start This on the Right Foot
+        %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide
+    .row
+      .six.columns.offset-by-four.end
+        .landingpage__heading Team approach
+        %h4.landingpage__subheading  All Projects Get a Project Guide, Developers, and a Designer
+        %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide. Aliqua.
+    .row
+      .six.columns.offset-by-four.end
+        .landingpage__heading Best in technology 
+        %h4.landingpage__subheading  It’s What all the Cool Startups are Doings
+        %p We push the boundary at Gaslight and have a wide skillset for your project. We have experience in Ruby, Ruby on Rails, Backbone.js, Ember.js, Angular, user experienece, and iOS... to name a few.
+        %a.button.brand3 See Our Other Talents
 
   %section.hero--worktogether
     .row
@@ -67,21 +80,23 @@
       .five.columns.offset-by-one
         %p Say hello, talk to us about a project, want to join our team, check out this link to get in contact with us.
       .three.columns
-        %li
-          %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"} Email
-        %li
-          %a{href: "http://twitter.com/teamgaslight", rel: "Footer Social", target: "_blank"} Twitter
-
-        %li
-          %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"} Facebook
-
-        %li
-          %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"} GitHub
+        %ul.landingpage__contact
+          %li
+            %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"}
+              %i.icon-envelope
+          %li
+            %a{href: "http://twitter.com/teamgaslight", rel: "Footer Social", target: "_blank"}
+              %i.icon-twitter
+          %li
+            %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"} 
+              %i.icon-facebook-sign
+          %li
+            %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"} 
+              %i.icon-github
+          %li.justifylist--last
 
 
   / .buttonLinks.show-for-small
   /   %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
   /   %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
   /   %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
-
-  = render partial: 'application/footer'

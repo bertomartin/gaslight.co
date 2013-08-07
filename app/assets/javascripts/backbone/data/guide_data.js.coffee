@@ -25,8 +25,8 @@ Gaslight.Data.guideData = [
     ]
     dot: {
       size: 20
-      fill: "#57c0e8"
-      stroke: "#57c0e8"
+      fill: "#efc703"
+      stroke: "#efc703"
       speed: 10000
       easing: "<>"
     }
@@ -57,11 +57,9 @@ Gaslight.Data.guideData = [
       {x: -300, y: 300}
     ]
     dot: {
-      size: 10
-      fill: "#efc703"
-      stroke: "#efc703"
-      speed: 12000
-      easing: "<>"
+      size: 2
+      fill: "#eee"
+      stroke: "#eee"
     }
   }
   {
@@ -88,11 +86,9 @@ Gaslight.Data.guideData = [
       {x: -350, y: 350}
     ]
     dot: {
-      size: 20
-      fill: "#000"
-      stroke: "#000"
-      speed: 8000
-      easing: "<>"
+      size: 5
+      fill: "#eee"
+      stroke: "#eee"
     }
   }
   
@@ -120,11 +116,9 @@ Gaslight.Data.guideData = [
       {x: -400, y: -400}
     ]
     dot: {
-      size: 40
-      fill: "#e53c2e"
-      stroke: "#e53c2e"
-      speed: 10000
-      easing: "<>"
+      size: 10
+      fill: "#eee"
+      stroke: "#eee"
     }
   }
   # Bottom Left
@@ -138,11 +132,9 @@ Gaslight.Data.guideData = [
       {x: -200, y: 200}
     ]
     dot: {
-      size: 20
-      fill: "#efc703"
-      stroke: "#efc703"
-      speed: 12000
-      easing: "<>"
+      size: 10
+      fill: "#eee"
+      stroke: "#eee"
     }
   }
   

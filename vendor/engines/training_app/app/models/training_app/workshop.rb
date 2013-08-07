@@ -22,10 +22,10 @@ module TrainingApp
     end
 
     def to_param
-      city  = venue.city.gsub(/ /,'-').downcase
-      title = course.title.gsub(/ /,'-').downcase
-      date  = start_date.strftime('%Y-%B').downcase
-      "#{id}-#{date}-#{city}-#{title}"
+      city  = venue.city.gsub(/ /,'-').downcase unless venue.nil?
+      title = course.title.gsub(/ /,'-').downcase unless course.nil?
+      date  = start_date.strftime('%Y-%B').downcase unless start_date.nil?
+      [id, date, city, title].reject(&:nil?).join('-')
     end
 
     def location

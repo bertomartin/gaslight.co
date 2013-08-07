@@ -1,0 +1,96 @@
+<div class="row">
+  <form action="#">
+    <fieldset class="seven columns centered">
+      <h2 class="purchase_form">Purchase the Course for <span>$<%= @get("amount") %>.00</span></h2>
+      <p class="purchase_intro">Fill out the form fields below and we'll take you right to your
+      content. Questions? Problems? Send us an email:
+      <a href="mailto:training@gaslight.co">training@gaslight.co</a>.</p>
+
+      <div class="row">
+        <div class="twelve column">
+          <h4>About You</h4>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" class="input-text" value="<%= @get 'name' %>">
+        </div>
+      </div>
+       <div class="row">
+        <div class="twelve column">
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" class="input-text" value="<%= @get 'email' %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve column">
+          <h4>For Your Reciept</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve column">
+          <label for="organization">Organization</label>
+          <input type="text" class="input-text" id="organization" name="organization" value="<%= @get 'organization' %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve column">
+          <label for="phone">Phone</label>
+          <input type="text" class="input-text" id="phone" value="<%= @get 'phone' %>">
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve column">
+          <h4 class="title">Credit Card</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve column">
+          <label for="card-name">Name on Card</label>
+          <input type="text" class="input-text" id="card-name" name="cardName" value="<%= @get 'cardName' %>">
+        </div>
+      </div>
+      <div class="row">
+        <% if @model.get("errors")?.base : %>
+          <div class="columns twelve">
+            <span class="errors"><%= @model.get("errors").base %></span>
+          </div>
+        <% end %>
+
+        <div class="twelve column box">
+          <label for="card-number">Card Number</label>
+          <input type="text" id="card-number" class="input-text" autocomplete="off" name="cardNumber" value="<%= @get 'cardNumber' %>"/>
+        </div>
+        <div class="twelve column box" id="box-cvc">
+          <label for="card-cvc">CVC</label>
+          <input type="text" id="card-cvc" class="input-text" autocomplete="off" name="cardCvc" value="<%= @get 'cardCvc' %>" />
+        </div>
+
+        <div class="twelve column box" id="box-expiry">
+          <div class="row">
+            <div class="four column">
+              <h4>Card Expiration</label>
+            </div>
+          </div>
+          <div class="row">
+           <div class="four column">
+              <label for="card-expiration-month">Expiration Month (MM)</label>
+
+              <input type="text" id="card-expiration-month" name="cardExpirationMonth" class="input-text six column" value="<%= @get 'cardExpirationMonth' %>" maxlength="2"/>
+            </div>
+
+            <div class="four offset-by-one column end">
+              <label for="card-expiration-year">Expiration Year (YYYY)</label>
+
+              <input type="text" id="card-expiration-year" name="cardExpirationYear" class="input-text six column" value="<%= @get 'cardExpirationYear' %>" maxlength="4"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ssl"><a href="http://www.rapidssl.com/" alt="RapidSSL encripted"></a></div>
+      <div class="row">
+        <div class="twelve column">
+          <a href="/registrations" class="button cancel">Cancel Purchase</a>
+          <input type="submit" class="button accept" value="Purchase Training">
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

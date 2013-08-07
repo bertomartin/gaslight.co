@@ -11,7 +11,7 @@ module TrainingApp
     after_create :send_confirmation
     validates_presence_of :name, :email
     validates_uniqueness_of :code
-    before_validation :generate_code, on: :create
+    before_validation :generate_code, on: :create, unless: Proc.new { |r| r.code.present? }
 
     private
 

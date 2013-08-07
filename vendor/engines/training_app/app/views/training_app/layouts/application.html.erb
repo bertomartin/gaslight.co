@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Javascript Training from Gaslight</title>
+    <%= favicon_link_tag "32x32icon.png" %>
+    <%= stylesheet_link_tag :application %>
+    <%= csrf_meta_tag %>
+    <!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="stylesheets/ie.css" media="screen"/><![endif]-->
+
+  </head>
+  <body>
+    <%= render partial: 'training_app/layouts/nav' %>
+    <div id="wrapper">
+      <!-- header -->
+      <%= yield %>
+      <div class="push"></div>
+      <div class="footer">
+        <div class="row">
+          <div class="two columns logo">
+            <a href="http://gaslight.co/"><%= image_tag('/images/white_logo.png', :class => 'footer_icon') %></a>
+          </div>
+          <div class="four columns links">
+            <a href="mailto:training@gaslight.co?Subject=Training" class="mail">Contact Us</a>
+            <a href="https://twitter.com/teamgaslight" target="_blank" id="twitter"></a>
+            <a href="https://www.facebook.com/teamgaslight" target="_blank" id="facebook"></a>
+            <a href="https://github.com/gaslight" target="_blank" id="git"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= yield(:modal) %>
+
+    <script src="//d3nslu0hdya83q.cloudfront.net/dist/1.0/raven.min.js"></script>
+    <script>
+      Raven.config("<%= ENV.fetch('SENTRY_URL') %>").install();
+    </script>
+
+    <script type="text/javascript" src="//js.stripe.com/v1/"></script>
+    <script type="text/javascript">Stripe.setPublishableKey("<%= ENV['STRIPE_PUB_KEY'] %>");</script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25957234-11']);
+      _gaq.push(['_setDomainName', 'gaslight.co']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+    </script>
+
+    <%= javascript_include_tag "vendor" %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

@@ -102,7 +102,9 @@ PATH
   remote: vendor/engines/training_app
   specs:
     training_app (0.0.1)
+      eco
       rails (~> 4.0.0)
+      stripe
 
 GEM
   remote: https://rubygems.org/
@@ -180,6 +182,11 @@ GEM
     dotenv (0.8.0)
     dotenv-rails (0.8.0)
       dotenv (= 0.8.0)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
     ejs (1.0.0)
     erubis (2.7.0)
     eventmachine (1.0.0)
@@ -328,6 +335,8 @@ GEM
     redcarpet (2.3.0)
     responders (1.0.0.rc)
       railties (>= 3.2, < 5)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (2.14.3)
     rspec-expectations (2.14.0)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -368,6 +377,9 @@ GEM
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     stringex (2.0.3)
+    stripe (1.8.4)
+      multi_json (>= 1.0.4, < 2)
+      rest-client (~> 1.4)
     thor (0.18.1)
     thread_safe (0.1.0)
       atomic

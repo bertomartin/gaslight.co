@@ -1,0 +1,72 @@
+/*---------------- TOP BANNER ----------------*/
+.banner{
+	background-image: url('/images/grey_bg.png');
+}
+.banner img{
+	width: 705px;
+	display: block;
+	margin: auto; 
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*---------------- NAV BAR ----------------*/
+.nav{
+	background: #f6f2ed;
+}
+.nav .columns{
+	padding: 0;
+}
+.nav-bar{
+	background: none;
+	margin-top: 0;
+	height: 45px;
+}
+.nav-bar li{
+	width: 20%;
+	height: 30px;
+	border: none;
+	border-left: 1px solid #aea6a6;
+	text-align: center;
+	margin-top: 7px;
+	
+}
+.nav-bar li:hover{
+	background:none;
+}
+.nav-bar > li:last-child{
+	border-right: none;
+}
+.register a{
+	width: 139px;
+	line-height: 1.6;
+	color: #e3dfd7 !important;
+	margin-top: -20px;
+	margin-bottom: -20px;
+	margin-left: -6px;
+	height: 90px;
+	padding: 0 !important;
+	padding-top: 16px !important;
+	text-shadow: 0px 5px 5px rgba(0,0,0,.21);
+	background: url('/images/reg_btn.png') no-repeat;
+	background-size: 100%;
+	/*background-position: 2px -22px;*/
+}
+
+ul{
+	margin-bottom: 0px;
+}
+.nav-bar li a{
+	font-family: "gill_sans_stdregular";
+	text-transform: uppercase;
+	color: #40403c;
+	font-size: 12px !important;
+}
+.register span{
+	font-size: 14px !important;
+}
+.nav-bar li a:hover{
+	color: #cd7e18;
+	text-decoration: underline;
+	cursor: pointer;
+}

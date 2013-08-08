@@ -47,11 +47,11 @@
           .three.columns.iconTile
             %i.icon-team-dev
             %strong
-              = workshop.course_title
+              %a{href: workshop_path(workshop)}= workshop.course_title
               %br
               = workshop.location
           .nine.columns
-            %p= workshop.course.description_main
+            = simple_format(workshop.course.description_main)
 
 = render partial: 'application/footer'
 

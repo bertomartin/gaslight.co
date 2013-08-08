@@ -8,5 +8,5 @@ TrainingApp::Engine.routes.draw do
     get :stats, on: :collection
   end
 
-  root to: 'registrations#index'
+  root to: 'courses#index'
 end

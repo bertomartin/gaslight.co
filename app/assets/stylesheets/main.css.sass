@@ -30,12 +30,16 @@
     background-position: center
     background-repeat: no-repeat
     background-size: 100%
+    background-size: cover
 
   %lbs-link__overlay
     @extend %lbs-link
-    opacity: 0.6
+    opacity: 0.9
+    &:hover
+      opacity: 1
 
   .lbs
+    margin-top: 10px
     .lbs__l
       @extend %lbs
     .lbs__b
@@ -44,14 +48,27 @@
       @extend %lbs
     .lbs-link
       width: 100%
-      height: 60px
+      height: 80px
       position: relative
       overflow: hidden
       display: block
+      h3
+        position: absolute 
+        top: 10px 
+        left: 0
+        width: 100% 
+        color: #fff
+    p
+      display: inline-block
+      color: #333
+      font-size: 14px
+      margin-top: 10px
     .lbs-link__image--l
       @extend %lbs-link__image
+      background-image: url(http://gaslight.github.io/posts/assets/images/train_rails.png)
     .lbs-link__image--b
       @extend %lbs-link__image
+      background-image: url(http://assets2.gaslight.co/assets/casestudy/lumbee_ba-4e86a7bd372b06c5753e7be943d35f2b.jpg)
     .lbs-link__image--s
       @extend %lbs-link__image
 
@@ -68,7 +85,7 @@
   .arrow-down
     width: 0
     height: 0
-    margin-top: 20px
+    margin-top: 40px
     border-left: 20px solid transparent
     border-right: 20px solid transparent
     border-top: 20px solid $brandBase
@@ -142,6 +159,9 @@
           &:hover
             color: #000
       .headline__buzzword
+        font-size: 50px
+        margin: 122px 0 0 25px
+      .headline__buzzword--casestudy
         font-size: 50px
         margin: 122px 0 0 25px
       h4

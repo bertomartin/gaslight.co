@@ -17,28 +17,28 @@
         .row
           .four.columns
             .lbs__l
-              %a.lbs-link
+              %a.lbs-link{ href: page_path('blog') }
                 .lbs-link__image--l
                 .lbs-link__overlay--l
-              %h3 Learn
-              %a{href: "http://gaslight.co/blog", rel: "Landing Page"} We want to learn all the best new things. 
+                %h3 Learn
+              %p We want to learn all the best new things. 
           .four.columns
             .lbs__b
-              %a.lbs-link
+              %a.lbs-link{ href: page_path('case-studies/lumbee') }
                 .lbs-link__image--b
                 .lbs-link__overlay--b
-              %h3 Build
-              %a{href: "http://gaslight.co/work", rel: "Landing Page"} We want to build all the best new things. 
+                %h3 Build
+              %p We want to build all the best new things. 
           .four.columns
             .lbs__s
-              %a.lbs-link
+              %a.lbs-link{ href: page_path('about') }
                 .lbs-link__image--s
                 .lbs-link__overlay--s
-              %h3 Share
-              %a{href: "http://gaslight.co/work", rel: "Landing Page"} We want to share all the best new things.
+                %h3 Share
+              %p We want to share all the best new things.
     .row
       .one.columns.centered
-        .arrow-down
+        .arrow-down.bounceInDown
 
 #main.landing--page
   %section.hero--weare

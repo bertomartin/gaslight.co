@@ -1,0 +1,26 @@
+- content_for(:title) { "JavaScript and Ruby on Rails Training from Gaslight | Cincinnati, OH" }
+= render partial: 'application/nav'
+
+#main.container.row.training
+  %header.row.brand1
+    .headline.four.columns
+      .headline__buzzword
+        = course.title
+    .intro.eight.columns
+      %h3= course.title
+      = simple_format(course.description_main)
+      %a.purchase{href: new_registration_path}
+        %img{src: image_path('training_app/cap.png'), alt: 'register now'}
+        %span Purchase the full course
+
+  %section.row.yourTeam
+    %a.anchor{name:"team"}
+    .eleven.columns.centered
+      %h2.title.brand2= course.title
+      = simple_format(course.description_main)
+
+    - course.workshops.each do |workshop|
+      %h3= workshop.location
+
+= render partial: 'application/footer'
+

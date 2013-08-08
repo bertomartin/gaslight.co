@@ -34,7 +34,7 @@
   %section.row.yourTeam
     %a.anchor{name:"team"}
     .eleven.columns.centered
-      %h2.title.brand2 Recent Workshops
+      %h2.title.brand2 Recent Courses
       %p.lead
         When you work with us, you’ll never be competing with other clients for
         our time or attention. We assign a dedicated team to every project
@@ -42,16 +42,14 @@
         in touch just about every day as they turn your ideas into a success
         story.
       %hr.divider.show-for-small
-      - workshops.each do |workshop|
+      - courses.each do |course|
         .row
           .three.columns.iconTile
             %i.icon-team-dev
             %strong
-              %a{href: workshop_path(workshop)}= workshop.course_title
-              %br
-              = workshop.location
+              %a{href: course_path(course)}= course.title
           .nine.columns
-            = simple_format(workshop.course.description_main)
+            = simple_format(course.description_main)
 
 = render partial: 'application/footer'
 

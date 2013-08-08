@@ -3,33 +3,16 @@ module TrainingApp
 
     respond_to :json, :html
 
+    expose(:current_workshop) { Workshop.current }
+    expose(:current_workshop?) { current_workshop.present? }
     expose(:workshops)
+    expose(:workshop) { Workshop.by_slug(params[:id]) }
+    expose(:featured_workshop) {  current_or_last_workshop }
 
-    def index
-      featured_workshop = current_or_last_workshop
-      respond_with workshops
-    end
-
-    def show
-      respond_with workshop
-    end
-
-    def current_workshop?
-      current_workshop.present?
-    end
-    helper_method :current_workshop?
-
-    def workshop
-      @workshop ||= Workshop.by_slug(params[:id])
-    end
-    helper_method :workshop
-
-    def current_workshop
-      @current_workshop ||= Workshop.current
-    end
+    private
 
     def current_or_last_workshop
-      current_workshop? ? current_workshop : Workshop.order('created_at desc').first
+      current_workshop || Workshop.order('created_at desc').first
     end
   end
 end

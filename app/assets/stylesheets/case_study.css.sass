@@ -1,3 +1,4 @@
+// Work Page
 
 %hero__heading
   margin-top: 0
@@ -20,12 +21,20 @@
 .hero__header
   @extend %hero__header
 
-.hero__header--animated
+.hero__featured-header--animated
   @extend %hero__header
   background-color: rgba(0,0,0,0.65)
   @include transition(all 0.5s)
   &:hover
-    padding: 155px 0
+    padding: 170px 0
+    background-color: rgba(239,199,3,0.65)
+
+.hero__header--animated
+  @extend %hero__header
+  @include transition(all 0.5s)
+  background-color: rgba(0,0,0,0.65)
+  padding: 80px 0
+  &:hover
     background-color: rgba(239,199,3,0.65)
 
 .hero__header--brand1
@@ -45,18 +54,34 @@
     padding-left: 25px
     padding-right: 25px
 
-.hero--featured
-  @extend %hero
+%case-study--featured
   height: 450px
+%case-study
+  height: 250px
+
+.case-study--lumbee
+  @extend %hero
+  @extend %case-study--featured
   background-image: image-url("casestudy/lumbee_hero.jpg")
 
-.hero--secondary
+.case-study--ipc
+  @extend %hero
+  @extend %case-study
+  background-image: image-url("casestudy/lumbee_hero.jpg")
+
+// Case Study
+
+.casestudy--ipc--first
+  @extend %hero
+  @extend %case-study--featured
+  background-image: image-url("casestudy/lumbee_hero.jpg")
+.case-study--lumbee--second
   @extend %hero
   min-height: 350px
   background-image: image-url("casestudy/lumbee_video.jpg")
   background-color: #000
 
-.hero--ba
+.case-study--lumbee--third
   @extend %hero
   min-height: 350px
   background-image: image-url("casestudy/lumbee_ba.jpg")
@@ -120,10 +145,14 @@ h4.casestudy__design-subheading
   margin-top: 40px
 
 @media only screen and (min-width : 320px) and (max-width: 767px)
-  .hero__header--brand1, .hero__header--animated
+  .hero__header--brand1, .hero__header--animated, .hero__featured-header--animated
     h1
       font-size: 36px
-  .hero--featured, .hero--secondary, .hero--ba
+      line-height: 1.2em
+  .case-study__buzzword
+    font-size: 36px
+    line-height: 1.2em
+  .case-study--lumbee, .case-study--lumbee--second, .case-study--lumbee--third
     margin-left: -25px
     margin-right: -25px
     padding: 0 5px

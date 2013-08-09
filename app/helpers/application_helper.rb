@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+  def description
+    desc = content_for?(:description) ? content_for(:description) : I18n.t('gaslight.description')
+    truncate(HTMLEntities.new.decode(desc), length: 155)
+  end
+
   def active_page_class(path)
     "active" if current_page?(path)
   end

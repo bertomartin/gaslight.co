@@ -29,3 +29,5 @@ en:
     formats:
       nice: "%B %e, %Y %l:%M%p"
 
+  gaslight:
+    description: "Gaslight, an experienced and trusted agile software development shop, offers custom Ruby on Rails, iOS, and JavaScript web and mobile application development."

@@ -86,7 +86,7 @@ class Author < SuperStruct.new(:id, :name, :first_name, :github, :tumblr, :twitt
         },
         {
           "id": 22,
-          "name": "Kevin Rocwkood",
+          "name": "Kevin Rockwood",
           "first_name": "Kevin",
           "github": "rockwood",
           "tumblr": "rockwood",

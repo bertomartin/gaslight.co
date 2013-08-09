@@ -2,7 +2,7 @@
 = render partial: 'application/nav'
 
 #main.container.row
-  %section.case-study--lumbee
+  %section.casestudy--lumbee--first
     .hero__header--brand1
       .row
         .ten.columns.offset-by-one
@@ -103,5 +103,14 @@
       %hr
       %h4 The Technology
       %p.casestudy We built this Web-based application with <a href="http://gaslight.co/about"  rel="Ruby on Rails">Ruby on Rails</a> and <a href="http://gaslight.co/about" rel="Backbone.js">Backbone.js</a>. Plus, we moved the app from a single server in the client’s ofﬁce to Heroku. This cloud-based platform allows the app to scale with business demands. It also eliminates the headaches of server maintenance.
+
+  %hr
+
+  %section.casestudy__next
+    .row
+      .eight.columns
+        %h2 Check out some of our other work.
+      .four.columns
+        %a.button.brandBase{href: page_path("case-studies/ipc"), rel: "Lumbee Case Study" } IPC Case Study &#187;
 
 = render partial: 'application/footer'

@@ -14,6 +14,7 @@ gem 'pg'
 gem 'decent_exposure'
 gem 'stringex'
 gem 'asset_sync'
+gem 'htmlentities'
 gem 'rack-cors', :require => 'rack/cors'
 
 gem 'redcarpet', require: false

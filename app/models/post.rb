@@ -1,4 +1,7 @@
+require 'htmlentities'
+
 class Post < ActiveRecord::Base
+  include ActionView::Helpers::SanitizeHelper
 
   has_many :old_slugs
 
@@ -128,6 +131,11 @@ class Post < ActiveRecord::Base
     persisted? && published_at && published_at <= Time.now
   end
 
+  def generated_description
+    desc = description || generate_description
+    HTMLEntities.new.decode(desc)
+  end
+
   private
 
   def update_html
@@ -139,6 +147,10 @@ class Post < ActiveRecord::Base
     if self.slug_changed?
       self.old_slugs.build(old_slug: self.slug_was, new_slug: self.slug)
     end
+  end
+
+  def generate_description
+    strip_tags(html)
   end
 end
 

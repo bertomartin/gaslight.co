@@ -99,6 +99,35 @@ describe Post do
     end
   end
 
+  describe '#generated_description' do
+    let(:dirty) { "On the flipside, you don&#39;t need to be one of those des/dev demi-gods to work with developers." }
+    let(:clean) { "On the flipside, you don't need to be one of those des/dev demi-gods to work with developers." }
+
+    it 'is empty by default' do
+      subject.generated_description.should be_blank
+    end
+
+    context 'when set' do
+      before { subject.description = dirty }
+
+      it 'decodes any HTML entities present' do
+        subject.generated_description.should eq(clean)
+      end
+    end
+
+    context 'when missing' do
+      before { subject.html = "<p>#{dirty}</p>" }
+
+      it 'generates a description from the HTML' do
+        subject.generated_description.should eq(clean)
+      end
+
+      it 'decodes any HTML entities present' do
+        subject.generated_description.should eq(clean)
+      end
+    end
+  end
+
   describe 'class methods' do
     # TODO: do a bunch of crazy setup and testing
 

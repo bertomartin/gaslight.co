@@ -2,25 +2,55 @@
 = render partial: 'application/nav'
 
 #main.container.row.training
-  %header.row.brand1
-    .headline.four.columns
-      .headline__buzzword
-        = course.title
-    .intro.eight.columns
-      %h3= course.title
-      = simple_format(course.description_main)
-      %a.purchase{href: new_registration_path}
-        %img{src: image_path('training_app/cap.png'), alt: 'register now'}
-        %span Purchase the full course
-
-  %section.row.yourTeam
-    %a.anchor{name:"team"}
-    .eleven.columns.centered
-      %h2.title.brand2= course.title
+  .columns.eight
+    .course
+      %h1= course.title
       = simple_format(course.description_main)
 
-    - course.workshops.each do |workshop|
-      %h3= workshop.location
+    %h2 What should I know before the course?
+    %ul
+      %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
+      %li How to drive a car
+      %li The unladen swallow joke from Monty Python
+
+    %ul
+      %li A laptop
+      %li A working Ruby installation
+
+  
+
+
+
+  .columns.three.prepend-1.sidebar
+    - if course.workshops.upcoming
+      - course.workshops.upcoming.each do |workshop|
+        .workshop
+          %h4
+            = workshop.location
+            %span= number_to_currency(workshop.early_bird_price, precision: 0)
+          %p We're doing a one day workshop in Cincinnati. Come learn with everyone.
+          %button.small.radius.success.button.brand1 Register Now!
+    %p We can bring this workshop to your location private training as well.
+    %a.small.radius.success.button{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
+   
+    .trainer
+      %h5 Chris Nelson
+      %img{src: "http://assets3.gaslight.co/assets/team/chris_n-d6703c32e47a8d176aa1db61f3cc9d4c.jpg"}
+      %p Chris Nelson is a software developer who hails from the fair city of Cincinnati, Ohio. He has been developing web applications for 15 years and is passionate about finding better ways to do it. 
+
+
+    .trainer
+      %h5 Kevin Rockwood
+      %img{src: "http://assets3.gaslight.co/assets/team/kevin-5595fd1c0109cfee31bf51d22af20ad1.jpg"}
+      %p Kevin is from the cold north and loves fancy things, like pianos. Kevin is from the cold north and loves fancy things, like pianos. Kevin is from the cold north and loves fancy things, like pianos. 
+
+    .testimonial
+      %h5 Testimonials
+      %p “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)" 
+    
+
+      
+
 
 = render partial: 'application/footer'
 

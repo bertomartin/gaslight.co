@@ -1,0 +1,83 @@
+// Ask Kevin
+
+#main.container.row.training {
+  padding: 100px 10px 100px 30px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+li {
+  font-size: 18px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+.sidebar_text{
+  font-size: 12px;
+}
+
+.workshop {
+  h3 {
+    color: #999;
+  }
+}
+
+.description_main {
+  padding-bottom: 20px;
+}
+
+.button {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+
+%sidebar__block {
+  img {
+    width: 100%;
+  }
+  h5 {
+    @extend .brand2;
+  }
+  p {
+    border: 1px solid #eee;
+    border-top: none;
+    padding: .5em;
+    font-size: 12px;
+  }
+}
+
+.trainer, .testimonial {
+  @extend %sidebar__block;
+}
+
+
+.course {
+  h1 { // title
+
+  }
+  img { // image
+    max-width: 40%;
+    float: right;
+  }
+}

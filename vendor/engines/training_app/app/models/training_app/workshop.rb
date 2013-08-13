@@ -4,8 +4,16 @@ module TrainingApp
     has_many :registrations
     belongs_to :venue
 
+    def self.upcoming
+      where('training_app_workshops.start_date >= ?', Date.today)
+    end
+
+    def self.past
+      where('training_app_workshops.start_date <= ?', Date.today)
+    end
+
     def self.current
-      where('training_app_workshops.end_date >= ?', Date.today).first
+      upcoming.first
     end
 
     def self.other_than(workshop)
@@ -31,7 +39,11 @@ module TrainingApp
     end
 
     def location
-      (venue && venue.city) || ""
+      city || ""
+    end
+
+    def city
+      (venue && venue.city) && venue.city.split(',').first || ""
     end
 
     def full?

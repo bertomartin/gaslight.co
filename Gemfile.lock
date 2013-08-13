@@ -10,12 +10,14 @@ GIT
 
 GIT
   remote: git://github.com/gaslight/engagement.git
-  revision: 8ebba37bbad854a222806c395d30ff203afd41b9
+  revision: de1d7f0efa1c7cc04bd2f57964783cfcb232f54b
+  ref: de1d7f0
   specs:
-    engagement (0.0.1)
+    engagement (1.0.0)
       disqus
       hacker_news_search (~> 0.0.6)
       snoo
+      twitter
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
@@ -204,7 +206,7 @@ GEM
       railties (>= 3.2, < 5.0)
     formatador (0.2.4)
     fssm (0.2.9)
-    hacker_news_search (0.0.6)
+    hacker_news_search (0.0.7)
       faraday (~> 0.8.4)
       faraday_middleware (~> 0.8.4)
       hashie (~> 1.2.0)
@@ -258,7 +260,7 @@ GEM
       compass (>= 0.11.5)
       sassy-math (>= 1.2)
     multi_json (1.7.7)
-    multi_xml (0.5.4)
+    multi_xml (0.5.5)
     multipart-post (1.2.0)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
@@ -345,6 +347,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip
       websocket (~> 1.0.4)
+    simple_oauth (0.2.0)
     slop (3.4.5)
     snoo (0.1.2)
       httparty
@@ -367,6 +370,10 @@ GEM
     treetop (1.4.14)
       polyglot
       polyglot (>= 0.3.1)
+    twitter (4.8.1)
+      faraday (~> 0.8, < 0.10)
+      multi_json (~> 1.0)
+      simple_oauth (~> 0.2)
     tzinfo (0.3.37)
     uglifier (2.1.2)
       execjs (>= 0.3.0)

@@ -33,7 +33,8 @@ class PostCommentCounter
     [post.url, post.legacy_url].compact.each do |url|
       count += @counter.comments_count(url)
       # reddit has a limit of 30 requests per minute
-      sleep 2
+      # twitter has a limit of 180 requests per 15 minutes (12 per minute)
+      sleep 5
     end
 
     count
@@ -41,7 +42,7 @@ class PostCommentCounter
 
   private
 
-  def twitter_credentials
+  def self.twitter_credentials
     {
       consumer_key: ENV['TWITTER_CONSUMER_KEY'],
       consumer_secret: ENV['TWITTER_CONSUMER_SECRET'],
@@ -50,7 +51,7 @@ class PostCommentCounter
     }
   end
 
-  def twitter_credentials_present?
+  def self.twitter_credentials_present?
     twitter_credentials[:consumer_key] &&
     twitter_credentials[:consumer_secret] &&
     twitter_credentials[:oauth_token] &&

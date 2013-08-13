@@ -6,7 +6,6 @@ module TrainingApp
 
     has_and_belongs_to_many :trainers
     has_many :workshops
-    belongs_to :venue
 
     validate :start_date, :uniqueness => { :scope => :venue_id }, 
         :message => "One course at a time per venue, please."

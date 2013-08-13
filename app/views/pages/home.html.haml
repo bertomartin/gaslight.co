@@ -5,19 +5,128 @@
 = render partial: 'application/nav'
 
 #guides
+  %section
+    .row
+      .ten.columns.centered
+        %h1.landingpage__tagline We build web apps that build businesses.
+    .row
+      .six.columns.centered
+        %p
+          Gaslight partners with you to create custom web-based software or
+          improve your existing software. We also lead in-person and online
+          training sessions on the latest technology for development teams. All
+          with a focus on business results.
+    .row
+      .ten.columns.centered
+        %h3 Let’s work together to take your business new places:
+    .row
+      .seven.column.centered.lbs.hide-for-small
+        .row
+          .four.columns
+            .lbs__l
+              %a.lbs-link{href: post_path('kanban-smackdown-part-1')}
+                .lbs-link__image--l
+                .lbs-link__overlay--l
+                %h3 Learn
+              %p
+                We’re always learning. 
+                %a{href: post_path('kanban-smackdown-part-1')} Hear about our explorations with the Kanban process on the Gaslight podcast.
+          .four.columns
+            .lbs__b
+              %a.lbs-link{href: page_path('case-studies/lumbee')}
+                .lbs-link__image--b
+                .lbs-link__overlay--b
+                %h3 Build
+              %p
+                %a{href: page_path('case-studies/lumbee')} See how we overhauled Lumbee Enterprises’ software
+                to improve productivity, profits and client relationships.
+          .four.columns
+            .lbs__s
+              %a.lbs-link{ href: page_path('about') }
+                .lbs-link__image--s
+                .lbs-link__overlay--s
+                %h3 Share
+              %p
+                Want to #{link_to('learn Backbone or Ember', 'https://training.gaslight.co/')}?
+                We’re sharing the strengths and weaknesses of each framework
+                along with code examples in our online training classes.
+    .row
+      .one.columns.centered
+        .arrow-down
 
-  %img.logo{src: image_path("logoLarge.png")}
+#main.landing-page
+  %section.hero--weare
+    .row
+      .three.columns.landing-page__sidebar--about
+        %h2 We Are
+      .eight.columns.offset-by-one
+        %p.lead
+          We are a group of developers, designers and project guides passionate
+          about building things. We want to solve hard problems and add the
+          kind of value that makes your business more competitive and
+          profitable. We want to be a trusted partner, not just a service
+          provider.
+          %a{href: '/about'} Learn more about how we partner with clients. 
+    .row
+      .five.columns.offset-by-four
+        %p
+          %a{href: post_path('with-purpose')} Find out how Gaslight started.
+      .three.columns
+        %a.button.brand1{href: '/about'} See Who We Are
 
-  .intro
-    %h1.hide-for-small Hi, We're Gaslight
-    %p.hide-for-small As a design and development shop, we're passionate about building your best ideas. We partner with you to create custom software, web apps and mobile apps. Let’s work together to create something that takes your business new places.
+  %section.hero--process
+    .row
+      .three.columns.landing-page__sidebar--process
+        %h2 Our Process
+      .six.columns.end.offset-by-one
+        .landing-page__heading The igniter
+        %h4.landing-page__subheading Turning big ideas into successful projects
+        %p
+          You have a great idea. But throwing developers at a project doesn’t
+          always get it off on the right foot. Every vision needs an actionable
+          plan to become reality. 
+          %a{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas. 
+    .row
+      .six.columns.offset-by-four.end
+        .landing-page__heading Team approach
+        %h4.landing-page__subheading Becoming part of your team
+        %p
+          Need a dedicated team to work on your project? We have one. We love
+          partnering with business owners and key stakeholders. During a
+          project, you can expect to hear from us nearly everyday.
+          %a{href: '/about'} Find out more about how we partner with clients.
+    .row
+      .six.columns.offset-by-four.end
+        .landing-page__heading Best in technology 
+        %h4.landing-page__subheading Bringing start-up technology to established businesses
+        %p
+          We’re constantly trying out the latest technology so you don’t have
+          to. Then we put the best solutions to work for our clients. Discover
+          the technology we’re using right now and how it can make your
+          business better.
 
-    %p.lead.show-for-small <strong>Hi, we're Gaslight.</strong> <br/> We create web and mobile apps for your business.
-    %a.button.brand3.hide-for-small{href: page_path("contact"), rel: "Homepage Lets Talk button" } Let's Talk
+  %section.hero--worktogether
+    .row
+      .three.columns.landing-page__sidebar--contact
+        %h2 Let's Keep in Touch
+      .five.columns.offset-by-one
+        %p
+          Sign-up for our email newsletter to receive monthly tech tips, news and events:
+          = render partial: 'application/newsletter'
+      .three.columns
+        %p Start a conversation with us:
+        %ul.landing-page__contact
+          %li
+            %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"}
+              %i.icon-envelope
+          %li
+            %a{href: "http://twitter.com/teamgaslight", rel: "Footer Social", target: "_blank"}
+              %i.icon-twitter
+          %li
+            %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"} 
+              %i.icon-facebook-sign
+          %li
+            %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"} 
+              %i.icon-github
+          %li.justifylist--last
 
-  .buttonLinks.show-for-small
-    %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
-    %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
-    %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
-
-  %h2 Let’s Build<br/> Great Things

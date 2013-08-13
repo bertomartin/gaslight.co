@@ -1,13 +1,24 @@
 #footer
-  background: #222
-  @include background-image(radial-gradient(center center, #333 0%, #1a1a1a 100%))
+  background: #000
   @include clearfix()
-  padding: 20px 0
+  padding-top: 10px
   text-align: center
+  color: #fff
+  a
+    color: #ccc
+    font-weight: bold
+    &:hover
+      color: $brand1
+      font-weight: bold
+      @include transition-duration(0.5s)
   ul.socialLinks
     display: inline-block
     margin-left: 0px
-    li
-      background: transparent
-      .brand1
-        margin: 0px
+    li a
+      border: none
+      font-size: 14px
+  .footer__contact
+    p
+      font-size: 14px
+      font-weight: bold
+      margin-bottom: 0

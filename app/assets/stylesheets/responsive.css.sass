@@ -16,7 +16,7 @@
         float: none
         width: 40px
         vertical-align: top
-        margin-top: 6px
+        margin-top: 12px
       .name
         display: none
     ul.links > li a
@@ -29,6 +29,7 @@
       font-size: 24px
 
   #guides
+    min-height: 25%
     .intro
       max-width: 100%
       position: relative
@@ -37,7 +38,15 @@
       .lead
         text-align: left
         margin-bottom: 0
-
+    .landing-page__tagline
+      padding-top: 65px
+      font-size: 225%
+      text-align: left
+    p
+      text-align: left
+    .arrow-down
+      margin-top: 10px
+      margin-bottom: 15px
     .logo
       display: none
     h2
@@ -78,7 +87,18 @@
     &.brand3
       &:before, &:after
         @include icon-sprite(diamond-small-red)
-  
+  #main.landing-page
+    .hero--weare, .hero--worktogether
+      padding: 20px 0
+      background-color: $brandBase
+      background-image: none
+      height: 100%
+      .button
+        width: 100%
+    .hero--process
+      padding: 20px 0
+      .button
+        width: 100%
   #main 
     padding: 75px 25px
     > header
@@ -112,21 +132,9 @@
     height: 100%
     margin-bottom: 25px
 
-  .socialLinks
-    .madeincincy
-      margin-top: 10px
-      float: none
-      padding: 0px 11px
-      a
-        width: 90%
-        padding: 5px 15px
-        margin: 0px
+  .footer__contact
+    margin-bottom: 5px
 
-@media only screen and (max-width: 767px) and (orientation: landscape)
-  .socialLinks
-    .madeincincy
-      a
-        width: 70%
 
 //iPad and down
 @media only screen and (max-width : 1024px)

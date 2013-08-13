@@ -1,20 +1,23 @@
+.top-bar
+  height: 58px 
+
 #nav
   position: fixed
   top: 0
   z-index: 100
-  // @include transition(height 0.5s ease)
   .brand
     float: left
     img, a
       float: left
     img
-      margin: 8px 12px 0 0
+      margin: 14px 5px 0 0
     .name
       color: #fff
-      font-size: 19px
+      font-size: 25px
       font-weight: bold
       margin-top: 3px
       text-transform: uppercase
+      letter-spacing: 1.5px
       &:hover
         color: darken($topBarLinkColor, 15%)
         
@@ -25,7 +28,7 @@
     font-weight: $topBarLinkWeight
     padding: 0 $topBarHeight / 3
     height: $topBarHeight - 10px
-    line-height: $topBarHeight - 10px
+    line-height: $topBarHeight - 20px
     border-top: 10px solid transparent
     &.active
       @include brandColors(border-color)
@@ -34,7 +37,7 @@
     display: none
     position: absolute
     top: 0
-    margin: 10px
+    margin: 18px
     &.toggle
       left: 0
     &.mail

@@ -8,34 +8,48 @@
   %section
     .row
       .ten.columns.centered
-        %h1.landingpage__tagline We build apps that build businesses.
+        %h1.landingpage__tagline We build web apps that build businesses.
     .row
       .six.columns.centered
-        %p Gaslight partners with you to create custom software, web apps and mobile apps. Let’s work together to create something that takes your business new places.
+        %p
+          Gaslight partners with you to create custom web-based software or
+          improve your existing software. We also lead in-person and online
+          training sessions on the latest technology for development teams. All
+          with a focus on business results.
     .row
-      .six.column.centered.lbs.hide-for-small
+      .ten.columns.centered
+        %h3 Let’s work together to take your business new places:
+    .row
+      .seven.column.centered.lbs.hide-for-small
         .row
           .four.columns
             .lbs__l
-              %a.lbs-link{ href: page_path('blog') }
+              %a.lbs-link{href: post_path('kanban-smackdown-part-1')}
                 .lbs-link__image--l
                 .lbs-link__overlay--l
                 %h3 Learn
-              %p We want to learn all the best new things. 
+              %p
+                We’re always learning. 
+                %a{href: post_path('kanban-smackdown-part-1')} Hear about our explorations with the Kanban process on the Gaslight podcast.
           .four.columns
             .lbs__b
-              %a.lbs-link{ href: page_path('case-studies/lumbee') }
+              %a.lbs-link{href: page_path('case-studies/lumbee')}
                 .lbs-link__image--b
                 .lbs-link__overlay--b
                 %h3 Build
-              %p We want to build all the best new things. 
+              %p
+                %a{href: page_path('case-studies/lumbee')} See how we overhauled Lumbee Enterprises’ software
+                to improve productivity, profits and client relationships.
           .four.columns
             .lbs__s
               %a.lbs-link{ href: page_path('about') }
                 .lbs-link__image--s
                 .lbs-link__overlay--s
                 %h3 Share
-              %p We want to share all the best new things.
+              %p
+                Want to #{link_to('learn Backbone or Ember', 'https://training.gaslight.co/')}?
+                We’re sharing the strengths and weaknesses of each framework
+                along with code examples in our online training classes.
     .row
       .one.columns.centered
         .arrow-down
@@ -46,12 +60,19 @@
       .three.columns.landing-page__sidebar--about
         %h2 We Are
       .eight.columns.offset-by-one
-        %p.lead Aliqua fixie occupy helvetica ea, magna disrupt consectetur nihil Qui quis blog Marfa vegan. IPhone bespoke mumblecore hashtag 8-bit. Aliqua fixie occupy helvetica ea, magna disrupt consectetur nihil. Qui quis blog Marfa vegan.
+        %p.lead
+          We are a group of developers, designers and project guides passionate
+          about building things. We want to solve hard problems and add the
+          kind of value that makes your business more competitive and
+          profitable. We want to be a trusted partner, not just a service
+          provider.
+          %a{href: '/about'} Learn more about how we partner with clients. 
     .row
       .five.columns.offset-by-four
-        %p Aliqua fixie occupy helvetica ea, magna disrupt sectetur nihil. Qui quis blog Marfa vegan. IPhone bespoke mumblecore hashtag 8-bit.
+        %p
+          %a{href: post_path('with-purpose')} Find out how Gaslight started.
       .three.columns
-        %a.button.brand1 See Who We Are
+        %a.button.brand1{href: '/about'} See Who We Are
 
   %section.hero--process
     .row
@@ -59,27 +80,41 @@
         %h2 Our Process
       .six.columns.end.offset-by-one
         .landing-page__heading The igniter
-        %h4.landingpage__subheading  Let’s Start This on the Right Foot
-        %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide
+        %h4.landing-page__subheading Turning big ideas into successful projects
+        %p
+          You have a great idea. But throwing developers at a project doesn’t
+          always get it off on the right foot. Every vision needs an actionable
+          plan to become reality. 
+          %a{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas. 
     .row
       .six.columns.offset-by-four.end
         .landing-page__heading Team approach
-        %h4.landing-page__subheading  All Projects Get a Project Guide, Developers, and a Designer
-        %p We like to work with people who are directly invested in the business and will see an immediate result from the work we provide. Aliqua.
+        %h4.landing-page__subheading Becoming part of your team
+        %p
+          Need a dedicated team to work on your project? We have one. We love
+          partnering with business owners and key stakeholders. During a
+          project, you can expect to hear from us nearly everyday.
+          %a{href: '/about'} Find out more about how we partner with clients.
     .row
       .six.columns.offset-by-four.end
         .landing-page__heading Best in technology 
-        %h4.landing-page__subheading  It’s What all the Cool Startups are Doings
-        %p We push the boundary at Gaslight and have a wide skillset for your project. We have experience in Ruby, Ruby on Rails, Backbone.js, Ember.js, Angular, user experienece, and iOS... to name a few.
-        %a.button.brand3 See Our Other Talents
+        %h4.landing-page__subheading Bringing start-up technology to established businesses
+        %p
+          We’re constantly trying out the latest technology so you don’t have
+          to. Then we put the best solutions to work for our clients. Discover
+          the technology we’re using right now and how it can make your
+          business better.
 
   %section.hero--worktogether
     .row
       .three.columns.landing-page__sidebar--contact
-        %h2 Let's Work Together
+        %h2 Let's Keep in Touch
       .five.columns.offset-by-one
-        %p Say hello, talk to us about a project, want to join our team, check out this link to get in contact with us.
+        %p
+          Sign-up for our email newsletter to receive monthly tech tips, news and events:
+          = render partial: 'application/newsletter'
       .three.columns
+        %p Start a conversation with us:
         %ul.landing-page__contact
           %li
             %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"}
@@ -95,8 +130,3 @@
               %i.icon-github
           %li.justifylist--last
 
-
-  / .buttonLinks.show-for-small
-  /   %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
-  /   %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
-  /   %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact

@@ -13,6 +13,9 @@
     text-align: center
     font-size: 20px
 
+  h3
+    text-align: center
+
   %lbs
     display: block
     margin: auto
@@ -68,7 +71,7 @@
       background-image: url(http://gaslight.github.io/posts/assets/images/train_rails.png)
     .lbs-link__image--b
       @extend %lbs-link__image
-      background-image: url(http://assets2.gaslight.co/assets/casestudy/lumbee_ba-4e86a7bd372b06c5753e7be943d35f2b.jpg)
+      background-image: image-url("casestudy/lumbee_hero.jpg")
     .lbs-link__image--s
       @extend %lbs-link__image
 
@@ -85,8 +88,7 @@
   .arrow-down
     width: 0
     height: 0
-    margin: auto
-    margin-top: 40px
+    margin: 20px auto
     border-left: 20px solid transparent
     border-right: 20px solid transparent
     border-top: 20px solid $brandBase
@@ -211,7 +213,7 @@
     background-image: image-url("landing/contact.jpg")
     background-repeat: no-repeat
     background-size: cover
-    height: 260px
+    min-height: 260px
     padding-top: 75px
     color: #fff
     li

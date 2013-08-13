@@ -16,6 +16,10 @@ class PostCommentCounter
       sources << Engagement::CommentCounter::Disqus.new(disqus_forum_api_key)
     end
 
+    if (twitter_credentials_present?)
+      sources << Engagement::CommentCounter::Twitter.new(twitter_credentials)
+    end
+
     Engagement::CommentCounter::Threaded.new(sources)
   end
 
@@ -33,6 +37,24 @@ class PostCommentCounter
     end
 
     count
+  end
+
+  private
+
+  def twitter_credentials
+    {
+      consumer_key: ENV['TWITTER_CONSUMER_KEY'],
+      consumer_secret: ENV['TWITTER_CONSUMER_SECRET'],
+      oauth_token: ENV['TWITTER_OAUTH_TOKEN'],
+      oauth_token_secret: ENV['TWITTER_OAUTH_TOKEN_SECRET'],
+    }
+  end
+
+  def twitter_credentials_present?
+    twitter_credentials[:consumer_key] &&
+    twitter_credentials[:consumer_secret] &&
+    twitter_credentials[:oauth_token] &&
+    twitter_credentials[:oauth_token_secret]
   end
 
 end

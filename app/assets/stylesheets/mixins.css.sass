@@ -5,3 +5,8 @@
     $color: nth($brands, $i)
     &.brand#{$i}
       #{$property}: lighten($color, $lighten)
+
+@mixin opaqueBackground($color, $lighten: 0.9)
+  background: rgba(red($color), green($color), blue($color), $lighten)
+  &:hover
+    background: rgba(red($color), green($color), blue($color), 1)

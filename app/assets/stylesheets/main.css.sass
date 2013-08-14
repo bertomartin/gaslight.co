@@ -71,21 +71,15 @@
 
 .action-tile__heading--brand1
   @extend %action-tile__heading
-  background: rgba(red($brand1), green($brand1), blue($brand1), 0.9)
-  &:hover
-    background: rgba(red($brand1), green($brand1), blue($brand1), 1)
+  +opaqueBackground($brand1)
 
 .action-tile__heading--brand2
   @extend %action-tile__heading
-  background: rgba(red($brand2), green($brand2), blue($brand2), 0.9)
-  &:hover
-    background: rgba(red($brand2), green($brand2), blue($brand2), 1)
+  +opaqueBackground($brand2)
 
 .action-tile__heading--brand3
   @extend %action-tile__heading
-  background: rgba(red($brand3), green($brand3), blue($brand3), 0.9)
-  &:hover
-    background: rgba(red($brand3), green($brand3), blue($brand3), 1)
+  +opaqueBackground($brand3)
 
 #main
   background: #fff

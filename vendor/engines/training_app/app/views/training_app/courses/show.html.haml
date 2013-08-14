@@ -22,15 +22,16 @@
 
 
   .columns.three.prepend-1.sidebar
-    - if course.workshops.upcoming
-      - course.workshops.upcoming.each do |workshop|
-        .workshop
-          %h4
-            = workshop.location
-            %span= number_to_currency(workshop.early_bird_price, precision: 0)
-          %p We're doing a one day workshop in Cincinnati. Come learn with everyone.
-          %button.small.radius.success.button.brand1 Register Now!
-    %p We can bring this workshop to your location private training as well.
+    .action_container
+      - if course.workshops.upcoming
+        - course.workshops.upcoming.each do |workshop|
+          .workshop
+            %h4
+              = workshop.location
+              %span= number_to_currency(workshop.early_bird_price, precision: 0)
+            %p We're doing a one day workshop in Cincinnati. Come learn with everyone.
+            %button.small.radius.success.button.brand1 Register Now!
+    %p We can bring this workshop to your location for private training as well.
     %a.small.radius.success.button{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
    
     .trainer

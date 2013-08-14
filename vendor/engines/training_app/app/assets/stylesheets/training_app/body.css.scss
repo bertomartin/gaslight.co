@@ -1,7 +1,7 @@
 // Ask Kevin
 
 #main.container.row.training {
-  padding: 100px 10px 100px 30px;
+  padding: 100px 0px 100px 30px;
 }
 
 h1 {
@@ -46,10 +46,16 @@ ul {
   padding-bottom: 20px;
 }
 
+.action_container {
+  border: 1px solid #eee;
+  background-color: #f5f3f3;
+  padding: .5em;
+  margin-bottom: 20px;
+}
+
 .button {
   width: 100%;
-  margin-top: 5px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 %sidebar__block {
@@ -57,7 +63,7 @@ ul {
     width: 100%;
   }
   h5 {
-    @extend .brand2;
+    @extend .brand3;
   }
   p {
     border: 1px solid #eee;
@@ -69,6 +75,7 @@ ul {
 
 .trainer, .testimonial {
   @extend %sidebar__block;
+  margin-top: 5px;
 }
 
 

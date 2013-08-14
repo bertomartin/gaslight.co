@@ -9,24 +9,6 @@
         %br
         %span Do Great Things
     .intro.eight.columns
-      %h3 Backbone and Ember
-      %p
-        Picking a client side MVC framework isn't easy, and seeing a trivial
-        Todo app just doesn't show how much these frameworks bring to the
-        table. In this workshop, we'll dive into two popular frameworks:
-        #{link_to('Backbone.js', 'http://backbonejs.org/')} and
-        #{link_to('Ember', 'http://emberjs.com/')}.
-      %p
-        We'll cover the features of each framework and dig in with code
-        examples and labs that give you a solid understanding of the strengths
-        and weaknesses of each. After completing this workshop, you should be
-        armed to the teeth with the knowledge you need to pick the best
-        framework for your next rich client web app.
-      %p
-        About us: We're Gaslight. We build web and mobile apps in Cincinnati,
-        Ohio. We're available for consulting and training. You can find more
-        about us at #{link_to('http://gaslight.co')} or by emailing us at
-        #{mail_to('hello@gaslight.co')}.
       %a.purchase{href: new_registration_path}
         %img{src: image_path('training_app/cap.png'), alt: 'register now'}
         %span Purchase the full course
@@ -50,6 +32,13 @@
               %a{href: course_path(course)}= course.title
           .nine.columns
             = simple_format(course.description_main)
-
+  %section.row.testimonials
+    %a.anchor{name:"team"}
+    .eleven.columns.centered
+      %h2.title.brand2 What are people saying?
+  %section.row.testimonials
+    %a.anchor{name:"team"}
+    .eleven.columns.centered
+      %h2.title.brand2 Past Workshops
 = render partial: 'application/footer'
 

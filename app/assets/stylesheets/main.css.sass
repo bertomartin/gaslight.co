@@ -5,6 +5,7 @@
   min-height: 100%
   background: #fff
   @include background-image(radial-gradient(center center, #eee 0%, #fff 100%))
+
   .landingpage__tagline
     padding-top: 200px
     text-align: center
@@ -16,40 +17,40 @@
   h3
     text-align: center
 
-  %lbs
+  %action-tile
     display: block
     margin: auto
     text-align: center
 
-  %lbs-link
+  %action-tile-link
     position: absolute
     width: 100%
     height: 100%
     top: 0
     left: 0
 
-  %lbs-link__image
-    @extend %lbs-link
+  %action-tile-link__image
+    @extend %action-tile-link
     background-position: center
     background-repeat: no-repeat
     background-size: 100%
     background-size: cover
 
-  %lbs-link__overlay
-    @extend %lbs-link
+  %action-tile-link__overlay
+    @extend %action-tile-link
     opacity: 0.9
     &:hover
       opacity: 1
 
-  .lbs
+  .action-tile
     margin-top: 10px
-    .lbs__l
-      @extend %lbs
-    .lbs__b
-      @extend %lbs
-    .lbs__s
-      @extend %lbs
-    .lbs-link
+    .action-tile__first
+      @extend %action-tile
+    .action-tile__second
+      @extend %action-tile
+    .action-tile__third
+      @extend %action-tile
+    .action-tile-link
       width: 100%
       height: 80px
       position: relative
@@ -66,23 +67,23 @@
       color: #333
       font-size: 14px
       margin-top: 10px
-    .lbs-link__image--l
-      @extend %lbs-link__image
+    .action-tile-link__image--first
+      @extend %action-tile-link__image
       background-image: image-url("landing/train_rails.png")
-    .lbs-link__image--b
-      @extend %lbs-link__image
+    .action-tile-link__image--second
+      @extend %action-tile-link__image
       background-image: image-url("casestudy/lumbee_hero.jpg")
-    .lbs-link__image--s
-      @extend %lbs-link__image
+    .action-tile-link__image--third
+      @extend %action-tile-link__image
 
-    .lbs-link__overlay--l
-      @extend %lbs-link__overlay
+    .action-tile-link__overlay--first
+      @extend %action-tile-link__overlay
       background-color: $brand1
-    .lbs-link__overlay--b
-      @extend %lbs-link__overlay
+    .action-tile-link__overlay--second
+      @extend %action-tile-link__overlay
       background-color: $brand2
-    .lbs-link__overlay--s
-      @extend %lbs-link__overlay
+    .action-tile-link__overlay--third
+      @extend %action-tile-link__overlay
       background-color: $brand3
 
   .intro

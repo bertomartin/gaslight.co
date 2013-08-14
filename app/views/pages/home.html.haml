@@ -19,31 +19,31 @@
     .ten.columns.centered
       %h3 Let’s work together to take your business new places:
   .row
-    .seven.column.centered.lbs.hide-for-small
+    .seven.column.centered.action-tile.hide-for-small
       .row
         .four.columns
-          .lbs__l
-            %a.lbs-link{href: post_path('kanban-smackdown-part-1')}
-              .lbs-link__image--l
-              .lbs-link__overlay--l
+          .action-tile__first
+            %a.action-tile-link{href: post_path('kanban-smackdown-part-1')}
+              .action-tile-link__image--first
+              .action-tile-link__overlay--first
               %h3 Learn
             %p
               We’re always learning.
               %a{href: post_path('kanban-smackdown-part-1')} Hear about our explorations with the Kanban process on the Gaslight podcast.
         .four.columns
-          .lbs__b
-            %a.lbs-link{href: page_path('case-studies/lumbee')}
-              .lbs-link__image--b
-              .lbs-link__overlay--b
+          .action-tile__second
+            %a.action-tile-link{href: page_path('case-studies/lumbee')}
+              .action-tile-link__image--second
+              .action-tile-link__overlay--second
               %h3 Build
             %p
               %a{href: page_path('case-studies/lumbee')} See how we overhauled Lumbee Enterprises’ software
               to improve productivity, profits and client relationships.
         .four.columns
-          .lbs__s
-            %a.lbs-link{ href: page_path('about') }
-              .lbs-link__image--s
-              .lbs-link__overlay--s
+          .action-tile__third
+            %a.action-tile-link{ href: page_path('about') }
+              .action-tile-link__image--third
+              .action-tile-link__overlay--third
               %h3 Share
             %p
               Want to #{link_to('learn Backbone or Ember', 'https://training.gaslight.co/')}?

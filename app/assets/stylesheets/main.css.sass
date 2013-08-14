@@ -6,82 +6,6 @@
   background: #fff
   @include background-image(radial-gradient(center center, #eee 0%, #fff 100%))
 
-  .landingpage__tagline
-    padding-top: 200px
-    text-align: center
-    font-size: 325%
-  p
-    text-align: center
-    font-size: 20px
-
-  h3
-    text-align: center
-
-  %action-tile
-    display: block
-    margin: auto
-    text-align: center
-
-  %action-tile-link
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-
-  %action-tile-link__image
-    @extend %action-tile-link
-    background-position: center
-    background-repeat: no-repeat
-    background-size: 100%
-    background-size: cover
-
-  %action-tile-link__overlay
-    @extend %action-tile-link
-    opacity: 0.9
-    &:hover
-      opacity: 1
-
-  .action-tile
-    margin-top: 10px
-    .action-tile
-      @extend %action-tile
-    .action-tile-link
-      width: 100%
-      height: 80px
-      position: relative
-      overflow: hidden
-      display: block
-      h3
-        position: absolute
-        top: 10px
-        left: 0
-        width: 100%
-        color: #fff
-    p
-      display: inline-block
-      color: #333
-      font-size: 14px
-      margin-top: 10px
-    .action-tile-link__image--first
-      @extend %action-tile-link__image
-      background-image: image-url("landing/train_rails.png")
-    .action-tile-link__image--second
-      @extend %action-tile-link__image
-      background-image: image-url("casestudy/lumbee_hero.jpg")
-    .action-tile-link__image--third
-      @extend %action-tile-link__image
-
-    .action-tile-link__overlay--first
-      @extend %action-tile-link__overlay
-      background-color: $brand1
-    .action-tile-link__overlay--second
-      @extend %action-tile-link__overlay
-      background-color: $brand2
-    .action-tile-link__overlay--third
-      @extend %action-tile-link__overlay
-      background-color: $brand3
-
   .intro
     position: absolute
     top: 50%
@@ -105,6 +29,63 @@
   svg
     position: absolute !important
     top: 0px
+
+.landingpage__tagline
+  padding-top: 200px
+  text-align: center
+  font-size: 325%
+
+.landingpage__paragraph
+  text-align: center
+  font-size: 20px
+
+.landingpage__subheading
+  text-align: center
+
+.action-tile
+  margin-top: 10px
+  p
+    text-align: center
+    display: inline-block
+    color: #333
+    font-size: 14px
+    margin-top: 10px
+
+.action-tile__link
+  display: block
+  position: relative
+  height: 80px
+
+.action-tile__image
+  position: absolute
+  width: 100%
+  top: 0
+  left: 0
+
+%action-tile__heading
+  color: #fff
+  position: relative
+  line-height: 80px
+  margin: 0
+  text-align: center
+
+.action-tile__heading--brand1
+  @extend %action-tile__heading
+  background: rgba(red($brand1), green($brand1), blue($brand1), 0.9)
+  &:hover
+    background: rgba(red($brand1), green($brand1), blue($brand1), 1)
+
+.action-tile__heading--brand2
+  @extend %action-tile__heading
+  background: rgba(red($brand2), green($brand2), blue($brand2), 0.9)
+  &:hover
+    background: rgba(red($brand2), green($brand2), blue($brand2), 1)
+
+.action-tile__heading--brand3
+  @extend %action-tile__heading
+  background: rgba(red($brand3), green($brand3), blue($brand3), 0.9)
+  &:hover
+    background: rgba(red($brand3), green($brand3), blue($brand3), 1)
 
 #main
   background: #fff

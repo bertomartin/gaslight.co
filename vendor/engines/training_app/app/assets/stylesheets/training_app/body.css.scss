@@ -2,6 +2,13 @@
 
 #main.container.row.training {
   padding: 100px 0px 100px 30px;
+    header {
+    margin: 0px -37px 60px -75px;
+  }
+}
+
+header {
+  margin: 0px -37px 60px -75px;
 }
 
 h1 {
@@ -76,6 +83,14 @@ ul {
 .trainer, .testimonial {
   @extend %sidebar__block;
   margin-top: 5px;
+}
+
+.testimonial {
+  border: 1px solid #eee;
+  background-color: #f5f3f3;
+  padding: 25px;
+  margin-bottom: 20px;
+  min-height: 275px;
 }
 
 

@@ -9,9 +9,7 @@
         %br
         %span Do Great Things
     .intro.eight.columns
-      %a.purchase{href: new_registration_path}
-        %img{src: image_path('training_app/cap.png'), alt: 'register now'}
-        %span Purchase the full course
+      
 
   %section.row.yourTeam
     %a.anchor{name:"team"}
@@ -32,13 +30,42 @@
               %a{href: course_path(course)}= course.title
           .nine.columns
             = simple_format(course.description_main)
-  %section.row.testimonials
+  %section.row
     %a.anchor{name:"team"}
     .eleven.columns.centered
       %h2.title.brand2 What are people saying?
-  %section.row.testimonials
+      .row
+        .four.columns
+          %p.testimonial
+            “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)"
+            %br
+            %span -Name
+        .four.columns
+          %p.testimonial
+            “The cookbook app was a well-sized app for two days of coding. Pulling in Twitter Bootstrap was a nice way to make the app look good..."
+            %br
+            %span -Name
+        .four.columns
+          %p.testimonial
+            “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of  Rails components I hadn't used in some time (like Inherited Resource)"
+            %br
+            %span -Name
+
+  %section.row
     %a.anchor{name:"team"}
     .eleven.columns.centered
       %h2.title.brand2 Past Workshops
+      .row
+        .two.columns.iconTile
+          %i.icon-team-dev
+        .four.columns
+          %p
+            Beautiful Front End Code
+        .two.columns.iconTile
+          %i.icon-team-dev
+        .four.columns
+          %p
+            Backbone & Ember
+          
 = render partial: 'application/footer'
 

@@ -4,55 +4,44 @@
 
 = render partial: 'application/nav'
 
-#guides
-  %section
-    .row
-      .twelve.columns.centered
-        %h1.landingpage__tagline We build web apps that build businesses.
-    .row
-      .six.columns.centered
-        %p
-          Gaslight partners with you to create custom web-based software or
-          improve your existing software. We also lead in-person and online
-          training sessions on the latest technology for development teams. All
-          with a focus on business results.
-    .row
-      .ten.columns.centered
-        %h3 Let’s work together to take your business new places:
-    .row
-      .seven.column.centered.lbs.hide-for-small
-        .row
-          .four.columns
-            .lbs__l
-              %a.lbs-link{href: post_path('kanban-smackdown-part-1')}
-                .lbs-link__image--l
-                .lbs-link__overlay--l
-                %h3 Learn
-              %p
-                We’re always learning. 
-                %a{href: post_path('kanban-smackdown-part-1')} Hear about our explorations with the Kanban process on the Gaslight podcast.
-          .four.columns
-            .lbs__b
-              %a.lbs-link{href: page_path('case-studies/lumbee')}
-                .lbs-link__image--b
-                .lbs-link__overlay--b
-                %h3 Build
-              %p
-                %a{href: page_path('case-studies/lumbee')} See how we overhauled Lumbee Enterprises’ software
-                to improve productivity, profits and client relationships.
-          .four.columns
-            .lbs__s
-              %a.lbs-link{ href: page_path('about') }
-                .lbs-link__image--s
-                .lbs-link__overlay--s
-                %h3 Share
-              %p
-                Want to #{link_to('learn Backbone or Ember', 'https://training.gaslight.co/')}?
-                We’re sharing the strengths and weaknesses of each framework
-                along with code examples in our online training classes.
-    .row
-      .one.columns.centered
-        .arrow-down
+%section#guides
+  .row
+    .twelve.columns.centered
+      %h1.landingpage__tagline We build web apps that build businesses.
+  .row
+    .six.columns.centered
+      %p.landingpage__paragraph
+        Gaslight partners with you to create custom web-based software or
+        improve your existing software. We also lead in-person and online
+        training sessions on the latest technology for development teams. All
+        with a focus on business results.
+  .row
+    .ten.columns.centered
+      %h3.landingpage__subheading Let’s work together to take your business new places:
+  .row
+    .seven.column.centered.action-tile.hide-for-small
+      .row
+        .four.columns.action-tile
+          %a.action-tile__link{href: post_path('kanban-smackdown-part-1')}
+            %img.action-tile__image{src: image_path("landing/train_rails.jpg")}
+            %h3.action-tile__heading--brand1 Learn
+          %p
+            We’re always learning.
+            %a{href: post_path('kanban-smackdown-part-1')} Hear about our explorations with the Kanban process on the Gaslight podcast.
+        .four.columns.action-tile
+          %a.action-tile__link{href: page_path('case-studies/lumbee')}
+            %img.action-tile__image{src: image_path("landing/wheel.jpg")}
+            %h3.action-tile__heading--brand2 Build
+          %p
+            %a{href: page_path('case-studies/lumbee')} See how we overhauled Lumbee Enterprises’ software
+            to improve productivity, profits and client relationships.
+        .four.columns.action-tile
+          %a.action-tile__link{ href: page_path('about') }
+            %h3.action-tile__heading--brand3 Share
+          %p
+            Want to #{link_to('learn Backbone or Ember', 'https://training.gaslight.co/')}?
+            We’re sharing the strengths and weaknesses of each framework
+            along with code examples in our online training classes.
 
 #main.landing-page
   %section.hero--weare
@@ -66,7 +55,7 @@
           kind of value that makes your business more competitive and
           profitable. We want to be a trusted partner, not just a service
           provider.
-          %a{href: '/about'} Learn more about how we partner with clients. 
+          %a{href: '/about'} Learn more about how we partner with clients.
     .row
       .five.columns.offset-by-four
         %p
@@ -84,8 +73,8 @@
         %p
           You have a great idea. But throwing developers at a project doesn’t
           always get it off on the right foot. Every vision needs an actionable
-          plan to become reality. 
-          %a{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas. 
+          plan to become reality.
+          %a{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas.
     .row
       .six.columns.offset-by-four.end
         .landing-page__heading Team approach
@@ -97,7 +86,7 @@
           %a{href: '/about'} Find out more about how we partner with clients.
     .row
       .six.columns.offset-by-four.end
-        .landing-page__heading Best in technology 
+        .landing-page__heading Best in technology
         %h4.landing-page__subheading Bringing start-up technology to established businesses
         %p
           We’re constantly trying out the latest technology so you don’t have
@@ -123,10 +112,10 @@
             %a{href: "http://twitter.com/teamgaslight", rel: "Footer Social", target: "_blank"}
               %i.icon-twitter
           %li
-            %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"} 
+            %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"}
               %i.icon-facebook-sign
           %li
-            %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"} 
+            %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"}
               %i.icon-github
           %li.justifylist--last
 

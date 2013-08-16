@@ -42,4 +42,3 @@ $ ->
 
   # grab clicks inside the accordion
   $('ul.accordion li a.button, ul.accordion li button').on 'click', (e) -> e.stopPropagation()
-

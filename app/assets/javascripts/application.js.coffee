@@ -7,6 +7,8 @@
 #= require moment
 #= require backbone
 #= require backbone/gaslight
+#= require foundation.min
+#= require foundation-orbit
 
 track = (category, action, value = "") ->
   _gaq.push(['_trackEvent', category, action, value])
@@ -26,3 +28,8 @@ $ ->
   $('audio').mediaelementplayer
     pluginPath: '/assets/'
     audioWidth: '100%'
+
+$(window).load ->
+  $(".featuredContent").orbit
+    directionalNav: 'false'
+    advanceSpeed: 8000

@@ -5,7 +5,9 @@
   .columns.eight
     .course
       %h1= course.title
-      = simple_format(course.description_main)
+      %p 
+        = image_tag(course.image_url)
+        = simple_format(course.description_main)
 
     %h2 What should I know before the course?
     %ul

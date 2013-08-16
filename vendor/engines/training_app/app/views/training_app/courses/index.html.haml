@@ -9,7 +9,22 @@
         %br
         %span Do Great Things
     .intro.eight.columns
-      
+      .featuredContent
+        %div
+          %p 
+            “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)"
+          %br
+          %span -Name
+        %div
+          %p
+            “The cookbook app was a well-sized app for two days of coding. Pulling in Twitter Bootstrap was a nice way to make the app look good..."
+          %br
+          %span -Name
+        %div
+          %p
+            “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of  Rails components I hadn't used in some time (like Inherited Resource)"
+          %br
+          %span -Name
 
   %section.row.yourTeam
     %a.anchor{name:"team"}
@@ -25,31 +40,35 @@
       - courses.each do |course|
         .row
           .three.columns.iconTile
-            %i.icon-team-dev
+            = image_tag((course.image_url), :class => "iconTile__image")
             %strong
               %a{href: course_path(course)}= course.title
           .nine.columns
             = simple_format(course.description_main)
-  %section.row
-    %a.anchor{name:"team"}
-    .eleven.columns.centered
-      %h2.title.brand2 What are people saying?
-      .row
-        .four.columns
-          %p.testimonial
-            “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)"
-            %br
-            %span -Name
-        .four.columns
-          %p.testimonial
-            “The cookbook app was a well-sized app for two days of coding. Pulling in Twitter Bootstrap was a nice way to make the app look good..."
-            %br
-            %span -Name
-        .four.columns
-          %p.testimonial
-            “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of  Rails components I hadn't used in some time (like Inherited Resource)"
-            %br
-            %span -Name
+  
+  / %section.row
+  /   %a.anchor{name:"team"}
+  /   .eleven.columns.centered
+  /     %h2.title.brand2 What are people saying?
+  /     .row
+  /       .four.columns
+  /         %blockquote
+  /           %p
+  /             “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)"
+  /             %br
+  /             %span -Name
+  /       .four.columns
+  /         %blockquote
+  /           %p
+  /             “The cookbook app was a well-sized app for two days of coding. Pulling in Twitter Bootstrap was a nice way to make the app look good..."
+  /             %br
+  /             %span -Name
+  /       .four.columns
+  /         %blockquote
+  /           %p
+  /             “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of  Rails components I hadn't used in some time (like Inherited Resource)"
+  /             %br
+  /             %span -Name
 
   %section.row
     %a.anchor{name:"team"}
@@ -66,6 +85,6 @@
         .four.columns
           %p
             Backbone & Ember
-          
+
 = render partial: 'application/footer'
 

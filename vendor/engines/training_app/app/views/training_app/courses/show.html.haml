@@ -4,22 +4,24 @@
 #main.container.row.training
   .columns.eight
     .course
+      = image_tag(course.image_url)
       %h1= course.title
       %p 
-        = image_tag(course.image_url)
         = simple_format(course.description_main)
+    - if course.id == 3
+      = render :partial => "training_videos"
+    - else
+      %h2 What should I know before the course?
+      %ul
+        %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
+        %li How to drive a car
+        %li The unladen swallow joke from Monty Python
 
-    %h2 What should I know before the course?
-    %ul
-      %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
-      %li How to drive a car
-      %li The unladen swallow joke from Monty Python
+      %ul
+        %li A laptop
+        %li A working Ruby installation
 
-    %ul
-      %li A laptop
-      %li A working Ruby installation
-
-  
+    
 
 
 
@@ -34,6 +36,7 @@
             %p We're doing a one day workshop in Cincinnati. Come learn with everyone.
             %button.small.radius.success.button.brand1 Register Now!
     %p We can bring this workshop to your location for private training as well.
+    
     %a.small.radius.success.button{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
    
     .trainer

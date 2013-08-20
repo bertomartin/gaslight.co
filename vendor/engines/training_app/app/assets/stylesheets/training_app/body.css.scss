@@ -107,19 +107,66 @@ blockquote {
 
   }
   img { // image
-    max-width: 40%;
-    float: right;
+   min-width: 45px;
+  float: left;
+  padding: 0px 10px 0px 0px;
+  height: auto;
+  max-width: 60px;
   }
 }
 
-div.orbit-wrapper div.timer{
-  display: none;
+div.intro div.orbit-wrapper {
+  div.orbit.featuredContent{
+    max-width: 95%;
+    position: absolute;
+    top: 50%;
+    margin-top: -100px;  
+  }
+
+  div.timer {
+    display: none;
+  }
+
+  div.orbit-slide{
+    p{
+      font-weight: 600;
+      font-size: 23px;
+      color: #444;
+    }
+
+    span{
+      font-size: 20px;
+    }
+  }
 }
 
-.featuredContent{
-  color: #333;
+.descriptions:last-child{
+  margin-bottom: -60px;
 }
 
-.iconTile__image {
-  max-width: 50%;
+.descriptions__text{
+  padding-top: 20px;
+}
+
+.descriptions__icon:last-child{
+  margin-bottom: 0px;
+}
+
+.descriptions__icon__image {
+  height: 100px;
+  padding: 10px;
+}
+
+.recent--courses:before, :after, .past--workshop :before, :after{
+  background-position: 0 -524px;
+  height: 25px;
+  width: 25px;
+}
+
+.ember, .backbone {
+  tbody tr td {
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 20px 10px;
+  }
 }

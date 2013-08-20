@@ -29,7 +29,7 @@
   %section.row.yourTeam
     %a.anchor{name:"team"}
     .eleven.columns.centered
-      %h2.title.brand2 Recent Courses
+      %h2.title.recent--courses Recent Courses
       %p.lead
         When you work with us, you’ll never be competing with other clients for
         our time or attention. We assign a dedicated team to every project
@@ -38,13 +38,13 @@
         story.
       %hr.divider.show-for-small
       - courses.each do |course|
-        .row
-          .three.columns.iconTile
-            = image_tag((course.image_url), :class => "iconTile__image")
+        .row.descriptions
+          .three.columns.descriptions__icon
+            = image_tag((course.image_url), :class => "descriptions__icon__image")
             %strong
               %a{href: course_path(course)}= course.title
-          .nine.columns
-            = simple_format(course.description_main)
+          .nine.columns.descriptions__text
+            = simple_format(course.synopsis)
   
   / %section.row
   /   %a.anchor{name:"team"}
@@ -73,18 +73,24 @@
   %section.row
     %a.anchor{name:"team"}
     .eleven.columns.centered
-      %h2.title.brand2 Past Workshops
-      .row
-        .two.columns.iconTile
-          %i.icon-team-dev
-        .four.columns
+      %h2.title.past--workshop Past Workshops
+      .row.descriptions
+        .three.columns.descriptions__icon
+          %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
+          %strong
+            Backbone and Ember
+        .nine.columns.descriptions__text
           %p
+            Picking a client side MVC framework isn't easy, and seeing a trivial Todo app just doesn't show how much these frameworks bring to the table. In this workshop, we'll dive into two popular frameworks: Backbone.js and Ember...
+      .row.descriptions
+        .three.columns.descriptions__icon
+          %img{:src => "http://sociablelabs.files.wordpress.com/2013/02/jasmine_flower.png?w=590", :class => "descriptions__icon__image"}
+          %strong
             Beautiful Front End Code
-        .two.columns.iconTile
-          %i.icon-team-dev
-        .four.columns
+        .nine.columns.descriptions__text
           %p
-            Backbone & Ember
+            This 2-day intensive course will forever change the way you develop the front end of your web applications. Too long, many web developers have approached our front end code as drudgery or worse...
+      
 
 = render partial: 'application/footer'
 

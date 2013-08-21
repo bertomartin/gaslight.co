@@ -153,12 +153,20 @@ div.intro div.orbit-wrapper {
   }
 }
 
+.descriptions{
+  display: inline-block;
+}
+
 .descriptions:last-child{
   margin-bottom: -60px;
 }
 
 .descriptions__text{
   padding-top: 20px;
+
+  p{
+    margin-bottom: 0px;
+  }
 }
 
 .descriptions__icon:last-child{

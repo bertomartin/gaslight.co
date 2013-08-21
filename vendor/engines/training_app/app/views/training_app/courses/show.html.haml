@@ -4,8 +4,7 @@
 #main.container.row.training
   .columns.eight
     .course
-      = image_tag(course.image_url)
-      %h1= course.title
+      %h1.course__title= course.title
       %p 
         = simple_format(course.description_main)
     - if course.id == 3
@@ -21,9 +20,15 @@
         %li A laptop
         %li A working Ruby installation
 
-    
-
-
+      %h2 What will I learn in the course?
+      .row.descriptions
+        .three.columns.descriptions__icon
+          = image_tag((course.image_url), :class => "course__img")
+          %strong
+            Backbone and Ember
+        .nine.columns.descriptions__text
+          %p
+            Picking a client side MVC framework isn't easy, and seeing a trivial Todo app just doesn't show how much these frameworks bring to the table. In this workshop, we'll dive into two popular frameworks: Backbone.js and Ember...
 
   .columns.three.prepend-1.sidebar
     .action_container
@@ -34,10 +39,10 @@
               = workshop.location
               %span= number_to_currency(workshop.early_bird_price, precision: 0)
             %p We're doing a one day workshop in Cincinnati. Come learn with everyone.
-            %button.small.radius.success.button.brand1 Register Now!
+            %button.small.radius.success.button.brand3 Register Now!
     %p We can bring this workshop to your location for private training as well.
     
-    %a.small.radius.success.button{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
+    %a.small.radius.success.button.request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
    
     .trainer
       %h5 Chris Nelson

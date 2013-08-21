@@ -101,18 +101,26 @@ blockquote {
   font-size: 12px;
 }
 
+.course__title{
+  color: white;
+  margin-top: 0px;
+  background: #57c0e8;
+  padding: 10px 20px 10px 65px;
+  margin-left: -45px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
-.course {
-  h1 { // title
+.course__img {
+  height: 100px;
+}
 
-  }
-  img { // image
-   min-width: 45px;
-  float: left;
-  padding: 0px 10px 0px 0px;
-  height: auto;
-  max-width: 60px;
-  }
+.training h2{
+  padding-top: 30px;
 }
 
 div.intro div.orbit-wrapper {

@@ -119,8 +119,13 @@ blockquote {
   height: 100px;
 }
 
-.training h2{
-  padding-top: 30px;
+.training__hr{
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.training__subhead{
+  font-size: 14pt;
 }
 
 div.intro div.orbit-wrapper {

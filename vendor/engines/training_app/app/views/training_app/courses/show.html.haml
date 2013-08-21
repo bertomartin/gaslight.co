@@ -10,7 +10,8 @@
     - if course.id == 3
       = render :partial => "training_videos"
     - else
-      %h2 What should I know before the course?
+      %hr.training__hr
+      %h2.training__subhead What should I know before the course?
       %ul
         %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
         %li How to drive a car
@@ -20,7 +21,8 @@
         %li A laptop
         %li A working Ruby installation
 
-      %h2 What will I learn in the course?
+      %hr.training__hr
+      %h2.training__subhead What will I learn in the course?
       .row.descriptions
         .three.columns.descriptions__icon
           = image_tag((course.image_url), :class => "course__img")

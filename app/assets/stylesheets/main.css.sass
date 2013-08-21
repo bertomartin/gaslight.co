@@ -2,22 +2,19 @@
   @include clearfix()
   overflow: hidden
   width: 100%
-  min-height: 85%
   background: #fff
   @include background-image(radial-gradient(center center, #eee 0%, #fff 100%))
-
+  padding: 75px 0
   .intro
     position: absolute
     top: 50%
     margin-top: -180px
     left: 0
     max-width: 400px
-    padding: 20px 40px
     background: #000
     color: #fff
     text-align: justify
     background: rgba(0, 0, 0, 0.75)
-    margin-bottom: 20px
     p
       text-align: left
     .button
@@ -164,23 +161,31 @@
 // Landing Page
 #main.landing-page
   padding: 0
+  .arrow-right
+    width: 0
+    height: 0
+    border-top: 10px solid transparent
+    border-bottom: 10px solid transparent
+    border-left: 10px solid $brand3
+    float: right
+    margin-top: 5px
   .hero--weare
     background: $brandBase
     background-image: image-url("landing/group.jpg")
     background-repeat: no-repeat
     background-size: cover
-    height: 450px
-    padding-top: 75px
+    padding: 75px 0
     color: #fff
   .hero--process
     padding: 75px 0
+    a
+      margin-bottom: 40px
   .hero--worktogether
     background: $brandBase
     background-image: image-url("landing/contact.jpg")
     background-repeat: no-repeat
     background-size: cover
-    min-height: 350px
-    padding-top: 75px
+    padding: 75px 0
     color: #fff
     li
       list-style: none
@@ -192,7 +197,7 @@
       height: 0
   i[class^="icon"]
     color: #fff
-    font-size: 3em
+    font-size: 2.5em
     display: inline-block
     &:hover
       color: $brand2
@@ -200,6 +205,7 @@
   %landing-page__sidebar
     border-top-width: 8px
     border-top-style: solid
+    padding-top: 10px
 
   .landing-page__sidebar--about
     @extend %landing-page__sidebar

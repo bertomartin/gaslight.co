@@ -9,7 +9,7 @@
     .twelve.columns.centered
       %h1.landingpage__tagline We build web apps that build businesses.
   .row
-    .seven.columns.centered
+    .ten.columns.centered
       %p.landingpage__paragraph
         Gaslight partners with you to create custom web-based software or improve your existing software. We also lead in-person and online training sessions on the latest technology for development teams. All with a focus on business results.
   .row
@@ -18,25 +18,26 @@
   .row
     .seven.column.centered.action-tile.hide-for-small
       .row
-        .four.columns.action-tile
+
+        .four.columns.action-tile--brand1
           %a.action-tile__link{href: post_path('kanban-smackdown-part-1')}
             %h3.action-tile__heading--brand1 Learn
           %p
-            We’re always learning.
-            %a{href: post_path('kanban-smackdown-part-1')} Hear about our explorations with the Kanban process on the Gaslight podcast.
-        .four.columns.action-tile
+            We’re always learning. Hear about our explorations with the Kanban process on the Gaslight podcast.
+            %a.button.brandBase{href: post_path('kanban-smackdown-part-1')} Podcast 
+        
+        .four.columns.action-tile--brand2
           %a.action-tile__link{href: page_path('case-studies/lumbee')}
             %h3.action-tile__heading--brand2 Build
           %p
-            %a{href: page_path('case-studies/lumbee')} See how we overhauled Lumbee Enterprises’ software
-            to improve productivity, profits and client relationships.
-        .four.columns.action-tile
-          %a.action-tile__link{ href: page_path('about') }
+            See how we overhauled Lumbee Enterprises’ software to improve productivity, profits and client relationships.
+            %a.button.brandBase{href: post_path('case-studies/lumbee')} Case Study
+        .four.columns.action-tile--brand3
+          %a.action-tile__link{ href: page_path('https://training.gaslight.co/') }
             %h3.action-tile__heading--brand3 Share
           %p
-            Want to #{link_to('learn Backbone or Ember', 'https://training.gaslight.co/')}?
-            We’re sharing the strengths and weaknesses of each framework
-            along with code examples in our online training classes.
+            Want to learn Backbone or Ember? We’re sharing the strengths and weaknesses of each framework along with code examples in our online training classes.
+            %a.button.brandBase{href: post_path('learn Backbone or Ember', 'https://training.gaslight.co/')} Training
 #main.landing-page
   %section.hero--weare
     .row
@@ -44,39 +45,40 @@
         %h2 We Are
       .eight.columns.offset-by-one
         %p.lead
-          We are a group of developers, designers and project guides passionate
-          about building things. We want to solve hard problems and add the
-          kind of value that makes your business more competitive and
-          profitable. We want to be a trusted partner, not just a service
-          provider.
-          %a{href: '/about'} Learn more about how we partner with clients.
+          We are a group of developers, designers and project guides passionate about building things. We want to solve hard problems and add the kind of value that makes your business more competitive and profitable. We want to be a trusted partner, not just a service provider. Learn more about how we partner with clients.
     .row
       .three.columns.offset-by-four
-        %a.button.brand1{href: '/about'} See Who We Are
+        %a.button--large.brand1{href: '/about'} See Who We Are
 
   %section.hero--process
     .row
       .three.columns.landing-page__sidebar--process
         %h2 Our Process
-      .six.columns.end.offset-by-one
+      .one.column.hide-for-small
+        .arrow-right
+      .six.columns.end
         .landing-page__heading The igniter
         %h4.landing-page__subheading Turning big ideas into successful projects
         %p
-          You have a great idea. But throwing developers at a project doesn’t
-          always get it off on the right foot. Every vision needs an actionable
-          plan to become reality.
-          %a{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas.
+          You have a great idea. But throwing developers at a project doesn’t always get it off on the right foot. Every vision needs an actionable plan to become reality. Learn how we can ignite your best ideas.
+        .row
+          .five.columns
+            %a.button--large.brand3{href: '/Gaslight_Igniter_2013.pdf'} The Igniter
     .row
-      .six.columns.offset-by-four.end
+      .one.column.offset-by-three.hide-for-small
+        .arrow-right
+      .six.columns.end
         .landing-page__heading Team approach
         %h4.landing-page__subheading Becoming part of your team
         %p
-          Need a dedicated team to work on your project? We have one. We love
-          partnering with business owners and key stakeholders. During a
-          project, you can expect to hear from us nearly everyday.
-          %a{href: '/about'} Find out more about how we partner with clients.
+          Need a dedicated team to work on your project? We have one. We love partnering with business owners and key stakeholders. During a project, you can expect to hear from us nearly everyday.Find out more about how we partner with clients.
+        .row
+          .five.columns
+            %a.button--large.brand3{href: '/about'} Partner with Us
     .row
-      .six.columns.offset-by-four.end
+      .one.column.offset-by-three.hide-for-small
+        .arrow-right
+      .six.columns.end
         .landing-page__heading Best in technology
         %h4.landing-page__subheading Bringing start-up technology to established businesses
         %p
@@ -89,12 +91,12 @@
     .row
       .three.columns.landing-page__sidebar--contact
         %h2 Let's Keep in Touch
-      .five.columns.offset-by-one
+      .four.columns.offset-by-one
         %p
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
           = render partial: 'application/newsletter'
-      .three.columns
-        %p Start a conversation with us:
+      .three.columns.offset-by-one
+        %p Start a conversation:
         %ul.landing-page__contact
           %li
             %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"}

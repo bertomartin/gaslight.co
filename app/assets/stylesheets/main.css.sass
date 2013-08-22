@@ -22,7 +22,7 @@
 
   .wendell
     margin-top: 100px
-  svg
+  svg, > div
     position: absolute !important
     top: 0px
 
@@ -155,6 +155,14 @@
     p.emphasize
       margin-bottom: 40px
 
+%hero--full-width
+  background-color: $brandBase
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  padding: 75px 0
+  color: #fff
+
 // Landing Page
 #main.landing-page
   padding: 0
@@ -167,23 +175,15 @@
     float: right
     margin-top: 5px
   .hero--weare
-    background: $brandBase
+    @extend %hero--full-width
     background-image: image-url("landing/group.jpg")
-    background-repeat: no-repeat
-    background-size: cover
-    padding: 75px 0
-    color: #fff
   .hero--process
     padding: 75px 0
     a
       margin-bottom: 40px
   .hero--worktogether
-    background: $brandBase
+    @extend %hero--full-width
     background-image: image-url("landing/contact.jpg")
-    background-repeat: no-repeat
-    background-size: cover
-    padding: 75px 0
-    color: #fff
     li
       list-style: none
       display: inline-block

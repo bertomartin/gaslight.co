@@ -16,34 +16,31 @@
     .ten.columns.centered
       %h3.landingpage__subheading Let’s work together to take your business new places.
   .row
-    .seven.column.centered.action-tile.hide-for-small
+    .eight.column.centered.lbs.hide-for-small
       .row
-
-        .four.columns.action-tile--brand1
-          %a.action-tile__link{href: post_path('kanban-smackdown-part-1')}
-            %h3.action-tile__heading--brand1 Learn
+        .four.columns
+          %a.button--large.brand1{href: post_path('kanban-smackdown-part-1')} Learn
           %p
             We’re always learning. Hear about our explorations with the Kanban process on the Gaslight podcast.
-            %a.button.brandBase{href: post_path('kanban-smackdown-part-1')} Podcast 
+          %a.brand1--link{href: post_path('kanban-smackdown-part-1')} Check out the podcast &#62;
         
-        .four.columns.action-tile--brand2
-          %a.action-tile__link{href: page_path('case-studies/lumbee')}
-            %h3.action-tile__heading--brand2 Build
+        .four.columns
+          %a.button--large.brand2{href: page_path('case-studies/lumbee')} Build
           %p
             See how we overhauled Lumbee Enterprises’ software to improve productivity, profits and client relationships.
-            %a.button.brandBase{href: post_path('case-studies/lumbee')} Case Study
-        .four.columns.action-tile--brand3
-          %a.action-tile__link{ href: page_path('https://training.gaslight.co/') }
-            %h3.action-tile__heading--brand3 Share
+          %a.brand2--link{href: page_path('case-studies/lumbee')} See the case study &#62;
+        .four.columns
+          %a.button--large.brand3{href: "https://training.gaslight.co/"} Share
           %p
             Want to learn Backbone or Ember? We’re sharing the strengths and weaknesses of each framework along with code examples in our online training classes.
-            %a.button.brandBase{href: post_path('learn Backbone or Ember', 'https://training.gaslight.co/')} Training
+          %a.brand3--link{href: "https://training.gaslight.co/"} Learn from us &#62;
+
 #main.landing-page
   %section.hero--weare
     .row
       .three.columns.landing-page__sidebar--about
         %h2 We Are
-      .eight.columns.offset-by-one
+      .eight.columns.offset-by-one.landing-page__info
         %p.lead
           We are a group of developers, designers and project guides passionate about building things. We want to solve hard problems and add the kind of value that makes your business more competitive and profitable. We want to be a trusted partner, not just a service provider. Learn more about how we partner with clients.
     .row
@@ -54,9 +51,9 @@
     .row
       .three.columns.landing-page__sidebar--process
         %h2 Our Process
-      .one.column.hide-for-small
+      .one.column.hide-for-small.landing-page__info
         .arrow-right
-      .six.columns.end
+      .six.columns.end.landing-page__info
         .landing-page__heading The igniter
         %h4.landing-page__subheading Turning big ideas into successful projects
         %p
@@ -91,11 +88,11 @@
     .row
       .three.columns.landing-page__sidebar--contact
         %h2 Let's Keep in Touch
-      .four.columns.offset-by-one
+      .four.columns.offset-by-one.landing-page__info
         %p
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
           = render partial: 'application/newsletter'
-      .three.columns.offset-by-one
+      .three.columns.offset-by-one.landing-page__info
         %p Start a conversation:
         %ul.landing-page__contact
           %li

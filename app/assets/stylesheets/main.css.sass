@@ -39,52 +39,38 @@
 
 .landingpage__subheading
   text-align: center
+  margin-bottom: 35px
 
-%action-tile
-  margin-top: 10px
-  min-height: 285px
+.landing-page__info
+  margin-top: 25px
+
+.lbs
+  width: 100%
+  text-align: center
+  display: inline-block
   p
-    text-align: center
-    display: inline-block
     color: #222
     font-size: 14px
     margin: 10px 0
-  a
+  .button--large
+    width: 100%
+    text-transform: uppercase
     margin-top: 10px
-
-.action-tile--brand1
-  @extend %action-tile
-  background-color: $brand1
-
-.action-tile--brand2
-  @extend %action-tile
-  background-color: $brand2
-
-.action-tile--brand3
-  @extend %action-tile
-  background-color: lighten($brand3, 5)
-
-.action-tile__link
-  display: block
-  position: relative
-
-%action-tile__heading
-  color: #fff
-  text-align: center
-  line-height: 30px
-  margin-bottom: 0
-
-.action-tile__heading--brand1
-  @extend %action-tile__heading
-  +opaqueBackground($brand1)
-
-.action-tile__heading--brand2
-  @extend %action-tile__heading
-  +opaqueBackground($brand2)
-
-.action-tile__heading--brand3
-  @extend %action-tile__heading
-  +opaqueBackground(lighten($brand3, 5))
+  a
+    font-weight: bold
+    text-align: center
+  .brand1--link
+    color: $brand1
+    &:hover
+      color: darken($brand1,20)
+  .brand2--link
+    color: $brand2
+    &:hover
+      color: darken($brand2,10)
+  .brand3--link
+    color: $brand3
+    &:hover
+      color: darken($brand3,10)
 
 #main
   background: #fff

@@ -1,39 +1,40 @@
 - content_for :javascript do
   :javascript
-    //new Gaslight.Views.SvgView({el: "#guides"}).render()
+    new Gaslight.Views.SvgView({el: "#guides"}).render()
 
 = render partial: 'application/nav'
 
-%section#guides
-  .row
-    .twelve.columns.centered
-      %h1.landingpage__tagline We build web apps that build businesses.
-  .row
-    .ten.columns.centered
-      %p.landingpage__paragraph
-        Gaslight partners with you to create custom web-based software or improve your existing software. We also lead in-person and online training sessions on the latest technology for development teams. All with a focus on business results.
-  .row
-    .ten.columns.centered
-      %h3.landingpage__subheading Let’s work together to take your business new places.
-  .row
-    .eight.column.centered.lbs.hide-for-small
-      .row
-        .four.columns
-          %a.button--large.brand1{href: post_path('kanban-smackdown-part-1')} Learn
-          %p
-            We’re always learning. Hear about our explorations with the Kanban process on the Gaslight podcast.
-          %a.brand1--link{href: post_path('kanban-smackdown-part-1')} Check out the podcast &#62;
-        
-        .four.columns
-          %a.button--large.brand2{href: page_path('case-studies/lumbee')} Build
-          %p
-            See how we overhauled Lumbee Enterprises’ software to improve productivity, profits and client relationships.
-          %a.brand2--link{href: page_path('case-studies/lumbee')} See the case study &#62;
-        .four.columns
-          %a.button--large.brand3{href: "https://training.gaslight.co/"} Share
-          %p
-            Want to learn Backbone or Ember? We’re sharing the strengths and weaknesses of each framework along with code examples in our online training classes.
-          %a.brand3--link{href: "https://training.gaslight.co/"} Learn from us &#62;
+#guides
+  %section.landingpage
+    .row
+      .twelve.columns.centered
+        %h1.landingpage__tagline We build web apps that build businesses.
+    .row
+      .ten.columns.centered
+        %p.landingpage__paragraph
+          Gaslight partners with you to create custom web-based software or improve your existing software. We also lead in-person and online training sessions on the latest technology for development teams. All with a focus on business results.
+    .row
+      .ten.columns.centered
+        %h3.landingpage__subheading Let’s work together to take your business new places.
+    .row
+      .eight.column.centered.lbs.hide-for-small
+        .row
+          .four.columns
+            %a.button--large.brand1{href: post_path('kanban-smackdown-part-1')} Learn
+            %p
+              We’re always learning. Hear about our explorations with the Kanban process on the Gaslight podcast.
+            %a.brand1--link{href: post_path('kanban-smackdown-part-1')} Check out the podcast &#62;
+          
+          .four.columns
+            %a.button--large.brand2{href: page_path('case-studies/lumbee')} Build
+            %p
+              See how we overhauled Lumbee Enterprises’ software to improve productivity, profits and client relationships.
+            %a.brand2--link{href: page_path('case-studies/lumbee')} See the case study &#62;
+          .four.columns
+            %a.button--large.brand3{href: "https://training.gaslight.co/"} Share
+            %p
+              Want to learn Backbone or Ember? We’re sharing the strengths and weaknesses of each framework along with code examples in our online training classes.
+            %a.brand3--link{href: "https://training.gaslight.co/"} Learn from us &#62;
 
 #main.landing-page
   %section.hero--weare

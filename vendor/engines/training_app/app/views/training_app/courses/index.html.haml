@@ -44,8 +44,7 @@
             %strong
               %a{href: course_path(course)}= course.title
           .nine.columns.descriptions__text
-            = simple_format(course.synopsis)
-  
+            = simple_format(truncate(course.description_main, length: 250, omission: "...%s")) % link_to(" read more", course_path(course))
   / %section.row
   /   %a.anchor{name:"team"}
   /   .eleven.columns.centered

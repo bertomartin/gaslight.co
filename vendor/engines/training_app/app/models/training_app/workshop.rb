@@ -59,10 +59,10 @@ module TrainingApp
     end
 
     def current_price
-      if Time.now > early_bird_end_date
-        price
-      else
+      if early_bird_price && early_bird_end_date && Time.now <= early_bird_end_date
         early_bird_price
+      else
+        price
       end
     end
   end

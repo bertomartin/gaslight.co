@@ -1,68 +1,31 @@
-// Ask Kevin
 
-#main.container.row.training {
-  padding: 100px 0px 100px 30px;
-    header {
-    margin: 0px -37px 60px -75px;
-  }
-}
-
-header {
-  margin: 0px -37px 60px -75px;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 28px;
-}
-
-h4{
-  font-size: 24px;
-}
-
-h5 {
-  font-size: 20px;
-}
-
-li {
+.trainingcourse__content{
+  padding-right: 35px;
+  li {
   font-size: 18px;
-}
+  }
 
-ul {
-  padding-left: 20px;
-}
-
-.sidebar_text{
-  font-size: 12px;
-}
-
-.workshop {
-  h3 {
-    color: #999;
+  ul {
+    padding-left: 20px;
   }
 }
 
-.description_main {
-  padding-bottom: 20px;
+.sidebar--training{
+  padding: 5px 30px;
+  border-left: 1px solid #eee
 }
 
 .action_container {
   border: 1px solid #eee;
   background-color: #f5f3f3;
-  padding: .5em;
+  padding: 0.5em 1em;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .button {
-  width: 100%;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 %sidebar__block {
@@ -71,61 +34,54 @@ ul {
   }
   h5 {
     @extend .brand3;
+    background-color: $brandBase;
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
   }
   p {
     border: 1px solid #eee;
     border-top: none;
-    padding: .5em;
-    font-size: 12px;
+    padding: .75em;
+    font-size: 14px;
   }
 }
 
 .trainer, .testimonial {
   @extend %sidebar__block;
-  margin-top: 5px;
 }
 
 blockquote {
   border: 1px solid #eee;
   margin-bottom: 20px;
   min-height: 300px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  background-color: #fafafa;
-  padding: 0.25em 0.5em 0.25em 3em;
-  background-image: url(/assets/bg-quote.png);
-  background-repeat: no-repeat;
-  font-size: 12px;
+  padding: 0.25em 0.5em;
 }
 
+
 .course__title{
-  color: white;
+  color: #fff;
   margin-top: 0px;
-  background: #57c0e8;
+  background: $brand1;
   padding: 10px 20px 10px 65px;
-  margin-left: -45px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  text-align: center;
 }
 
 .course__img {
   height: 100px;
 }
 
-.training__hr{
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
 
 .training__subhead{
   font-size: 16pt;
+  background: #eee;
+  padding: 10px 20px 10px 65px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.request{
+  margin-bottom: 20px;
 }
 
 div.intro div.orbit-wrapper {
@@ -193,10 +149,12 @@ div.intro div.orbit-wrapper {
   }
 }
 
-.request, .workshop button{
-  font-size: 18px;
-}
-
-.request{
-  background: #999;
+.button--request{
+  background-color: #fff;
+  color: $brandBase;
+  border: 2px solid #999;
+  text-align: center;
+  &:hover{
+    color: #fff;
+  }
 }

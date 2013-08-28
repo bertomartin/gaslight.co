@@ -4,7 +4,7 @@
 #main.container.row.training
   %header.row.brand1
     .headline.four.columns
-      .headline__buzzword
+      .headline__buzzword--3lines
         Helping You
         %br
         %span Do Great Things
@@ -13,18 +13,12 @@
         %div
           %p 
             “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)"
-          %br
-          %span -Name
         %div
           %p
             “The cookbook app was a well-sized app for two days of coding. Pulling in Twitter Bootstrap was a nice way to make the app look good..."
-          %br
-          %span -Name
         %div
           %p
             “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of  Rails components I hadn't used in some time (like Inherited Resource)"
-          %br
-          %span -Name
 
   %section.row.yourTeam
     %a.anchor{name:"team"}
@@ -45,30 +39,6 @@
               %a{href: course_path(course)}= course.title
           .nine.columns.descriptions__text
             = simple_format(truncate(course.description_main, length: 250, omission: "...%s")) % link_to(" read more", course_path(course))
-  / %section.row
-  /   %a.anchor{name:"team"}
-  /   .eleven.columns.centered
-  /     %h2.title.brand2 What are people saying?
-  /     .row
-  /       .four.columns
-  /         %blockquote
-  /           %p
-  /             “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)"
-  /             %br
-  /             %span -Name
-  /       .four.columns
-  /         %blockquote
-  /           %p
-  /             “The cookbook app was a well-sized app for two days of coding. Pulling in Twitter Bootstrap was a nice way to make the app look good..."
-  /             %br
-  /             %span -Name
-  /       .four.columns
-  /         %blockquote
-  /           %p
-  /             “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of  Rails components I hadn't used in some time (like Inherited Resource)"
-  /             %br
-  /             %span -Name
-
   %section.row
     %a.anchor{name:"team"}
     .eleven.columns.centered

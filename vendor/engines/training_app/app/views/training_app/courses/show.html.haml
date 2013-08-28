@@ -2,76 +2,74 @@
 = render partial: 'application/nav'
 
 #main.container.row.training
-  .columns.eight
-    .course
-      %h1.course__title= course.title
-      %p 
-        = simple_format(course.description_main)
-    - if course.id == 3
-      = render :partial => "training_videos"
-    - else
-      %hr.training__hr
-      %h2.training__subhead What will I learn in the course?
-      .descriptions
-        .three.columns.descriptions__icon
-          = image_tag((course.image_url), :class => "course__img")
-          %strong
-            Backbone and Ember
-        .nine.columns.descriptions__text
-          %p
-            Picking a client side MVC framework isn't easy, and seeing a
-            trivial Todo app just doesn't show how much these frameworks bring
-            to the table. In this workshop, we'll dive into two popular
-            frameworks: Backbone.js and Ember...
+  %h1.course__title= course.title
+  .row
+    .columns.eight.trainingcourse__content
+      .course
+        %p 
+          = simple_format(course.description_main)
+      - if course.id == 3
+        = render :partial => "training_videos"
+      - else
+        %h2.training__subhead What will I learn in the course?
+        .descriptions.row
+          .three.columns.descriptions__icon
+            = image_tag((course.image_url), :class => "course__img")
+            %strong
+              Backbone and Ember
+          .nine.columns.descriptions__text
+            %p
+              Picking a client side MVC framework isn't easy, and seeing a
+              trivial Todo app just doesn't show how much these frameworks bring
+              to the table. In this workshop, we'll dive into two popular
+              frameworks: Backbone.js and Ember...
 
-      %hr.training__hr
-      %h2.training__subhead What should I know before the course?
-      %ul
-        %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
-        %li How to drive a car
-        %li The unladen swallow joke from Monty Python
+        %h2.training__subhead What should I know before the course?
+        %ul
+          %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
+          %li How to drive a car
+          %li The unladen swallow joke from Monty Python
 
-      %ul
-        %li A laptop
-        %li A working Ruby installation
+        %ul
+          %li A laptop
+          %li A working Ruby installation
 
-
-  .columns.three.prepend-1.sidebar
-    .action_container
-      - if course.workshops.upcoming
-        - course.workshops.upcoming.each do |workshop|
-          .workshop
-            %h4
-              = workshop.location
-              %span= number_to_currency(workshop.current_price, precision: 0)
-            %p We're doing a one day workshop in #{workshop.location}. Come learn with everyone.
-            %button.small.radius.success.button.brand3 Register Now!
-    %p We can bring this workshop to your location for private training as well.
-    
-    %a.small.radius.success.button.request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
-   
-    .trainer
-      %h5 Chris Nelson
-      %img{src: image_path('team/chris_n.jpg') }
-      %p
-        Chris Nelson is a software developer who hails from the fair city of
-        Cincinnati, Ohio. He has been developing web applications for 15 years
-        and is passionate about finding better ways to do it. 
+    .columns.four.sidebar--training
+      .action_container
+        - if course.workshops.upcoming
+          - course.workshops.upcoming.each do |workshop|
+            .workshop
+              %h3
+                = workshop.location
+                %span= number_to_currency(workshop.current_price, precision: 0)
+              %p We're doing a one day workshop in #{workshop.location}. Come learn with everyone.
+              %button.small.radius.success.button.brand3 Register Now!
+      .request
+        %p We can bring this workshop to your location for private training as well.
+        %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
+     
+      .trainer
+        %h5 Chris Nelson
+        %img{src: image_path('team/chris_n-large.png') }
+        %p
+          Chris Nelson is a software developer who hails from the fair city of
+          Cincinnati, Ohio. He has been developing web applications for 15 years
+          and is passionate about finding better ways to do it. 
 
 
-    .trainer
-      %h5 Kevin Rockwood
-      %img{src: image_path('team/kevin.jpg') }
-      %p
-        Kevin is from the cold north and loves fancy things, like pianos. Kevin
-        is from the cold north and loves fancy things, like pianos. Kevin is
-        from the cold north and loves fancy things, like pianos. 
+      .trainer
+        %h5 Kevin Rockwood
+        %img{src: image_path('team/kevin-large.png') }
+        %p
+          Kevin is from the cold north and loves fancy things, like pianos. Kevin
+          is from the cold north and loves fancy things, like pianos. Kevin is
+          from the cold north and loves fancy things, like pianos. 
 
-    .testimonial
-      %h5 Testimonials
-      %p
-        "Was happy to see explanations/solutions for "persisted" events, as
-        well as being reintroduced to a number of Rails components I hadn't
-        used in some time (like Inherited Resource)
+      .testimonial
+        %h5 Testimonials
+        %p
+          "Was happy to see explanations/solutions for "persisted" events, as
+          well as being reintroduced to a number of Rails components I hadn't
+          used in some time (like Inherited Resource)
 = render partial: 'application/footer'
 

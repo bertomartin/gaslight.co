@@ -19,7 +19,10 @@
             Backbone and Ember
         .nine.columns.descriptions__text
           %p
-            Picking a client side MVC framework isn't easy, and seeing a trivial Todo app just doesn't show how much these frameworks bring to the table. In this workshop, we'll dive into two popular frameworks: Backbone.js and Ember...
+            Picking a client side MVC framework isn't easy, and seeing a
+            trivial Todo app just doesn't show how much these frameworks bring
+            to the table. In this workshop, we'll dive into two popular
+            frameworks: Backbone.js and Ember...
 
       %hr.training__hr
       %h2.training__subhead What should I know before the course?
@@ -40,8 +43,8 @@
           .workshop
             %h4
               = workshop.location
-              %span= number_to_currency(workshop.early_bird_price, precision: 0)
-            %p We're doing a one day workshop in Cincinnati. Come learn with everyone.
+              %span= number_to_currency(workshop.current_price, precision: 0)
+            %p We're doing a one day workshop in #{workshop.location}. Come learn with everyone.
             %button.small.radius.success.button.brand3 Register Now!
     %p We can bring this workshop to your location for private training as well.
     
@@ -49,22 +52,26 @@
    
     .trainer
       %h5 Chris Nelson
-      %img{src: "http://assets3.gaslight.co/assets/team/chris_n-d6703c32e47a8d176aa1db61f3cc9d4c.jpg"}
-      %p Chris Nelson is a software developer who hails from the fair city of Cincinnati, Ohio. He has been developing web applications for 15 years and is passionate about finding better ways to do it. 
+      %img{src: image_path('team/chris_n.jpg') }
+      %p
+        Chris Nelson is a software developer who hails from the fair city of
+        Cincinnati, Ohio. He has been developing web applications for 15 years
+        and is passionate about finding better ways to do it. 
 
 
     .trainer
       %h5 Kevin Rockwood
-      %img{src: "http://assets3.gaslight.co/assets/team/kevin-5595fd1c0109cfee31bf51d22af20ad1.jpg"}
-      %p Kevin is from the cold north and loves fancy things, like pianos. Kevin is from the cold north and loves fancy things, like pianos. Kevin is from the cold north and loves fancy things, like pianos. 
+      %img{src: image_path('team/kevin.jpg') }
+      %p
+        Kevin is from the cold north and loves fancy things, like pianos. Kevin
+        is from the cold north and loves fancy things, like pianos. Kevin is
+        from the cold north and loves fancy things, like pianos. 
 
     .testimonial
       %h5 Testimonials
-      %p “Was happy to see explanations/solutions for "persisted" events, as well as being reintroduced to a number of Rails components I hadn't used in some time (like Inherited Resource)" 
-    
-
-      
-
-
+      %p
+        "Was happy to see explanations/solutions for "persisted" events, as
+        well as being reintroduced to a number of Rails components I hadn't
+        used in some time (like Inherited Resource)
 = render partial: 'application/footer'
 

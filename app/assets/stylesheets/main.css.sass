@@ -361,17 +361,20 @@ ul.photos li
     list-style: none
     display: inline-block
     a
-      background: #000
+      // background: #000
       display: inline-block
       text-align: center
       padding: 5px 10px
       margin: 0 0 0 20px
-      border: 3px solid #fff
-      color: #fff
+      font-size: 16px
+      font-weight: bold
+      border: 7px solid #fff
+      color: #000
+      line-height: 2em
       @include brandColors(border-color)
-      @include border-radius(5px)
+      // @include border-radius(5px)
       &:hover
-        @include brandColors(color, 20%)
+        @include brandColors(background-color)
 
 
 .clientsList

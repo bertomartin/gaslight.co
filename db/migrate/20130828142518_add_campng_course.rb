@@ -6,13 +6,27 @@ class AddCampngCourse < ActiveRecord::Migration
 
     campng = TrainingApp::Course.create!(title: 'CampNg',
                                          image_url: "http://ninja-squad.com/public/img/angularjs-logo.png",
-                                         description_main: "Do consequat voluptate, in pour-over kitsch 90's flannel High Life sapiente gluten-free cupidatat wayfarers sed. Commodo bicycle rights fap High Life, narwhal nostrud Odd Future cliche chia Terry Richardson tote bag aliquip. Shoreditch aliqua slow-carb photo booth elit eiusmod retro, nesciunt YOLO nulla you probably haven't heard of them DIY irure. Tote bag hella Etsy, skateboard +1 tempor cray organic. Polaroid Banksy nihil consequat, dreamcatcher dolor flexitarian bespoke aesthetic. Nisi meggings culpa paleo, fixie sustainable you probably haven't heard of them. 8-bit quis keytar messenger bag, Williamsburg cupidatat plaid bespoke selvage authentic do chillwave twee.
+                                         description_main: "Angular.js is a ridiculously productive way to build web applications. It's quick to learn and build things with, but it's also a powerful tool with some important concepts to learn. We're going to spend one crazily action packed day building an app in angular.js together. We'll start simple, and by the end of the day be hitting some of the more advanced features of this powerful framework. Go from zero to angular.js hero with us as we hit the following topics:
 
-                                                            Officia enim delectus 90's, tofu Pitchfork 3 wolf moon Vice et lomo sed cillum. Aliquip assumenda letterpress ethnic Portland fanny pack cray in you probably haven't heard of them butcher. Food truck elit Marfa, vinyl accusamus art party stumptown whatever actually. Small batch anim accusamus, YOLO fanny pack brunch readymade est Pinterest wayfarers proident. Trust fund freegan pariatur, readymade direct trade enim asymmetrical locavore Terry Richardson do exercitation. Chillwave deep v four loko kale chips. Ennui mlkshk Pinterest slow-carb.
+                                         Creating a new app quickly with yeoman
 
-                                                            Skateboard Tumblr Intelligentsia, delectus YOLO trust fund Portland. Semiotics asymmetrical enim eiusmod. Nostrud organic ut, art party ad laboris sustainable pop-up aute seitan literally. Distillery fanny pack raw denim, Tumblr before they sold out single-origin coffee incididunt asymmetrical twee selfies master cleanse bespoke Truffaut. High Life commodo pork belly, synth est gluten-free Tumblr id fingerstache Austin food truck. Assumenda Neutra whatever, Bushwick dreamcatcher gentrify ea banh mi meh. Stumptown whatever ugh, Intelligentsia authentic asymmetrical sapiente.
- 
-                                                            Eu forage consectetur, wayfarers yr Intelligentsia bespoke accusamus. Leggings mollit banh mi, nihil roof party messenger bag fixie laboris Cosby sweater YOLO kogi. Farm-to-table mumblecore commodo messenger bag adipisicing. Ullamco iPhone nisi, viral sapiente artisan cillum Terry Richardson mustache. Distillery elit iPhone, chambray selvage cray aliqua small batch Godard whatever wolf irony aliquip. Polaroid ad nulla, in viral tofu irony direct trade skateboard culpa Wes Anderson sed. Blue Bottle hoodie incididunt, Pinterest flannel keffiyeh pork belly Godard.")
+                                         Testing driving your app (unit and end-to-end)
+
+                                         Controllers and scopes
+
+                                         Using and writing filters
+
+                                         Client side routing
+
+                                         Forms and validation
+
+                                         Organizing your code with modules
+
+                                         Dependency injection with Services and Factories
+
+                                         Using and writing directives
+
+                                         Talking to the server with $http and friends")
 
     campng.workshops.create!(price: '150',
                              start_date: '2013-09-20',

@@ -8,28 +8,13 @@
       .course
         %p 
           = simple_format(course.description_main)
-      - if course.id == 3
-        = render :partial => "training_videos"
-      - else
-        %h2.training__subhead What will I learn in the course?
-        .descriptions.row
-          .three.columns.descriptions__icon
-            = image_tag((course.image_url), :class => "course__img")
-            %strong
-              Backbone and Ember
-          .nine.columns.descriptions__text
-            %p
-              Picking a client side MVC framework isn't easy, and seeing a
-              trivial Todo app just doesn't show how much these frameworks bring
-              to the table. In this workshop, we'll dive into two popular
-              frameworks: Backbone.js and Ember...
 
         %h2.training__subhead What should I know before the course?
         %ul
-          %li You should have a strong understanding of DOM manipulation and underwater basket weaving.
-          %li How to drive a car
-          %li The unladen swallow joke from Monty Python
+          %li You should have a strong understanding of DOM manipulation.
+          %li You should have some experience with JavaScript web applications.
 
+        %h2.training__subhead What should I bring?
         %ul
           %li A laptop
           %li A working Ruby installation
@@ -55,7 +40,6 @@
           Chris Nelson is a software developer who hails from the fair city of
           Cincinnati, Ohio. He has been developing web applications for 15 years
           and is passionate about finding better ways to do it. 
-
 
       .trainer
         %h5 Kevin Rockwood

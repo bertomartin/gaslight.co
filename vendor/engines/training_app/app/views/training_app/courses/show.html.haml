@@ -1,0 +1,55 @@
+- content_for(:title) { "JavaScript and Ruby on Rails Training from Gaslight | Cincinnati, OH" }
+= render partial: 'application/nav'
+
+#main.container.row.training
+  %h1.course__title= course.title
+  .row
+    .columns.eight.trainingcourse__content
+      .course
+        %p
+          = simple_format(course.description_main)
+
+        %h2.training__subhead What should I know before the course?
+        %ul
+          %li Familiarity with Javascript
+          %li Basic understanding of jQuery or similar DOM manipulation library
+
+        %h2.training__subhead What should I bring?
+        %ul
+          %li A laptop
+          %li A modern web browser (Chrome is highly recommended)
+
+    .columns.four.sidebar--training
+      .action_container
+        - if course.workshops.upcoming
+          - course.workshops.upcoming.each do |workshop|
+            .workshop
+              %h3= workshop.start_date.to_s(:long)
+              %h3
+                = workshop.location
+                %span= number_to_currency(workshop.current_price, precision: 0)
+              %p We're doing a one day workshop in #{workshop.location}. Come learn with everyone.
+              %a.button.small.radius.success.button.brand3{href: "https://campng-cincy.eventbrite.com/"} Register Now!
+      .request
+        %p We can bring this workshop to your location for private training as well.
+        %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
+
+      .trainer
+        %h5 Chris Nelson
+        %img{src: image_path('team/chris_n-large.png') }
+        %p
+          Chris Nelson is a software developer at Gaslight. He has been developing web applications for 15 years
+          in a variety of technologies. In addition to speaking at conferences, Chris also enjoys teaching developers about how to build web apps better and have more fun doing it.
+
+      .trainer
+        %h5 Kevin Rockwood
+        %img{src: image_path('team/kevin-large.png') }
+        %p
+          Kevin Rockwood is a developer at Gaslight. He brings a depth of knowledge in front end technologies, but can build awesome things on the server side too. What's more, Kevin is a super nerdy audio/visual engineer and was probably in the A/V club in high school.
+
+      .testimonial
+        %h5 Testimonials
+        %p
+          "What I've seen so far is pretty freaking amazing. I love the rhythm of showing the students a little bit and then forcing them to type in order to make it work. The lesson sizes are perfect, very small and digestible."
+= render partial: 'application/footer'
+

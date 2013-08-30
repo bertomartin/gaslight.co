@@ -1,0 +1,2 @@
+module TrainingApp::ApplicationHelper
+end

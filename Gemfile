@@ -16,6 +16,7 @@ gem 'stringex'
 gem 'asset_sync'
 gem 'htmlentities'
 gem 'rack-cors', require: 'rack/cors'
+gem 'training_app', path: 'vendor/engines/training_app'
 
 gem 'redcarpet', require: false
 gem 'pygments.rb', require: false

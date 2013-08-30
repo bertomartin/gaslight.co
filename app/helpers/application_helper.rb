@@ -19,6 +19,10 @@ module ApplicationHelper
     request.fullpath =~ /blog/
   end
 
+  def viewing_training?
+    request.fullpath =~ /training/
+  end
+
   def tag_list(tags)
     tags.collect do |t|
       link_to(t, posts_path(tagged: t.name), class: 'tag')

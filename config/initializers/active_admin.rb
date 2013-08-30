@@ -109,7 +109,7 @@ ActiveAdmin.setup do |config|
   #   config.namespace :without_comments do |without_comments|
   #     without_comments.allow_comments = false
   #   end
-
+  config.allow_comments = false
 
   # == Batch Actions
   #
@@ -150,3 +150,11 @@ ActiveAdmin.setup do |config|
   # Set the CSV builder options (default is {})
   # config.csv_options = {}
 end
+
+ActiveAdmin::ResourceController.class_eval do
+  # Allow ActiveAdmin admins to freely mass-assign when using strong_parameters
+  def resource_params
+    [(params[resource_request_name] || params[resource_instance_name]).try(:permit!) || {}]
+  end
+end
+

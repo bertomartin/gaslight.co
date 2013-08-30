@@ -1,4 +1,5 @@
 ActiveAdmin.register Post do
+  menu label: 'Posts', parent: 'Blog'
   config.sort_order = 'published_at_desc'
 
   controller do

@@ -1,0 +1,58 @@
+- content_for(:title) { "JavaScript and Ruby on Rails Training from Gaslight | Cincinnati, OH" }
+= render partial: 'application/nav'
+
+#main.container.row.training
+  %header.row.brand1
+    .headline.four.columns
+      .headline__buzzword--3lines
+        Helping You
+        %br
+        %span Do Great Things
+    .intro.eight.columns
+      .featuredContent
+        %div
+          %p 
+            “Was happy to see explanations/solutions for "persisted" events, as
+            well as being reintroduced to a number of Rails components I hadn't
+            used in some time (like Inherited Resource)"
+        %div
+          %p
+            “The cookbook app was a well-sized app for two days of coding.
+            Pulling in Twitter Bootstrap was a nice way to make the app look
+            good..."
+        %div
+          %p
+            “Was happy to see explanations/solutions for "persisted" events, as
+            well as being reintroduced to a number of  Rails components I
+            hadn't used in some time (like Inherited Resource)"
+
+  %section.row.yourTeam
+    %a.anchor{name:"team"}
+    .eleven.columns.centered
+      %h2.title.recent--courses Current Courses
+      - courses.each do |course|
+        .row.descriptions
+          .three.columns.descriptions__icon
+            %a{href: course_path(course)}
+              = image_tag((course.image_url), :class => "descriptions__icon__image")
+              %strong= course.title
+          .nine.columns.descriptions__text
+            = simple_format(truncate(course.description_main, length: 250, omission: "...%s")) % link_to(" read more", course_path(course))
+  %section.row
+    %a.anchor{name:"team"}
+    .eleven.columns.centered
+      %h2.title.past--workshop Past Courses
+      .row.descriptions
+        .three.columns.descriptions__icon
+          %a{href: 'https://training.gaslight.co/'}
+            %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
+            %strong Backbone and Ember
+        .nine.columns.descriptions__text
+          %p
+            Picking a client side MVC framework isn't easy, and seeing a
+            trivial Todo app just doesn't show how much these frameworks bring
+            to the table. In this workshop, we'll dive into two popular
+            frameworks: Backbone.js and Ember...
+
+= render partial: 'application/footer'
+

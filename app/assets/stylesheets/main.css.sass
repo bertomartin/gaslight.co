@@ -92,6 +92,7 @@
       border-color: $brand1
       .intro
         padding-top: 60px
+        height: 100%
     &.brand2
       background-image: image-url("header2.jpg")
       border-color: $brand2
@@ -120,12 +121,14 @@
         h4
           &:hover
             color: #000
-      .headline__buzzword
+      .headline__buzzword, .headline__buzzword--casestudy
         font-size: 50px
         margin: 122px 0 0 25px
-      .headline__buzzword--casestudy
+      .headline__buzzword--3lines
         font-size: 50px
-        margin: 122px 0 0 25px
+        margin: 100px 0 0 25px
+        color: #fff
+        line-height: 1.2em
       h4
         text-align: center
       &.brandBase .headline__buzzword, h4
@@ -259,9 +262,8 @@ h2.title
   p
     margin-bottom: 40px
 
-.iconTile
+.descriptions__icon
   text-align: center
-  margin-bottom: 40px
   &.last
     margin-bottom: 0
   i
@@ -407,7 +409,7 @@ ul.photos li
 
 .sidebar
   h5
-    @include brandColors(background)
+    background-color: #222
     color: #fff
     margin: 0
     padding: 10px 0

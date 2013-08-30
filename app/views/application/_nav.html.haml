@@ -14,7 +14,7 @@
         %li
           %a.brand2{href: main_app.posts_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
         %li
-          %a{href: "/training", rel: "Main Navigation"} Training
+          %a.brand1{href: "/training", rel: "Main Navigation", class: viewing_training? ? 'active' : nil} Training
 
       %a.mobile.toggle.icon-menu
       %a.mobile.mail.icon-mail{href: "mailto:hello@gaslight.co", rel: "Main Navigation"}

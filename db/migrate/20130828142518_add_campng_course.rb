@@ -1,5 +1,5 @@
 class AddCampngCourse < ActiveRecord::Migration
-  def change
+  def up
     gaslight = TrainingApp::Venue.create!(name: 'Gaslight Training Room',
                                           address: '11126 Kenwood Rd Cincinnati OH 45242',
                                           city: 'Cincinnati, OH')
@@ -19,5 +19,11 @@ class AddCampngCourse < ActiveRecord::Migration
                              end_date: '2013-09-20',
                              venue: gaslight)
 
+  end
+
+  def down
+    TrainingApp::Workshop.destroy_all
+    TrainingApp::Course.destroy_all
+    TrainingApp::Venue.destroy_all
   end
 end

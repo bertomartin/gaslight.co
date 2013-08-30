@@ -21,27 +21,6 @@
       font-size: 24px
 
   #guides
-    min-height: 25%
-    margin-bottom: 20px
-    .intro
-      max-width: 100%
-      position: relative
-      margin-top: 60px
-      padding: 20px
-      .lead
-        text-align: left
-        margin-bottom: 0
-    .landing-page__tagline
-      padding-top: 65px
-      font-size: 225%
-      text-align: left
-    p
-      text-align: left
-    .logo
-      display: none
-    h2
-      display: none
-
   .sidebar
     margin-bottom: 40px
     border-left: none
@@ -77,16 +56,20 @@
     &.brand3
       &:before, &:after
         @include icon-sprite(diamond-small-red)
-  #main.landing-page
+  .landingpage
+    margin-top: 15px + $topBarHeight
+    margin-bottom: 15px
+
+
     .hero--weare, .hero--worktogether
-      padding: 20px 0
+      padding: 35px 0
       background-color: $brandBase
       background-image: none
       height: 100%
       .button
         width: 100%
     .hero--process
-      padding: 20px 0
+      padding: 35px 0
       .button
         width: 100%
   #main 

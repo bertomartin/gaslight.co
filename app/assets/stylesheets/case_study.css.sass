@@ -34,8 +34,15 @@
   @include transition(all 0.5s)
   background-color: rgba(0,0,0,0.65)
   padding: 80px 0
+
+.hero__header--animated
+  @extend %hero__header
+  @include transition(all 0.5s)
+  background-color: rgba(0,0,0,0.65)
+  padding: 80px 0
   &:hover
     background-color: rgba(239,199,3,0.65)
+
 
 .hero__header--brand1
   @extend %hero__header
@@ -58,6 +65,7 @@
 
 %case-study--featured
   height: 450px
+
 %case-study
   height: 250px
 
@@ -69,7 +77,7 @@
 .case-study--ipc
   @extend %hero
   @extend %case-study
-  background-image: image-url("casestudy/lumbee_hero.jpg")
+  background-image: image-url("casestudy/ipc_hero--home.jpg")
 
 // Case Study
 
@@ -91,17 +99,17 @@
 .case-study--ipc--first
   @extend %hero--top
   @extend %case-study--featured
-  background-image: image-url("casestudy/lumbee_hero.jpg")
+  background-image: image-url("casestudy/ipc_hero.jpg")
 .case-study--ipc--second
   @extend %hero
   min-height: 300px
-  background-image: image-url("casestudy/lumbee_video.jpg")
+  background-image: image-url("casestudy/ipc--1.jpg")
   background-color: #000
 
 .case-study--ipc--third
   @extend %hero
   min-height: 300px
-  background-image: image-url("casestudy/lumbee_ba.jpg")
+  background-image: image-url("casestudy/ipc--2.jpg")
 
 .case-study__design .row
   margin-bottom: $sectionMargin
@@ -162,7 +170,6 @@ h4.case-study__sidebar__heading
 .case-study__quote--full
   p
     font-size: 50px
-    margin-top: 20px
   h4
     color: #eee
     font-size: 25px
@@ -175,6 +182,7 @@ h4.case-study__sidebar__heading
 .case-study__next
   .button
     margin-top: 10px
+
 
 @media only screen and (min-width : 320px) and (max-width: 767px)
   .hero__header--brand1, .hero__header--animated, .hero__featured-header--animated

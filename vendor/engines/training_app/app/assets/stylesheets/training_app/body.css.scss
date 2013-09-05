@@ -113,17 +113,17 @@ div.intro div.orbit-wrapper {
   display: inline-block;
 }
 
-.descriptions:last-child{
-  margin-bottom: -60px;
-}
+// .descriptions:last-child{
+//   margin-bottom: -60px;
+// }
 
-.descriptions__text{
-  padding-top: 20px;
+// .descriptions__text{
+//   padding-top: 20px;
 
-  p{
-    margin-bottom: 0px;
-  }
-}
+//   p{
+//     margin-bottom: 0px;
+//   }
+// }
 
 .descriptions__icon:last-child{
   margin-bottom: 0px;
@@ -134,10 +134,8 @@ div.intro div.orbit-wrapper {
   padding: 10px;
 }
 
-.recent--courses:before, :after, .past--workshop :before, :after{
-  background-position: 0 -524px;
-  height: 25px;
-  width: 25px;
+.title.recent--courses, .title.past--workshop{
+  margin: 0 100px 30px 100px;
 }
 
 .ember, .backbone {

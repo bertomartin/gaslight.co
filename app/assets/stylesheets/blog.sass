@@ -6,40 +6,17 @@
   position: relative
   padding: 4px 8px
   font-size: 12px
-  border: 1px solid #ccc
+  border: 1px solid #ddd
   display: inline-block
   margin: 2px 0
   font-weight: 600
-  vertical-align: top
+  // vertical-align: top
   @include border-radius(4px)
   @include transition-property(all)
   @include transition-duration(0.5s)
-  &[data-count]:after
-    position: absolute
-    content: attr(data-count)
-    text-align: center
-    color: #fff
-    font-weight: bold
-    top: -1px
-    left: 100%
-    width: 0px
-    height: auto
-    padding: 4px 0
-    background: #57c0e8
-    z-index: 1
-    overflow: hidden
-    border: 1px solid #2aafe2
-    opacity: 0
-    @include transition(all 0.5s)
-    @include border-top-right-radius(3px)
-    @include border-bottom-right-radius(3px)
   &:hover
     background-color: #ddd
-    @include border-top-right-radius(0px)
-    @include border-bottom-right-radius(0px)
-    &[data-count]:after
-      width: 20px
-      opacity: 1
+
 
 .sidebar--blog
   border-left: 1px solid #eee

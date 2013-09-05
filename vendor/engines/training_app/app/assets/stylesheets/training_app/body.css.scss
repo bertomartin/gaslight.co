@@ -63,7 +63,7 @@ blockquote {
   color: #fff;
   margin-top: 0px;
   background: $brand1;
-  padding: 10px 20px 10px 65px;
+  padding: 10px 20px;
   text-align: center;
 }
 
@@ -75,7 +75,7 @@ blockquote {
 .training__subhead{
   font-size: 16pt;
   background: #eee;
-  padding: 10px 20px 10px 65px;
+  padding: 10px 20px;
   text-align: center;
   margin-top: 60px;
 }
@@ -156,5 +156,12 @@ div.intro div.orbit-wrapper {
   text-align: center;
   &:hover{
     color: #fff;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .sidebar--training{
+    padding: 0;
+    border-left: 0px solid #fff;
   }
 }

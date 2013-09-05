@@ -26,7 +26,7 @@
     border-left: none
   
   .iconTile, .iconTile.last
-    margin-bottom: 20px
+    margin-bottom: 10px
 
   #slideshow
     h3
@@ -61,25 +61,30 @@
     margin-bottom: 15px
   .landingpage__tagline
     font-size: 28px
+  .landingpage__subheading
+    margin-bottom: 0
+  .landing-page__info
+    margin-top: 0
 
 
-    .hero--weare, .hero--worktogether
-      padding: 15px 0
-      background-color: $brandBase
-      background-image: none
-      height: 100%
-      .button
-        width: 100%
-    .hero--process
-      padding: 15px 0
-      .button
-        width: 100%
   #main 
     padding: 75px 25px
     > header
       display: none
     > .columns
       padding: 0
+  #main.landing-page
+    .hero--weare, .hero--worktogether
+      padding: 40px 0
+      // background-color: $brandBase
+      // background-image: none
+      height: 100%
+      .button
+        width: 100%
+    .hero--process
+      padding: 40px 0
+      .button
+        width: 100%
 
   .post__title
     font-size: 20px
@@ -110,7 +115,8 @@
   .footer__contact
     margin-bottom: 5px
 
-
+  .headline__buzzword--casestudy
+    line-height: 1em
 //iPad and down
 @media only screen and (max-width : 1024px)
   .post__avatar

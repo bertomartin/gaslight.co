@@ -215,8 +215,6 @@ GEM
       net-ssh (>= 2.1.3)
       nokogiri (~> 1.5)
       ruby-hmac
-    font-awesome-rails (3.2.1.3)
-      railties (>= 3.2, < 5.0)
     formatador (0.2.4)
     fssm (0.2.9)
     hacker_news_search (0.0.7)
@@ -423,7 +421,6 @@ DEPENDENCIES
   dotenv-rails
   engagement!
   factory_girl_rails
-  font-awesome-rails
   formtastic!
   foundation_rails_helper!
   haml (~> 4.0)

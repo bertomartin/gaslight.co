@@ -1,5 +1,6 @@
 .columns.three.prepend-1.sidebar--blog
   = render partial: 'search_form'
+  = link_to "Learn Angular!", training_app.course_path(TrainingApp::Course.first), class: "brand1 button--bloglink"
   %a.button.brand3.button--bloglink{href: "/coffee", rel: "Coffee Friday"} Get Coffee With Us
   %a.button.button--bloglink{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
   = link_to_unless_current('Recent Posts', posts_path)

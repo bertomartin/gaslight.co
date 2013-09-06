@@ -44,9 +44,10 @@ $ ->
   $("meta[property='author']").each ->
     track('Blog', 'Author', $(this).attr('content'))
 
-  $('audio').mediaelementplayer
-    pluginPath: '/assets/'
-    audioWidth: '100%'
+  $('audio').each ->
+    new MediaElementPlayer this,
+      pluginPath: '/assets/'
+      audioWidth: '100%'
 
 $(window).load ->
   $(".featuredContent").orbit

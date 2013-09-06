@@ -9,8 +9,14 @@
     display: block
     float: left
     line-height: 1
-    margin-top: 18px
-
+    margin-top: 18px 
+  .logo
+    height: 23px
+    width: 140px
+    background: image-url("logoSmall.png")
+    background-size: 100%
+    background-repeat: no-repeat
+    margin: auto
         
   ul.links > li a
     color: $topBarLinkColor
@@ -33,3 +39,9 @@
       left: 0
     &.mail
       right: 0
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) 
+  
+  .logo
+    background-image: image-url("logoSmall.svg") !important

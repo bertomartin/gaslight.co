@@ -2,7 +2,7 @@
   .row
     %nav.twelve.columns
       %a.brand{href: main_app.root_path, rel: "Main Navigation"}
-        %img.logo{src: image_path("logoSmall.svg")}
+        .logo
 
       %ul.right.links
         %li
@@ -17,4 +17,3 @@
           %a.brand1{href: "/training", rel: "Main Navigation", class: viewing_training? ? 'active' : nil} Training
 
       %a.mobile.toggle.icon-menu
-      %a.mobile.mail.icon-mail{href: "mailto:hello@gaslight.co", rel: "Main Navigation"}

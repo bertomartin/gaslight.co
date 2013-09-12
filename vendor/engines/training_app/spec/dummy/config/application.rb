@@ -7,6 +7,12 @@ require "action_mailer/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+require "haml"
+require "haml-rails"
+require "decent_exposure"
+require "eco"
+require "stripe"
+
 Bundler.require(*Rails.groups)
 require "training_app"
 

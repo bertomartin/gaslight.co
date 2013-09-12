@@ -102,7 +102,10 @@ PATH
   remote: vendor/engines/training_app
   specs:
     training_app (0.0.1)
+      decent_exposure
       eco
+      haml (~> 4.0)
+      haml-rails
       rails (~> 4.0.0)
       stripe
 

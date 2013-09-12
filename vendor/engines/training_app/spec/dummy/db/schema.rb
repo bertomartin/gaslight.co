@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 20130912184711) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "venue_id"
+    t.string   "image_url"
+    t.text     "synopsis"
   end
 
   create_table "training_app_courses_instructors", id: false, force: true do |t|

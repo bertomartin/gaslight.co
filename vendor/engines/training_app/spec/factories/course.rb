@@ -6,6 +6,5 @@ FactoryGirl.define do
     start_date { 1.day.ago }
     end_date { Date.today + 1.month }
     price 199
-    venue
   end
 end

@@ -35,24 +35,11 @@
           well.
         %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
 
-      .trainer
-        %h5 Chris Nelson
-        %img{src: image_path('team/chris_n-large.png') }
-        %p
-          Chris Nelson is a software developer at Gaslight. He has been
-          developing web applications for 15 years in a variety of
-          technologies. In addition to speaking at conferences, Chris also
-          enjoys teaching developers about how to build web apps better and
-          have more fun doing it.
-
-      .trainer
-        %h5 Kevin Rockwood
-        %img{src: image_path('team/kevin-large.png') }
-        %p
-          Kevin Rockwood is a developer at Gaslight. He brings a depth of
-          knowledge in front end technologies, but can build awesome things on
-          the server side too. What's more, Kevin is a super nerdy audio/visual
-          engineer and was probably in the A/V club in high school.
+      - course.instructors.each do |instructor|
+        .instructor
+          %h5= instructor.name
+          %img{src: instructor.image_url }
+          %p= instructor.bio
 
       .testimonial
         %h5 Testimonials

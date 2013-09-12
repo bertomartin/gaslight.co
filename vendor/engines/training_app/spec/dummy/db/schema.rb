@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130804174733) do
+ActiveRecord::Schema.define(version: 20130912184711) do
 
   create_table "training_app_active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -58,14 +58,22 @@ ActiveRecord::Schema.define(version: 20130804174733) do
     t.integer  "venue_id"
   end
 
-  create_table "training_app_courses_trainers", id: false, force: true do |t|
+  create_table "training_app_courses_instructors", id: false, force: true do |t|
     t.integer "course_id"
-    t.integer "trainer_id"
+    t.integer "instructor_id"
   end
 
   create_table "training_app_discount_requests", force: true do |t|
     t.integer  "price"
     t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "training_app_instructors", force: true do |t|
+    t.string   "name"
+    t.string   "image_url"
+    t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -83,14 +91,6 @@ ActiveRecord::Schema.define(version: 20130804174733) do
     t.integer  "workshop_id"
     t.string   "referral_token"
     t.string   "code"
-  end
-
-  create_table "training_app_trainers", force: true do |t|
-    t.string   "name"
-    t.string   "gravatar_email"
-    t.text     "bio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "training_app_venues", force: true do |t|

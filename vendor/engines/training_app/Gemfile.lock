@@ -51,8 +51,12 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    database_cleaner (1.0.1)
     decent_exposure (2.2.1)
     diff-lcs (1.2.4)
+    dotenv (0.9.0)
+    dotenv-rails (0.9.0)
+      dotenv (= 0.9.0)
     eco (1.0.0)
       coffee-script
       eco-source
@@ -167,6 +171,8 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  database_cleaner (= 1.0.1)
+  dotenv-rails
   factory_girl_rails
   poltergeist
   pry

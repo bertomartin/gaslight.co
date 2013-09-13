@@ -12,6 +12,7 @@ require "haml-rails"
 require "decent_exposure"
 require "eco"
 require "stripe"
+require "pry"
 
 Bundler.require(*Rails.groups)
 require "training_app"

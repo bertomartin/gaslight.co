@@ -190,10 +190,10 @@ div.intro div.orbit-wrapper {
   }
 }
 
-.featured-card__more-link{
+%more-info-link{
   float: right;
   position: relative;
-  top: -15px;
+  text-transform: uppercase;
   margin-right: 10px; 
   &:hover{
     text-decoration: underline;
@@ -206,9 +206,14 @@ div.intro div.orbit-wrapper {
     border: 5px solid;
     border-color: transparent transparent transparent $brand1;
     position: absolute;
-    top: 2px;
+    top: 1px;
     right: -15px;
   }
+}
+
+.featured-card__more-link{
+  @extend %more-info-link;
+  top: -15px;
 }
 
 .featured-card .button{
@@ -217,7 +222,71 @@ div.intro div.orbit-wrapper {
 }
 
 
+//--------------------------------//
+//         COURSE LISTING         //
+//--------------------------------//
 
+.descriptions:hover .descriptions__more-link{
+  display: block;
+}
 
+.descriptions__more-link{
+  @extend %more-info-link;
+  top: 10px;
+  display: none;
+}
+
+.descriptions__title h1{
+  display: inline-block;
+  color: #000;
+  margin-top: 0;
+  @include transition(color 0.1s);
+  &:hover{
+    color: inherit;
+  }
+}
+
+.descriptions__text p{
+  margin-bottom: 25px;
+}
+
+.descriptions__course-schedule{
+  list-style: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  a{
+    position: relative;
+    color: #999;
+    &::after{
+      content: "";
+      display: none;
+      height: 0;
+      width: 0;
+      border: 5px solid;
+      border-color: transparent transparent transparent $brand1;
+      position: absolute;
+      top: 1px;
+      right: -15px;
+    }
+    &:hover{
+      color: $brand1;
+      text-decoration: underline;
+      &::after{
+        display: block;
+      }
+    }
+  }
+}
+
+.descriptions__buttons{
+  display: inline-block;
+  float: right;
+  width: 50%;
+}
+
+.descriptions .button{
+  display: block;
+}
 
 

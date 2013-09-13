@@ -29,7 +29,7 @@
   %section.row
     .eleven.columns.centered
       %h2.title.recent--courses Featured Courses
-      .row.descriptions
+      .row
         .six.columns
           .featured-card
             %p.featured-card__date september 20, 2013  -  cincinnati, oh
@@ -45,7 +45,7 @@
               %h1 EmberJS Video Course
             %p Get all of the new front-end hottness with our online training interface. Taught by those who know best, Tom Dale and Yehuda Katz.
             %a.featured-card__more-link{:href => "#"} more info
-            %a.button{:href => "#"} Watch the demo
+            %a.button{:href => "#"} View the demo
 
   %section.row
     %a.anchor{name:"team"}
@@ -54,40 +54,38 @@
       .row.descriptions
         .three.columns.descriptions__icon
           %a{href: 'https://training.gaslight.co/'}
-            %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
+            %img{:src => "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png", :class => "descriptions__icon__image"}
         .nine.columns.descriptions__text
-          %a{:href => "#"}
-            %h1 Backbone
+          %a.descriptions__more-link{:href => "#"} more info
+          %a.descriptions__title{:href => "#"}
+            %h1 Learn AngularJS at CampNG
           %p
-            Picking a client side MVC framework isn't easy, and seeing a
-            trivial Todo app just doesn't show how much these frameworks bring
-            to the table. In this workshop, we'll dive into two popular
-            frameworks: Backbone.js and Ember...
-        %a.button{:href => "#"} Reserve your seat!
+            AngularJS is a ridiculously productive way to build web applications. It's quick to learn and build things with, but it's also a powerful tool with some important concepts to learn. We're going to spend one crazily action packed day building an app in AngularJS together. We'll start simple, and by the end of the day be hitting some of the more advanced features of this powerful framework.
+          %ul.descriptions__course-schedule
+            %li 
+              %a{:href => "#"} september 20, 2013  -  cincinnati, oh
+            %li 
+              %a{:href => "#"} september 20, 2013  -  cincinnati, oh
+            %li 
+              %a{:href => "#"} september 20, 2013  -  cincinnati, oh
+          .descriptions__buttons
+            %a.button{:href => "#"} Reserve your seat!
         %hr
       .row.descriptions
         .three.columns.descriptions__icon
           %a{href: 'https://training.gaslight.co/'}
-            %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
+            %img{:src => "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png", :class => "descriptions__icon__image"}
         .nine.columns.descriptions__text
-          %h1 Backbone
+          %a.descriptions__more-link{:href => "#"} more info
+          %a.descriptions__title{:href => "#"}
+            %h1 EmberJS Video Training Course
           %p
-            Picking a client side MVC framework isn't easy, and seeing a
-            trivial Todo app just doesn't show how much these frameworks bring
-            to the table. In this workshop, we'll dive into two popular
-            frameworks: Backbone.js and Ember...
+            AngularJS is a ridiculously productive way to build web applications. It's quick to learn and build things with, but it's also a powerful tool with some important concepts to learn. We're going to spend one crazily action packed day building an app in AngularJS together. We'll start simple, and by the end of the day be hitting some of the more advanced features of this powerful framework.
+          .descriptions__buttons
+            %a.button.button--request{:href => "#"} View the demo
+            %a.button{:href => "#"} Reserve your seat!
         %hr
-      .row.descriptions
-        .three.columns.descriptions__icon
-          %a{href: 'https://training.gaslight.co/'}
-            %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
-        .nine.columns.descriptions__text
-          %h1 Backbone
-          %p
-            Picking a client side MVC framework isn't easy, and seeing a
-            trivial Todo app just doesn't show how much these frameworks bring
-            to the table. In this workshop, we'll dive into two popular
-            frameworks: Backbone.js and Ember...
+
 
 = render partial: 'application/footer'
 

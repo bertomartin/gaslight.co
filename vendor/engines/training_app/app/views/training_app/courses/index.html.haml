@@ -26,28 +26,63 @@
             well as being reintroduced to a number of  Rails components I
             hadn't used in some time (like Inherited Resource)"
 
-  %section.row.yourTeam
-    %a.anchor{name:"team"}
+  %section.row
     .eleven.columns.centered
-      %h2.title.recent--courses Current Courses
-      - courses.each do |course|
-        .row.descriptions
-          .three.columns.descriptions__icon
-            %a{href: course_path(course)}
-              = image_tag((course.image_url), :class => "descriptions__icon__image")
-              %strong= course.title
-          .nine.columns.descriptions__text
-            = simple_format(truncate(course.description_main, length: 250, omission: "...%s")) % link_to(" read more", course_path(course))
+      %h2.title.recent--courses Featured Courses
+      .row.descriptions
+        .six.columns
+          .featured-card
+            %p.featured-card__date september 20, 2013  -  cincinnati, oh
+            %a.featured-card__title{:href => "#"}
+              %h1 Learn AngularJS at CampNG
+            %p The amazing SuperChris Nelson’s latest installment of front-end development training teaches you all things NG.
+            %a.featured-card__more-link{:href => "#"} more info
+            %a.button{:href => "#"} Reserve your seat!
+        .six.columns
+          .featured-card
+            %p.featured-card__date online
+            %a.featured-card__title{:href => "#"}
+              %h1 EmberJS Video Course
+            %p Get all of the new front-end hottness with our online training interface. Taught by those who know best, Tom Dale and Yehuda Katz.
+            %a.featured-card__more-link{:href => "#"} more info
+            %a.button{:href => "#"} Watch the demo
+
   %section.row
     %a.anchor{name:"team"}
     .eleven.columns.centered
-      %h2.title.past--workshop Past Courses
+      %h2.title.past--workshop Course List
       .row.descriptions
         .three.columns.descriptions__icon
           %a{href: 'https://training.gaslight.co/'}
             %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
-            %strong Backbone and Ember
         .nine.columns.descriptions__text
+          %a{:href => "#"}
+            %h1 Backbone
+          %p
+            Picking a client side MVC framework isn't easy, and seeing a
+            trivial Todo app just doesn't show how much these frameworks bring
+            to the table. In this workshop, we'll dive into two popular
+            frameworks: Backbone.js and Ember...
+        %a.button{:href => "#"} Reserve your seat!
+        %hr
+      .row.descriptions
+        .three.columns.descriptions__icon
+          %a{href: 'https://training.gaslight.co/'}
+            %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
+        .nine.columns.descriptions__text
+          %h1 Backbone
+          %p
+            Picking a client side MVC framework isn't easy, and seeing a
+            trivial Todo app just doesn't show how much these frameworks bring
+            to the table. In this workshop, we'll dive into two popular
+            frameworks: Backbone.js and Ember...
+        %hr
+      .row.descriptions
+        .three.columns.descriptions__icon
+          %a{href: 'https://training.gaslight.co/'}
+            %img{:src => "http://backboneconf.com/img/backbone.png", :class => "descriptions__icon__image"}
+        .nine.columns.descriptions__text
+          %h1 Backbone
           %p
             Picking a client side MVC framework isn't easy, and seeing a
             trivial Todo app just doesn't show how much these frameworks bring

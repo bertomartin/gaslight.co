@@ -158,3 +158,66 @@ div.intro div.orbit-wrapper {
     color: #fff;
   }
 }
+
+
+//--------------------------------//
+//     FEATURED COURSE CARD       //
+//--------------------------------//
+
+.featured-card{
+  border: 1px solid #ccc;
+  padding: 15px;
+}
+
+.featured-card__date{
+  font-size: 16px;
+  text-transform: uppercase;
+  color: grey;
+  margin: 0
+}
+
+.featured-card__title h1{
+  @extend %headline;
+  display: inline-block;
+  //font-size: 50px;
+  //font-weight: normal;
+  line-height: 1.2em;
+  color: #000;
+  //margin-top: 0;
+  @include transition(color 0.1s);
+  &:hover{
+    color: inherit;
+  }
+}
+
+.featured-card__more-link{
+  float: right;
+  position: relative;
+  top: -15px;
+  margin-right: 10px; 
+  &:hover{
+    text-decoration: underline;
+  }
+  &::after{
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+    border: 5px solid;
+    border-color: transparent transparent transparent $brand1;
+    position: absolute;
+    top: 2px;
+    right: -15px;
+  }
+}
+
+.featured-card .button{
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+
+
+
+
+

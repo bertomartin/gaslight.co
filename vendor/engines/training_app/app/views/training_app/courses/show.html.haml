@@ -28,7 +28,7 @@
                 %span= number_to_currency(workshop.current_price, precision: 0)
               %h5{style: 'margin-bottom: 1em'}= workshop.start_date.to_s(:long)
               %p We're doing a one day workshop in #{workshop.location}. Come learn with us.
-              %a.button.small.radius.success.button.brand3{href: "https://campng-cincy.eventbrite.com/"} Register Now!
+              %a.button.small.radius.success.button.brand3{href: workshop.registration_link} Register Now!
       .request
         %p
           We can bring this workshop to your location for private training as

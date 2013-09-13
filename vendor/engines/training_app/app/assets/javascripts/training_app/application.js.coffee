@@ -9,6 +9,15 @@ $.ajaxSetup
     if (TrainingApp.csrf_token)
       xhr.setRequestHeader('X-CSRF-Token', TrainingApp.csrf_token)
 
+
+TrainingApp.initialize = (options = {}) ->
+  registration = new TrainingApp.Models.Registration(options)
+  registration.bind "persisted", -> window.location.href = "/registrations/#{registration.get("code")}"
+  newRegistrationView = new TrainingApp.Views.NewRegistrationView
+    model: registration
+    el: $("#new_registration")
+  newRegistrationView.render()
+
 $ ->
   $("#detailsLink").click (e) ->
     e.preventDefault()
@@ -17,14 +26,6 @@ $ ->
   $("#closeDetails").click (e) ->
     e.preventDefault()
     $(".details").slideUp()
-
-  if $("#new_registration").length > 0
-    window.registration = new TrainingApp.Models.Registration
-    registration.bind "persisted", -> window.location.href = "/registrations/#{registration.get("code")}"
-    window.newRegistrationView = new TrainingApp.Views.NewRegistrationView
-      model: registration
-      el: $("#new_registration")
-    newRegistrationView.render()
 
   if $('#map').length > 0
     MapOptions =

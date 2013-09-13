@@ -8,4 +8,7 @@
         %h3 Loading payment form...
 
 - content_for(:javascript) do
-  = javascript_include_tag 'training_app/application'
+  :javascript
+    $(function(){
+      TrainingApp.initialize(#{registration.to_json})
+    })

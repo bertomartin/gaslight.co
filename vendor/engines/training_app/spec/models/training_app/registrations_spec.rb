@@ -3,48 +3,60 @@ require 'spec_helper'
 module TrainingApp
   describe Registration do
 
-    describe "creating a registration without a workshop" do
+    it { should validate_presence_of(:course) }
+    it { should belong_to(:course) }
+
+    describe "purchase!" do
+      let(:course) { FactoryGirl.create(:course, price: 10000, title: "Super Happy Fun Time Javascript") }
+      let(:registration) { FactoryGirl.build(:registration, course: course, email: "foo@bar.com") }
+      let(:customer) { double("Customer", id: 1, error: error) }
+
       before do
-        Registration.any_instance.stub(:charge_stripe).and_return(true)
-        @registration = FactoryGirl.create(:registration, workshop: nil)
-      end
-      it "should be able to create one" do
-        @registration.should be_valid
-      end
-      it "should generate a unique customer code" do
-        @registration.code.should_not be_nil
+        allow(Customer).to receive(:generate) { customer }
+        expect(customer).to receive(:charge).with(amount: course.price, description: course.title)
+        registration.purchase!
       end
 
-    end
+      describe "with a valid customer" do
+        let(:error) {nil}
 
-    describe "capacity validation on create" do
-      before do
-        @workshop = FactoryGirl.create(:workshop, :capacity => 1)
-        Registration.any_instance.stub(:charge_stripe).and_return(true)
-      end
-
-      it "should allow registrations if workshop isn't full" do
-        registration = FactoryGirl.build(:registration, :workshop => @workshop)
-        registration.should be_valid
-      end
-
-      describe "full workshop" do
-        before do
-          FactoryGirl.create(:registration, :workshop => @workshop)
-          @new_registration = FactoryGirl.build(:registration, :workshop => @workshop)
+        it "assigns the customer id" do
+          expect(registration.customer_id).to eq(customer.id)
         end
 
-        it "should not allow registration if workshop is full" do
-          @new_registration.should_not be_valid
+        it "sends the confirmation email" do
+          expect(ActionMailer::Base.deliveries.last.to).to include(registration.email)
+        end
+
+        it "should be persisted" do
+          expect(registration).to be_persisted
+        end
+      end
+
+      describe "with an invalid customer" do
+
+        before { ActionMailer::Base.deliveries.clear }
+
+        let(:error) {"something's wrong"}
+
+        it "adds the error to the registration" do
+          expect(registration.errors[:base].first).to eq(error)
+        end
+
+        it "should not be persisted" do
+          expect(registration).to_not be_persisted
+        end
+
+        it "doesn't send the confirmation email" do
+          expect(ActionMailer::Base.deliveries).to be_empty
         end
       end
     end
 
     describe "bypassing purchase" do
-      subject { FactoryGirl.create(:registration, workshop: nil, freebie: true) }
+      subject { FactoryGirl.create(:registration, freebie: true) }
 
       it { should be_valid }
-      it { should have(0).errors }
       it { should_not be_new_record }
     end
   end

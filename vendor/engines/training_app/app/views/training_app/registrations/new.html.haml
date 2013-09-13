@@ -10,5 +10,5 @@
 - content_for(:javascript) do
   :javascript
     $(function(){
-      TrainingApp.initialize(#{registration.to_json})
+      TrainingApp.initialize(#{@registration.to_json})
     })

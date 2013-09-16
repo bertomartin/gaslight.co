@@ -11,7 +11,7 @@ $.ajaxSetup
 
 TrainingApp.initialize = (options = {}) ->
   registration = new TrainingApp.Models.Registration(options)
-  registration.bind "persisted", -> window.location.href = "#{registration.urlRoot()}/#{registration.get('code')}"
+  registration.bind "persisted", -> window.location.href = registration.url()
   newRegistrationView = new TrainingApp.Views.NewRegistrationView
     model: registration
     el: $("#new_registration")

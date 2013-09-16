@@ -1,7 +1,8 @@
 class TrainingApp.Models.Registration extends Backbone.Model
-
   urlRoot: ->
     "/training/courses/#{@get('course_id')}/registrations"
+
+  idAttribute: "code"
 
   defaults:
     amount: 10

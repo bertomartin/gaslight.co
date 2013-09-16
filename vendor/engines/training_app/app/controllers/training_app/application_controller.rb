@@ -11,5 +11,9 @@ class TrainingApp::ApplicationController < ApplicationController
     (Rails.env.production? || Rails.env.staging?) && !request.ssl?
     false
   end
+
+  def raise_not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
 end
 

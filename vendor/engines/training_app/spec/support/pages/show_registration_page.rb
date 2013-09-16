@@ -6,6 +6,6 @@ class ShowRegistrationPage
   end
 
   def title
-    find('h1').text
+    find('.bar__title').text
   end
 end

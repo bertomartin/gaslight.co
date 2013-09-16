@@ -5,9 +5,9 @@ feature "Experiencing an online course" do
   let(:registration) { FactoryGirl.create(:registration, course: course, code: "123") }
   let(:show_registration_page) { ShowRegistrationPage.new }
 
-  scenario "with a valid code" do
+  scenario "with a valid code", js: true do
     show_registration_page.visit_page(registration)
-    expect(show_registration_page.title).to eq(course.title)
+    expect(show_registration_page.title).to match("Introduction")
   end
 
   scenario "with an invalid code" do

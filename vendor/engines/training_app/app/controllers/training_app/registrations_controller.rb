@@ -17,6 +17,7 @@ module TrainingApp
     def show
       # the id param is actually the generated registration code
       @registration = Registration.find_by_code(params[:id]) || raise_not_found
+      render layout: "training_app/layouts/classroom"
     end
 
     def stats

@@ -22,6 +22,11 @@ Gem::Specification.new do |s|
   s.add_dependency "decent_exposure"
   s.add_dependency "haml", '~> 4.0'
   s.add_dependency "haml-rails"
+  s.add_dependency "sass-rails", "~> 4.0.0"
+  s.add_dependency "compass-rails", "~> 2.0.alpha.0"
+  s.add_dependency "zurb-foundation"
+  s.add_dependency "font-awesome-rails"
+  s.add_dependency "ember-rails"
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails'

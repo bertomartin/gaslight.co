@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classroom</title>
+  <%= stylesheet_link_tag "training_app/classroom", media: "all" %>
+  <%= javascript_include_tag "training_app/classroom" %>
+  <%= yield :javascript %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

@@ -13,6 +13,11 @@ require "decent_exposure"
 require "eco"
 require "stripe"
 require "pry"
+require "sass-rails"
+require "compass-rails"
+require "zurb-foundation"
+require "font-awesome-rails"
+require "ember-rails"
 
 Bundler.require(*Rails.groups)
 require "training_app"
@@ -30,6 +35,12 @@ module Dummy
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+
+    # Add parent apps stylesheets
+    config.assets.paths << "#{Rails.root}/../../../../../app/assets/stylesheets/"
+
+    config.handlebars.templates_root = 'training_app/templates'
   end
 end
 

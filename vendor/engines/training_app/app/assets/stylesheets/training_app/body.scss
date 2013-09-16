@@ -1,4 +1,3 @@
-
 .trainingcourse__content{
   padding-right: 35px;
   li {
@@ -89,7 +88,7 @@ div.intro div.orbit-wrapper {
     max-width: 95%;
     position: absolute;
     top: 50%;
-    margin-top: -100px;  
+    margin-top: -100px;
   }
 
   div.timer {
@@ -190,8 +189,6 @@ div.intro div.orbit-wrapper {
   //font-weight: normal;
   line-height: 1.2em;
   color: #000;
-  //margin-top: 0;
-  @include transition(color 0.1s);
   &:hover{
     color: inherit;
   }
@@ -201,7 +198,7 @@ div.intro div.orbit-wrapper {
   float: right;
   position: relative;
   text-transform: uppercase;
-  margin-right: 10px; 
+  margin-right: 10px;
   &:hover{
     text-decoration: underline;
   }
@@ -247,7 +244,6 @@ div.intro div.orbit-wrapper {
   display: inline-block;
   color: #000;
   margin-top: 0;
-  @include transition(color 0.1s);
   &:hover{
     color: inherit;
   }

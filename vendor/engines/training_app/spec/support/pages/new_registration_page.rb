@@ -17,7 +17,7 @@ class NewRegistrationPage
   end
 
   def successful?
-    page.has_content?("Thank you for purchasing")
+    page.has_content?("Introduction")
   end
 end
 

@@ -1,0 +1,38 @@
+<header class="bar">
+  <h1 class="bar__title">
+    <i {{action 'toggleSidebar'}} class="icon-list bar__title__hamburger" ></i>{{controllers.chapter.section.title}} - {{controllers.chapter.title}}
+  </h1>
+  <div class="user-profile">
+    <div class="user-profile__picture">
+      <img alt="user" class="picture--default" src="/assets/training_app/user.png"/>
+    </div>
+    <p class="user-profile__name"> Admiral William Adama </p>
+  </div>
+  <div class="progress-bar">
+    <div class="progress-bar__background"></div>
+    <div {{bindAttr style=barStyle}} class="progress-bar__current-progress"></div>
+  </div>
+</header>
+
+<nav {{bindAttr class=":sidebar active:sidebar--active"}}>
+  <ol class="nav">
+    {{#each itemController=navSection}}
+      <li {{bindAttr class=":nav__item isActive:nav__item--active"}}>
+        <div class="nav__heading">
+          <span class="nav__heading__index">{{number}}.</span>
+          <span class="nav__heading__title">{{title}}</span>
+          <span class="nav__heading__count">0/{{chapters.length}}</span>
+        </div>
+        <ul class="subnav">
+          {{#each chapters itemController=navChapter}}
+            <li {{bindAttr class=":subnav__item isActive:subnav__item--active"}}>
+              {{#linkTo 'chapter' this}}{{title}}{{/linkTo}}
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+  </ol>
+</nav>
+
+{{outlet}}

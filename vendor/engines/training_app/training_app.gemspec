@@ -33,4 +33,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency "pry"
   s.add_development_dependency "database_cleaner", "1.0.1"
   s.add_development_dependency "dotenv-rails"
+  s.add_development_dependency "selenium-webdriver"
 end

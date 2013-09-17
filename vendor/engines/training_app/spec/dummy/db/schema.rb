@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917134732) do
+ActiveRecord::Schema.define(version: 20130917194424) do
 
   create_table "training_app_active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20130917134732) do
 
   add_index "training_app_admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "training_app_admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "training_app_chapters", force: true do |t|
+    t.string  "title"
+    t.integer "order"
+    t.string  "description"
+    t.string  "video_url"
+    t.string  "code_url"
+    t.string  "poster_url"
+    t.integer "section_id"
+  end
 
   create_table "training_app_courses", force: true do |t|
     t.string   "title"
@@ -94,6 +104,11 @@ ActiveRecord::Schema.define(version: 20130917134732) do
     t.integer  "course_id"
     t.string   "referral_token"
     t.string   "code"
+  end
+
+  create_table "training_app_sections", force: true do |t|
+    t.string  "title"
+    t.integer "course_id"
   end
 
   create_table "training_app_venues", force: true do |t|

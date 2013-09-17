@@ -4,6 +4,7 @@ module TrainingApp
     has_and_belongs_to_many :instructors
     has_many :registrations
     has_many :workshops
+    has_many :sections
     belongs_to :venue
 
     validate :start_date, :uniqueness => { :scope => :venue_id },

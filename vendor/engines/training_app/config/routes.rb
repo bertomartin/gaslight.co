@@ -9,5 +9,9 @@ TrainingApp::Engine.routes.draw do
     end
   end
 
+  namespace :api, defaults: {format: :json} do
+    resources :sections
+  end
+
   root to: 'courses#index'
 end

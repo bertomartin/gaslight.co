@@ -14,7 +14,7 @@ module TrainingApp
     end
 
     def in_person?
-      (start_date || venue) ? true : false
+      (start_date.present? || workshops.present?) ? true : false
     end
   end
 end

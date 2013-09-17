@@ -6,17 +6,17 @@ module TrainingApp
     it { should have_many(:registrations) }
 
     describe "in_person?" do
-      let(:venue) { FactoryGirl.build(:venue)}
-      let(:course_with_location) { FactoryGirl.build(:course, start_date: Date.today, venue: nil)}
-      let(:course_with_venue) { FactoryGirl.build(:course, start_date: nil, venue: venue)}
-      let(:online_course) { FactoryGirl.build(:course, start_date: nil, venue: nil)}
+      let(:workshop) { FactoryGirl.build(:workshop)}
+      let(:course_with_start_date) { FactoryGirl.build(:course, start_date: Date.today, workshops: [])}
+      let(:course_with_workshop) { FactoryGirl.build(:course, start_date: nil, workshops: [workshop])}
+      let(:online_course) { FactoryGirl.build(:course, start_date: nil, workshops: [])}
 
       it "return true for a course with a location" do
-        expect(course_with_location.in_person?).to eq(true)
+        expect(course_with_start_date.in_person?).to eq(true)
       end
 
-      it "return true for a course with a venue" do
-        expect(course_with_venue.in_person?).to eq(true)
+      it "return true for a course with a workshop" do
+        expect(course_with_workshop.in_person?).to eq(true)
       end
 
       it "return false for a course without a location or a venue" do

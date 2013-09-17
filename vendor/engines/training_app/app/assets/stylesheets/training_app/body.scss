@@ -108,42 +108,9 @@ div.intro div.orbit-wrapper {
   }
 }
 
-.descriptions{
-  display: inline-block;
-}
-
-// .descriptions:last-child{
-//   margin-bottom: -60px;
-// }
-
-// .descriptions__text{
-//   padding-top: 20px;
-
-//   p{
-//     margin-bottom: 0px;
-//   }
-// }
-
-.descriptions__icon:last-child{
-  margin-bottom: 0px;
-}
-
-.descriptions__icon__image {
-  height: 100px;
+.course__image {
+  max-width: 100%;
   padding: 10px;
-}
-
-.title.recent--courses, .title.past--workshop{
-  margin: 0 100px 30px 100px;
-}
-
-.ember, .backbone {
-  border: 1px solid #eee;
-  tbody tr td {
-    font-size: 16px;
-    line-height: 1.5;
-    padding: 20px 10px;
-  }
 }
 
 .button--request{
@@ -160,9 +127,6 @@ div.intro div.orbit-wrapper {
   .sidebar--training{
     padding: 0;
     border-left: 0px solid #fff;
-  }
-  .title.recent--courses, .title.past--workshop{
-  margin: 0 10px 30px 10px;
   }
 }
 
@@ -230,17 +194,17 @@ div.intro div.orbit-wrapper {
 //         COURSE LISTING         //
 //--------------------------------//
 
-.descriptions:hover .descriptions__more-link{
+.course-list__course:hover .course__more-link{
   display: block;
 }
 
-.descriptions__more-link{
+.course__more-link{
   @extend %more-info-link;
   top: 10px;
   display: none;
 }
 
-.descriptions__title h1{
+.course__heading{
   display: inline-block;
   color: #000;
   margin-top: 0;
@@ -249,11 +213,11 @@ div.intro div.orbit-wrapper {
   }
 }
 
-.descriptions__text p{
+.course__description{
   margin-bottom: 25px;
 }
 
-.descriptions__course-schedule{
+.course__children-list{
   list-style: none;
   font-size: 16px;
   text-transform: uppercase;
@@ -282,13 +246,12 @@ div.intro div.orbit-wrapper {
   }
 }
 
-.descriptions__buttons{
+.course__actions{
   display: inline-block;
   float: right;
   width: 50%;
-}
-
-.descriptions .button{
-  display: block;
+  .button{
+    display: block;
+  }
 }
 

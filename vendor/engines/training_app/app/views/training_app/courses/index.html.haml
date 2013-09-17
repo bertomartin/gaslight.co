@@ -44,47 +44,32 @@
                 %h1= featured_course.title
               %p.featured-card__synopsis= truncate(featured_course.synopsis, length: 160, omission: '...')
               %a.featured-card__more-link{href: course_path(featured_course) } more info
-              %a.button{href: "#"} Reserve your seat!
+              - if featured_course.in_person?
+                %a.button.featured-card__button{href: "#"} Reserve your seat!
+              - else
+                %a.button.featured-card__button{href: "#"} Try now!
 
-  %section.row
-    %a.anchor{name:"team"}
+  %section.row.course-list
     .eleven.columns.centered
-      %h2.title.past--workshop Course List
-      .row.descriptions
-        .three.columns.descriptions__icon
-          %a{href: 'https://training.gaslight.co/'}
-            %img{:src => "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png", :class => "descriptions__icon__image"}
-        .nine.columns.descriptions__text
-          %a.descriptions__more-link{:href => "#"} more info
-          %a.descriptions__title{:href => "#"}
-            %h1 Learn AngularJS at CampNG
-          %p
-            AngularJS is a ridiculously productive way to build web applications. It's quick to learn and build things with, but it's also a powerful tool with some important concepts to learn. We're going to spend one crazily action packed day building an app in AngularJS together. We'll start simple, and by the end of the day be hitting some of the more advanced features of this powerful framework.
-          %ul.descriptions__course-schedule
-            %li
-              %a{:href => "#"} september 20, 2013  -  cincinnati, oh
-            %li
-              %a{:href => "#"} september 20, 2013  -  cincinnati, oh
-            %li
-              %a{:href => "#"} september 20, 2013  -  cincinnati, oh
-          .descriptions__buttons
-            %a.button{:href => "#"} Reserve your seat!
-        %hr
-      .row.descriptions
-        .three.columns.descriptions__icon
-          %a{href: 'https://training.gaslight.co/'}
-            %img{:src => "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png", :class => "descriptions__icon__image"}
-        .nine.columns.descriptions__text
-          %a.descriptions__more-link{:href => "#"} more info
-          %a.descriptions__title{:href => "#"}
-            %h1 EmberJS Video Training Course
-          %p
-            AngularJS is a ridiculously productive way to build web applications. It's quick to learn and build things with, but it's also a powerful tool with some important concepts to learn. We're going to spend one crazily action packed day building an app in AngularJS together. We'll start simple, and by the end of the day be hitting some of the more advanced features of this powerful framework.
-          .descriptions__buttons
-            %a.button.button--request{:href => "#"} View the demo
-            %a.button{:href => "#"} Reserve your seat!
-        %hr
+      %h2.title Course List
+      - courses.each do |course|
+        .row.course-list__course
+          .three.columns
+            %a{href: "#"}
+              %img.course__image{src: "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png"}
 
+          .nine.columns
+            %a.course__more-link{href: course_path(course)} more info
+            %a{href: course_path(course)}
+              %h1.course__heading= course.title
+            %p.course__description= course.synopsis
+            %ul.course__children-list
+              - course.workshops.each do |workshop|
+                %li.course__child
+                  %a{href: workshop.registration_link} september 20, 2013  -  cincinnati, ohh
+            .course__actions
+              %a.button{href: course_path(course)} Reserve your seat!
+          %hr
 
 = render partial: 'application/footer'
 

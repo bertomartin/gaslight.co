@@ -45,7 +45,7 @@
               %p.featured-card__synopsis= truncate(featured_course.synopsis, length: 160, omission: '...')
               %a.featured-card__more-link{href: course_path(featured_course) } more info
               - if featured_course.in_person?
-                %a.button.featured-card__button{href: "#"} Reserve your seat!
+                %a.button.featured-card__button{href: course_path(featured_course)} Reserve your seat!
               - else
                 %a.button.featured-card__button{href: "#"} Try now!
 

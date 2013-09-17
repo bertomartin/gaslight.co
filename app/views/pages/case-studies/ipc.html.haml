@@ -1,0 +1,90 @@
+- content_for(:title) { "Gaslight: Custom Software to Manage the SUBWAY® Card Program" }
+= render partial: 'application/nav'
+
+#main.container.row
+  %section.case-study--ipc--first
+    .hero__header--brand1
+      .row
+        .ten.columns.offset-by-one
+          %h1.headline__buzzword Custom Software to Manage the SUBWAY® Card Program 
+          %h3 Independent Purchasing Cooperative 
+    
+  %section.row
+    .case-study__sidebar.three.columns
+      %h4 Client
+      %p IPC
+      %h4 Engagement
+      %p 12 Weeks
+      %h4 Technology
+      %ul
+        %li JRuby
+        %li Ruby on Rails
+        %li 
+    .eight.offeset-by-one.columns
+      %p.lead IPC is an independent purchasing cooperative owned by SUBWAY® franchisees. The company does everything from negotiate lower prices for goods and services to improve quality and competitiveness for SUBWAY® franchisee members.
+      %p.case-study We teamed up with IPC to create a custom web-based software application that manages the creation of more than 152 million SUBWAY® spending/gifting cards each year. The new BIN Management Software automatically generates card and pin numbers for pre-loaded gift cards, as well as stored value cards that allow consumers to add more money. 
+
+  .case-study--ipc--second
+    .row.hero__header
+      .case-study__quote--full.nine.columns.centered
+        %p “We can now accomplish in two days what used to take twelve.” 
+        %h4 Erin Wood
+        %h4.case-study__quote--title SUBWAY® Card Program Manager, IPC
+
+  %section.row.case-study__design
+    .case-study__sidebar--design.three.columns
+      %h4.case-study__sidebar__heading A Team Effort for Real Business Results 
+      %p.case-study Before the new system, IPC created card and pin numbers manually. We worked side-by-side with IPC’s existing development team to create custom software that saves countless staff hours and protects data.
+
+      %h4.case-study__sidebar__heading Improving Data Integrity
+      %p.case-study The new automated system for creating card and pin numbers helps guarantee that every card works, every time a customer hands it over at a register. 
+
+      %h4.case-study__sidebar__heading Increasing Productivity
+      %p.case-study The BIN management software directly connects to IPC’s payment processing system. It also allows staff to automatically transfer new card orders to printers.
+    .eight.columns.offset-by-one
+      %h3.case-study__sidebar__heading Bringing Start-Up Speed to Enterprise Software Development
+      %p.case-study To quickly develop the BIN Management Software, we turned to Ruby, a popular programming language among tech start-ups that allows for faster development. The Gaslight team integrated Ruby into IPC’s existing Java infrastructure with JRuby, an implementation of Ruby for Java. 
+      %p.case-study JRuby essentially black boxes the Ruby code, so from the outside, the BIN Management software really is a web-based Java application with the JRuby interpreter and all the Ruby libraries packaged within it. This allows for faster development with no costly infrastructure changes.
+      %p.case-study This also allowed the team to leverage Ruby on Rails, a framework for building web-based applications in Ruby.
+  
+  %section.case-study--ipc--third
+    .row.hero__header
+      .case-study__beforeafter.four.offset-by-two.columns
+        %table
+          %thead
+            %tr
+              %th.table__header Traditional Software Development
+          %tbody.table__body
+            %tr
+              %td High custom development costs
+            %tr
+              %td Each software feature takes days or weeks to develop
+
+      .case-study__beforeafter.four.columns.end
+        %table
+          %thead
+            %tr
+              %th.table__header Ruby on Rails
+          %tbody.table__body
+            %tr
+              %td Lower costs by leveraging pre-built, open-source code
+            %tr
+              %td Individual software features created as quickly as a few hours
+
+  %section.row
+    .case-study__sidebar.three.columns
+      %h4 Wish your software development moved faster?
+      %p.casestudy  Let’s talk. We know how to bring the speed and flexibility of the start-up world to enterprise environments. 
+      %a.button.brand1{href: page_path("contact"), rel: "Case Study Lets Talk button" } Contact Us
+    .eight.offset-by-one.columns
+      %h3 Teaching While Building
+      %p.case-study Since we worked directly with IPC’s internal development team, we were able to provide training in Ruby, Ruby on Rails and JRuby as we developed the software. This provides lasting benefits for IPC’s future development projects.
+      %p.case-study We also conducted a separate one-day training session to give the IPC development team a more in-depth understanding of Ruby on Rails. In addition to custom training sessions like these, we offer <a href="http://training.gaslight.co/" rel="Training">online courses in Backbone and Ember. </a>
+  %hr
+  %section.case-study__next
+    .row
+      .three.columns
+        %a.button.button--bloglink{href: page_path("work"), rel: "IPC Case Study" } &#171; Work Page
+      .three.columns.offset-by-six
+        %a.button.button--bloglink{href: page_path("case-studies/lumbee"), rel: "Lumbee Case Study" } Lumbee Case Study &#187; 
+= render partial: 'application/footer'

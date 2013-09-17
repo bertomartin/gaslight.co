@@ -78,22 +78,21 @@ hr
   font-weight: 300
   margin-bottom: ms(1)
 
+%buzzword
+  font-size: ms(6)
+  color: #fff
+
 .headline__buzzword
   @extend %headline
-  font-size: ms(6)
-  font-weight: normal
+  @extend %buzzword
   line-height: 1.2em
-  color: #fff
-  strong
-    font-weight: bold
-.headline__buzzword--casestudy
-  @extend %headline
-  font-size: ms(6)
   font-weight: normal
-  line-height: 0.75em
-  color: #fff
-  strong
-    font-weight: bold
+
+.case-study__buzzword
+  @extend %headline
+  @extend %buzzword
+  line-height: .85em
+  font-weight: bold
 i 
   font-style: italic
   line-height: inherit 

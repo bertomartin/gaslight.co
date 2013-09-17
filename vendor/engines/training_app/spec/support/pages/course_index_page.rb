@@ -1,7 +1,7 @@
 class CourseIndexPage
   include Capybara::DSL
 
-  def visit_page(course)
+  def visit_page
     visit "/training/courses"
   end
 
@@ -15,6 +15,10 @@ class CourseIndexPage
 
   def featured_course_location
     first(".featured-card__location").text
+  end
+
+  def featured_course_meta
+    first(".featured-card__meta").text
   end
 end
 

@@ -33,7 +33,7 @@
         - featured_courses.each do |featured_course|
           .six.columns
             .featured-card
-              %p.featured-card__date-location
+              %p.featured-card__meta
                 - if featured_course.in_person?
                   %span.featured-card__date= featured_course.start_date.strftime("%B %d, %Y")
                   = " - " if featured_course.start_date.present? && featured_course.venue.present?

@@ -104,13 +104,13 @@
       %h4 The Technology
       %p.case-study We built this Web-based application with <a href="http://gaslight.co/about"  rel="Ruby on Rails">Ruby on Rails</a> and <a href="http://gaslight.co/about" rel="Backbone.js">Backbone.js</a>. Plus, we moved the app from a single server in the client’s ofﬁce to Heroku. This cloud-based platform allows the app to scale with business demands. It also eliminates the headaches of server maintenance.
 
-  / %hr
+  %hr
 
-  / %section.case-study__next
-  /   .row
-  /     .three.columns
-  /       %a.button.button--bloglink{href: page_path("work"), rel: "IPC Case Study" } &#171; Work Page
-  /     .three.columns.offset-by-six
-  /       %a.button.button--bloglink{href: page_path("case-studies/ipc"), rel: "Lumbee Case Study" } IPC Case Study &#187; 
+  %section.case-study__next
+    .row
+      .three.columns
+        %a.button.button--bloglink{href: page_path("work"), rel: "IPC Case Study" } &#171; Work Page
+      .three.columns.offset-by-six
+        %a.button.button--bloglink{href: page_path("case-studies/ipc"), rel: "Lumbee Case Study" } IPC Case Study &#187; 
 
 = render partial: 'application/footer'

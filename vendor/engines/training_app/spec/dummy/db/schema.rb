@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130913153215) do
+ActiveRecord::Schema.define(version: 20130917134732) do
 
   create_table "training_app_active_admin_comments", force: true do |t|
     t.string   "resource_id",   null: false
@@ -58,6 +58,7 @@ ActiveRecord::Schema.define(version: 20130913153215) do
     t.integer  "venue_id"
     t.string   "image_url"
     t.text     "synopsis"
+    t.boolean  "featured"
   end
 
   create_table "training_app_courses_instructors", id: false, force: true do |t|

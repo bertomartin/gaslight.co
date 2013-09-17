@@ -55,7 +55,7 @@
       - courses.each do |course|
         .row.course-list__course
           .three.columns
-            %a{href: "#"}
+            %a{href: course_path(course)}
               %img.course__image{src: "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png"}
 
           .nine.columns
@@ -68,7 +68,11 @@
                 %li.course__child
                   %a{href: workshop.registration_link} september 20, 2013  -  cincinnati, ohh
             .course__actions
-              %a.button{href: course_path(course)} Reserve your seat!
+              - if course.in_person?
+                %a.button{href: course_path(course)} Reserve your seat!
+              - else
+                %a.button{href: new_course_registration_path(course)} Buy now!
+                %a.button.button--request{href: course_path(course)} Try now!
           %hr
 
 = render partial: 'application/footer'

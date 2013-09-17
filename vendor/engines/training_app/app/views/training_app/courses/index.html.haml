@@ -35,7 +35,7 @@
             .featured-card
               %p.featured-card__meta
                 - if featured_course.in_person?
-                  %span.featured-card__date= featured_course.start_date.strftime("%B %d, %Y")
+                  %span.featured-card__date= featured_course.start_date.strftime("%B %d, %Y") if featured_course.start_date.present?
                   = " - " if featured_course.start_date.present? && featured_course.venue.present?
                   %span.featured-card__location= featured_course.venue.city if featured_course.venue.present?
                 - else
@@ -66,7 +66,10 @@
             %ul.course__children-list
               - course.workshops.each do |workshop|
                 %li.course__child
-                  %a{href: workshop.registration_link} september 20, 2013  -  cincinnati, ohh
+                  %a{href: workshop.registration_link}
+                    %span= workshop.start_date.strftime("%B %d, %Y") if workshop.start_date.present?
+                    = " - " if workshop.start_date.present? && workshop.venue.present?
+                    %span= workshop.venue.city if workshop.venue.present?
             .course__actions
               - if course.in_person?
                 %a.button{href: course_path(course)} Reserve your seat!

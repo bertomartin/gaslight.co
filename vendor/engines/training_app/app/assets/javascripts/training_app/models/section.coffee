@@ -1,8 +1,8 @@
 Training.Section = DS.Model.extend
   title: DS.attr('string')
-  chapters: DS.hasMany('Training.Chapter')
+  chapters: DS.hasMany('chapter')
 
   allSections: (->
-    Training.Section.all()
+    @get('store').all('section')
   ).property()
 

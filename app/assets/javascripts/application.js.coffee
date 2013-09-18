@@ -7,6 +7,7 @@
 #= require moment
 #= require backbone
 #= require backbone/gaslight
+#= require training_app/registrations
 #= require foundation.min
 #= require foundation-orbit
 

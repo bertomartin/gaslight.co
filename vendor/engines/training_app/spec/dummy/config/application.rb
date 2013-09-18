@@ -7,18 +7,6 @@ require "action_mailer/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
-require "haml"
-require "haml-rails"
-require "decent_exposure"
-require "eco"
-require "stripe"
-require "pry"
-require "sass-rails"
-require "compass-rails"
-require "zurb-foundation"
-require "font-awesome-rails"
-require "ember-rails"
-
 Bundler.require(*Rails.groups)
 require "training_app"
 

@@ -1,3 +1,15 @@
+require "haml"
+require "haml-rails"
+require "decent_exposure"
+require "eco"
+require "stripe"
+require "pry"
+require "sass-rails"
+require "compass-rails"
+require "zurb-foundation"
+require "font-awesome-rails"
+require "ember-rails"
+
 module TrainingApp
   class Engine < ::Rails::Engine
     isolate_namespace TrainingApp

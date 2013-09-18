@@ -1,5 +1,7 @@
-#= require ./serialize-object
-#= require ./inflection
+#= require training_app/serialize-object
+#= require training_app/inflection
+#= require training_app/stripe
+#= require ./stripe_key
 #= require ./namespace
 #= require_self
 #= require_tree ./templates

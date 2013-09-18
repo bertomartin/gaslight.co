@@ -11,6 +11,7 @@ module TrainingApp
       @course = Course.find(params[:course_id])
       @registration = Registration.new(registration_params)
       @registration.purchase!
+      flash[:notice] = "Thanks for purchasing!"
       respond_with @course, @registration
     end
 

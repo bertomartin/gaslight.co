@@ -6,10 +6,10 @@ Training.Chapter = DS.Model.extend
   codeUrl: DS.attr('string')
   repoUrl: DS.attr('string')
   posterUrl: DS.attr('string')
-  section: DS.belongsTo('Training.Section')
+  section: DS.belongsTo('section')
 
   allChapters: (->
-    Training.Chapter.all()
+    @get('store').all('chapter')
   ).property()
 
   nextChapter: (->

@@ -1,4 +1,4 @@
 Training.ApplicationRoute = Ember.Route.extend
-  events:
+  actions:
     willTransition: ->
       @controllerFor('application').setDefaultTitle()

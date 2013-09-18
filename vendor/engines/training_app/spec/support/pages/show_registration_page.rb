@@ -8,4 +8,8 @@ class ShowRegistrationPage
   def title
     find('.bar__title').text
   end
+
+  def has_chapter?(chapter)
+    page.has_content?(chapter.title)
+  end
 end

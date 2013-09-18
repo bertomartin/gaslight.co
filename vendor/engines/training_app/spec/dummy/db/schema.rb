@@ -11,40 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130917134732) do
+ActiveRecord::Schema.define(version: 20130918194844) do
 
-  create_table "training_app_active_admin_comments", force: true do |t|
-    t.string   "resource_id",   null: false
-    t.string   "resource_type", null: false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.text     "body"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "namespace"
+  create_table "training_app_chapters", force: true do |t|
+    t.string  "title"
+    t.integer "order"
+    t.string  "description"
+    t.string  "video_url"
+    t.string  "code_url"
+    t.string  "poster_url"
+    t.integer "section_id"
   end
-
-  add_index "training_app_active_admin_comments", ["author_type", "author_id"], name: "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "training_app_active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace"
-  add_index "training_app_active_admin_comments", ["resource_type", "resource_id"], name: "index_admin_notes_on_resource_type_and_resource_id"
-
-  create_table "training_app_admin_users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "training_app_admin_users", ["email"], name: "index_admin_users_on_email", unique: true
-  add_index "training_app_admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
   create_table "training_app_courses", force: true do |t|
     t.string   "title"
@@ -94,6 +71,11 @@ ActiveRecord::Schema.define(version: 20130917134732) do
     t.integer  "course_id"
     t.string   "referral_token"
     t.string   "code"
+  end
+
+  create_table "training_app_sections", force: true do |t|
+    t.string  "title"
+    t.integer "course_id"
   end
 
   create_table "training_app_venues", force: true do |t|

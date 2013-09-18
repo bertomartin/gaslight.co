@@ -2,6 +2,7 @@ PATH
   remote: .
   specs:
     training_app (0.0.1)
+      active_model_serializers
       compass-rails (~> 2.0.alpha.0)
       decent_exposure
       eco

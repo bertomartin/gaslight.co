@@ -4,7 +4,8 @@ module TrainingApp
       respond_to :json
 
       def index
-        respond_with(Section.all)
+        registration = Registration.find_by(code: params["code"]) || raise_not_found
+        respond_with(registration.course.sections)
       end
     end
   end

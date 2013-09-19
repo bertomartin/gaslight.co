@@ -6,7 +6,6 @@ require "stripe"
 require "pry"
 require "sass-rails"
 require "compass-rails"
-require "zurb-foundation"
 require "font-awesome-rails"
 require "ember-rails"
 
@@ -24,6 +23,9 @@ module TrainingApp
       g.assets false
       g.helper false
     end
+
+    config.ember.variant = ENV.fetch('RAILS_ENV') == "production" ? :production : :development
+    config.handlebars.templates_root = 'training_app/templates'
   end
 end
 

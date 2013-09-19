@@ -27,8 +27,6 @@ module Dummy
 
     # Add parent apps stylesheets
     config.assets.paths << "#{Rails.root}/../../../../../app/assets/stylesheets/"
-
-    config.handlebars.templates_root = 'training_app/templates'
   end
 end
 

@@ -1,3 +1,14 @@
+require "haml"
+require "haml-rails"
+require "decent_exposure"
+require "eco"
+require "stripe"
+require "pry"
+require "sass-rails"
+require "compass-rails"
+require "font-awesome-rails"
+require "ember-rails"
+
 module TrainingApp
   class Engine < ::Rails::Engine
     isolate_namespace TrainingApp
@@ -12,6 +23,9 @@ module TrainingApp
       g.assets false
       g.helper false
     end
+
+    config.ember.variant = ENV.fetch('RAILS_ENV', nil) == "production" ? :production : :development
+    config.handlebars.templates_root = 'training_app/templates'
   end
 end
 

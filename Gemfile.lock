@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Compass/compass-rails.git
+  revision: aea69635f6000bbc7180f7fdd0ce216f904db30d
+  specs:
+    compass-rails (2.0.alpha.0)
+      compass (>= 0.12.2, < 0.14)
+
+GIT
   remote: git://github.com/ernie/ransack.git
   revision: 43fff052ca7a850103c2ac122c99541cd34cf48d
   branch: rails-4
@@ -105,7 +112,6 @@ PATH
       rails (~> 4.0.0)
       sass-rails (~> 4.0.0)
       stripe
-      zurb-foundation
 
 GEM
   remote: https://rubygems.org/
@@ -176,8 +182,6 @@ GEM
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
-    compass-rails (2.0.alpha.0)
-      compass (>= 0.12.2, < 0.14)
     database_cleaner (1.0.1)
     decent_exposure (2.2.0)
     devise (3.0.0)
@@ -439,7 +443,7 @@ DEPENDENCIES
   acts-as-taggable-on!
   asset_sync
   coffee-rails (~> 4.0.0)
-  compass-rails (~> 2.0.alpha.0)
+  compass-rails!
   database_cleaner
   decent_exposure
   dotenv-rails
@@ -475,4 +479,4 @@ DEPENDENCIES
   timecop
   training_app!
   uglifier (~> 2.1.0)
-  zurb-foundation
+  zurb-foundation (~> 3.2)

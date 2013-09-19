@@ -14,6 +14,24 @@ module TrainingApp
     validate :start_date, :uniqueness => { :scope => :venue_id },
         :message => "One course at a time per venue, please."
 
+    delegate :price, :title, :description_main, :synopsis, to: :parent_course, prefix: true, allow_nil: true
+
+    def price
+      read_attribute(:price) || parent_course_price
+    end
+
+    def title
+      read_attribute(:title) || parent_course_title
+    end
+
+    def description_main
+      read_attribute(:description_main) || parent_course_description_main
+    end
+
+    def synopsis
+      read_attribute(:synopsis) || parent_course_synopsis
+    end
+
     def in_person?
       !online?
     end
@@ -64,6 +82,10 @@ module TrainingApp
 
     def self.past
       where('start_date <= ?', Date.today)
+    end
+
+    def self.top_level
+      where(parent_course_id: nil)
     end
   end
 end

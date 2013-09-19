@@ -15,17 +15,6 @@ module TrainingApp
       end
     end
 
-    describe "#child_courses, #parent_course" do
-      let(:parent_course) { FactoryGirl.create(:course) }
-      let(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }
-      it "sets the parent on the child" do
-        expect(child_course.parent_course).to eq(parent_course)
-      end
-      it "sets the child on the parent" do
-        expect(parent_course.child_courses).to include(child_course)
-      end
-    end
-
     context "with registrations" do
       let(:course) { FactoryGirl.create(:course, capacity: 2) }
       let(:registration) { double('registration') }
@@ -75,6 +64,52 @@ module TrainingApp
         it "returns multiple month dates" do
           expect(course.dates).to eq("July 29 - August  1, 2012")
         end
+      end
+    end
+
+    describe "#price" do
+      let(:parent_course) { FactoryGirl.build(:course, price: nil) }
+      let(:course) { FactoryGirl.build(:course, price: nil, parent_course: parent_course) }
+
+      context "with a price" do
+        before { course.price = 100 }
+        it "returns it's price" do
+          expect(course.price).to eq(100)
+        end
+      end
+
+      context "without a price" do
+        before { parent_course.price = 200 }
+        it "returns it's parents price" do
+          expect(course.price).to eq(200)
+        end
+      end
+
+      context "without a price or a parent price" do
+        it "returns nil" do
+          expect(course.price).to eq(nil)
+        end
+      end
+    end
+    describe "#child_courses, #parent_course" do
+      let(:parent_course) { FactoryGirl.create(:course) }
+      let(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }
+      it "sets the parent on the child" do
+        expect(child_course.parent_course).to eq(parent_course)
+      end
+      it "sets the child on the parent" do
+        expect(parent_course.child_courses).to include(child_course)
+      end
+    end
+
+    describe ".top_level" do
+      let(:parent_course) { FactoryGirl.create(:course) }
+      let(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }
+      it "includes the parent_course" do
+        expect(Course.top_level).to include(parent_course)
+      end
+      it "doesn't include the child course" do
+        expect(Course.top_level).to_not include(child_course)
       end
     end
   end

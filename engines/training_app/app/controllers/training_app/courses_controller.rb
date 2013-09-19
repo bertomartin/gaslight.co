@@ -3,7 +3,7 @@ module TrainingApp
 
     respond_to :json, :html
 
-    expose(:courses)
+    expose(:courses) { Course.top_level }
     expose(:featured_courses) { Course.featured }
     expose(:course)
   end

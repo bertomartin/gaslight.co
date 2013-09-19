@@ -64,12 +64,12 @@
               %h1.course__heading= course.title
             %p.course__description= course.synopsis
             %ul.course__children-list
-              - course.workshops.each do |workshop|
+              - course.child_courses.each do |child_course|
                 %li.course__child
-                  %a{href: workshop.registration_link}
-                    %span= workshop.start_date.strftime("%B %d, %Y") if workshop.start_date.present?
-                    = " - " if workshop.start_date.present? && workshop.venue.present?
-                    %span= workshop.venue.city if workshop.venue.present?
+                  %a{href: child_course.registration_link}
+                    %span= child_course.start_date.strftime("%B %d, %Y") if child_course.start_date.present?
+                    = " - " if child_course.start_date.present? && child_course.venue.present?
+                    %span= child_course.venue.city if child_course.venue.present?
             .course__actions
               - if course.in_person?
                 %a.button{href: course_path(course)} Reserve your seat!

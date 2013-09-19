@@ -24,7 +24,7 @@ gem 'pygments.rb', require: false
 gem 'foundation_rails_helper', github: 'sgruhier/foundation_rails_helper', ref: 'ed5b2903'
 gem 'sentry-raven', git: 'https://github.com/getsentry/raven-ruby.git'
 
-gem 'compass-rails', '~> 2.0.alpha.0'
+gem 'compass-rails',       github: 'Compass/compass-rails'
 gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
 gem 'ransack',             github: 'ernie/ransack',         branch: 'rails-4'
 gem 'inherited_resources', github: 'josevalim/inherited_resources', ref: '2656ca0c'
@@ -37,7 +37,7 @@ gem 'engagement',          github: 'gaslight/engagement', ref:'de1d7f0', require
 gem 'coffee-rails', '~> 4.0.0'
 gem 'sass-rails',   '~> 4.0.0'
 gem 'uglifier', '~> 2.1.0'
-gem 'zurb-foundation'
+gem 'zurb-foundation', '~> 3.2'
 
 group :development, :test do
   gem 'pry'

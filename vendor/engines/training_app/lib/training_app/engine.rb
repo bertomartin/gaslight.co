@@ -24,7 +24,7 @@ module TrainingApp
       g.helper false
     end
 
-    config.ember.variant = ENV.fetch('RAILS_ENV') == "production" ? :production : :development
+    config.ember.variant = ENV.fetch('RAILS_ENV', nil) == "production" ? :production : :development
     config.handlebars.templates_root = 'training_app/templates'
   end
 end

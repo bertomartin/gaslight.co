@@ -8,8 +8,6 @@
 #= require backbone
 #= require backbone/gaslight
 #= require training_app/registrations
-#= require foundation.min
-#= require foundation-orbit
 
 track = (category, action, value = "") ->
   _gaq.push(['_trackEvent', category, action, value])
@@ -50,7 +48,3 @@ $ ->
       pluginPath: '/assets/'
       audioWidth: '100%'
 
-$(window).load ->
-  $(".featuredContent").orbit
-    directionalNav: 'false'
-    advanceSpeed: 8000

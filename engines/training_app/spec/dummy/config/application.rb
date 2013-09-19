@@ -26,7 +26,7 @@ module Dummy
 
 
     # Add parent apps stylesheets
-    config.assets.paths << "#{Rails.root}/../../../../../app/assets/stylesheets/"
+    config.assets.paths << "#{Rails.root}/../../../../app/assets/stylesheets/"
   end
 end
 

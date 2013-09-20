@@ -3,7 +3,6 @@ module TrainingApp
 
     has_and_belongs_to_many :instructors
     has_many :registrations
-    has_many :workshops
     has_many :sections
     has_many :chapters, through: :sections
     belongs_to :venue

@@ -7,7 +7,7 @@ feature "Viewing all courses" do
     let(:venue) { FactoryGirl.create(:venue, city: "Chicago") }
 
     context "with an in person featured course" do
-      let!(:in_person_featured_course) { FactoryGirl.create(:course, title: "In Person", synopsis: "synopsis", featured: true, start_date: Date.today, venue: venue) }
+      let!(:in_person_featured_course) { FactoryGirl.create(:course, title: "In Person", online: false, synopsis: "synopsis", featured: true, venue: venue) }
 
       scenario do
         course_index_page.visit_page
@@ -19,7 +19,7 @@ feature "Viewing all courses" do
     end
 
     context "with an online featured course" do
-      let!(:online_featured_course) { FactoryGirl.create(:course, title: "Online", synopsis: "synopsis", featured: true, start_date: nil, venue: nil) }
+      let!(:online_featured_course) { FactoryGirl.create(:course, title: "Online", online: true, synopsis: "synopsis", featured: true, venue: nil) }
 
       scenario do
         course_index_page.visit_page
@@ -34,8 +34,8 @@ feature "Viewing all courses" do
   describe "Course list" do
     let!(:course1) { FactoryGirl.create(:course, title: "Course 1") }
     let!(:course2) { FactoryGirl.create(:course, title: "Course 2") }
-    let!(:workshop1) { FactoryGirl.create(:workshop, course: course1) }
-    let!(:workshop2) { FactoryGirl.create(:workshop, course: course2) }
+    let!(:child_course1) { FactoryGirl.create(:course, parent_course: course1) }
+    let!(:child_course2) { FactoryGirl.create(:course, parent_course: course2) }
 
     scenario do
       course_index_page.visit_page

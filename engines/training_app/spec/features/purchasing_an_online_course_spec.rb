@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 feature "Purchasing an online course", js: true do
-  let(:course) { FactoryGirl.create(:course) }
+  let(:course) { FactoryGirl.create(:course, online: true) }
   let(:new_registration_page) { NewRegistrationPage.new }
   scenario "submitting the form" do
     new_registration_page.visit_page(course)

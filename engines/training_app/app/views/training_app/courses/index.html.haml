@@ -33,13 +33,7 @@
         - featured_courses.each do |featured_course|
           .six.columns
             .featured-card
-              %p.featured-card__meta
-                - if featured_course.in_person?
-                  %span.featured-card__date= featured_course.start_date.strftime("%B %d, %Y") if featured_course.start_date.present?
-                  = " - " if featured_course.start_date.present? && featured_course.venue.present?
-                  %span.featured-card__location= featured_course.venue.city if featured_course.venue.present?
-                - else
-                  Online
+              %p.featured-card__meta= featured_course.meta
               %a.featured-card__title{href: course_path(featured_course)}
                 %h1= featured_course.title
               %p.featured-card__synopsis= truncate(featured_course.synopsis, length: 160, omission: '...')
@@ -64,12 +58,9 @@
               %h1.course__heading= course.title
             %p.course__description= course.synopsis
             %ul.course__children-list
-              - course.workshops.each do |workshop|
+              - course.child_courses.each do |child_course|
                 %li.course__child
-                  %a{href: workshop.registration_link}
-                    %span= workshop.start_date.strftime("%B %d, %Y") if workshop.start_date.present?
-                    = " - " if workshop.start_date.present? && workshop.venue.present?
-                    %span= workshop.venue.city if workshop.venue.present?
+                  %a{href: course_path(child_course)}= child_course.meta
             .course__actions
               - if course.in_person?
                 %a.button{href: course_path(course)} Reserve your seat!

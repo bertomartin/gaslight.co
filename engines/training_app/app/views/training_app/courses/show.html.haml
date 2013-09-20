@@ -20,19 +20,21 @@
 
     .columns.four.sidebar--training
       .action_container
-        - if course.workshops.upcoming
-          - course.workshops.upcoming.each do |workshop|
-            .workshop
-              %h3
-                = workshop.location
-                %span= number_to_currency(workshop.current_price, precision: 0)
-              %h5{style: 'margin-bottom: 1em'}= workshop.start_date.to_s(:long)
-              %p We're doing a one day workshop in #{workshop.location}. Come learn with us.
-              %a.button.small.radius.success.button.brand3{href: workshop.registration_link} Register Now!
+        - if course.online?
+          %a.button.small.radius.success.button.brand3{href: new_course_registration_path(course)} Buy Now!
+
+        - if course.registration_link.present?
+          %a.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!
+
+        - course.sibling_courses.each do |sibling_course|
+          = render sibling_course
+
+        - course.child_courses.each do |child_course|
+          = render child_course
+
       .request
         %p
-          We can bring this workshop to your location for private training as
-          well.
+          We can bring this workshop to your location for private training as well.
         %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
 
       - course.instructors.each do |instructor|

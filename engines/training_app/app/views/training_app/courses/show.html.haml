@@ -19,16 +19,28 @@
           %li A modern web browser (Chrome is highly recommended)
 
     .columns.four.sidebar--training
+      - if course.registration_link.present?
+        %a.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!
+
       .action_container
-        - if course.workshops.upcoming
-          - course.workshops.upcoming.each do |workshop|
-            .workshop
-              %h3
-                = workshop.location
-                %span= number_to_currency(workshop.current_price, precision: 0)
-              %h5{style: 'margin-bottom: 1em'}= workshop.start_date.to_s(:long)
-              %p We're doing a one day workshop in #{workshop.location}. Come learn with us.
-              %a.button.small.radius.success.button.brand3{href: workshop.registration_link} Register Now!
+        - course.sibling_courses.each do |sibling_course|
+          .workshop
+            %h3
+              = sibling_course.venue_city
+              %span= number_to_currency(sibling_course.current_price, precision: 0)
+            %h5= sibling_course.start_date.to_s(:long) if sibling_course.start_date?
+            %p We're doing a workshop in #{sibling_course.venue_city}. Come learn with us.
+            %a.button.small.radius.success.button.brand3{href: sibling_course.registration_link} Register Now!
+
+        - course.child_courses.each do |sibling_course|
+          .workshop
+            %h3
+              = sibling_course.venue_city
+              %span= number_to_currency(sibling_course.current_price, precision: 0)
+            %h5= sibling_course.start_date.to_s(:long) if sibling_course.start_date?
+            %p We're doing a workshop in #{sibling_course.venue_city}. Come learn with us.
+            %a.button.small.radius.success.button.brand3{href: sibling_course.registration_link} Register Now!
+
       .request
         %p
           We can bring this workshop to your location for private training as

@@ -15,6 +15,7 @@ module TrainingApp
         :message => "One course at a time per venue, please."
 
     delegate :price, :title, :description_main, :synopsis, to: :parent_course, prefix: true, allow_nil: true
+    delegate :name, :city, :address, to: :venue, prefix: true, allow_nil: true
 
     def price
       read_attribute(:price) || parent_course_price
@@ -48,16 +49,16 @@ module TrainingApp
       registrations.count >= capacity
     end
 
-    def city
-      (venue && venue.city) && venue.city.split(',').first || ""
-    end
-
     def dates
       if start_date.month == end_date.month
         "#{start_date.strftime('%B %e')} - #{end_date.strftime('%e, %Y')}"
       else
         "#{start_date.strftime('%B %e')} - #{end_date.strftime('%B %e, %Y')}"
       end
+    end
+
+    def sibling_courses
+      parent_course.present? ? parent_course.child_courses : []
     end
 
     def to_s

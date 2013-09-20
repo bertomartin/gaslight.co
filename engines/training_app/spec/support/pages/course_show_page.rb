@@ -16,5 +16,9 @@ class CourseShowPage
   def has_instructor_image?(image_url)
     page.has_css?("img[src$='#{image_url}']")
   end
+
+  def has_registration_link?(url)
+    page.has_css?("a[href$='#{url}']")
+  end
 end
 

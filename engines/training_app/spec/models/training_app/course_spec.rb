@@ -112,5 +112,20 @@ module TrainingApp
         expect(Course.top_level).to_not include(child_course)
       end
     end
+
+    describe "#sibling_courses" do
+      let(:parent_course) { FactoryGirl.create(:course) }
+      let!(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }
+      let!(:sibling_course1) { FactoryGirl.create(:course, parent_course: parent_course) }
+      let!(:sibling_course2) { FactoryGirl.create(:course, parent_course: parent_course) }
+
+      it "returns an empty array if no siblings exist" do
+        expect(parent_course.sibling_courses).to eq([])
+      end
+
+      it "returns the courses with the same parent" do
+        expect(child_course.sibling_courses).to include(sibling_course1, sibling_course2)
+      end
+    end
   end
 end

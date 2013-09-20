@@ -36,3 +36,12 @@
   margin: 0 0 15px 0
   width: 100%
 
+.button--quiet
+  @extend %button
+  background: none
+  color: #939598
+  &:hover
+    color: #ffffff
+    background: #939598
+  &:active
+    background: darken(#939598, 10%)

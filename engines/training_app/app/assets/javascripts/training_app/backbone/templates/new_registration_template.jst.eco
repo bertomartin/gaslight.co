@@ -76,7 +76,7 @@
               <input type="text" id="card-expiration-month" name="cardExpirationMonth" class="input-text six column" value="<%= @get 'cardExpirationMonth' %>" maxlength="2"/>
             </div>
 
-            <div class="four offset-by-one column end">
+            <div class="four column end">
               <label for="card-expiration-year">Expiration Year (YYYY)</label>
 
               <input type="text" id="card-expiration-year" name="cardExpirationYear" class="input-text six column" value="<%= @get 'cardExpirationYear' %>" maxlength="4"/>

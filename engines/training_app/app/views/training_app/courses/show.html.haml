@@ -19,10 +19,13 @@
           %li A modern web browser (Chrome is highly recommended)
 
     .columns.four.sidebar--training
-      - if course.registration_link.present?
-        %a.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!
-
       .action_container
+        - if course.online?
+          %a.button.small.radius.success.button.brand3{href: new_course_registration_path(course)} Buy Now!
+
+        - if course.registration_link.present?
+          %a.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!
+
         - course.sibling_courses.each do |sibling_course|
           = render sibling_course
 
@@ -31,8 +34,7 @@
 
       .request
         %p
-          We can bring this workshop to your location for private training as
-          well.
+          We can bring this workshop to your location for private training as well.
         %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
 
       - course.instructors.each do |instructor|

@@ -91,6 +91,7 @@ module TrainingApp
         end
       end
     end
+
     describe "#child_courses, #parent_course" do
       let(:parent_course) { FactoryGirl.create(:course) }
       let(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }
@@ -125,6 +126,23 @@ module TrainingApp
 
       it "returns the courses with the same parent" do
         expect(child_course.sibling_courses).to include(sibling_course1, sibling_course2)
+      end
+    end
+
+    describe "#meta" do
+      context "online" do
+        let(:course) {FactoryGirl.build(:course, online: true)}
+        it "returns Online" do
+          expect(course.meta).to eq("Online")
+        end
+      end
+
+      context "in person" do
+        let(:venue) {FactoryGirl.build(:venue, city: "Seoul")}
+        let(:course) {FactoryGirl.build(:course, online: false, venue: venue, start_date: Date.new(2025, 01, 01))}
+        it "returns the date city" do
+          expect(course.meta).to eq("January 01, 2025 - Seoul")
+        end
       end
     end
   end

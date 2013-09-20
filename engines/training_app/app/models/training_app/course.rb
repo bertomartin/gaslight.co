@@ -65,6 +65,15 @@ module TrainingApp
       title
     end
 
+    def meta
+      return "Online" if online?
+      parts = []
+      parts.push start_date.strftime("%B %d, %Y") if start_date.present?
+      parts.push " - "
+      parts.push venue_city
+      parts.join("")
+    end
+
     def self.current
       upcoming.first
     end

@@ -24,22 +24,10 @@
 
       .action_container
         - course.sibling_courses.each do |sibling_course|
-          .workshop
-            %h3
-              = sibling_course.venue_city
-              %span= number_to_currency(sibling_course.current_price, precision: 0)
-            %h5= sibling_course.start_date.to_s(:long) if sibling_course.start_date?
-            %p We're doing a workshop in #{sibling_course.venue_city}. Come learn with us.
-            %a.button.small.radius.success.button.brand3{href: sibling_course.registration_link} Register Now!
+          = render sibling_course
 
-        - course.child_courses.each do |sibling_course|
-          .workshop
-            %h3
-              = sibling_course.venue_city
-              %span= number_to_currency(sibling_course.current_price, precision: 0)
-            %h5= sibling_course.start_date.to_s(:long) if sibling_course.start_date?
-            %p We're doing a workshop in #{sibling_course.venue_city}. Come learn with us.
-            %a.button.small.radius.success.button.brand3{href: sibling_course.registration_link} Register Now!
+        - course.child_courses.each do |child_course|
+          = render child_course
 
       .request
         %p

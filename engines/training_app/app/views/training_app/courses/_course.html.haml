@@ -1,0 +1,7 @@
+.workshop
+  %h3
+    = course.venue_city
+    %span= number_to_currency(course.current_price, precision: 0)
+  %h5= course.start_date.to_s(:long)
+  %p We're doing a one day workshop in #{course.venue_city}. Come learn with us.
+  %a.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!

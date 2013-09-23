@@ -5,11 +5,6 @@ feature "Viewing a course" do
     let(:parent_course) { FactoryGirl.create(:course, registration_link: "google.com") }
     let(:course_show_page) { CourseShowPage.new }
 
-    scenario "shows the registration link" do
-      course_show_page.visit_page(parent_course)
-      expect(course_show_page).to have_registration_link("google.com")
-    end
-
     context "with instructors" do
       let!(:instructor) { FactoryGirl.create(:instructor, courses: [parent_course]) }
       scenario "shows the instructors" do

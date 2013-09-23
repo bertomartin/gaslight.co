@@ -23,9 +23,6 @@
         - if course.online?
           %a.button.small.radius.success.button.brand3{href: new_course_registration_path(course)} Buy Now!
 
-        - if course.registration_link.present?
-          %a.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!
-
         - course.sibling_courses.each do |sibling_course|
           = render sibling_course
 

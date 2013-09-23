@@ -14,8 +14,8 @@ module TrainingApp
       self.customer_id = customer.id
       customer.charge(amount: amount, description: course.title)
       if customer.error.blank?
-        send_confirmation
         save!
+        send_confirmation
       else
         errors.add :base, customer.error
       end

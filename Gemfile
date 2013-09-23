@@ -13,7 +13,6 @@ gem 'rack-rewrite'
 gem 'pg'
 gem 'decent_exposure'
 gem 'stringex'
-gem 'asset_sync'
 gem 'htmlentities'
 gem 'rack-cors', require: 'rack/cors'
 gem 'training_app', path: 'engines/training_app'
@@ -57,5 +56,9 @@ end
 
 group :staging, :production do
   gem 'rails_12factor'
+end
+
+group :production do
+  gem 'asset_sync'
 end
 

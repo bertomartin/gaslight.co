@@ -17,19 +17,23 @@ module TrainingApp
     delegate :name, :city, :address, to: :venue, prefix: true, allow_nil: true
 
     def price
-      read_attribute(:price) || parent_course_price
+      price = read_attribute(:price)
+      price.present? ? price : parent_course_price
     end
 
     def title
-      read_attribute(:title) || parent_course_title
+      title = read_attribute(:title)
+      title.present? ? title : parent_course_title
     end
 
     def description_main
-      read_attribute(:description_main) || parent_course_description_main
+      desc = read_attribute(:description_main)
+      desc.present? ? desc : parent_course_description_main
     end
 
     def synopsis
-      read_attribute(:synopsis) || parent_course_synopsis
+      synopsis = read_attribute(:synopsis)
+      synopsis.present? ? synopsis : parent_course_synopsis
     end
 
     def in_person?

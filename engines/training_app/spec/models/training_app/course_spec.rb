@@ -92,6 +92,31 @@ module TrainingApp
       end
     end
 
+    describe "#synopsis" do
+      let(:parent_course) { FactoryGirl.build(:course, synopsis: "") }
+      let(:course) { FactoryGirl.build(:course, synopsis: "", parent_course: parent_course) }
+
+      context "with a synopsis" do
+        before { course.synopsis = "test" }
+        it "returns it's price" do
+          expect(course.synopsis).to eq("test")
+        end
+      end
+
+      context "without a synopsis" do
+        before { parent_course.synopsis = "parent synopsis" }
+        it "returns it's parents synopsis" do
+          expect(course.synopsis).to eq("parent synopsis")
+        end
+      end
+
+      context "without a synopsis or a parent synopsis" do
+        it "returns nil" do
+          expect(course.synopsis).to eq(nil)
+        end
+      end
+    end
+
     describe "#child_courses, #parent_course" do
       let(:parent_course) { FactoryGirl.create(:course) }
       let(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }

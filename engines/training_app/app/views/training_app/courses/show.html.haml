@@ -19,15 +19,14 @@
           %li A modern web browser (Chrome is highly recommended)
 
     .columns.four.sidebar--training
-      .action_container
-        - if course.online?
-          %a.button.small.radius.success.button.brand3{href: new_course_registration_path(course)} Buy Now!
+      - if course.online?
+        = render course
 
-        - course.sibling_courses.each do |sibling_course|
-          = render sibling_course
+      - course.sibling_courses.each do |sibling_course|
+        = render sibling_course
 
-        - course.child_courses.each do |child_course|
-          = render child_course
+      - course.child_courses.each do |child_course|
+        = render child_course
 
       .request
         %p

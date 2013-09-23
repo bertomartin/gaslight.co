@@ -20,5 +20,13 @@ class CourseShowPage
   def has_registration_link?(url)
     page.has_css?("a[href$='#{url}']")
   end
+
+  def buy_now_link
+    page.find(".purchase-panel__buy")["href"]
+  end
+
+  def price
+    page.find(".purchase-panel__price").text
+  end
 end
 

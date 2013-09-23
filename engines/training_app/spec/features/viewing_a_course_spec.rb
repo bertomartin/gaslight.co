@@ -37,4 +37,14 @@ feature "Viewing a course" do
       end
     end
   end
+
+  context "Online" do
+    let(:online_course) { FactoryGirl.create(:course, price: 199, online: true)}
+    let(:course_show_page) { CourseShowPage.new }
+    scenario "viewing buy now links" do
+      course_show_page.visit_page(online_course)
+      expect(course_show_page.buy_now_link).to eq("/training/courses/#{online_course.id}/registrations/new")
+      expect(course_show_page.price).to eq("$199")
+    end
+  end
 end

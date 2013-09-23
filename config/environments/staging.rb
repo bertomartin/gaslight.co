@@ -61,7 +61,7 @@ Gaslight::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.assets.precompile += %w( coffee.css coffee.js )
+  config.assets.precompile += %w( coffee.css coffee.js training_app/classroom.css training_app/classroom.js)
 
   ActionMailer::Base.smtp_settings = {
     address:        'smtp.sendgrid.net',

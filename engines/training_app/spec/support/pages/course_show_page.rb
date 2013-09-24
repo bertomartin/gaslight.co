@@ -28,5 +28,9 @@ class CourseShowPage
   def price
     page.find(".purchase-panel__price").text
   end
+
+  def description_html
+    page.find(".course__description").native.inner_html
+  end
 end
 

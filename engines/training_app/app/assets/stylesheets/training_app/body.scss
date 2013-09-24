@@ -70,13 +70,16 @@ blockquote {
   height: 100px;
 }
 
-
-.training__subhead{
-  font-size: 16pt;
-  background: #eee;
-  padding: 10px 20px;
-  text-align: center;
-  margin-top: 60px;
+// this is rendered via markdown, so we cant use  class names
+.course__description{
+  h1{
+    font-size: 24px;
+    line-height: 26px;
+    background: #eee;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 60px;
+  }
 }
 
 .request{

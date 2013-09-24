@@ -110,6 +110,7 @@ PATH
       haml (~> 4.0)
       haml-rails
       rails (~> 4.0.0)
+      redcarpet
       sass-rails (~> 4.0.0)
       stripe
 

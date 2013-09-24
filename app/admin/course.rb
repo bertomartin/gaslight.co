@@ -26,6 +26,7 @@ ActiveAdmin.register TrainingApp::Course do
       f.input :registration_link
       f.input :online
       f.input :featured
+      f.input :instructors, as: :check_boxes
     end
     f.actions
   end

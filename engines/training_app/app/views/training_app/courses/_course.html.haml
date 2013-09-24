@@ -6,7 +6,7 @@
     %h3.purchase-panel__price
       = course.venue_city
       %span= number_to_currency(course.current_price, precision: 0)
-    %h5.purchase-panel__date= course.start_date.to_s(:long)
+    %h5.purchase-panel__date= course.start_date.to_s(:long) if course.start_date.present?
     %p.purchase-panel__description We're doing a one day workshop in #{course.venue_city}. Come learn with us.
     %a.purchase-panel__buy.button.small.radius.success.button.brand3{href: course.registration_link} Register Now!
 

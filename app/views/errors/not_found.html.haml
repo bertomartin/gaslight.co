@@ -1,6 +1,6 @@
 = render partial: 'application/nav'
 
-#guides
+.error-page
   .row
     .columns.twelve
       %img.wendell{ src: image_path('wendell-lost.png') }
@@ -20,10 +20,10 @@
       Whatever you were looking for doesn't seem to be here anymore ;(
     %a.button.brand3.hide-for-small{href: page_path("contact"), rel: "Homepage Lets Talk button" } Let's Talk
 
-  .buttonLinks.show-for-small
-    %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
-    %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
-    %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
+    .buttonLinks.show-for-small
+      %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
+      %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
+      %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
 
   
 

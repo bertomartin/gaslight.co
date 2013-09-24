@@ -1,7 +1,7 @@
 <div class="row">
   <form action="#">
     <fieldset class="seven columns centered">
-      <h2 class="purchase_form">Purchase the Course for <span>$<%= @get("amount") %>.00</span></h2>
+      <h3 class="purchase_form">Purchase <%= @get("course").title %> for <span>$<%= @get("amount") %>.00</span></h3>
       <p class="purchase_intro">Fill out the form fields below and we'll take you right to your
       content. Questions? Problems? Send us an email:
       <a href="mailto:training@gaslight.co">training@gaslight.co</a>.</p>

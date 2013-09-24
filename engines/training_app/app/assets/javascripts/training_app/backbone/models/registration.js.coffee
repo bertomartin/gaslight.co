@@ -28,7 +28,7 @@ class TrainingApp.Models.Registration extends Backbone.Model
   toJSON: ->
     json = {}
     for attribute of @attributes
-      unless attribute.match(/^card/) or attribute == "workshop"
+      unless attribute.match(/^card/) or attribute == "workshop" or attribute == "course"
         json[attribute.tableize().singularize()] = @attributes[attribute]
     json
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130920200909) do
+ActiveRecord::Schema.define(version: 20130924142750) do
 
   create_table "training_app_chapters", force: true do |t|
     t.string  "title"
@@ -26,7 +26,6 @@ ActiveRecord::Schema.define(version: 20130920200909) do
   create_table "training_app_courses", force: true do |t|
     t.string   "title"
     t.text     "description_main"
-    t.text     "description_close"
     t.date     "start_date"
     t.date     "end_date"
     t.integer  "price"

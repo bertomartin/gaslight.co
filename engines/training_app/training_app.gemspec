@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency "font-awesome-rails"
   s.add_dependency "ember-rails"
   s.add_dependency "active_model_serializers"
+  s.add_dependency "redcarpet"
 
   s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'rspec-rails'

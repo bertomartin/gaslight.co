@@ -6,17 +6,7 @@
   .row
     .columns.eight.trainingcourse__content
       .course
-        %p= simple_format(course.description_main)
-
-        %h2.training__subhead What should I know before the course?
-        %ul
-          %li Familiarity with Javascript
-          %li Basic understanding of jQuery or similar DOM manipulation library
-
-        %h2.training__subhead What should I bring?
-        %ul
-          %li A laptop
-          %li A modern web browser (Chrome is highly recommended)
+        .course__description= markdown(course.description_main)
 
     .columns.four.sidebar--training
       - if course.online?

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130924142750) do
+ActiveRecord::Schema.define(version: 20130924203755) do
 
   create_table "training_app_chapters", force: true do |t|
     t.string  "title"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130924142750) do
     t.string  "code_url"
     t.string  "poster_url"
     t.integer "section_id"
+    t.boolean "demo"
   end
 
   create_table "training_app_courses", force: true do |t|

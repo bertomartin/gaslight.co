@@ -1,4 +1,6 @@
 TrainingApp::Engine.routes.draw do
+  resources :classroom, only: [:index]
+
   resources :courses, only: [:index, :show] do
     resources :registrations do
       get :stats, on: :collection

@@ -17,5 +17,13 @@ class ClassroomPage
   def code_url
     find('iframe')[:src]
   end
+
+  def showing_purchase_modal?
+    has_css?('.modal.modal--active')
+  end
+
+  def registration_url
+    find('.modal__actions .button')[:href]
+  end
 end
 

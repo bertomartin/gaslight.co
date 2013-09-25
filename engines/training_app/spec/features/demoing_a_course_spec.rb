@@ -17,12 +17,22 @@ feature "Demoing a course", js: true do
     end
   end
 
-
   describe "viewing a chapter" do
-    let!(:demo_chapter) { FactoryGirl.create(:chapter, title: "Demo", demo: true, code_url: "http://test.com/") }
-    scenario "should exist" do
-      classroom_page.visit_chapter(demo_chapter)
-      expect(classroom_page.code_url).to eq("http://test.com/")
+    context "demo chapter" do
+      let!(:demo_chapter) { FactoryGirl.create(:chapter, title: "Demo", demo: true, code_url: "http://example.com/") }
+      scenario "should show the chapter" do
+        classroom_page.visit_chapter(demo_chapter)
+        expect(classroom_page.code_url).to eq("http://example.com/")
+      end
+    end
+
+    context "restricted chapter" do
+      let!(:restricted_chapter) { FactoryGirl.create(:chapter, title: "Demo", demo: false, code_url: "http://example.com/") }
+      scenario "should show the purchase modal" do
+        classroom_page.visit_chapter(restricted_chapter)
+        expect(classroom_page).to be_showing_purchase_modal
+        expect(classroom_page.registration_url).to eq("/training/courses/#{restricted_chapter.section.course.id}/registraions/new")
+      end
     end
   end
 end

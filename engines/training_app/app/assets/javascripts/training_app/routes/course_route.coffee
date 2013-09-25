@@ -1,12 +1,12 @@
-Training.SectionsRoute = Ember.Route.extend
-  model: ->
-    @store.find('section')
+Training.CourseRoute = Ember.Route.extend
+  needs: ['chapter']
 
   actions:
     toggleSidebar: ->
       @controllerFor('chapter').toggleProperty('isSidebarActive')
 
-Training.SectionsIndexRoute = Ember.Route.extend
+Training.CourseIndexRoute = Ember.Route.extend
   redirect: ->
     firstChapter = @get('store').all('chapter').get('firstObject')
     @transitionTo('chapter', firstChapter)
+

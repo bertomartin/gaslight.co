@@ -6,6 +6,9 @@ Training.Chapter = DS.Model.extend
   codeUrl: DS.attr('string')
   repoUrl: DS.attr('string')
   posterUrl: DS.attr('string')
+  demo: DS.attr('boolean')
+  enabled: DS.attr('boolean')
+
   section: DS.belongsTo('section')
 
   allChapters: (->
@@ -23,6 +26,10 @@ Training.Chapter = DS.Model.extend
   progress: (->
     (@get('currentIndex') + 1) / @get('allChapters.length')
   ).property('currentIndex')
+
+  isDisabled: (->
+    !@get('demo') || @get('disabled')
+  ).property('demo', 'enabled')
 
   currentIndex: (->
     @get('allChapters').indexOf(this)

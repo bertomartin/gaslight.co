@@ -16,7 +16,7 @@
 
 <nav {{bindAttr class=":sidebar active:sidebar--active"}}>
   <ol class="nav">
-    {{#each itemController=navSection}}
+    {{#each sections itemController=navSection}}
       <li {{bindAttr class=":nav__item isActive:nav__item--active"}}>
         <div class="nav__heading">
           <span class="nav__heading__index">{{number}}.</span>
@@ -25,7 +25,7 @@
         </div>
         <ul class="subnav">
           {{#each chapters itemController=navChapter}}
-            <li {{bindAttr class=":subnav__item isActive:subnav__item--active"}}>
+            <li {{bindAttr class=":subnav__item isActive:subnav__item--active isDisabled:subnav__item--disabled"}}>
               {{#linkTo 'chapter' this}}{{title}}{{/linkTo}}
             </li>
           {{/each}}

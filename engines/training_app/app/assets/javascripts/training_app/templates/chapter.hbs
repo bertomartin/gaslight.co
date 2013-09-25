@@ -1,26 +1,23 @@
-<section {{bindAttr class=":main isSidebarActive:main--pushed"}}>
-  <div class="chapter">
-    {{#if previousChapter}}
-      {{#linkTo 'chapter' previousChapter class="nav-button nav-button--left"}}
-        <i class="icon-angle-left nav-button__icon"></i>
-        <span class="nav-button__text">Previous</span>
-      {{/linkTo}}
-    {{/if}}
-
-    {{#if videoUrl}}
-      {{media-element src=videoUrl poster=posterUrl class="chapter__video" resize=isSidebarActive}}
-    {{/if}}
-
-    {{#if nextChapter}}
-      {{#linkTo 'chapter' nextChapter class="nav-button nav-button--right"}}
-        <span class="nav-button__text">Next</span>
-        <i class="icon-angle-right nav-button__icon"></i>
-      {{/linkTo}}
-    {{/if}}
-  </div>
-
-  {{#if codeUrl}}
-    <iframe class="chapter__code" {{bindAttr src=codeUrl}}></iframe>
+<div class="chapter">
+  {{#if previousChapter}}
+    {{#linkTo 'chapter' previousChapter class="nav-button nav-button--left"}}
+      <i class="icon-angle-left nav-button__icon"></i>
+      <span class="nav-button__text">Previous</span>
+    {{/linkTo}}
   {{/if}}
 
-</section>
+  {{#if videoUrl}}
+    {{media-element src=videoUrl poster=posterUrl class="chapter__video" resize=isSidebarActive}}
+  {{/if}}
+
+  {{#if nextChapter}}
+    {{#linkTo 'chapter' nextChapter class="nav-button nav-button--right"}}
+      <span class="nav-button__text">Next</span>
+      <i class="icon-angle-right nav-button__icon"></i>
+    {{/linkTo}}
+  {{/if}}
+</div>
+
+{{#if codeUrl}}
+  <iframe class="chapter__code" {{bindAttr src=codeUrl}}></iframe>
+{{/if}}

@@ -1,2 +1,1 @@
-Training.ChapterController = Ember.ObjectController.extend
-  isSidebarActive: false
+Training.ChapterController = Ember.ObjectController.extend()

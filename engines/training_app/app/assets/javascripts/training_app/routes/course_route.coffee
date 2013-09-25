@@ -5,6 +5,9 @@ Training.CourseRoute = Ember.Route.extend
     toggleSidebar: ->
       @controllerFor('chapter').toggleProperty('isSidebarActive')
 
+    purchase: ->
+      @get('controller').purchase()
+
 Training.CourseIndexRoute = Ember.Route.extend
   redirect: ->
     firstChapter = @get('store').all('chapter').get('firstObject')

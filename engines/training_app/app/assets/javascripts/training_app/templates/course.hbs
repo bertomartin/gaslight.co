@@ -16,7 +16,7 @@
   </div>
 </header>
 
-<nav {{bindAttr class=":sidebar active:sidebar--active"}}>
+<nav {{bindAttr class=":sidebar isSidebarActive:sidebar--active"}}>
   <ol class="nav">
     {{#each sections itemController=navSection}}
       <li {{bindAttr class=":nav__item isActive:nav__item--active"}}>
@@ -37,4 +37,6 @@
   </ol>
 </nav>
 
-{{outlet}}
+<section {{bindAttr class=":main isSidebarActive:main--pushed"}}>
+  {{outlet}}
+</section>

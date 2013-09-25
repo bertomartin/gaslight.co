@@ -1,3 +1,3 @@
 Training.Router.map ->
-  @resource "sections", { path: '/' }, ->
-    @resource "chapter", { path: 'chapters/:chapter_id' }
+  @resource "course", { path: '/courses/:course_id' }, ->
+    @resource "chapter", { path: '/chapters/:chapter_id' }

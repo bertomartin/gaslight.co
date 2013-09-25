@@ -1,4 +1,4 @@
-Training.SectionsController = Ember.ArrayController.extend
+Training.CourseController = Ember.ObjectController.extend
   needs: ['chapter']
 
   active: (->

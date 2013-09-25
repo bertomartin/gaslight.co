@@ -8,8 +8,8 @@ Training.CourseRoute = Ember.Route.extend
     purchase: ->
       @get('controller').purchase()
 
-Training.CourseIndexRoute = Ember.Route.extend
-  redirect: ->
-    firstChapter = @get('store').all('chapter').get('firstObject')
-    @transitionTo('chapter', firstChapter)
+# Training.CourseIndexRoute = Ember.Route.extend
+  # redirect: ->
+  #   firstChapter = @get('store').all('chapter').get('firstObject')
+  #   @transitionTo('chapter', firstChapter)
 

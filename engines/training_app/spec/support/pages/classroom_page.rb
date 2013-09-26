@@ -13,12 +13,13 @@ class ClassroomPage
     find('.bar__title').text
   end
 
-  def has_chapter?(chapter)
-    page.has_content?(chapter.title)
+  def chapters
+    find('.nav') # this will wait until ember renders
+    all('.subnav__item')
   end
 
   def disabled_chapters
-    find(".subnav__item--disabled") # this will wait until ember renders
+    find(".nav") # this will wait until ember renders
     all(".subnav__item--disabled").collect(&:text)
   end
 

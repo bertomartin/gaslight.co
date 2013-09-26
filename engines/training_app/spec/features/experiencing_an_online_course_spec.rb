@@ -17,13 +17,12 @@ feature "Experiencing an online course", js: true do
     expect(classroom_page).to be_showing_demo
   end
 
-  # TODO - this is a slow test because it waits for capybara to time out
   describe "seeing only this courses chapters" do
     let!(:unrelated_chapter) { FactoryGirl.create(:chapter, title: "Another Chapter") }
 
-    scenario do
+    scenario "should not see the unrelated chapter" do
       classroom_page.visit_page(registration.course, registration.code)
-      expect(classroom_page).to_not have_chapter(unrelated_chapter)
+      expect(classroom_page.chapters.count).to eq(1)
     end
   end
 end

@@ -66,7 +66,7 @@
                 %a.button{href: course_path(course)} Reserve your seat!
               - else
                 %a.button{href: new_course_registration_path(course)} Buy now!
-                %a.button.button--request{href: course_path(course)} Try now!
+                %a.button.button--request{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try now!
           %hr
 
 = render partial: 'application/footer'

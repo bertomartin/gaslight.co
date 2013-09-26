@@ -5,7 +5,6 @@ module TrainingApp
     def attributes
       attrs = super
       if registration.nil? && !object.demo?
-        attrs[:disabled] = true
         [:code_url, :video_url, :poster_url].each { |attr| attrs[attr] = nil}
       end
       attrs

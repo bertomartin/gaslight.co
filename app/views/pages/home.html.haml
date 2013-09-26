@@ -8,34 +8,39 @@
   %section.landingpage
     .row
       .twelve.columns.centered
-        %h1.landingpage__tagline We build web apps that build businesses.
+        %h1.landingpage__tagline We build apps that build businesses.
     .row
-      .ten.columns.centered
+      .six.columns.centered
         %p.landingpage__paragraph
-          Gaslight partners with you to create custom web-based software or improve your existing software. We also lead in-person and online training sessions on the latest technology for development teams. All with a focus on business results.
-    .row
-      .ten.columns.centered
-        %h3.landingpage__subheading Let’s work together to take your business new places.
+          Gaslight is a design and development shop based around three driving principles.
     .row
       .eight.column.centered.lbs.hide-for-small
         .row
           .four.columns
-            %a.button--large.brand1{href: post_path('kanban-smackdown-part-1')} Learn
+            %a.button--large.brand1{href: page_path('about')} Learn
             %p
-              We’re always learning. Hear about our explorations with the Kanban process on the Gaslight podcast.
-            %a.brand1--link{href: post_path('kanban-smackdown-part-1')} Check out the podcast &#62;
+              Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you. 
           
           .four.columns
-            %a.button--large.brand2{href: page_path('case-studies/lumbee')} Build
+            %a.button--large.brand2{href: page_path('case-studies/ipc')} Build
             %p
-              See how we overhauled Lumbee Enterprises’ software to improve productivity, profits and client relationships.
-            %a.brand2--link{href: page_path('case-studies/lumbee')} See the case study &#62;
+              We wield our coding, design and UX chops to create custom software or super-charge existing software. See our <a class="brand2--link" href="case-studies/ipc" rel="Case Study">latest work.</a>
           .four.columns
-            %a.button--large.brand3{href: "https://training.gaslight.co/"} Share
+            %a.button--large.brand3{href: page_path('blog')} Share
             %p
-              Want to learn Backbone or Ember? We’re sharing the strengths and weaknesses of each framework along with code examples in our online training classes.
-            %a.brand3--link{href: "https://training.gaslight.co/"} Learn from us &#62;
-
+              We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, podcast and training classes
+    .row
+      .eight.column.centered.lbs.show-for-small
+        .row
+          .four.columns
+            %a.button--large.brand1{href: page_path('about')} Learn
+           
+          .four.columns
+            %a.button--large.brand2{href: page_path('case-studies/ipc')} Build
+            
+          .four.columns
+            %a.button--large.brand3{href: page_path('blog')} Share
+           
 #main.landing-page
   %section.hero--weare
     .row
@@ -90,7 +95,7 @@
         %p
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
           = render partial: 'application/newsletter'
-      .three.columns.offset-by-one.landing-page__info
+      .three.columns.offset-by-one.landing-page__contact
         %p Start a conversation:
         %ul.landing-page__contact
           %li

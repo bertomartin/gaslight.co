@@ -34,8 +34,8 @@ class ClassroomPage
     find('.modal__actions .button')[:href]
   end
 
-  def demo?
-    true
+  def showing_demo?
+    has_css?('.bar__notice--demo')
   end
 end
 

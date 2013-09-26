@@ -41,7 +41,7 @@
               - if featured_course.in_person?
                 %a.button.featured-card__button{href: course_path(featured_course)} Reserve your seat!
               - else
-                %a.button.featured-card__button{href: "#"} Try now!
+                %a.button.featured-card__button{href: classroom_index_path(anchor: "/courses/#{featured_course.id}")} Try now!
 
   %section.row.course-list
     .eleven.columns.centered

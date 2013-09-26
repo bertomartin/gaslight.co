@@ -10,7 +10,7 @@ class ClassroomPage
   end
 
   def title
-    find('.bar__title').text
+    find('.info-bar__title').text
   end
 
   def chapters

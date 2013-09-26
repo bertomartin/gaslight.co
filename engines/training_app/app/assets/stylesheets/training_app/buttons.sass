@@ -1,5 +1,6 @@
-%button
+.button
   display: block
+  background: $red
   text-align: center
   margin-bottom: 15px
   padding: 0.75em
@@ -8,7 +9,6 @@
   +border-radius(4px)
 
 .button--primary
-  @extend %button
   background: $red
   &:hover
     color: #ffffff
@@ -17,7 +17,6 @@
     background: darken($red, 10%)
 
 .button--secondary
-  @extend %button
   background: none
   &:hover
     color: #ffffff

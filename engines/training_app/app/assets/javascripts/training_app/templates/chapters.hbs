@@ -9,7 +9,7 @@
         </div>
         <ul class="subnav">
           {{#each chapters itemController=navChapter}}
-            <li {{bindAttr class=":subnav__item isActive:subnav__item--active isDisabled:subnav__item--disabled"}}>
+            <li {{bindAttr class=":subnav__item isActive:subnav__item--active isRestricted:subnav__item--disabled"}}>
               {{#linkTo 'chapter' this}}{{title}}{{/linkTo}}
             </li>
           {{/each}}

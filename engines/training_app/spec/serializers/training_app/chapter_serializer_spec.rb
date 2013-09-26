@@ -17,7 +17,6 @@ module TrainingApp
       let(:serializer){ ChapterSerializer.new(chapter, scope: nil, scope_name: "registration") }
       it "should remove urls" do
         expect(serializer.attributes[:video_url]).to be_blank
-        expect(serializer.attributes[:disabled]).to eq(true)
       end
     end
 

@@ -1,5 +1,5 @@
 Training.ApplicationController = Ember.Controller.extend
-  defaultTitle: "Ember.js"
+  defaultTitle: "Classroom"
 
   init: ->
     @setDefaultTitle()

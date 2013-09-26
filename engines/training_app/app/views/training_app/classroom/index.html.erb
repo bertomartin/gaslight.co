@@ -1,1 +1,1 @@
-<% content_for(:registration_code) { registration.code }  %>
+<% content_for(:registration_code) { registration.code if registration.present? }  %>

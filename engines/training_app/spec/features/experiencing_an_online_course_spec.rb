@@ -14,7 +14,7 @@ feature "Experiencing an online course", js: true do
   scenario "with an invalid code" do
     registration.code = "invalid_code"
     classroom_page.visit_page(registration.course, registration.code)
-    expect(classroom_page).to be_demo
+    expect(classroom_page).to be_showing_demo
   end
 
   # TODO - this is a slow test because it waits for capybara to time out

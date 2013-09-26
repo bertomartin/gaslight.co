@@ -6,6 +6,10 @@ Training.CourseController = Ember.ObjectController.extend
     "width: #{@get('controllers.chapter.progress') * 100}%"
   ).property('controllers.chapter.progress')
 
+  registrationLink: (->
+    "/training/courses/#{@get('id')}/registrations/new/"
+  ).property('id')
+
   purchase: ->
     @set('purchasing', true)
 

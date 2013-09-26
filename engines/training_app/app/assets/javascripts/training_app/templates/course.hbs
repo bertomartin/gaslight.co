@@ -4,6 +4,13 @@
   <h1 class="bar__title">
     <i {{action 'toggleSidebar'}} class="icon-list bar__title__hamburger" ></i>{{controllers.application.title}}
   </h1>
+  {{#if demo}}
+    <div class="bar__notice bar__notice--demo">
+      <p>Welcome to the {{title}} demo!</p>
+      <p>If you like what you see, enroll in the full course!</p>
+      <a {{bind-attr href=registrationLink}}>Enroll now!</a>
+    </div>
+  {{/if}}
   <div class="user-profile">
     <div class="user-profile__picture">
       <img alt="user" class="picture--default" src="/assets/training_app/user.png"/>

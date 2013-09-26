@@ -4,26 +4,26 @@ feature "Experiencing an online course", js: true do
   let(:chapter) { FactoryGirl.create(:chapter, title: "Test Chapter") }
   let(:course) { chapter.section.course }
   let(:registration) { FactoryGirl.create(:registration, course: course, code: "123") }
-  let(:show_registration_page) { ShowRegistrationPage.new }
+  let(:classroom_page) { ClassroomPage.new }
 
   scenario "with a valid code" do
-    show_registration_page.visit_page(registration)
-    expect(show_registration_page.title).to match("Test Chapter")
+    classroom_page.visit_page(registration.course, registration.code)
+    expect(classroom_page.title).to eq(registration.course.title)
   end
 
-  scenario "with an invalid code", js: false do
+  scenario "with an invalid code" do
     registration.code = "invalid_code"
-    expect(lambda {
-      show_registration_page.visit_page(registration)
-    }).to raise_error(ActionController::RoutingError, "Not Found")
+    classroom_page.visit_page(registration.course, registration.code)
+    expect(classroom_page).to be_demo
   end
 
+  # TODO - this is a slow test because it waits for capybara to time out
   describe "seeing only this courses chapters" do
     let!(:unrelated_chapter) { FactoryGirl.create(:chapter, title: "Another Chapter") }
 
     scenario do
-      show_registration_page.visit_page(registration)
-      expect(show_registration_page).to_not have_chapter(unrelated_chapter)
+      classroom_page.visit_page(registration.course, registration.code)
+      expect(classroom_page).to_not have_chapter(unrelated_chapter)
     end
   end
 end

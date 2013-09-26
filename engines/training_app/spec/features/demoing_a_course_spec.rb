@@ -29,9 +29,10 @@ feature "Demoing a course", js: true do
     context "restricted chapter" do
       let!(:restricted_chapter) { FactoryGirl.create(:chapter, title: "Demo", demo: false, code_url: "http://example.com/") }
       scenario "should show the purchase modal" do
+        classroom_page.visit_page(restricted_chapter.section.course)
         classroom_page.visit_chapter(restricted_chapter)
         expect(classroom_page).to be_showing_purchase_modal
-        expect(classroom_page.registration_url).to eq("/training/courses/#{restricted_chapter.section.course.id}/registraions/new")
+        expect(classroom_page.registration_url).to match("/#{restricted_chapter.section.course.id}/registrations/new")
       end
     end
   end

@@ -1,7 +1,6 @@
 Training.CourseController = Ember.ObjectController.extend
-  needs: ['chapter']
+  needs: ['chapter', 'application']
   purchasing: false
-  isSidebarActive: false
 
   barStyle: (->
     "width: #{@get('controllers.chapter.progress') * 100}%"
@@ -9,3 +8,6 @@ Training.CourseController = Ember.ObjectController.extend
 
   purchase: ->
     @set('purchasing', true)
+
+Training.CourseIndexController = Ember.Controller.extend
+  needs: ['course']

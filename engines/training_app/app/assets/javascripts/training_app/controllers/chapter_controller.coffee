@@ -1,1 +1,0 @@
-Training.ChapterController = Ember.ObjectController.extend()

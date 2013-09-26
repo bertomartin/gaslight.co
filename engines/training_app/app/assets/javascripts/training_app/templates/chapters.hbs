@@ -1,0 +1,24 @@
+<nav {{bindAttr class=":sidebar isSidebarActive:sidebar--active"}}>
+  <ol class="nav">
+    {{#each sections itemController=navSection}}
+      <li {{bindAttr class=":nav__item isActive:nav__item--active"}}>
+        <div class="nav__heading">
+          <span class="nav__heading__index">{{number}}.</span>
+          <span class="nav__heading__title">{{title}}</span>
+          <span class="nav__heading__count">0/{{chapters.length}}</span>
+        </div>
+        <ul class="subnav">
+          {{#each chapters itemController=navChapter}}
+            <li {{bindAttr class=":subnav__item isActive:subnav__item--active isDisabled:subnav__item--disabled"}}>
+              {{#linkTo 'chapter' this}}{{title}}{{/linkTo}}
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/each}}
+  </ol>
+</nav>
+
+<section {{bindAttr class=":main isSidebarActive:main--pushed"}}>
+  {{outlet}}
+</section>

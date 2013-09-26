@@ -1,13 +1,13 @@
 {{purchase-modal active=purchasing course=this}}
 
-<header class="bar">
-  <div class="bar__content">
-    <h1 class="bar__title">
-      <i {{action 'toggleSidebar'}} class="icon-list bar__title__hamburger" ></i>{{controllers.application.title}}
+<header class="header">
+  <div class="info-bar">
+    <h1 class="info-bar__title">
+      <i {{action 'toggleSidebar'}} class="icon-list info-bar__hamburger" ></i>{{controllers.application.title}}
     </h1>
 
     {{#if demo}}
-      <div class="bar__notice bar__notice--demo">
+      <div class="info-bar__notice bar__notice--demo">
         <p>
           Welcome to the {{title}} demo!<br/>
           If you like what you see, enroll in the full course!
@@ -16,11 +16,11 @@
       </div>
     {{/if}}
 
-    <div class="user-profile">
-      <div class="user-profile__picture">
+    <div class="info-bar__profile">
+      <div class="profile__picture">
         <img alt="user" class="picture--default" src="/assets/training_app/user.png"/>
       </div>
-      <p class="user-profile__name"> Admiral William Adama </p>
+      <p class="profile__name"> Admiral William Adama </p>
     </div>
   </div>
 

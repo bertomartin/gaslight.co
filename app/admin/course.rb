@@ -17,6 +17,7 @@ ActiveAdmin.register TrainingApp::Course do
     f.inputs "Course Details" do
       f.input :venue
       f.input :parent_course, collection: TrainingApp::Course.top_level
+      f.input :title
       f.input :description_main
       f.input :synopsis
       f.input :start_date

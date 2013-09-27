@@ -1,0 +1,155 @@
+- content_for(:title) { "Gaslight: Style Guide" }
+= render partial: 'application/nav'
+
+%section.swatch
+  .row
+    .six.columns
+      %h2.styleguide__label Colors
+  .row
+    .one.column
+      .swatch--blue
+      %p.swatch__caption #57c0e8
+    .one.column
+      .swatch--yellow
+      %p.swatch__caption #efc703
+    .one.column
+      .swatch--red
+      %p.swatch__caption #e53c2e
+    .one.column
+      .swatch--black
+      %p.swatch__caption #000
+    .one.column
+      .swatch--darkgrey
+      %p.swatch__caption #333
+    .one.column
+      .swatch--lightgrey
+      %p.swatch__caption #ccc
+    .one.column
+      .swatch--white
+      %p.swatch__caption #fff
+      
+%section.headlines.styleguide
+  .container
+    .row
+      .six.columns.styleguide__label
+        %h3.style__header Headlines
+    .row
+      .four.columns
+        %h1 This is an h1 heading
+        %h2 This is an h2 heading
+        %h3 This is an h3 heading
+        %h4 This is an h4 heading
+      .eight.columns.callout__container
+        %p.lead
+          The discordance of host and Wolbachia phylogenies indicates that these bacteria have moved between host lineages on
+          %a{href: "#"} multiple occasions
+          during their evolutionary history, although.
+        %p And this is some text in a paragraph below it. Looks good. To understand what is really going on in a colony of ants or bees, Dr. Dornhaus, an assistant professor of ecology and evolutionary biology at the University of Arizona, tracks the little creatures individually — hence the paint and the numbers. Individual ants, she said, have “their own brains and legs, as well as complex and flexible behaviors.” She continues, “Each ant’s behavior and the rules under which it operates generate a pattern for the colony, so it’s crucial to discover its individual cognitive skill.”
+%section.inputs.styleguide
+  .container
+    .row
+      .six.columns.styleguide__label
+        %h3.style__header Inputs
+    .row
+      %form
+        .four.columns
+          %label{class: "input__label", for: "text--normal"} Normal
+          %input#text--normal{type: "text"}/
+          %label{class: "input__label", for: "text--focus"} Focus
+          %input#text--focus.focus{type: "text"}/
+          %label{class: "input__label", for: "text--error"} Error
+          %input.input--error#text--error{type: "text", value: "Error!"}/
+        .four.columns.end
+          %label{class: "input__label", for: "text--verified"} Verified
+          %input#text--verified.input--verified{type: "text", value: "Correct"}/
+          %label{class: "input__label", for: "text--disabled"}Disabled
+          %input#text--disabled{disabled: "disabled", type: "text"}/
+
+        .four.columns
+          %dl
+            %dt Title
+            %dd What up
+
+            %dt Start
+            %dd 2013/02/01
+%section.checkboxes.styleguide
+  .container
+    .row
+      .six.columns.styleguide__label
+        %h3.style__header Checkboxes
+    .row
+      %form
+        .two.columns
+          %label{class: "input__label", for: "checkbox--normal"} Normal
+          %input#checkbox--normal{type: "checkbox"}/
+        .two.columns
+          %label{class: "input__label", for:"checkbox--selected"} Selected
+          %input#checkbox--selected.checkbox--selected{type: "checkbox"}/
+        .two.columns.end
+          %label{class: "input__label", for: "checkbox--disabled"} Disabled
+          %input#checkbox--disabled{disabled: "disabled", type: "checkbox"}/
+
+%section.buttons.styleguide
+  .container
+    .row
+      .six.columns.styleguide__label
+        %h3.style__header Buttons
+    .row
+      .six
+        .five.columns
+          %p.caption Primary
+          .row
+            .four.columns
+              %button.button--primary Primary
+            .four.end.columns
+              %button.button--primary.hover Hover
+        .five.columns
+          %p.caption Secondary
+          .row
+            .four.columns
+              %button.button--secondary Secondary
+            .four.columns.end.columns
+              %button.button--secondary.hover Hover
+        .two.columns
+          %p.caption Dropdown
+          %select.dropdown
+            %option
+            %option Option 1
+            %option.dropdown--hover Option 2
+            %option Option 3
+
+%section.tables.styleguide
+  .container
+    .row
+      .six.columns.styleguide__label
+        %h3.style__header Tables
+    .row
+      .twelve.columns
+        %table
+          %thead.table__header
+            %tr
+              %th Table Header One
+              %th Table Header Two
+              %th Table Header Three
+              %th Table Header Four
+          %tbody.table__info
+            %tr
+              %td TD One
+              %td TD Two
+              %td TD One
+              %td TD Two
+            %tr
+              %td TD One
+              %td TD Two
+              %td TD One
+              %td TD Two
+            %tr
+              %td TD One
+              %td TD Two
+              %td TD One
+              %td TD Two
+            %tr
+              %td TD One
+              %td TD Two
+              %td TD One
+              %td TD Two

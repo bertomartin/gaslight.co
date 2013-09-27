@@ -3,6 +3,7 @@ Training.ApplicationController = Ember.Controller.extend
 
   init: ->
     @setDefaultTitle()
+    @createLinkElement()
 
   setDefaultTitle: ->
     @set('title', @get('defaultTitle'))
@@ -10,3 +11,10 @@ Training.ApplicationController = Ember.Controller.extend
   titleDidChange: (->
     document.title = @get('title')
   ).observes('title')
+
+  createLinkElement: ->
+    @set('linkElement', $("<link rel='stylesheet' class='theme-link'></link>"))
+    $('head').append(@get('linkElement'))
+
+  setThemeUrl: (url) ->
+    @get('linkElement').attr('href', url)

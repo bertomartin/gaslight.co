@@ -3,6 +3,7 @@ Training.CourseRoute = Ember.Route.extend
 
   afterModel: (model)->
     @controllerFor('application').set('title', model.get('title'))
+    @controllerFor('application').setThemeUrl("/training/courses/#{model.get('id')}/theme.css")
 
   actions:
     toggleSidebar: ->

@@ -86,31 +86,6 @@ blockquote {
   margin-bottom: 20px;
 }
 
-div.intro div.orbit-wrapper {
-  div.orbit.featuredContent{
-    max-width: 95%;
-    position: absolute;
-    top: 50%;
-    margin-top: -100px;
-  }
-
-  div.timer {
-    display: none;
-  }
-
-  div.orbit-slide{
-    p{
-      font-weight: 600;
-      font-size: 23px;
-      color: #444;
-    }
-
-    span{
-      font-size: 20px;
-    }
-  }
-}
-
 .course__image {
   max-width: 100%;
   padding: 10px;

@@ -8,7 +8,7 @@ feature "Experiencing an online course", js: true do
 
   scenario "with a valid code" do
     classroom_page.visit_course(registration.course, registration.code)
-    expect(classroom_page.title).to eq(registration.course.title)
+    expect(classroom_page.title).to eq("#{chapter.section.title} - #{chapter.title}")
   end
 
   scenario "with an invalid code" do

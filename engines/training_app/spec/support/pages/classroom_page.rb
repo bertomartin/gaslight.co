@@ -3,9 +3,12 @@ class ClassroomPage
 
   def visit_course(course, code=nil)
     visit "/training/classroom/?code=#{code}#/courses/#{course.id}"
+    find('.ember-application') # wait for ember to initialize
   end
 
   def visit_chapter(chapter, code=nil)
+    # Going directly to a restricted chapter will fail unless your go to the course first
+    visit_course(chapter.section.course, code)
     visit "/training/classroom/?code=#{code}#/courses/#{chapter.section.course.id}/chapters/#{chapter.id}"
   end
 
@@ -18,12 +21,10 @@ class ClassroomPage
   end
 
   def chapters
-    find('.nav') # this will wait until ember renders
     all('.subnav__item')
   end
 
   def disabled_chapters
-    find(".nav") # this will wait until ember renders
     all(".subnav__item--disabled").collect(&:text)
   end
 

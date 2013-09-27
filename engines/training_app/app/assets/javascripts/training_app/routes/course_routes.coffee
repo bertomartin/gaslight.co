@@ -14,4 +14,5 @@ Training.CourseRoute = Ember.Route.extend
 
 Training.CourseIndexRoute = Ember.Route.extend
   redirect: ->
-    @transitionTo('chapters')
+    firstActiveChapter = @store.all('chapter').findBy('isRestricted', false)
+    @transitionTo('chapter', firstActiveChapter) if firstActiveChapter?

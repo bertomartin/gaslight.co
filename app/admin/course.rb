@@ -25,6 +25,8 @@ ActiveAdmin.register TrainingApp::Course do
       f.input :price
       f.input :image_url
       f.input :registration_link
+      f.input :color_primary
+      f.input :color_secondary
       f.input :online
       f.input :featured
       f.input :instructors, as: :check_boxes

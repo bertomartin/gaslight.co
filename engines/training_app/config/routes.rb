@@ -2,6 +2,7 @@ TrainingApp::Engine.routes.draw do
   resources :classroom, only: [:index]
 
   resources :courses, only: [:index, :show] do
+    get :theme, on: :member
     resources :registrations do
       get :stats, on: :collection
     end

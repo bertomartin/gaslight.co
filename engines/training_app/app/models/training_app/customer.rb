@@ -16,7 +16,7 @@ module TrainingApp
     end
 
     def charge(options)
-      Stripe::Charge.create(amount: options[:amount],
+      Stripe::Charge.create(amount: options[:amount] * 100,
                             currency: "usd",
                             description: options[:description],
                             customer: id)

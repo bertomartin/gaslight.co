@@ -7,6 +7,7 @@ ActiveAdmin.register TrainingApp::Course do
     column :start_date
     column :end_date
     column :price
+    column :active
     column :featured
     column :online
 
@@ -27,6 +28,7 @@ ActiveAdmin.register TrainingApp::Course do
       f.input :registration_link
       f.input :color_primary
       f.input :color_secondary
+      f.input :active
       f.input :online
       f.input :featured
       f.input :instructors, as: :check_boxes

@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20130927174535) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "training_app_chapters", force: true do |t|
     t.string  "title"
     t.integer "order"

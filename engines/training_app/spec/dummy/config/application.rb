@@ -7,6 +7,7 @@ require "action_mailer/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
+require "pg"
 require "pry"
 
 Bundler.require(*Rails.groups)

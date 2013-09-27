@@ -115,6 +115,7 @@ blockquote {
 .featured-card{
   border: 1px solid #ccc;
   padding: 15px;
+  @include border-radius(4px);
 }
 
 .featured-card__meta{
@@ -127,14 +128,17 @@ blockquote {
 .featured-card__title h1{
   @extend %headline;
   display: inline-block;
-  //font-size: 50px;
-  //font-weight: normal;
   line-height: 1.2em;
   color: #000;
   &:hover{
     color: inherit;
   }
 }
+
+.featured-card__synopsis{
+  min-height: 110px;
+}
+
 
 %more-info-link{
   float: right;
@@ -171,6 +175,16 @@ blockquote {
 //--------------------------------//
 //         COURSE LISTING         //
 //--------------------------------//
+
+.course-list__course{
+  border-bottom: 1px solid #DDD;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+}
+
+.course-list__course:last-child{
+  border-bottom: none
+}
 
 .course-list__course:hover .course__more-link{
   display: block;

@@ -23,27 +23,27 @@
     .eleven.columns.centered
       %h2.title Course List
       - courses.each do |course|
-        .row.course-list__course
-          .three.columns
-            %a{href: course_path(course)}
-              %img.course__image{src: course.image_url}
+        .course-list__course
+          .row
+            .three.columns
+              %a{href: course_path(course)}
+                %img.course__image{src: course.image_url}
 
-          .nine.columns
-            %a.course__more-link{href: course_path(course)} more info
-            %a{href: course_path(course)}
-              %h1.course__heading= course.title
-            %p.course__description= course.synopsis
-            %ul.course__children-list
-              - course.child_courses.each do |child_course|
-                %li.course__child
-                  %a{href: course_path(child_course)}= child_course.meta
-            .course__actions
-              - if course.in_person?
-                %a.button{href: course_path(course)} Reserve your seat!
-              - else
-                %a.button{href: new_course_registration_path(course)} Buy now!
-                %a.button.button--request{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try now!
-          %hr
+            .nine.columns
+              %a.course__more-link{href: course_path(course)} more info
+              %a{href: course_path(course)}
+                %h1.course__heading= course.title
+              %p.course__description= course.synopsis
+              %ul.course__children-list
+                - course.child_courses.each do |child_course|
+                  %li.course__child
+                    %a{href: course_path(child_course)}= child_course.meta
+              .course__actions
+                - if course.in_person?
+                  %a.button{href: course_path(course)} Reserve your seat!
+                - else
+                  %a.button{href: new_course_registration_path(course)} Buy now!
+                  %a.button.button--request{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try now!
 
 = render partial: 'application/footer'
 

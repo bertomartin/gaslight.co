@@ -1,4 +1,4 @@
-.bar
+.header
   position: fixed
   top: 0
   width: 100%
@@ -6,28 +6,55 @@
   height: $bar-height
   background: $red
 
-.bar__toggle-sidebar
-  color: #fff
-  font-size: $title
-  cursor: pointer
+// .info-bar__hamburger
+//   color: #fff
+//   font-size: $title
+//   cursor: pointer
 
-.bar__title
-  display: inline-block
+.info-bar
+  @include clearfix
+  height: 60px
+
+.info-bar__title
+  float: left
   font-size: $title
   font-weight: bold
   color: #fff
   line-height: 60px
-  margin: 0 0 0 20px
+  margin: 0
+  padding-left: 20px
 
-.bar__title__hamburger
+.info-bar__hamburger
   margin-right: 15px
   cursor: pointer
 
-.user-profile
+.info-bar__notice
+  position: absolute
+  left: 50%
+  width: 600px
+  margin-left: -300px
+  background: $light-gray
+  top: 5px
+  height: 50px
+  padding: 3px
+
+  @include border-radius(4px)
+  p
+    float: left
+    width: 70%
+    margin: 0
+    line-height: 21px
+    text-align: center
+  .button
+    float: right
+    width: 25%
+
+.info-bar__profile
+  width: 25%
+  float: right
   position: relative
   display: block
   height: 60px
-  float: right
   padding-right: 40px
   cursor: pointer
   @include transform-style( preserve-3d )
@@ -42,13 +69,13 @@
     border: 4px solid
     border-color: $light-gray transparent transparent transparent
   &:hover
-    .user-profile__picture
+    .profile__picture
       margin-right: 5px
-    .user-profile__name
+    .profile__name
       color: #fff
       margin: 0 15px
 
-.user-profile__picture
+.profile__picture
   display: inline-block
   float: right
   height: 50px
@@ -66,7 +93,7 @@
     height: 80%
     margin: 17% 10% 3% 10%
 
-.user-profile__name
+.profile__name
   display: inline-block
   float: right
   font-size: 12px
@@ -74,6 +101,3 @@
   color: transparent
   margin: 0 -15px
   @include transition(all 0.3s ease-out)
-  
-
-

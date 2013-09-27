@@ -15,12 +15,6 @@ module TrainingApp
       respond_with @course, @registration
     end
 
-    def show
-      # the id param is actually the generated registration code
-      @registration = Registration.find_by_code(params[:id]) || raise_not_found
-      render layout: "training_app/layouts/classroom"
-    end
-
     def stats
       regs = Registration.where('created_at > ?', Date.new(2013, 5, 31))
       render json: { quantity: regs.size }

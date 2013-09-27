@@ -9,8 +9,8 @@ module TrainingApp
 
     Given(:registration) { FactoryGirl.create(:registration) }
     When(:registration_mail) { TrainingApp::Confirmation.registered(registration) }
-    Then { expect(registration_mail.body).to match "great day" }
-    Then { expect(registration_mail.body).to match "/courses/#{registration.course.id}/registrations/#{registration.code}" }
+    Then { expect(registration_mail.body).to match registration.course.title }
+    Then { expect(registration_mail.body).to match "code=#{registration.code}#/courses/#{registration.course.id}" }
   end
 end
 

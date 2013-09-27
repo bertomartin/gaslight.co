@@ -15,7 +15,8 @@ jQuery.ajaxPrefilter (options, originalOptions, xhr) ->
 
 TrainingApp.initialize = (options = {}) ->
   registration = new TrainingApp.Models.Registration(options)
-  registration.bind "persisted", -> window.location.href = registration.url()
+  courseId = registration.get('course').id
+  registration.bind "persisted", -> window.location.href = "/training/classroom?code=#{registration.get('code')}#/courses/#{courseId}"
   newRegistrationView = new TrainingApp.Views.NewRegistrationView
     model: registration
     el: $("#new_registration")

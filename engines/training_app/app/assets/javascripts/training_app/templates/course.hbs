@@ -1,0 +1,33 @@
+{{purchase-modal active=purchasing course=this}}
+
+<header class="header">
+  <div class="info-bar">
+    <h1 class="info-bar__title">
+      <i {{action 'toggleSidebar'}} class="icon-list info-bar__hamburger" ></i>{{controllers.application.title}}
+    </h1>
+
+    {{#if demo}}
+      <div class="info-bar__notice bar__notice--demo">
+        <p>
+          Welcome to the {{title}} demo!<br/>
+          If you like what you see, enroll in the full course!
+        </p>
+        <a class="button button--primary" {{bind-attr href=registrationLink}}>Enroll now!</a>
+      </div>
+    {{/if}}
+
+    <div class="info-bar__profile">
+      <div class="profile__picture">
+        <img alt="user" class="picture--default" src="/assets/training_app/user.png"/>
+      </div>
+      <p class="profile__name"> Admiral William Adama </p>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-bar__background"></div>
+    <div {{bindAttr style=barStyle}} class="progress-bar__current-progress"></div>
+  </div>
+</header>
+
+{{outlet}}

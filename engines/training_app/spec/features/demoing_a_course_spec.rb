@@ -11,7 +11,7 @@ feature "Demoing a course", js: true do
     let!(:restricted_chapter) { FactoryGirl.create(:chapter, title: "Restricted", section: section) }
 
     scenario "should be disabled" do
-      classroom_page.visit_page(course)
+      classroom_page.visit_course(course)
       expect(classroom_page.disabled_chapters).to include(restricted_chapter.title)
       expect(classroom_page.disabled_chapters).to_not include(demo_chapter.title)
     end
@@ -29,7 +29,7 @@ feature "Demoing a course", js: true do
     context "restricted chapter" do
       let!(:restricted_chapter) { FactoryGirl.create(:chapter, title: "Demo", demo: false, code_url: "http://example.com/") }
       scenario "should show the purchase modal" do
-        classroom_page.visit_page(restricted_chapter.section.course)
+        classroom_page.visit_course(restricted_chapter.section.course)
         classroom_page.visit_chapter(restricted_chapter)
         expect(classroom_page).to be_showing_purchase_modal
         expect(classroom_page.registration_url).to match("/#{restricted_chapter.section.course.id}/registrations/new")

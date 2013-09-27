@@ -1,7 +1,7 @@
 class ClassroomPage
   include Capybara::DSL
 
-  def visit_page(course, code=nil)
+  def visit_course(course, code=nil)
     visit "/training/classroom/?code=#{code}#/courses/#{course.id}"
   end
 
@@ -11,6 +11,10 @@ class ClassroomPage
 
   def title
     find('.info-bar__title').text
+  end
+
+  def has_theme_for_course?(course)
+    find('.theme-link', visible: false)[:href] == "/training/courses/#{course.id}/theme.css"
   end
 
   def chapters

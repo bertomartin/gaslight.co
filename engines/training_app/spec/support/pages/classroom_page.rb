@@ -1,7 +1,7 @@
 class ClassroomPage
   include Capybara::DSL
 
-  def visit_page(course, code=nil)
+  def visit_course(course, code=nil)
     visit "/training/classroom/?code=#{code}#/courses/#{course.id}"
   end
 

@@ -96,6 +96,10 @@ module TrainingApp
     def self.top_level
       where(parent_course_id: nil)
     end
+
+    def self.active
+      where(active: true)
+    end
   end
 end
 

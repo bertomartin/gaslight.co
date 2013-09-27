@@ -32,5 +32,9 @@ class CourseIndexPage
   def course_children_size
     all(".course__child").size
   end
+
+  def course_titles
+    all(".course__heading").collect(&:text)
+  end
 end
 

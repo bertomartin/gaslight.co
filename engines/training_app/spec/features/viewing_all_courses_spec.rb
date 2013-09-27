@@ -32,15 +32,27 @@ feature "Viewing all courses" do
   end
 
   describe "Course list" do
-    let!(:course1) { FactoryGirl.create(:course, title: "Course 1") }
-    let!(:course2) { FactoryGirl.create(:course, title: "Course 2") }
-    let!(:child_course1) { FactoryGirl.create(:course, parent_course: course1) }
-    let!(:child_course2) { FactoryGirl.create(:course, parent_course: course2) }
+    describe "child courses" do
+      let!(:course1) { FactoryGirl.create(:course, title: "Course 1") }
+      let!(:course2) { FactoryGirl.create(:course, title: "Course 2") }
+      let!(:child_course1) { FactoryGirl.create(:course, parent_course: course1) }
+      let!(:child_course2) { FactoryGirl.create(:course, parent_course: course2) }
 
-    scenario do
-      course_index_page.visit_page
-      expect(course_index_page.course_list_size).to eq(2)
-      expect(course_index_page.course_children_size).to eq(2)
+      scenario do
+        course_index_page.visit_page
+        expect(course_index_page.course_list_size).to eq(2)
+        expect(course_index_page.course_children_size).to eq(2)
+      end
+    end
+
+    describe "active and inactive" do
+      let!(:active_course) { FactoryGirl.create(:course, active: true, title: "Active course") }
+      let!(:inactive_course) { FactoryGirl.create(:course, active: false, title: "Inactive course") }
+      scenario "shows on only active courses" do
+        course_index_page.visit_page
+        expect(course_index_page.course_titles.size).to eq(1)
+        expect(course_index_page.course_titles).to include("Active course")
+      end
     end
   end
 end

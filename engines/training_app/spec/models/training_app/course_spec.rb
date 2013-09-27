@@ -139,6 +139,17 @@ module TrainingApp
       end
     end
 
+    describe ".active" do
+      let(:active_course) { FactoryGirl.create(:course) }
+      let(:inactive_course) { FactoryGirl.create(:course, active: false) }
+      it "includes the active course" do
+        expect(Course.active).to include(active_course)
+      end
+      it "doesn't include the inactive course" do
+        expect(Course.active).to_not include(inactive_course)
+      end
+    end
+
     describe "#sibling_courses" do
       let(:parent_course) { FactoryGirl.create(:course) }
       let!(:child_course) { FactoryGirl.create(:course, parent_course: parent_course) }

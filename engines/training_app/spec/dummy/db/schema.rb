@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130927135907) do
+ActiveRecord::Schema.define(version: 20130927174535) do
 
   create_table "training_app_chapters", force: true do |t|
     t.string  "title"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20130927135907) do
     t.boolean  "online"
     t.string   "color_primary"
     t.string   "color_secondary"
+    t.boolean  "active",              default: true
   end
 
   create_table "training_app_courses_instructors", id: false, force: true do |t|

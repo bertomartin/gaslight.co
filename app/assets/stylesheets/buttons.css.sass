@@ -1,47 +1,47 @@
-%button
-  @include border-radius(5px)
-  @include brandColors(background-color)
-  width: auto
-  background: $brand1
-  color: $white
-  cursor: pointer
-  display: inline-block
-  font-family: inherit
-  font-weight: bold
-  line-height: 1
-  margin: 0
-  padding: ($btnBase + 2) ($btnBase * 2) ($btnBase - 1)
-  position: relative
-  text-align: center
-  text-decoration: none
-  border: none
-  // @include single-transition(background-color, .15s, ease-in-out)
-  &:hover
-    color: #fff
-    background-color: lighten($brandBase,20)
+// %button
+//   @include border-radius(5px)
+//   @include brandColors(background-color)
+//   width: auto
+//   background: $brand1
+//   color: $white
+//   cursor: pointer
+//   display: inline-block
+//   font-family: inherit
+//   font-weight: bold
+//   line-height: 1
+//   margin: 0
+//   padding: ($btnBase + 2) ($btnBase * 2) ($btnBase - 1)
+//   position: relative
+//   text-align: center
+//   text-decoration: none
+//   border: none
+//   // @include single-transition(background-color, .15s, ease-in-out)
+//   &:hover
+//     color: #fff
+//     background-color: lighten($brandBase,20)
 
-.button
-  @extend %button
-  font-size: 14px
+// .button
+//   @extend %button
+//   font-size: 14px
 
-.button--large
-  @extend %button
-  font-size: 18px
+// .button--large
+//   @extend %button
+//   font-size: 18px
 
-.button--bloglink
-  @extend %button
-  background-color: #000
-  font-size: 14px
-  font-weight: bold
-  margin: 0 0 15px 0
-  width: 100%
+// .button--bloglink
+//   @extend %button
+//   background-color: #000
+//   font-size: 14px
+//   font-weight: bold
+//   margin: 0 0 15px 0
+//   width: 100%
 
-.button--quiet
-  @extend %button
-  background: none
-  color: #939598
-  &:hover
-    color: #ffffff
-    background: #939598
-  &:active
-    background: darken(#939598, 10%)
+// .button--quiet
+//   @extend %button
+//   background: none
+//   color: #939598
+//   &:hover
+//     color: #ffffff
+//     background: #939598
+//   &:active
+//     background: darken(#939598, 10%)

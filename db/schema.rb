@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130927175959) do
+ActiveRecord::Schema.define(version: 20130930220552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,7 +103,7 @@ ActiveRecord::Schema.define(version: 20130927175959) do
 
   create_table "training_app_chapters", force: true do |t|
     t.string  "title"
-    t.integer "order"
+    t.integer "sort_order"
     t.string  "description"
     t.string  "video_url"
     t.string  "code_url"

@@ -15,6 +15,18 @@
   background-color: <%= course.color_secondary %>;
 }
 
+.nav-button:hover{
+  border-color: <%= course.color_primary %>;
+}
+
+button:hover .nav-button__icon {
+  color: <%= course.color_primary %>;
+}
+
+.nav-button:hover .nav-button__text{
+  color: <%= course.color_primary %>;
+}
+
 .mejs-container .mejs-controls{
   background-color: <%= course.color_primary %>;
 }

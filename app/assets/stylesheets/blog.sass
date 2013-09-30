@@ -1,207 +1,207 @@
-@import tango.min
+// @import tango.min
 
 
-.tag
-  color: #aaa
-  position: relative
-  padding: 4px 8px
-  font-size: 12px
-  border: 1px solid #ddd
-  display: inline-block
-  margin: 2px 0
-  font-weight: 600
-  // vertical-align: top
-  @include border-radius(4px)
-  @include transition-property(all)
-  @include transition-duration(0.5s)
-  &:hover
-    background-color: #ddd
+// .tag
+//   color: #aaa
+//   position: relative
+//   padding: 4px 8px
+//   font-size: 12px
+//   border: 1px solid #ddd
+//   display: inline-block
+//   margin: 2px 0
+//   font-weight: 600
+//   // vertical-align: top
+//   @include border-radius(4px)
+//   @include transition-property(all)
+//   @include transition-duration(0.5s)
+//   &:hover
+//     background-color: #ddd
 
 
-.sidebar--blog
-  border-left: 1px solid #eee
-  dl
-    dt, dd
-      display: inline-block
-      float: left
-    dt
-      width: 40%
-    dd
-      width: 60%
-  ul, ol
-    list-style-position: inside
-    li
-      list-style: none
-      line-height: 1.4em
-      padding: 0.35em 0
-      a
-        font-weight: bold
+// .sidebar--blog
+//   border-left: 1px solid #eee
+//   dl
+//     dt, dd
+//       display: inline-block
+//       float: left
+//     dt
+//       width: 40%
+//     dd
+//       width: 60%
+//   ul, ol
+//     list-style-position: inside
+//     li
+//       list-style: none
+//       line-height: 1.4em
+//       padding: 0.35em 0
+//       a
+//         font-weight: bold
 
-.sidebar__heading
-  font-size: 18px
-  margin-top: 35px
+// .sidebar__heading
+//   font-size: 18px
+//   margin-top: 35px
 
-.sidebar__nav
-  font-size: 14px
+// .sidebar__nav
+//   font-size: 14px
 
-ol.post__list 
-  margin-left: 0
-  padding-left: 0
-  list-style: none
-  counter-reset: post-counter
-  li
-    margin: 20px 0px
-    &:before
-      content: counter(post-counter)
-      counter-increment: post-counter
-      display: inline-block
-      color: #aaa
-      font-size: 30px
-      float: left
-    .post__list__information
-      padding-left: 20px
-      margin-left: 15px
-      .post__list__link
-        font-weight: 600
-        color: #222
-        text-transform: uppercase
-        letter-spacing: 0.1em
-        display: inline-block
-        &:hover
-          color: #57c0e8
-      .post__author, .post__time
-        color: #aaa
-        font-size: 14px
-        display: inline-block
-        &:hover
-          color: #2aafe2
+// ol.post__list 
+//   margin-left: 0
+//   padding-left: 0
+//   list-style: none
+//   counter-reset: post-counter
+//   li
+//     margin: 20px 0px
+//     &:before
+//       content: counter(post-counter)
+//       counter-increment: post-counter
+//       display: inline-block
+//       color: #aaa
+//       font-size: 30px
+//       float: left
+//     .post__list__information
+//       padding-left: 20px
+//       margin-left: 15px
+//       .post__list__link
+//         font-weight: 600
+//         color: #222
+//         text-transform: uppercase
+//         letter-spacing: 0.1em
+//         display: inline-block
+//         &:hover
+//           color: #57c0e8
+//       .post__author, .post__time
+//         color: #aaa
+//         font-size: 14px
+//         display: inline-block
+//         &:hover
+//           color: #2aafe2
 
-li.related-post__list
-  border-bottom: 1px solid #eee
-  &:last-child
-    border-bottom: none
+// li.related-post__list
+//   border-bottom: 1px solid #eee
+//   &:last-child
+//     border-bottom: none
 
-.post
-  margin-bottom: 10em
-  &:last-of-type
-    margin-bottom: 0
+// .post
+//   margin-bottom: 10em
+//   &:last-of-type
+//     margin-bottom: 0
 
-.post__header
-  margin-bottom: 1.5em
+// .post__header
+//   margin-bottom: 1.5em
 
-.post__title
-  color: #fff
-  font-size: 30px
-  font-weight: bold
-  line-height: 1.2em
-  position: relative
-  margin-top: 0px
-  margin-bottom: 0.5em
-  text-transform: capitalize
-  background: $brand1
-  padding: 10px 20px 10px 65px
-  margin-left: -65px
-  @include border-top-right-radius(3px)
-  @include border-bottom-right-radius(3px)
-  a
-    font-weight: inherit
-    color: inherit
-    @include transition-property(color)
-    @include transition-duration(0.5s)
-    &:hover
-      color: #eee
+// .post__title
+//   color: #fff
+//   font-size: 30px
+//   font-weight: bold
+//   line-height: 1.2em
+//   position: relative
+//   margin-top: 0px
+//   margin-bottom: 0.5em
+//   text-transform: capitalize
+//   background: $brand1
+//   padding: 10px 20px 10px 65px
+//   margin-left: -65px
+//   @include border-top-right-radius(3px)
+//   @include border-bottom-right-radius(3px)
+//   a
+//     font-weight: inherit
+//     color: inherit
+//     @include transition-property(color)
+//     @include transition-duration(0.5s)
+//     &:hover
+//       color: #eee
 
-.post__time
-  &:before
-    content: "  \2022  "
+// .post__time
+//   &:before
+//     content: "  \2022  "
 
-.post__avatar
-  position: absolute
-  left: 0
-  top: 50%
-  margin-top: - ($avatar-size / 2)
-  margin-left: - ($avatar-size / 2)
-  width: $avatar-size
-  height: $avatar-size
-  @include border-radius($avatar-size)
+// .post__avatar
+//   position: absolute
+//   left: 0
+//   top: 50%
+//   margin-top: - ($avatar-size / 2)
+//   margin-left: - ($avatar-size / 2)
+//   width: $avatar-size
+//   height: $avatar-size
+//   @include border-radius($avatar-size)
 
-.post__author
-  font-weight: bold
-  display: inline-block
+// .post__author
+//   font-weight: bold
+//   display: inline-block
 
-.post__player
-  margin-bottom: 20px
+// .post__player
+//   margin-bottom: 20px
 
-.post__body
-  font-family: Helvetica, Arial, sans-serif
-  color: #333
-  margin-bottom: 4em
-  img
-    padding-bottom: 0.5em
-    &.small
-      max-width: 35%
-    &.wide
-      clear: both
-      width: 100%
-      margin-bottom: 1em
-  h1
-    font-size: $blog-mobile-heading-font-size
-    font-weight: bold
-    color: #333
-  h2
-    font-size: $blog-mobile-heading-font-size * .875
-  h3
-    font-size: $blog-mobile-heading-font-size * .75
-  h4
-    font-size: $blog-mobile-heading-font-size * .625
-  h5
-    font-size: $blog-mobile-heading-font-size * .5
-  h6
-    font-size: $blog-mobile-heading-font-size * .4
-  ul, ol,
-    margin-left: 20px
-    li
-      font-size: 18px
-    a
-      font-size: 18px
-  pre
-    @include border-radius(5px)
-    background-color: #fafafa
-    padding: 10px
-    line-height: 1.4em
-    overflow: scroll
-    margin-bottom: 1em
-    font-size: 90%
-  code
-    font-size: 14px
-    background-color: transparent
-  blockquote
-    clear: both
-    min-height: 75px
-    @include border-radius(5px)
-    background-color: #fafafa
-    padding: 0.25em 0.5em 0.25em 3em
-    background-image: image-url('bg-quote.png')
-    background-repeat: no-repeat
-    p:last-child
-      margin-bottom: 0
-    cite:before
-      content: "\2014"
-  .full-width
-    width: 100%
-    height: auto
-  .left-align
-    width: 50%
-    height: auto
-    float: left
-    padding-right: 0.5em
-  .right-align
-    width: 50%
-    height: auto
-    float: right
-    padding-left: 0.5em
-  .center-align
-    margin: 0 auto
-    width: 50%
-    height: auto
-    display: block
+// .post__body
+//   font-family: Helvetica, Arial, sans-serif
+//   color: #333
+//   margin-bottom: 4em
+//   img
+//     padding-bottom: 0.5em
+//     &.small
+//       max-width: 35%
+//     &.wide
+//       clear: both
+//       width: 100%
+//       margin-bottom: 1em
+//   h1
+//     font-size: $blog-mobile-heading-font-size
+//     font-weight: bold
+//     color: #333
+//   h2
+//     font-size: $blog-mobile-heading-font-size * .875
+//   h3
+//     font-size: $blog-mobile-heading-font-size * .75
+//   h4
+//     font-size: $blog-mobile-heading-font-size * .625
+//   h5
+//     font-size: $blog-mobile-heading-font-size * .5
+//   h6
+//     font-size: $blog-mobile-heading-font-size * .4
+//   ul, ol,
+//     margin-left: 20px
+//     li
+//       font-size: 18px
+//     a
+//       font-size: 18px
+//   pre
+//     @include border-radius(5px)
+//     background-color: #fafafa
+//     padding: 10px
+//     line-height: 1.4em
+//     overflow: scroll
+//     margin-bottom: 1em
+//     font-size: 90%
+//   code
+//     font-size: 14px
+//     background-color: transparent
+//   blockquote
+//     clear: both
+//     min-height: 75px
+//     @include border-radius(5px)
+//     background-color: #fafafa
+//     padding: 0.25em 0.5em 0.25em 3em
+//     background-image: image-url('bg-quote.png')
+//     background-repeat: no-repeat
+//     p:last-child
+//       margin-bottom: 0
+//     cite:before
+//       content: "\2014"
+//   .full-width
+//     width: 100%
+//     height: auto
+//   .left-align
+//     width: 50%
+//     height: auto
+//     float: left
+//     padding-right: 0.5em
+//   .right-align
+//     width: 50%
+//     height: auto
+//     float: right
+//     padding-left: 0.5em
+//   .center-align
+//     margin: 0 auto
+//     width: 50%
+//     height: auto
+//     display: block

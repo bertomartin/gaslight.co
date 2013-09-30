@@ -26,7 +26,7 @@
         .row.course-list__course
           .three.columns
             %a{href: course_path(course)}
-              %img.course__image{src: "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png"}
+              %img.course__image{src: course.image_url}
 
           .nine.columns
             %a.course__more-link{href: course_path(course)} more info

@@ -37,7 +37,7 @@ class ClassroomPage
   end
 
   def registration_url
-    find('.modal__actions .button')[:href]
+    find('.modal__actions .button--primary')[:href]
   end
 
   def showing_demo?

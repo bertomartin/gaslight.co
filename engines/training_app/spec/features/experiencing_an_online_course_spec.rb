@@ -25,4 +25,14 @@ feature "Experiencing an online course", js: true do
       expect(classroom_page.chapters.count).to eq(1)
     end
   end
+
+  describe "chapter ordering" do
+    let(:section) { FactoryGirl.create(:section) }
+    let!(:chapter2) { FactoryGirl.create(:chapter, title: "Two", sort_order: 2, section: section) }
+    let!(:chapter1) { FactoryGirl.create(:chapter, title: "One", sort_order: 1, section: section, demo: true) }
+    scenario "should be ordered by the order property" do
+      classroom_page.visit_course(section.course)
+      expect(classroom_page.chapters).to eq(["One", "Two"])
+    end
+  end
 end

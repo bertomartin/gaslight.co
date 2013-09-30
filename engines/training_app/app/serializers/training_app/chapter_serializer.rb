@@ -1,6 +1,6 @@
 module TrainingApp
   class ChapterSerializer < ActiveModel::Serializer
-    attributes :id, :title, :order, :description, :video_url, :code_url, :poster_url, :section_id, :demo
+    attributes :id, :title, :sort_order, :description, :video_url, :code_url, :poster_url, :section_id, :demo
 
     def attributes
       attrs = super

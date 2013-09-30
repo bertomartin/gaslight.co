@@ -21,11 +21,11 @@ class ClassroomPage
   end
 
   def chapters
-    all('.subnav__item')
+    all('.subnav__item', visible: false).collect(&:text)
   end
 
   def disabled_chapters
-    all(".subnav__item--disabled").collect(&:text)
+    all(".subnav__item--disabled", visible: false).collect(&:text)
   end
 
   def code_url

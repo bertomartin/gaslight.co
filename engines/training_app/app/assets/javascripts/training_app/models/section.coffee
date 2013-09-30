@@ -7,3 +7,6 @@ Training.Section = DS.Model.extend
     @get('store').all('section')
   ).property()
 
+  currentIndex: (->
+    @get('allSections').indexOf(this)
+  ).property('allSections.@each')

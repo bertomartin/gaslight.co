@@ -3,7 +3,7 @@
     {{#each sections itemController=navSection}}
       <li {{bindAttr class=":nav__item isActive:nav__item--active"}}>
         <div class="nav__heading">
-          <span class="nav__heading__index">{{number}}.</span>
+          <span class="nav__heading__index">{{position}}.</span>
           <span class="nav__heading__title">{{title}}</span>
           <span class="nav__heading__count">0/{{chapters.length}}</span>
         </div>

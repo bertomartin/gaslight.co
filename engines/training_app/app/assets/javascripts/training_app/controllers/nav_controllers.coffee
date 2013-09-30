@@ -5,11 +5,11 @@ Training.NavSectionController = Ember.ObjectController.extend
     @get('controllers.chapter.section') == @get('model')
   ).property('controllers.chapter.model')
 
-  number: (->
-    return "0" + @get('id') if @get('id').toString().length <= 1
-    @get('id')
-  ).property('id')
-
+  position: (->
+    position = @get('currentIndex') + 1
+    return "0" + position if position.toString().length <= 1
+    position
+  ).property('currentIndex')
 
 Training.NavChapterController = Ember.ObjectController.extend
   needs: 'chapter'

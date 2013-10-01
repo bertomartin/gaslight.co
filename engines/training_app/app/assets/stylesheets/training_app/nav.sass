@@ -20,7 +20,22 @@
     /* Some space between the number and the content in browsers that support
        generated content but not positioning it (Camino 2 is one example) */
     margin-right: 8px
-    padding: 4px
+    //padding: 4px
+    font-weight: bold
+    text-align: center
+  & > li:after
+    content: ""
+    //content: "0" counter(li) "." /* Use the counter as content */
+    //counter-increment: li /* Increment the counter by 1 */
+    /* Position and style the number */
+    position: absolute
+    top: -2px
+    left: -2em
+    width: 2em
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right: 8px
+    //padding: 4px
     font-weight: bold
     text-align: center
 
@@ -28,12 +43,24 @@
   @extend %list-reset
   & > li:before
     display: block
-    height: 8px
-    width: 10px
-    background-image: image-url("training_app/triangle-sprite.png")
-    background-position: top
-    background-size: 100%
+    height: 0px
+    width: 0px
+    top: -4px
+    border-style: solid
+    border-width: 6px 12px
+    border-color: transparent transparent transparent $light-gray
     margin: 10px 0 0 15px
+  & > li:after
+    display: block
+    top: -2px
+    left: -1.9em
+    height: 0px
+    width: 0px
+    border-style: solid
+    border-width: 4px 9px
+    border-color: transparent transparent transparent transparent 
+    margin: 10px 0 0 15px
+
 
 .nav
   & > li
@@ -74,23 +101,32 @@
   margin-bottom: 10px
 
 .subnav__item
-  &:hover
-    &:before
-      background-position: 0 -16px !important
   a
     display: block
-    &:hover
-      color: $red
 
 .subnav__item--complete
   &:before
-    background-position: center !important
+    //background-position: center !important
+    border-color: transparent transparent transparent $dark-gray !important
+
 
 .subnav__item--active
   &:before
-    background-position: bottom !important
+    //background-position: bottom !important
+    border-color: transparent transparent transparent red !important
+  &:after
+    border-color: transparent transparent transparent transparent !important
   a
     font-weight: bold
 
 .subnav__item--disabled
   color: #999
+
+.nav__item--active 
+  .subnav__item:after
+    border-color: transparent transparent transparent $dark-gray
+  .subnav__item--complete
+    &:before
+      border-color: transparent transparent transparent $light-gray !important
+    &:after
+      border-color: transparent transparent transparent transparent

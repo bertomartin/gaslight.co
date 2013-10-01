@@ -28,6 +28,10 @@ class ClassroomPage
     all(".subnav__item--disabled", visible: false).collect(&:text)
   end
 
+  def sections
+    all(".nav__heading__title", visible: false).collect(&:text)
+  end
+
   def code_url
     find('iframe')[:src]
   end

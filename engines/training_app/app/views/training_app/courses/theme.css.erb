@@ -31,3 +31,14 @@ button:hover .nav-button__icon {
   background-color: <%= course.color_primary %>;
 }
 
+.subnav__item:hover::before{
+  border-color: transparent transparent transparent <%= course.color_primary %>;
+}
+
+.subnav__item:hover::after{
+  border-color: transparent transparent transparent transparent !important;
+}
+
+.subnav__item a:hover{
+  color: <%= course.color_primary %>;
+}

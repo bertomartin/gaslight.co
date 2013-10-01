@@ -9,7 +9,7 @@ feature "Experiencing an online course", js: true do
     context "with a valid code" do
       scenario "isn't in demo mode" do
         classroom_page.visit_course(course, registration.code)
-        expect(classroom_page.title).to eq("#{course.title}")
+        expect(classroom_page).to_not be_showing_demo
       end
     end
 

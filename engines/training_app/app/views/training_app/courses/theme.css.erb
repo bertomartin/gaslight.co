@@ -19,7 +19,7 @@
   border-color: <%= course.color_primary %>;
 }
 
-button:hover .nav-button__icon {
+.nav-button:hover .nav-button__icon {
   color: <%= course.color_primary %>;
 }
 
@@ -41,4 +41,8 @@ button:hover .nav-button__icon {
 
 .subnav__item a:hover{
   color: <%= course.color_primary %>;
+}
+
+.subnav__item--active:before{
+  border-color: transparent transparent transparent <%= course.color_primary %> !important;
 }

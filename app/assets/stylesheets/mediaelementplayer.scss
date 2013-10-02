@@ -90,7 +90,11 @@
 	width: 100px;
 	height: 100px;
 	margin: -50px 0 0 -50px;
-	background: image-url('bigplay.png') no-repeat;
+	background: image-url('bigplay.svg') no-repeat;
+}
+
+.no-svg .mejs-overlay-button {
+	background-image:image-url('bigplay.png');
 }
 
 .mejs-overlay:hover .mejs-overlay-button {
@@ -161,7 +165,11 @@
 	height: 16px;
 	width: 16px;
 	border: 0;
-	background: transparent image-url('controls.png') no-repeat;
+	background: transparent image-url('controls.svg') no-repeat;
+}
+
+.no-svg .mejs-controls .mejs-button button {
+	background-image: image-url('controls.png');
 }
 
 /* :focus for accessibility */

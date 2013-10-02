@@ -3,43 +3,43 @@
 
 %section.swatch
   .row
-    .six.columns
+    .large-6.columns
       %h2.styleguide__label Colors
   .row
-    .one.column
+    .large-1.column
       .swatch--blue
       %p.swatch__caption #57c0e8
-    .one.column
+    .large-1.column
       .swatch--yellow
       %p.swatch__caption #efc703
-    .one.column
+    .large-1.column
       .swatch--red
       %p.swatch__caption #e53c2e
-    .one.column
+    .large-1.column
       .swatch--black
       %p.swatch__caption #000
-    .one.column
+    .large-1.column
       .swatch--darkgrey
       %p.swatch__caption #333
-    .one.column
+    .large-1.column
       .swatch--lightgrey
       %p.swatch__caption #ccc
-    .one.column
+    .large-1.column
       .swatch--white
       %p.swatch__caption #fff
       
 %section.headlines.styleguide
   .container
     .row
-      .six.columns.styleguide__label
+      .large-6.columns.styleguide__label
         %h3.style__header Headlines
     .row
-      .four.columns
+      .large-4.columns
         %h1 This is an h1 heading
         %h2 This is an h2 heading
         %h3 This is an h3 heading
         %h4 This is an h4 heading
-      .eight.columns.callout__container
+      .large-8.columns.callout__container
         %p.lead
           The discordance of host and Wolbachia phylogenies indicates that these bacteria have moved between host lineages on
           %a{href: "#"} multiple occasions
@@ -48,24 +48,24 @@
 %section.inputs.styleguide
   .container
     .row
-      .six.columns.styleguide__label
+      .large-6.columns.styleguide__label
         %h3.style__header Inputs
     .row
       %form
-        .four.columns
+        .large-4.columns
           %label{class: "input__label", for: "text--normal"} Normal
           %input#text--normal{type: "text"}/
           %label{class: "input__label", for: "text--focus"} Focus
           %input#text--focus.focus{type: "text"}/
           %label{class: "input__label", for: "text--error"} Error
           %input.input--error#text--error{type: "text", value: "Error!"}/
-        .four.columns.end
+        .large-4.columns.end
           %label{class: "input__label", for: "text--verified"} Verified
           %input#text--verified.input--verified{type: "text", value: "Correct"}/
           %label{class: "input__label", for: "text--disabled"}Disabled
           %input#text--disabled{disabled: "disabled", type: "text"}/
 
-        .four.columns
+        .large-4.columns
           %dl
             %dt Title
             %dd What up
@@ -75,42 +75,42 @@
 %section.checkboxes.styleguide
   .container
     .row
-      .six.columns.styleguide__label
+      .large-6.columns.styleguide__label
         %h3.style__header Checkboxes
     .row
       %form
-        .two.columns
+        .large-2.columns
           %label{class: "input__label", for: "checkbox--normal"} Normal
           %input#checkbox--normal{type: "checkbox"}/
-        .two.columns
+        .large-2.columns
           %label{class: "input__label", for:"checkbox--selected"} Selected
           %input#checkbox--selected.checkbox--selected{type: "checkbox"}/
-        .two.columns.end
+        .large-2.columns.end
           %label{class: "input__label", for: "checkbox--disabled"} Disabled
           %input#checkbox--disabled{disabled: "disabled", type: "checkbox"}/
 
 %section.buttons.styleguide
   .container
     .row
-      .six.columns.styleguide__label
+      .large-6.columns.styleguide__label
         %h3.style__header Buttons
     .row
-      .six
-        .five.columns
+      .large-6
+        .large-5.columns
           %p.caption Primary
           .row
-            .four.columns
+            .large-4.columns
               %button.button--primary Primary
-            .four.end.columns
+            .large-4.end.columns
               %button.button--primary.hover Hover
-        .five.columns
+        .large-5.columns
           %p.caption Secondary
           .row
-            .four.columns
+            .large-4.columns
               %button.button--secondary Secondary
-            .four.columns.end.columns
+            .large-4.columns.end.columns
               %button.button--secondary.hover Hover
-        .two.columns
+        .large-2.columns
           %p.caption Dropdown
           %select.dropdown
             %option
@@ -121,10 +121,10 @@
 %section.tables.styleguide
   .container
     .row
-      .six.columns.styleguide__label
+      .large-6.columns.styleguide__label
         %h3.style__header Tables
     .row
-      .twelve.columns
+      .large-12.columns
         %table
           %thead.table__header
             %tr

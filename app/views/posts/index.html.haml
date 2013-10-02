@@ -3,7 +3,7 @@
 
 = render partial: 'application/nav'
 #main.container.row
-  .columns.eight
+  .columns.large-8
     - if params[:tagged].present?
       %h2 Posts tagged with #{params[:tagged]}
       = page_entries_info posts

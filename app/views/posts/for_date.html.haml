@@ -1,7 +1,7 @@
 - content_for(:title) { "Gaslight Blog: Archive " }
 = render partial: 'application/nav'
 #main.container.row
-  .columns.eight
+  .columns.large-8
     %h1
       #{pluralize(posts.count, 'post')} written
       - if params[:day].present?

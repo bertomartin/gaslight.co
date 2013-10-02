@@ -3,10 +3,10 @@
 
 #main.container.row
   %header.row.brand1
-    .headline.four.columns
+    .headline.large-4.columns
       .headline__buzzword We’re Better <br/><strong>Together</strong>
 
-    .intro.eight.columns
+    .intro.large-8.columns
       %h1 Our secret weapon? Collaboration.
       %p The design and development process shouldn’t be a mystery. At Gaslight, the whole team owns every project. And when you work with us, we consider you an integral part of the team.
       %p In fact, you can expect to hear from us just about every day. And if you stop by the office, you'll find us sitting in one big room trading ideas on the best ways to make your project come alive.
@@ -15,46 +15,46 @@
 
   %section.row.expertise
     %a.anchor{name:"expertise"}
-    .eleven.columns.centered
+    .large-11.columns.large-centered
       %h2.title.brand1 Expertise
       .row
-        .two.columns.iconTile
+        .large-2.columns.iconTile
           %i.icon-skills-backbone
           %h2.title--expertise Backbone
-        .ten.columns
+        .large-10.columns
           %p We love building rich Web apps because they create incredible user experiences. These apps feature top-notch design, multitasking through threads, drag-and-drop capability, editing in real time, and quick response to user input. They can be accessed from any computer or even offline. To build these apps, we use the structure and foundation provided by Backbone.
       .row
-        .two.columns.iconTile
+        .large-2.columns.iconTile
           %i.icon-skills-rails
           %h2.title--expertise Ruby on Rails + Ruby
-        .ten.columns
+        .large-10.columns
           %p The Ruby programming language is smart, friendly, and easy to work with, making it a perfect choice for building high quality software. Another benefit? Ruby makes it easier to update and maintain your software long-term. Rails is the framework that makes Ruby operate on the Web.
       .row
-        .two.columns.iconTile
+        .large-2.columns.iconTile
           %i.icon-skills-ios
           %h2.title--expertise iOS
-        .ten.columns
+        .large-10.columns
           %p We can help you follow users wherever they go. Our development expertise includes creating apps for iPhones and iPads. These native apps create better user interactions than Web apps.
       .row
-        .two.columns.iconTile.last
+        .large-2.columns.iconTile.last
           %i.icon-skills-ux
           %h2.title--expertise User Experience
-        .ten.columns
+        .large-10.columns
           %p A focus on user experience allows us to create software and applications that are a pleasure for real people to use. How? We combine top-notch design with both internal and external testing. From sketches, to wireframes, to the final product, user experience brings your idea to life. 
 
   %section.row
-    %hr.divider.eight.columns.centered
+    %hr.divider.large-8.columns.large-centered
     %row
       .four.columns
         %p
           %strong Don’t see what you’re looking for on this list? We have a few more technology tricks up our sleeves.
-      .eight.columns
+      .large-8.columns
         %p Some of our other skills include: graphic design, agile development, story mapping, lean software development, game design and development, HTML/CSS, Ember.js, Node.js, embedded systems, hardware integration, developer training and more. The list is always growing.
 
   %section.row.team.hide-for-small
     %a.anchor{name:"team"}
     %h2.title.brand1 The Team
-    %ul.eight.columns.photos
+    %ul.large-8.columns.photos
       %li
         .photo
           %img{src: image_path("team/doug.jpg"), alt: "Doug Alcorn" }
@@ -165,14 +165,14 @@
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/joelturnbull", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/joelturnbull", rel: "Team Social"}
         %h3 Joel Turnbull
-    .four.columns.sidebar
+    .large-4.columns.sidebar
       %h5.brand1 A Little About Us
       .content
         %p No two Gaslighters are exactly alike. Each person on our team brings a different set of talents to the group. So when we put our heads together, we’re ready for almost any project.
 
   %section.row.events
     %a.anchor{name:"events"}
-    .eleven.columns.centered
+    .large-11.columns.large-centered
       %h2.title.brand1 Upcoming Events
       #activities
         .events.inactive
@@ -182,7 +182,7 @@
 
   %section.row.videos
     %a.anchor{name:"videos"}
-    .eleven.columns.centered
+    .large-11.columns.large-centered
       %h2.title.brand1 Videos
       = render partial: 'application/videos'
 

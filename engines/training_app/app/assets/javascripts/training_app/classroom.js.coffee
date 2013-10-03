@@ -3,8 +3,10 @@
 #= require ember
 #= require ember-data
 #= require training_app/mediaelement
+#= require training_app/moment
 #= require_self
 #= require ./store
+#= require_tree ./helpers
 #= require_tree ./templates
 #= require_tree ./models
 #= require_tree ./routes

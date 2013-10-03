@@ -10,7 +10,10 @@
         <ul class="subnav">
           {{#each chapters itemController=navChapter}}
             <li {{bindAttr class=":subnav__item isActive:subnav__item--active isRestricted:subnav__item--disabled"}}>
-              {{#linkTo 'chapter' this}}{{title}}{{/linkTo}}
+              {{#linkTo 'chapter' this class="subnav__link"}}
+                <span class="left">{{title}}</span>
+                <span class="right">{{time duration}}</span>
+              {{/linkTo}}
             </li>
           {{/each}}
         </ul>

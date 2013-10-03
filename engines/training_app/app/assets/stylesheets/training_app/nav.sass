@@ -58,7 +58,7 @@
     width: 0px
     border-style: solid
     border-width: 4px 9px
-    border-color: transparent transparent transparent transparent 
+    border-color: transparent transparent transparent transparent
     margin: 10px 0 0 15px
 
 
@@ -100,9 +100,13 @@
   margin-left: -0.65em
   margin-bottom: 10px
 
-.subnav__item
-  a
-    display: block
+.subnav__link
+  display: block
+  overflow: auto
+  .left
+    float: left
+  .right
+    float: right
 
 .subnav__item--complete
   &:before
@@ -119,7 +123,7 @@
 .subnav__item--disabled
   color: #999
 
-.nav__item--active 
+.nav__item--active
   .subnav__item:after
     border-color: transparent transparent transparent $dark-gray
   .subnav__item--complete

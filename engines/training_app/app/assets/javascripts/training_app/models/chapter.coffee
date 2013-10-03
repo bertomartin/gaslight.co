@@ -2,6 +2,7 @@ Training.Chapter = DS.Model.extend
   title: DS.attr('string')
   order: DS.attr('string')
   description: DS.attr('string')
+  duration: DS.attr('number')
   videoUrl: DS.attr('string')
   codeUrl: DS.attr('string')
   repoUrl: DS.attr('string')

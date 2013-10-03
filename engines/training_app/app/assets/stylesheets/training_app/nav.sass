@@ -50,6 +50,7 @@
     border-width: 6px 12px
     border-color: transparent transparent transparent $light-gray
     margin: 10px 0 0 15px
+    -webkit-transition: all 0.25s ease-out
   & > li:after
     display: block
     top: -2px
@@ -60,6 +61,8 @@
     border-width: 4px 9px
     border-color: transparent transparent transparent transparent
     margin: 10px 0 0 15px
+    -webkit-transition: all 0.25s ease-out
+
 
 
 .nav
@@ -107,6 +110,14 @@
     float: left
   .right
     float: right
+
+.subnav__item
+  a
+    display: block
+  &:hover:before
+    left: -1.75em
+  &:hover:after
+    left: -1.65em
 
 .subnav__item--complete
   &:before

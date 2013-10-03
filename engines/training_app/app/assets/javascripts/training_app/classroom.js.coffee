@@ -2,7 +2,7 @@
 #= require handlebars
 #= require ember
 #= require ember-data
-#= require training_app/mediaelement
+#= require training_app/video-js
 #= require training_app/moment
 #= require_self
 #= require ./store

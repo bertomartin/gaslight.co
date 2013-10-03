@@ -2,23 +2,17 @@ Training.MediaElementComponent = Ember.Component.extend
   classNameBindings: ['class']
 
   playerOptions:
-    pluginPath: '/assets/training_app/'
-    enableAutosize: false
+    width: false
+    height: false
 
   didInsertElement: ->
     @createPlayer()
 
   createPlayer: ->
-    # MediaElement pukes if there's no src
-    @$('video').attr('src', 'temp.mp4') unless @get('src')?
-    @player = new MediaElementPlayer @$('video'), @playerOptions
-
-  onResize: (->
-    setTimeout (=> @player.setPlayerSize()), 425
-  ).observes('resize')
+    @player = videojs('player', @playerOptions)
 
   loadVideo: ( ->
-    @player.setSrc(@get('src'))
-    @player.setPoster(@get('poster'))
+    @player.pause()
+    @player.src(@get('src'))
     @player.load()
   ).observes('src')

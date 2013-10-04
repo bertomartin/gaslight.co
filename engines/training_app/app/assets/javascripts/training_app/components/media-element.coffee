@@ -4,6 +4,7 @@ Training.MediaElementComponent = Ember.Component.extend
   playerOptions:
     width: false
     height: false
+    controls: true
 
   didInsertElement: ->
     @createPlayer()

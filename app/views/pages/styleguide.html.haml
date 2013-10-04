@@ -1,55 +1,53 @@
 - content_for(:title) { "Gaslight: Style Guide" }
 = render partial: 'application/nav'
 
-%section.swatch
-  .row
-    .large-6.columns
-      %h2.styleguide__label Colors
-  .row
-    .large-1.column
-      .swatch--blue
-      %p.swatch__caption #57c0e8
-    .large-1.column
-      .swatch--yellow
-      %p.swatch__caption #efc703
-    .large-1.column
-      .swatch--red
-      %p.swatch__caption #e53c2e
-    .large-1.column
-      .swatch--black
-      %p.swatch__caption #000
-    .large-1.column
-      .swatch--darkgrey
-      %p.swatch__caption #333
-    .large-1.column
-      .swatch--lightgrey
-      %p.swatch__caption #ccc
-    .large-1.column
-      .swatch--white
-      %p.swatch__caption #fff
-      
-%section.headlines.styleguide
-  .container
+#main.container
+  %section.swatch.styleguide
     .row
-      .large-6.columns.styleguide__label
-        %h3.style__header Headlines
+      .large-12.columns
+        %h2.header--light.underline--blue Colors
     .row
-      .large-4.columns
-        %h1 This is an h1 heading
-        %h2 This is an h2 heading
-        %h3 This is an h3 heading
-        %h4 This is an h4 heading
-      .large-8.columns.callout__container
+      .large-6.large-offset-3
+        .row
+          .large-2.column
+            .swatch--brand1
+            %p.swatch__caption #60bce4
+          .large-2.column
+            .swatch--brand2
+            %p.swatch__caption #f1d618
+          .large-2.column
+            .swatch--brand3
+            %p.swatch__caption #d63d2f
+          .large-2.column
+            .swatch--brandBase
+            %p.swatch__caption #000
+          .large-2.column
+            .swatch--darkgrey
+            %p.swatch__caption #333
+          .large-2.column
+            .swatch--lightgrey
+            %p.swatch__caption #ccc
+        
+  %section.headlines.styleguide
+    .row
+      .large-12.columns.styleguide__label
+        %h2.header.underline--red Headlines
+    .row
+      .large-5.columns
+        %h1.title h1 heading
+        %h2.header.underline--blue.no-margin h2 heading
+        %h3.subheader h3 heading
+        %h4.subtitle h4 heading
+      .large-7.columns.callout__container
         %p.lead
           The discordance of host and Wolbachia phylogenies indicates that these bacteria have moved between host lineages on
           %a{href: "#"} multiple occasions
           during their evolutionary history, although.
         %p And this is some text in a paragraph below it. Looks good. To understand what is really going on in a colony of ants or bees, Dr. Dornhaus, an assistant professor of ecology and evolutionary biology at the University of Arizona, tracks the little creatures individually — hence the paint and the numbers. Individual ants, she said, have “their own brains and legs, as well as complex and flexible behaviors.” She continues, “Each ant’s behavior and the rules under which it operates generate a pattern for the colony, so it’s crucial to discover its individual cognitive skill.”
-%section.inputs.styleguide
-  .container
+  %section.inputs.styleguide.section--contrast
     .row
-      .large-6.columns.styleguide__label
-        %h3.style__header Inputs
+      .large-12.columns.styleguide__label
+        %h2.header.underline--yellow Form Text Fields
     .row
       %form
         .large-4.columns
@@ -72,10 +70,9 @@
 
             %dt Start
             %dd 2013/02/01
-%section.checkboxes.styleguide
-  .container
+  %section.checkboxes.styleguide
     .row
-      .large-6.columns.styleguide__label
+      .large-12.columns.styleguide__label
         %h3.style__header Checkboxes
     .row
       %form
@@ -89,39 +86,28 @@
           %label{class: "input__label", for: "checkbox--disabled"} Disabled
           %input#checkbox--disabled{disabled: "disabled", type: "checkbox"}/
 
-%section.buttons.styleguide
-  .container
+  %section.buttons.styleguide
     .row
-      .large-6.columns.styleguide__label
-        %h3.style__header Buttons
+      .large-12.columns.styleguide__label
+        %h2.header.underline--blue Buttons
     .row
-      .large-6
-        .large-5.columns
-          %p.caption Primary
-          .row
-            .large-4.columns
-              %button.button--primary Primary
-            .large-4.end.columns
-              %button.button--primary.hover Hover
-        .large-5.columns
-          %p.caption Secondary
-          .row
-            .large-4.columns
-              %button.button--secondary Secondary
-            .large-4.columns.end.columns
-              %button.button--secondary.hover Hover
-        .large-2.columns
-          %p.caption Dropdown
-          %select.dropdown
-            %option
-            %option Option 1
-            %option.dropdown--hover Option 2
-            %option Option 3
+      .large-5.columns
+        %button.button.button--blue Primary
+        %button.button.button--yellow Primary
+      .large-5.columns
+        %button.button.button--red Secondary
+        %button.button.button--black Secondary
+      .large-2.columns
+        %p.caption Dropdown
+        %select.dropdown
+          %option
+          %option Option 1
+          %option.dropdown--hover Option 2
+          %option Option 3
 
-%section.tables.styleguide
-  .container
+  %section.tables.styleguide.section--contrast
     .row
-      .large-6.columns.styleguide__label
+      .large-12.columns.styleguide__label
         %h3.style__header Tables
     .row
       .large-12.columns

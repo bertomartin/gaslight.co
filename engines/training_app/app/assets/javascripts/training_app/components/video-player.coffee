@@ -1,10 +1,11 @@
-Training.MediaElementComponent = Ember.Component.extend
+Training.VideoPlayerComponent = Ember.Component.extend
   classNameBindings: ['class']
 
   playerOptions:
     width: false
     height: false
     controls: true
+    preload: "auto"
 
   didInsertElement: ->
     @createPlayer()

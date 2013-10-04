@@ -1,0 +1,138 @@
+
+
+#main section
+  padding: 5em 0
+
+.section--contrast
+  background-color: $section-contrast
+
+
+
+//---------------//
+//     Type     //
+//-------------//
+
+%title
+  font-size: 4.3em
+  font-weight: 700
+  display: block
+
+.title
+  @extend %title
+
+%header
+  font-weight: 600
+  display: block
+  margin: auto
+
+.header
+  @extend %header
+  font-size: 2.2em
+  line-height: 2em
+  text-align: center
+
+.header--light
+  @extend .header
+  color: #fff
+
+.header.no-margin
+  margin: 0
+
+.subheader
+  @extend %header
+  font-size: 1.8em
+
+%underline
+  display: block
+  margin: auto
+  width: 8em
+  margin-bottom: 2em
+  border-bottom-style: solid
+  border-bottom-width: 9px
+
+.underline--blue
+  @extend %underline
+  border-bottom-color: $brand1
+
+.underline--yellow
+  @extend %underline
+  border-bottom-color: $brand2
+
+.underline--red
+  @extend %underline
+  border-bottom-color: $brand3
+
+%subtitle
+  font-size: 1.2
+  font-weight: 600
+
+.subtitle
+  @extend %subtitle
+
+
+//---------------//
+//  Full Image  //
+//-------------//
+
+%image--full-width
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  padding: 125px 0
+
+.swatch
+  @extend %image--full-width
+  background-image: image-url("landing/group.jpg")
+
+//---------------//
+//   SWATCHES   //
+//-------------//
+
+
+%caption
+  margin: 0
+  font-size: 14px
+
+
+%swatch
+  display: block
+  height: 55px
+  margin-bottom: 10px
+
+.color
+  @extend %color-card
+  width: 70px
+
+.swatch--brand1
+  @extend %swatch
+  background: $brand1
+
+.swatch--brand2
+  @extend %swatch
+  background: $brand2
+
+.swatch--brand3
+  @extend %swatch
+  background: $brand3
+
+.swatch--brandBase
+  @extend %swatch
+  background: $brandBase
+
+.swatch--lightgrey
+  @extend %swatch
+  background: #ccc
+
+.swatch--darkgrey
+  @extend %swatch
+  background: #666
+
+.swatch--white
+  @extend %swatch
+  background: #fff
+  border: 1px solid #ccc
+
+.swatch__caption
+  @extend %caption
+  text-align: center
+  color: #fff

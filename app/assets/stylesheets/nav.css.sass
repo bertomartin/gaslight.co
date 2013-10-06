@@ -34,16 +34,19 @@
       display: inline
       line-height: $topbar-height
       a
-        color: $topbar-link-color
+        color: #ddd
         display: inline-block
-        font-size: $topbar-link-font-size
-        font-weight: $topbar-link-weight
-        padding: 0 $topbar-height / 3
+        font-size: 0.8em
+        font-weight: 500
+        padding: 0 $topbar-height / 4
         height: $topbar-height - 10px
         line-height: $topbar-height - 20px
         border-top: 10px solid transparent
         &.active
-          @include brandColors(border-color)
+          color: #fff
+          font-weight: 700
+        &:hover
+          color: #fff
 
   .top-bar-section ul li > a
     width: auto

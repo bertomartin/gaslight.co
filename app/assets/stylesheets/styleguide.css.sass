@@ -1,107 +1,10 @@
-#main section
-  padding: 5em 0 7em 0
-  &:last-child
-    padding-bottom: 10em
-
-.section--contrast
-  background-color: $section-contrast
-
-
-
-//---------------//
-//     Type     //
-//-------------//
-
-%title
-  font-size: 4em
-  font-weight: 700
-  display: block
-
-.title
-  @extend %title
-
-.title--light
-  @extend %title
-  color: #fff
-
-%header
-  display: block
-  margin: auto
-
-.header
-  @extend %header
-  font-size: 2.2em
-  font-weight: 600
-  line-height: 2em
-  text-align: center
-
-.header--light
-  @extend .header
-  color: #fff
-  font-weight: 500
-
-.header.no-margin
-  margin: 0
-
-.subheader
-  @extend %header
-  font-size: 1.8em
-
-%underline
-  display: block
-  margin: auto
-  width: 8em
-  margin-bottom: 2em
-  border-bottom-style: solid
-  border-bottom-width: 9px
-
-.underline--blue
-  @extend %underline
-  border-bottom-color: $brand1
-
-.underline--yellow
-  @extend %underline
-  border-bottom-color: $brand2
-
-.underline--red
-  @extend %underline
-  border-bottom-color: $brand3
-
-%subtitle
-  font-size: 1.2
-  font-weight: 600
-
-.subtitle
-  @extend %subtitle
-
-
-//---------------//
-//  Full Image  //
-//-------------//
-
-%image--full-width
-  background-color: $brandBase
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: top center
-  padding: 125px 0
-
-.landing__about
-  @extend %image--full-width
-  background-image: image-url("landing/group.jpg")
-
-.case-study
-  @extend %image--full-width
-  background-image: image-url("landing/lumbee.jpg")
 //---------------//
 //   SWATCHES   //
 //-------------//
 
-
 %caption
   margin: 0
   font-size: 14px
-
 
 %swatch
   display: block
@@ -145,34 +48,3 @@
   @extend %caption
   text-align: center
   color: #fff
-
-
-//---------------//
-//    Buttons   //
-//-------------//
-
-
-%button
-
-
-//---------------//
-//   Checkbox   //
-//-------------//
-
-
-//---------------//
-//    Dropdown  //
-//-------------//
-
-%dropdown
-  @extend %input
-  background-image: url(dropdown_arrow.png)
-  background-repeat: no-repeat
-  background-position: right
-  &:focus
-    background-image: url(dropdown_arrow.png)
-    background-repeat: no-repeat
-    background-position: right
-
-.dropdown
-  @extend %dropdown

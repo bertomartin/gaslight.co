@@ -17,45 +17,47 @@
       .large-8.column.centered.lbs.hide-for-small
         .row
           .large-4.columns
-            %a.button--large.brand1{href: page_path('about')} Learn
+            %a.button.button--blue{href: page_path('about')} Learn
             %p
               Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you. 
           
           .large-4.columns
-            %a.button--large.brand2{href: page_path('case-studies/ipc')} Build
+            %a.button.button--yellow{href: page_path('case-studies/ipc')} Build
             %p
               We wield our coding, design and UX chops to create custom software or super-charge existing software. See our <a class="brand2--link" href="case-studies/ipc" rel="Case Study">latest work.</a>
           .large-4.columns
-            %a.button--large.brand3{href: page_path('blog')} Share
+            %a.button.button--red{href: page_path('blog')} Share
             %p
               We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, podcast and training classes
     .row
       .large-8.column.large-centered.lbs.show-for-small
         .row
           .large-4.columns
-            %a.button--large.brand1{href: page_path('about')} Learn
+            %a.button.brand1{href: page_path('about')} Learn
            
           .large-4.columns
-            %a.button--large.brand2{href: page_path('case-studies/ipc')} Build
+            %a.button.brand2{href: page_path('case-studies/ipc')} Build
             
           .large-4.columns
-            %a.button--large.brand3{href: page_path('blog')} Share
+            %a.button.brand3{href: page_path('blog')} Share
            
-#main.landing-page
+#main
   %section.landing__about
     .row
-      %h2.header--light.underline--blue We Are
+      %h2.header--light We Are
+      .underline--blue 
     .row
       .large-8.columns.large-centered
         %p.lead
           We are a group of designers, developers and project guides passionate about revving up your business. We love to create technology tools that solve hard problems. And make your company faster and more profitable. 
     .row
       .large-3.columns.large-centered
-        %a.button--large.brand1{href: '/about'} Learn How We Work
+        %a.button.button--blue{href: '/about'} Learn How We Work
 
   %section
     .row
-      %h2.header.underline--red What We Do
+      %h2.header What We Do
+      .underline--red
     .row
       .large-3.columns
         %h3.subheader Idea Igniter
@@ -70,9 +72,10 @@
         %h3.subheader Online and In-Person Training
         %p Learn the latest development tools to work smarter and faster.
 
-  %section.case-study
+  %section.case-study--home
     .row
-      %h2.header--light.underline--blue Latest Work
+      %h2.header--light Latest Work
+      .underline--blue 
     .row
       .large-8.columns.large-centered
         %h3.subheader Lumbee Enterprises
@@ -85,7 +88,8 @@
      
   %section
     .row
-      %h2.header.underline--yellow Let's Keep in Touch
+      %h2.header Let's Keep in Touch
+      .underline--yellow 
     .row
       .large-6.columns
         %a.anchor{name:"events"}

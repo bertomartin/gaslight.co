@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/bradphelan/jasminerice.git
+  revision: 091349c27343bfa728b8e5745675f9ddbb7d9699
+  specs:
+    jasminerice (0.1.0)
+      coffee-rails
+
 PATH
   remote: .
   specs:
@@ -62,6 +69,9 @@ GEM
     chunky_png (1.2.8)
     cliver (0.2.1)
     coderay (1.0.9)
+    coffee-rails (4.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -225,6 +235,7 @@ DEPENDENCIES
   database_cleaner (= 1.0.1)
   dotenv-rails
   factory_girl_rails
+  jasminerice!
   pg
   poltergeist
   pry

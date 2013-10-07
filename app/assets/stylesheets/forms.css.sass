@@ -156,6 +156,19 @@ input[type="radio"]
     border: 2px solid $brand1
     +box-shadow(0 0 0 3px #fff inset)
 
+%dropdown
+  @extend %input
+  background-image: url(dropdown_arrow.png)
+  background-repeat: no-repeat
+  background-position: right
+  &:focus
+    background-image: url(dropdown_arrow.png)
+    background-repeat: no-repeat
+    background-position: right
+
+.dropdown
+  @extend %dropdown
+
 
 // ------  Errors  ------ //
 

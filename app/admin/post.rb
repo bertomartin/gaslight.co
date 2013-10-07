@@ -52,7 +52,6 @@ ActiveAdmin.register Post do
       row :created_at
       row :updated_at
     end
-    active_admin_comments
   end
 
   form partial: 'posts/form'

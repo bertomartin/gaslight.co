@@ -2,7 +2,7 @@
 = render partial: 'application/nav'
 
 #main.container
-  %section.swatch.styleguide
+  %section.landing__about.styleguide
     .row
       .large-12.columns
         %h2.header--light.underline--blue Colors
@@ -50,41 +50,35 @@
         %h2.header.underline--yellow Form Text Fields
     .row
       %form
-        .large-4.columns
+        .large-6.columns
           %label{class: "input__label", for: "text--normal"} Normal
           %input#text--normal{type: "text"}/
-          %label{class: "input__label", for: "text--focus"} Focus
-          %input#text--focus.focus{type: "text"}/
-          %label{class: "input__label", for: "text--error"} Error
-          %input.input--error#text--error{type: "text", value: "Error!"}/
-        .large-4.columns.end
-          %label{class: "input__label", for: "text--verified"} Verified
-          %input#text--verified.input--verified{type: "text", value: "Correct"}/
+          %label.error{class: "input__label", for: "text--error"} Error
+          %input.error#text--error{type: "text", value: "Error!"}/
           %label{class: "input__label", for: "text--disabled"}Disabled
           %input#text--disabled{disabled: "disabled", type: "text"}/
-
-        .large-4.columns
-          %dl
-            %dt Title
-            %dd What up
-
-            %dt Start
-            %dd 2013/02/01
-  %section.checkboxes.styleguide
-    .row
-      .large-12.columns.styleguide__label
-        %h3.style__header Checkboxes
-    .row
-      %form
-        .large-2.columns
+          %label{class: "input__label", for: "dropdown"} Dropdown
+          %select.dropdown
+            %option
+            %option Option 1
+            %option.dropdown--hover Option 2
+            %option Option 3
           %label{class: "input__label", for: "checkbox--normal"} Normal
           %input#checkbox--normal{type: "checkbox"}/
-        .large-2.columns
           %label{class: "input__label", for:"checkbox--selected"} Selected
           %input#checkbox--selected.checkbox--selected{type: "checkbox"}/
-        .large-2.columns.end
           %label{class: "input__label", for: "checkbox--disabled"} Disabled
           %input#checkbox--disabled{disabled: "disabled", type: "checkbox"}/
+          %form
+            %label{class: "input__label"} Normal
+            %input#checkbox--normal{type: "radio"}/
+            %label{class: "input__label"} Normal
+            %input#checkbox--normal{type: "radio"}/
+            %label{class: "input__label"} Disabled
+            %input#checkbox--normal{disabled: "disabled", type: "radio"}/
+        .large-6.columns
+          %label{class: "input__label", for: "textarea"} Text Area
+          %textarea
 
   %section.buttons.styleguide
     .row
@@ -93,22 +87,15 @@
     .row
       .large-5.columns
         %button.button.button--blue Primary
-        %button.button.button--yellow Primary
+        %button.button--full-width.button--yellow Primary
       .large-5.columns
-        %button.button.button--red Secondary
-        %button.button.button--black Secondary
-      .large-2.columns
-        %p.caption Dropdown
-        %select.dropdown
-          %option
-          %option Option 1
-          %option.dropdown--hover Option 2
-          %option Option 3
+        %button.button--small.button--red Secondary
+        %button.button--small.button--black Secondary
 
   %section.tables.styleguide.section--contrast
     .row
       .large-12.columns.styleguide__label
-        %h3.style__header Tables
+        %h2.header.underline--red Tables
     .row
       .large-12.columns
         %table
@@ -139,3 +126,5 @@
               %td TD Two
               %td TD One
               %td TD Two
+
+= render partial: 'application/footer'

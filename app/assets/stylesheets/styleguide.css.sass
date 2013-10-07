@@ -1,7 +1,7 @@
-
-
 #main section
-  padding: 5em 0
+  padding: 5em 0 7em 0
+  &:last-child
+    padding-bottom: 10em
 
 .section--contrast
   background-color: $section-contrast
@@ -13,27 +13,32 @@
 //-------------//
 
 %title
-  font-size: 4.3em
+  font-size: 4em
   font-weight: 700
   display: block
 
 .title
   @extend %title
 
+.title--light
+  @extend %title
+  color: #fff
+
 %header
-  font-weight: 600
   display: block
   margin: auto
 
 .header
   @extend %header
   font-size: 2.2em
+  font-weight: 600
   line-height: 2em
   text-align: center
 
 .header--light
   @extend .header
   color: #fff
+  font-weight: 500
 
 .header.no-margin
   margin: 0
@@ -75,15 +80,19 @@
 //-------------//
 
 %image--full-width
+  background-color: $brandBase
   background-size: cover
   background-repeat: no-repeat
   background-position: top center
   padding: 125px 0
 
-.swatch
+.landing__about
   @extend %image--full-width
   background-image: image-url("landing/group.jpg")
 
+.case-study
+  @extend %image--full-width
+  background-image: image-url("landing/lumbee.jpg")
 //---------------//
 //   SWATCHES   //
 //-------------//
@@ -136,3 +145,34 @@
   @extend %caption
   text-align: center
   color: #fff
+
+
+//---------------//
+//    Buttons   //
+//-------------//
+
+
+%button
+
+
+//---------------//
+//   Checkbox   //
+//-------------//
+
+
+//---------------//
+//    Dropdown  //
+//-------------//
+
+%dropdown
+  @extend %input
+  background-image: url(dropdown_arrow.png)
+  background-repeat: no-repeat
+  background-position: right
+  &:focus
+    background-image: url(dropdown_arrow.png)
+    background-repeat: no-repeat
+    background-position: right
+
+.dropdown
+  @extend %dropdown

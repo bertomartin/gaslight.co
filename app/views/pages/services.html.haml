@@ -1,0 +1,59 @@
+- content_for(:title) { "Gaslight: Services" }
+= render partial: 'application/nav'
+
+#main.landing-page
+  %section.landing__about
+    .row
+      .large-12.columns.large-centered
+        %h1.title--light Supercharge Your Business
+    .row
+      .large-8.columns.large-centered
+        %h3.subheader Need a tech boost? We know how to make it count.
+        .underline--blue
+
+  %section
+    .row.large-centered
+      %h2.header.underline--blue Idea Igniter
+    .row
+      .large-8.columns.large-centered
+        %p.lead
+          You have a great idea. But throwing developers at a project doesn’t always get it off on the right foot. Every vision needs an actionable plan to become reality. In our Igniter sessions, we take you through an intensive process to figure out exactly what your initial product needs to be successful. Find out what you can achieve with The Igniter. 
+    .row
+      .large-3.columns.large-centered
+        %a.button--large.brand1{href: '/about'} The Igniter
+  %section.section--contrast
+    .row.large-centered
+      %h2.header.underline--blue Custom Software Development 
+    .row
+      .large-8.columns.large-centered
+        %p.lead
+          A great app isn’t just a business tool. It’s a business driver. We build software that powers core business functions, everything from workflow and accounting to national gift card programs. Let’s work together to create a new revenue stream, boost your bottom line or transform that over-burdened spreadsheet into powerful software. Already have an app that’s falling short? We can power it up. 
+  %section
+    .row.large-centered
+      %h2.header.underline--blue Design and User Experience 
+    .row
+      .large-8.columns.large-centered
+        %p.lead
+          We appreciate good looks, but it’s what’s behind the design that counts. Our design and UX talent works hand-in-hand with the development team to create an app that’s smart and beautiful. We create intuitive user experiences, so your team actually looks forward to using your new app. 
+  %section.section--contrast
+    .row.large-centered
+      %h2.header.underline--blue The Tools 
+    .row
+      .large-3.columns
+        %h1.subheader Ruby on Rails
+        %p Bring start-up speed to enterprise software development
+      .large-3.columns
+        %h1.subheader JRuby
+        %p Introduce Ruby into a Java environment 
+      .large-3.columns      
+        %h1.subheader AngularJS
+        %p Develop rich Web applications at lightning speed      
+      .large-3.columns
+        %h1.subheader Ember.js
+        %p Develop rich Web applications at lightning speed 
+    .row
+      %h2.subheader Eyes on the Future 
+      %p.lead
+        Technology changes fast. That’s why we’re always trying out—and even developing—the newest tools and methods. Follow along with our experiments on XXX XXXX to see what we’re excited about right now.  
+
+= render partial: 'application/footer'

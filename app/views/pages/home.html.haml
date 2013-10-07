@@ -8,10 +8,10 @@
   %section.landingpage
     .row
       .large-12.columns.large-centered
-        %h1.landingpage__tagline We build apps that build businesses.
+        %h1.title We build apps that build businesses.
     .row
       .large-6.columns.large-centered
-        %p.landingpage__paragraph
+        %p.lead
           Gaslight is a design and development shop based around three driving principles.
     .row
       .large-8.column.centered.lbs.hide-for-small
@@ -42,73 +42,82 @@
             %a.button--large.brand3{href: page_path('blog')} Share
            
 #main.landing-page
-  %section.hero--weare
+  %section.landing__about
     .row
-      .large-3.columns.landing-page__sidebar--about
-        %h2 We Are
-      .large-8.columns.large-offset-1.landing-page__info
+      %h2.header--light.underline--blue We Are
+    .row
+      .large-8.columns.large-centered
         %p.lead
-          We are a group of developers, designers and project guides passionate about building things. We want to solve hard problems and add the kind of value that makes your business more competitive and profitable. We want to be a trusted partner, not just a service provider. Learn more about how we partner with clients.
+          We are a group of designers, developers and project guides passionate about revving up your business. We love to create technology tools that solve hard problems. And make your company faster and more profitable. 
     .row
-      .large-3.columns.large-offset-4
-        %a.button--large.brand1{href: '/about'} See Who We Are
+      .large-3.columns.large-centered
+        %a.button--large.brand1{href: '/about'} Learn How We Work
 
-  %section.hero--process
+  %section
     .row
-      .large-3.columns.landing-page__sidebar--process
-        %h2 Our Process
-      .large-1.column.hide-for-small.landing-page__info
-        .arrow-right
-      .large-6.columns.end.landing-page__info
-        .landing-page__heading The igniter
-        %h4.landing-page__subheading Turning big ideas into successful projects
-        %p
-          You have a great idea. But throwing developers at a project doesn’t always get it off on the right foot. Every vision needs an actionable plan to become reality.          
-          %a.brand3--link{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas.
+      %h2.header.underline--red What We Do
+    .row
+      .large-3.columns
+        %h3.subheader Idea Igniter
+        %p Turn your big idea into an actionable plan with The Igniter.    
+      .large-3.columns
+        %h3.subheader Custom Software Development 
+        %p Boost profits and productivity with a new or upgraded app.
+      .large-3.columns      
+        %h3.subheader Design and User Experience
+        %p Create on-brand tools that are easy to use and easy on the eyes.      
+      .large-3.columns  
+        %h3.subheader Online and In-Person Training
+        %p Learn the latest development tools to work smarter and faster.
 
+  %section.case-study
     .row
-      .large-1.column.large-offset-3.hide-for-small
-        .arrow-right
-      .large-6.columns.end
-        .landing-page__heading Team approach
-        %h4.landing-page__subheading Becoming part of your team
-        %p
-          Need a dedicated team to work on your project? We have one. We love partnering with business owners and key stakeholders. During a project, you can expect to hear from us nearly everyday.
-          %a.brand3--link{href: '/about'} Find out more about how we partner with clients.
+      %h2.header--light.underline--blue Latest Work
     .row
-      .large-1.column.large-offset-3.hide-for-small
-        .arrow-right
-      .large-6.columns.end
-        .landing-page__heading Best in technology
-        %h4.landing-page__subheading Bringing start-up technology to established businesses
-        %p
-          We’re constantly trying out the latest technology so you don’t have
-          to. Then we put the best solutions to work for our clients. Discover
-          the technology we’re using right now and how it can make your
-          business better.
+      .large-8.columns.large-centered
+        %h3.subheader Lumbee Enterprises
+        %p.lead
+          A software overhaul for the automotive industry that drives real business results.
+    .row
+      .large-3.columns.large-centered
+        %a.button--large.brand1{href: '/case-studies/lumbee'} Read the case study
 
-  %section.hero--worktogether
+     
+  %section
     .row
-      .large-3.columns.landing-page__sidebar--contact
-        %h2 Let's Keep in Touch
-      .large-4.columns.large-offset-1.landing-page__info
+      %h2.header.underline--yellow Let's Keep in Touch
+    .row
+      .large-6.columns
+        %a.anchor{name:"events"}
+          %h3.subheader Upcoming Events
+          #activities
+            .events.inactive
+            .spinner
+              / %h4 Loading
+              / %img{src: image_path('loading.gif')}
+      .large-4.columns
         %p
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
           = render partial: 'application/newsletter'
-      .large-3.columns.large-offset-1.landing-page__contact
-        %p Start a conversation:
-        %ul.landing-page__contact
-          %li
-            %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"}
-              %i.icon-social-mail
-          %li
-            %a{href: "http://twitter.com/teamgaslight", rel: "Footer Social", target: "_blank"}
-              %i.icon-social-twitter
-          %li
-            %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"}
-              %i.icon-social-facebook
-          %li
-            %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"}
-              %i.icon-social-github
-          %li.justifylist--last
+
+= render partial: 'application/footer'
+
+:plain
+  <script type="text/template" id="eventTemplate">
+    <div class="columns one mobile-one">
+      <img src="<%- person.gravatar_url %>" class="avatar" />
+    </div>
+    <div class="columns eleven mobile-three">
+      <span class="person"><a href="https://twitter.com/<%- person.twitter %>"><%- person.firstName %></a></span>
+      is <span class="verb"><%- verb %></span>
+      <span class="event"><a href="<%- url %>"><%- name %></a></span>
+      in
+      <span class="location"><%- location %></span> on <%- occursOn %>.
+    </div>
+  </script>
+
+- content_for(:javascript) do
+  :javascript
+    jQuery(function() { var activityView = new Gaslight.Views.ActivityView; });
+
 

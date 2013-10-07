@@ -24,8 +24,8 @@ gem 'foundation_rails_helper', github: 'sgruhier/foundation_rails_helper', ref: 
 gem 'sentry-raven', git: 'https://github.com/getsentry/raven-ruby.git'
 
 gem 'compass-rails',       github: 'Compass/compass-rails'
-gem 'activeadmin',         github: 'gregbell/active_admin', branch: 'rails4'
-gem 'ransack',             github: 'ernie/ransack',         branch: 'rails-4'
+gem 'activeadmin',         github: 'gregbell/active_admin'
+gem 'ransack',             github: 'ernie/ransack'
 gem 'inherited_resources', github: 'josevalim/inherited_resources', ref: '2656ca0c'
 gem 'formtastic',          github: 'justinfrench/formtastic', ref: 'cd6cb88f'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', ref: '2f2768f8'

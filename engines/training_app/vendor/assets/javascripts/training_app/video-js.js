@@ -3534,7 +3534,7 @@ vjs.ControlBar.prototype.options_ = {
     'remainingTimeDisplay': {},
     'progressControl': {},
     'fullscreenToggle': {},
-    'volumeControl': {},
+    // 'volumeControl': {},
     'muteToggle': {}
     // 'volumeMenuButton': {}
   }

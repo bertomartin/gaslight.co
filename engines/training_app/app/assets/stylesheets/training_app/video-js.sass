@@ -702,3 +702,66 @@ body.vjs-full-window
 // -----------------------------------------------------------------------------
 // *The original source of this file lives at
 // *https://github.com/videojs/video.js/blob/master/src/css/video-js.less
+
+
+// ------------------------------- //
+// -------- CUSTOM STYLES -------- //
+// ------------------------------- //
+
+
+.vjs-default-skin
+  color: #fff
+  .vjs-big-play-button
+    left: 35%
+    top: Calc(50% - 1.3em)
+    -webkit-transition: none
+    -moz-transition: none
+    -o-transition: none
+    transition: none
+
+.vjs-control-bar > div
+  height: 50px
+
+.vjs-default-skin
+  .vjs-control:before
+    text-shadow: none
+    line-height: 50px
+    font-size: 2.2em
+  .vjs-play-control
+    width: 8%
+  .vjs-mute-control
+    width: 6%
+  .vjs-fullscreen-control
+    width: 8%
+  .vjs-time-controls
+    line-height: 22px
+  .vjs-current-time
+    position: absolute
+    left: 8%
+    width: 8%
+    float: none
+    text-align: left
+  .vjs-duration
+    position: absolute
+    left: 76%
+    width: 8%
+    float: none
+    text-align: right
+
+.vjs-time-divider
+  display: none
+
+.vjs-default-skin
+  .vjs-progress-control
+    position: absolute
+    width: 76%
+    top: 18px
+    left: 8%
+    height: 10px
+    div
+      border-radius: 10px
+  .vjs-progress-holder
+    .vjs-play-progress, .vjs-load-progress
+      background-color: #fff
+  .vjs-seek-handle
+    display: none

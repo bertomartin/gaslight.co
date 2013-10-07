@@ -8,15 +8,13 @@
 table
   @extend %table
 
-.table__header
+thead.table__header
   @extend %table
   background: $brand3
-  text-align: center
   color: #fff
 
-.table__body
-  @extend %table
-  tr td
-    text-align: center
-
+table thead tr th
+  text-align: center
+  color: #fff
+  font-weight: 600
 

@@ -1,37 +1,36 @@
 %button
-  @include border-radius(5px)
-  @include brandColors(background-color)
-  width: auto
-  background: $brand1
+  @include border-radius(2px)
   color: $white
-  cursor: pointer
   display: inline-block
   font-family: inherit
-  font-weight: bold
-  line-height: 1
   margin: 0
-  padding: ($btn-base + 2) ($btn-base * 2) ($btn-base - 1)
   position: relative
   text-align: center
   text-decoration: none
   border: none
-  // @include single-transition(background-color, .15s, ease-in-out)
   &:hover
     color: #fff
     background-color: lighten($brandBase,20)
 
 .button
   @extend %button
-  font-size: 14px
+  font-size: 16px
+  font-weight: 600
+  min-width: 150px
+  padding: ($btn-base + 2) ($btn-base * 2) ($btn-base - 1)
 
-.button--large
-  @extend %button
-  font-size: 18px
 
 .button--small
+  @extend %button
+  font-size: 14px
+  font-weight: 500
+  min-width: 80px
+  padding: $btn-base
 
 .button--full-width
+  @extend %button
   width: 100% !important
+  padding: ($btn-base + 2) ($btn-base * 2) ($btn-base - 1)
 
 .button--blue
   background-color: $brand1

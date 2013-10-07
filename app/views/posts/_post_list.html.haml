@@ -2,7 +2,7 @@
   - posts.each do |post|
     %li
       .post__list__information.row
-        .column.twelve.mobile-four
+        .column.large-12.small-4
           = link_to post.title, post, :class => "post__list__link"
         .column.large-12.small-4
           = link_to post.author_name, posts_path(author: post.author), rel: "author", itemprop: 'name', :class => "post__author"

@@ -15,9 +15,9 @@
           %li
             %a.brand1{href: main_app.page_path("about"), rel: "Main Navigation", class: active_page_class(main_app.page_path("about"))} About
           %li
-            %a.brand3{href: "#", rel: "Main Navigation", class: active_page_class(main_app.page_path("services"))} Services
+            %a.brand3{href: main_app.page_path("services"), rel: "Main Navigation", class: active_page_class(main_app.page_path("services"))} Services
           %li
-            %a.brand2{href: main_app.page_path("work"), rel: "Main Navigation", class: active_page_class(main_app.page_path("work")) || active_page_class(main_app.page_path("case-studies/lumbee"))} Work
+            %a.brand2{href: main_app.page_path("work"), rel: "Main Navigation", class: active_page_class(main_app.page_path("work")) || active_page_class(main_app.page_path("case-studies/lumbee")) || active_page_class(main_app.page_path("case-studies/ipc"))} Work
           %li
             %a.brand2{href: main_app.posts_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
           %li

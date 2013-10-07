@@ -1,208 +1,158 @@
 - content_for(:title) { "Gaslight: About Us" }
 = render partial: 'application/nav'
 
-#main.container.row
-  %header.row.brand1
-    .headline.large-4.columns
-      .headline__buzzword We’re Better <br/><strong>Together</strong>
+#main.landing-page
+  %section.landing__about
+    .row
+      .large-12.columns.large-centered
+        %h1.title--light We’re Better Together
+    .row
+      .large-8.columns.large-centered
+        %h3.subheader Our secret weapon? Collaboration.
+        .underline--blue
 
-    .intro.large-8.columns
-      %h1 Our secret weapon? Collaboration.
-      %p The design and development process shouldn’t be a mystery. At Gaslight, the whole team owns every project. And when you work with us, we consider you an integral part of the team.
-      %p In fact, you can expect to hear from us just about every day. And if you stop by the office, you'll find us sitting in one big room trading ideas on the best ways to make your project come alive.
 
-  %p.lead.show-for-small As a design and development shop, we're passionate about building your best ideas. We partner with you to create custom software, web apps and mobile apps. Let’s work together to create something that takes your business new places.
+  %section
+    .row
+      .large-8.columns.large-centered
+        %h2.subheader It’s Not About the Code
+        %p Sure, we love to geek out over technology and design. But it’s all for a bigger purpose: Boosting your business. We build apps that radically improve productivity, profits, client relationships and more. 
+    .row
+      .large-8.columns.large-centered
+        %h2.subheader It Is About the People
+        %p Achieving measurable business results means building deep partnerships. We assign a dedicated team to each project. And keep in touch just about every day during design and development. We’ll even invite you into our office to work side-by-side. 
 
-  %section.row.expertise
-    %a.anchor{name:"expertise"}
-    .large-11.columns.large-centered
-      %h2.title.brand1 Expertise
-      .row
-        .large-2.columns.iconTile
-          %i.icon-skills-backbone
-          %h2.title--expertise Backbone
-        .large-10.columns
-          %p We love building rich Web apps because they create incredible user experiences. These apps feature top-notch design, multitasking through threads, drag-and-drop capability, editing in real time, and quick response to user input. They can be accessed from any computer or even offline. To build these apps, we use the structure and foundation provided by Backbone.
-      .row
-        .large-2.columns.iconTile
-          %i.icon-skills-rails
-          %h2.title--expertise Ruby on Rails + Ruby
-        .large-10.columns
-          %p The Ruby programming language is smart, friendly, and easy to work with, making it a perfect choice for building high quality software. Another benefit? Ruby makes it easier to update and maintain your software long-term. Rails is the framework that makes Ruby operate on the Web.
-      .row
-        .large-2.columns.iconTile
-          %i.icon-skills-ios
-          %h2.title--expertise iOS
-        .large-10.columns
-          %p We can help you follow users wherever they go. Our development expertise includes creating apps for iPhones and iPads. These native apps create better user interactions than Web apps.
-      .row
-        .large-2.columns.iconTile.last
-          %i.icon-skills-ux
-          %h2.title--expertise User Experience
-        .large-10.columns
-          %p A focus on user experience allows us to create software and applications that are a pleasure for real people to use. How? We combine top-notch design with both internal and external testing. From sketches, to wireframes, to the final product, user experience brings your idea to life. 
+  %section.section--contrast
+    .row.large-centered
+      %h2.header.underline--blue Latest Ideas 
 
-  %section.row
-    %hr.divider.large-8.columns.large-centered
-    %row
-      .four.columns
-        %p
-          %strong Don’t see what you’re looking for on this list? We have a few more technology tricks up our sleeves.
-      .large-8.columns
-        %p Some of our other skills include: graphic design, agile development, story mapping, lean software development, game design and development, HTML/CSS, Ember.js, Node.js, embedded systems, hardware integration, developer training and more. The list is always growing.
-
-  %section.row.team.hide-for-small
+  %section.row.team
     %a.anchor{name:"team"}
-    %h2.title.brand1 The Team
-    %ul.large-8.columns.photos
+    %h2.header.underline--blue The Team
+    %ul.photos
       %li
         .photo
           %img{src: image_path("team/doug.jpg"), alt: "Doug Alcorn" }
           .overlay
             .links
+              %h3.subheader Doug Alcorn
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/dougalcorn", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/dougalcorn", rel: "Team Social"}
-        %h3 Doug Alcorn
       %li
         .photo
           %img{src: image_path("team/ryan.jpg"), alt: "Ryan Arthur" }
           .overlay
             .links
+              %h3.subheader Ryan Arthur
+              %h4 Designer
               %a.icon-github{target: "_blank", href: "http://github.com/arthurra"}
-        %h3 Ryan Arthur
       %li
         .photo
           %img{src: image_path("team/bill.jpg"), alt: "Bill Barnett" }
           .overlay
             .links
+              %h3.subheader Bill Barnett
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/agilous", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/agilous", rel: "Team Social"}
-        %h3 Bill Barnett
       %li
         .photo
           %img{src: image_path("team/tammy.jpg"), alt: "Tammy Gambrel" }
           .overlay
             .links
+              %h3.subheader Tammy Gambrel
+              %h4 Designer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/SilversunTammy", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "https://github.com/tammygambrel", rel: "Team Social"}
-        %h3 Tammy Gambrel
       %li
         .photo
           %img{src: image_path("team/dewayne.jpg"), alt: "Dewayne Greenwood" }
           .overlay
             .links
+              %h3.subheader Dewayne Greenwood
+              %h4 ??
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/xero6", rel: "Team Social"}
-        %h3 Dewayne Greenwood
       %li
         .photo
           %img{src: image_path("team/michael.jpg"), alt: "Michael Guterl" }
           .overlay
             .links
+              %h3.subheader Michael Guterl
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/mguterl", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/mguterl", rel: "Team Social"}
-        %h3 Michael Guterl
       %li
         .photo
           %img{src: image_path("team/peter.jpg"), alt: "Peter Kananen" }
           .overlay
             .links
+              %h3.subheader Peter Kananen
+              %h4 Project Guide
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/pkananen", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/pkananen", rel: "Team Social"}
-        %h3 Peter Kananen
       %li
         .photo
           %img{src: image_path("team/kristin.jpg"), alt: "Kristin Lasita" }
           .overlay
             .links
+              %h3.subheader Kristin Lasita
+              %h4 Designer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/kclasita", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/kclasita", rel: "Team Social"}
-        %h3 Kristin Lasita
       %li
         .photo
           %img{src: image_path("team/mitch.jpg"), alt: "Mitch Lloyd" }
           .overlay
             .links
+              %h3.subheader Mitch Lloyd
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/too_mitch", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/mitchlloyd", rel: "Team Social"}
-        %h3 Mitch Lloyd
       %li
         .photo
           %img{src: image_path("team/chris_m.jpg"), alt: "Chris Moore" }
           .overlay
             .links
+              %h3.subheader Chris Moore
+              %h4 Managing Partner
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/cdmwebs", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/cdmwebs", rel: "Team Social"}
-        %h3 Chris Moore
       %li
         .photo
           %img{src: image_path("team/chris_n.jpg"), alt: "Chris Nelson" }
           .overlay
             .links
+              %h3.subheader Chris Nelson
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/superchris", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/superchris", rel: "Team Social"}
-        %h3 Chris Nelson
       %li
         .photo
           %img{src: image_path("team/kevin.jpg"), alt: "Kevin Rockwood" }
           .overlay
             .links
+              %h3.subheader Kevin Rockwood
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/kevinrockwood", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/rockwood", rel: "Team Social"}
-        %h3 Kevin Rockwood
       %li
         .photo
           %img{src: image_path("team/james.jpg"), alt: "James Smith" }
           .overlay
             .links
+              %h3.subheader James Smith
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/st23am", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/st23am", rel: "Team Social"}
-        %h3 James Smith
       %li
         .photo
           %img{src: image_path("team/joel.jpg"), alt: "Joel Turnbull" }
           .overlay
             .links
+              %h3.subheader Joel Turnbull
+              %h4 Developer
               %a.icon-twitter{target: "_blank", href: "http://twitter.com/joelturnbull", rel: "Team Social"}
               %a.icon-github{target: "_blank", href: "http://github.com/joelturnbull", rel: "Team Social"}
-        %h3 Joel Turnbull
-    .large-4.columns.sidebar
-      %h5.brand1 A Little About Us
-      .content
-        %p No two Gaslighters are exactly alike. Each person on our team brings a different set of talents to the group. So when we put our heads together, we’re ready for almost any project.
-
-  %section.row.events
-    %a.anchor{name:"events"}
-    .large-11.columns.large-centered
-      %h2.title.brand1 Upcoming Events
-      #activities
-        .events.inactive
-        .spinner
-          %h4 Loading
-          %img{src: image_path('loading.gif')}
-
-  %section.row.videos
-    %a.anchor{name:"videos"}
-    .large-11.columns.large-centered
-      %h2.title.brand1 Videos
-      = render partial: 'application/videos'
 
 = render partial: 'application/footer'
-
-:plain
-  <script type="text/template" id="eventTemplate">
-    <div class="columns one mobile-one">
-      <img src="<%- person.gravatar_url %>" class="avatar" />
-    </div>
-    <div class="columns eleven mobile-three">
-      <span class="person"><a href="https://twitter.com/<%- person.twitter %>"><%- person.firstName %></a></span>
-      is <span class="verb"><%- verb %></span>
-      <span class="event"><a href="<%- url %>"><%- name %></a></span>
-      in
-      <span class="location"><%- location %></span> on <%- occursOn %>.
-    </div>
-  </script>
-
-- content_for(:javascript) do
-  :javascript
-    jQuery(function() { var activityView = new Gaslight.Views.ActivityView; });
-

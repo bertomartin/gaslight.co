@@ -1,49 +1,87 @@
 - content_for(:title) { "JavaScript and Ruby on Rails Training from Gaslight | Cincinnati, OH" }
 = render partial: 'application/nav'
 
-#main.container.row.training
-  %section.row
-    .eleven.columns.centered
-      %h2.title.recent--courses Featured Courses
-      .row
-        - featured_courses.each do |featured_course|
-          .six.columns
-            .featured-card
-              %p.featured-card__meta= featured_course.meta
-              %a.featured-card__title{href: course_path(featured_course)}
-                %h1= featured_course.title
-              %p.featured-card__synopsis= truncate(featured_course.synopsis, length: 160, omission: '...')
-              %a.featured-card__more-link{href: course_path(featured_course) } more info
-              - if featured_course.in_person?
-                %a.button.featured-card__button{href: course_path(featured_course)} Reserve your seat!
-              - else
-                %a.button.featured-card__button{href: classroom_index_path(anchor: "/courses/#{featured_course.id}")} Try now!
+#main.landing-page
+  %section.landing__about
+    .row
+      .large-12.columns.large-centered
+        %h1.title--light Build Great Things Faster
+    .row
+      .large-8.columns.large-centered
+        %h3.subheader Master the latest tools for developers with in-person and online training
+        .underline--blue
 
-  %section.row.course-list
-    .eleven.columns.centered
-      %h2.title Course List
-      - courses.each do |course|
-        .course-list__course
-          .row
-            .three.columns
-              %a{href: course_path(course)}
-                %img.course__image{src: course.image_url}
+  %section
+    .row.large-centered
+      %h2.header.underline--blue Upcoming Workshops
+    .row
+      .large-6.columns
+        %h3.subheader One-Day Angular JS Training
+        %p October 18, Chicago
+        %p AngularJS is a ridiculously productive way to build web applications. In this workshop, we’ll build an app together, so you’ll gain valuable hands-on experience.
+        %a.button--large.brand1{href: '/about'} Learn more about the class.
 
-            .nine.columns
-              %a.course__more-link{href: course_path(course)} more info
-              %a{href: course_path(course)}
-                %h1.course__heading= course.title
-              %p.course__description= course.synopsis
-              %ul.course__children-list
-                - course.child_courses.each do |child_course|
-                  %li.course__child
-                    %a{href: course_path(child_course)}= child_course.meta
-              .course__actions
-                - if course.in_person?
-                  %a.button{href: course_path(course)} Reserve your seat!
-                - else
-                  %a.button{href: new_course_registration_path(course)} Buy now!
-                  %a.button.button--request{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try now!
+  %section.section--contrast
+    .row.large-centered
+      %h2.header.underline--blue Online Classes
+    .row
+      .large-6.columns
+        %h3.subheader Backbone.js
+        %p Picking a client side MVC framework isn’t easy and seeing a trivial Todo app just doesn’t show how much these frameworks bring to the table. In this workshop, we’ll dive into Backbone.js.
+        %a.button--large.brand1{href: '/about'} Learn more about the class.
+
+  %section
+    .row.large-centered
+      %h2.header.underline--blue Custom Training Sessions
+    .row
+      .large-8.columns.large-centered
+        %p We can bring any workshop or class listed above right to your door. Or create a custom, hands-on training session tailored to your needs.
+        %a{href: "mailto:training@gaslight.co", rel: "Training Contact"} Let’s talk about a training session to move your team forward.
+
+
+/ #main.container.row.training
+/   %section.row
+/     .eleven.columns.centered
+/       %h2.title.recent--courses Featured Courses
+/       .row
+/         - featured_courses.each do |featured_course|
+/           .six.columns
+/             .featured-card
+/               %p.featured-card__meta= featured_course.meta
+/               %a.featured-card__title{href: course_path(featured_course)}
+/                 %h1= featured_course.title
+/               %p.featured-card__synopsis= truncate(featured_course.synopsis, length: 160, omission: '...')
+/               %a.featured-card__more-link{href: course_path(featured_course) } more info
+/               - if featured_course.in_person?
+/                 %a.button.featured-card__button{href: course_path(featured_course)} Reserve your seat!
+/               - else
+/                 %a.button.featured-card__button{href: classroom_index_path(anchor: "/courses/#{featured_course.id}")} Try now!
+
+/   %section.row.course-list
+/     .eleven.columns.centered
+/       %h2.title Course List
+/       - courses.each do |course|
+/         .row.course-list__course
+/           .three.columns
+/             %a{href: course_path(course)}
+/               %img.course__image{src: "http://s3.amazonaws.com/gaslight-co/static/images/angularjs-logo.png"}
+
+/           .nine.columns
+/             %a.course__more-link{href: course_path(course)} more info
+/             %a{href: course_path(course)}
+/               %h1.course__heading= course.title
+/             %p.course__description= course.synopsis
+/             %ul.course__children-list
+/               - course.child_courses.each do |child_course|
+/                 %li.course__child
+/                   %a{href: course_path(child_course)}= child_course.meta
+/             .course__actions
+/               - if course.in_person?
+/                 %a.button{href: course_path(course)} Reserve your seat!
+/               - else
+/                 %a.button{href: new_course_registration_path(course)} Buy now!
+/                 %a.button.button--request{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try now!
+/           %hr
 
 = render partial: 'application/footer'
 

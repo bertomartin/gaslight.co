@@ -4,55 +4,55 @@
 
 = render partial: 'application/nav'
 
-#guides
-  %section.landingpage
-    .row
-      .large-12.columns.large-centered
-        %h1.title We build apps that build businesses.
-    .row
-      .large-6.columns.large-centered
-        %p.lead
-          Gaslight is a design and development shop based around three driving principles.
-    .row
-      .large-8.column.centered.lbs.hide-for-small
-        .row
-          .large-4.columns
-            %a.button.button--blue{href: page_path('about')} Learn
-            %p
-              Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you. 
+
+%section.landingpage
+  .row
+    .large-12.columns.large-centered
+      %h1.title We build apps that build businesses.
+  .row
+    .large-6.columns.large-centered
+      %p.lead
+        Gaslight is a design and development shop based around three driving principles.
+  .row
+    .large-8.columns.large-centered.lbs.hide-for-small
+      .row
+        .large-4.columns
+          %a.button.button--brand1{href: page_path('about')} Learn
+          %p
+            Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you. 
+        
+        .large-4.columns
+          %a.button.button--brand2{href: page_path('case-studies/ipc')} Build
+          %p
+            We wield our coding, design and UX chops to create custom software or super-charge existing software. See our <a class="brand2--link" href="case-studies/ipc" rel="Case Study">latest work.</a>
+        .large-4.columns
+          %a.button.button--brand3{href: page_path('blog')} Share
+          %p
+            We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, podcast and training classes
+  .row
+    .large-8.column.large-centered.lbs.show-for-small
+      .row
+        .large-4.columns
+          %a.button.brand1{href: page_path('about')} Learn
+         
+        .large-4.columns
+          %a.button.brand2{href: page_path('case-studies/ipc')} Build
           
-          .large-4.columns
-            %a.button.button--yellow{href: page_path('case-studies/ipc')} Build
-            %p
-              We wield our coding, design and UX chops to create custom software or super-charge existing software. See our <a class="brand2--link" href="case-studies/ipc" rel="Case Study">latest work.</a>
-          .large-4.columns
-            %a.button.button--red{href: page_path('blog')} Share
-            %p
-              We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, podcast and training classes
-    .row
-      .large-8.column.large-centered.lbs.show-for-small
-        .row
-          .large-4.columns
-            %a.button.brand1{href: page_path('about')} Learn
-           
-          .large-4.columns
-            %a.button.brand2{href: page_path('case-studies/ipc')} Build
-            
-          .large-4.columns
-            %a.button.brand3{href: page_path('blog')} Share
+        .large-4.columns
+          %a.button.brand3{href: page_path('blog')} Share
            
 #main
-  %section.landing__about
+  %section.header--about
     .row
       %h2.header--light We Are
       .underline--blue 
     .row
       .large-8.columns.large-centered
-        %p.lead
+        %p.lead--light
           We are a group of designers, developers and project guides passionate about revving up your business. We love to create technology tools that solve hard problems. And make your company faster and more profitable. 
     .row
       .large-3.columns.large-centered
-        %a.button.button--blue{href: '/about'} Learn How We Work
+        %a.button.button--brand1{href: '/about'} Learn How We Work
 
   %section
     .row
@@ -78,12 +78,13 @@
       .underline--blue 
     .row
       .large-8.columns.large-centered
-        %h3.subheader Lumbee Enterprises
-        %p.lead
+        %a{href: '/case-studies/lumbee'}
+          %h3.subheader.brand1 Lumbee Enterprises
+        %p.lead--light
           A software overhaul for the automotive industry that drives real business results.
     .row
       .large-3.columns.large-centered
-        %a.button--large.brand1{href: '/case-studies/lumbee'} Read the case study
+        %a.button.button--brand1{href: '/case-studies/lumbee'} Read the case study
 
      
   %section
@@ -92,13 +93,15 @@
       .underline--yellow 
     .row
       .large-6.columns
-        %a.anchor{name:"events"}
-          %h3.subheader Upcoming Events
-          #activities
-            .events.inactive
-            .spinner
-              / %h4 Loading
-              / %img{src: image_path('loading.gif')}
+        %table
+          %thead.table__header--brand2
+            %h3.subheader{name:"events"} Upcoming Events
+          %tbody
+            #activities
+              .events.inactive
+              .spinner
+                / %h4 Loading
+                / %img{src: image_path('loading.gif')}
       .large-4.columns
         %p
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
@@ -108,10 +111,10 @@
 
 :plain
   <script type="text/template" id="eventTemplate">
-    <div class="columns one mobile-one">
+    <div class="columns large-1 small-1">
       <img src="<%- person.gravatar_url %>" class="avatar" />
     </div>
-    <div class="columns eleven mobile-three">
+    <div class="columns large-11 small-3">
       <span class="person"><a href="https://twitter.com/<%- person.twitter %>"><%- person.firstName %></a></span>
       is <span class="verb"><%- verb %></span>
       <span class="event"><a href="<%- url %>"><%- name %></a></span>

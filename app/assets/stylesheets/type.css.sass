@@ -13,11 +13,15 @@ a:hover, a:active, a:focus
   font-size: 18px
   line-height: 1.4
   margin-bottom: 20px
+  text-rendering: optimizeLegibility
   &.lead
-    font-style: normal
+    font-weight: normal
     font-size: 1.3em
     line-height: 1.5em
     margin-bottom: 35px
+  &.lead--light
+    @extend .lead
+    color: #fff
 
 //---------------//
 //     Type     //
@@ -27,6 +31,7 @@ a:hover, a:active, a:focus
   font-size: 4em
   display: block
   text-align: center
+  text-rendering: optimizeLegibility
 
 .title
   @extend %title
@@ -40,6 +45,8 @@ a:hover, a:active, a:focus
 %header
   display: block
   margin: auto
+  color: $brandBase
+  text-rendering: optimizeLegibility
 
 .header
   @extend %header
@@ -89,6 +96,7 @@ a:hover, a:active, a:focus
 %subtitle
   font-size: 1.2
   font-weight: 600
+  text-rendering: optimizeLegibility
 
 .subtitle
   @extend %subtitle
@@ -119,6 +127,7 @@ aside p
   font-family: "DINWeb"
   text-rendering: optimizeLegibility
   line-height: 1.1em
+  color: $brandBase
   margin-bottom: ms(0)
   margin-top: ms(0)
   small 

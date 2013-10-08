@@ -1,0 +1,35 @@
+.latest-post
+  +border-radius(2px)
+  background-color: #fff
+  border: 1px solid #E1E1E1
+  padding: 15px
+
+.latest-post__author-photo
+  display: block
+  height: 55px
+  width: 55px
+  margin: 10px auto
+  +border-radius(50%)
+  border: 2px solid $brand2
+  overflow: hidden
+
+.latest-post__title
+  font-weight: 600
+  display: block
+  text-align: center
+  margin: 0
+
+.latest-post__meta
+  display: block
+  text-align: center
+  p
+    @extend %caption
+    display: inline
+    color: #BBBBBB
+
+.latest-post__description
+  @extend %caption
+  margin: 20px 0 25px
+
+.latest-post__link
+  //margin: -15px 0

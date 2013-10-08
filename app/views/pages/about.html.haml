@@ -2,30 +2,63 @@
 = render partial: 'application/nav'
 
 #main.landing-page
-  %section.landing__about
+  %section.header--about
     .row
       .large-12.columns.large-centered
         %h1.title--light We’re Better Together
     .row
-      .large-8.columns.large-centered
+      .large-12.columns.large-centered
         %h3.subheader--light Our secret weapon? Collaboration.
         .underline--blue
 
 
   %section
+    .row--lg-margin-bottom
+      .large-8.columns.large-centered
+        .row
+          .large-2.columns
+          .large-10.columns
+            %h2.subheader It’s Not About the Code
+            %p Sure, we love to geek out over technology and design. But it’s all for a bigger purpose: Boosting your business. We build apps that radically improve productivity, profits, client relationships and more. 
     .row
       .large-8.columns.large-centered
-        %h2.subheader It’s Not About the Code
-        %p Sure, we love to geek out over technology and design. But it’s all for a bigger purpose: Boosting your business. We build apps that radically improve productivity, profits, client relationships and more. 
-    .row
-      .large-8.columns.large-centered
-        %h2.subheader It Is About the People
-        %p Achieving measurable business results means building deep partnerships. We assign a dedicated team to each project. And keep in touch just about every day during design and development. We’ll even invite you into our office to work side-by-side. 
+        .row
+          .large-2.columns
+          .large-10.columns
+            %h2.subheader It Is About the People
+            %p Achieving measurable business results means building deep partnerships. We assign a dedicated team to each project. And keep in touch just about every day during design and development. We’ll even invite you into our office to work side-by-side. 
 
   %section.section--contrast
-    .row.large-centered
+    .row
       %h2.header Latest Ideas 
-      .underline--blue
+      .underline--yellow
+    .row
+      .large-8.columns.large-centered
+        .row
+          .large-6.columns
+            .latest-post
+              .latest-post__author-photo
+                %img{src: image_path("team/joel.jpg"), alt: "Joel Turnbull" }
+              %p.latest-post__title Six Ways To Remove Pain From Feature Testing In Ruby On Rails
+              .latest-post__meta
+                %p.meta__author Joel Turnbull 
+                %p -
+                %p.meta__date October 2,  2013
+              %p.latest-post__description
+                Writing feature tests in Ruby on Rails used to be the most painful part of my development work flow. Now I kind of like it.
+              %a.button--full-width.button--brand2.latest-post__link Read Full Post
+          .large-6.columns
+            .latest-post
+              .latest-post__author-photo
+                %img{src: image_path("team/joel.jpg"), alt: "Joel Turnbull" }
+              %p.latest-post__title Six Ways To Remove Pain From Feature Testing In Ruby On Rails
+              .latest-post__meta
+                %p.meta__author Joel Turnbull 
+                %p -
+                %p.meta__date October 2,  2013
+              %p.latest-post__description
+                Writing feature tests in Ruby on Rails used to be the most painful part of my development work flow. Now I kind of like it.
+              %a.button--full-width.button--brand2.latest-post__link Read Full Post
 
   %section.row.team
     %a.anchor{name:"team"}

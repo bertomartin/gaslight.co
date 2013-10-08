@@ -1,3 +1,16 @@
+.brand1
+  color: $brand1
+
+.brand2
+  color: $brand2
+
+.brand3
+  color: $brand3
+
+.row--lg-margin-bottom
+  @extend .row
+  margin-bottom: 70px
+
 #guides
   @include clearfix()
   overflow: hidden
@@ -24,9 +37,7 @@
 .landingpage
   position: relative
   margin-top: 100px + $topbar-height
-  margin-bottom: 150px
   padding: 10px 0
-  background: rgba(244, 244, 244, 0.8)
 
 .landingpage__tagline
   text-align: center
@@ -42,6 +53,9 @@
   font-size: 24px
   font-weight: normal
 
+.landingpage .lead
+  text-align: center
+
 .landing-page__info
   margin-top: 5px
   p
@@ -49,12 +63,11 @@
 .landing-page__contact p
   margin-bottom: 5px
 .lbs
-  width: 100%
   text-align: center
   display: inline-block
   p
     color: #222
-    font-size: 14px
+    font-size: 15px
     margin: 10px 0
   .button--large
     width: 100%

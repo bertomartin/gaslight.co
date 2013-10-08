@@ -7,24 +7,40 @@
   background-position: top center
   padding: 125px 0
 
-.landing__about
-  @extend %image--full-width
-  background-image: image-url("landing/group.jpg")
+%landing-header
+  text-align: center
+  h3[class*="subheader"]
+    margin-top: 10px
+    margin-bottom: 45px 
 
 .case-study--home
   @extend %image--full-width
+  @extend %landing-header
   background-image: image-url("landing/lumbee.jpg")
 
 .header--about
   @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/group.jpg")
+
+.header--about
+  @extend %image--full-width
+  @extend %landing-header
   background-image: image-url("landing/lumbee.jpg")
 
 .header--services
   @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/contact.jpg")
+
+.header--work
+  @extend %image--full-width
+  @extend %landing-header
   background-image: image-url("landing/contact.jpg")
 
 .header--training
   @extend %image--full-width
+  @extend %landing-header
   background-image: image-url("landing/training.jpg")
 
 

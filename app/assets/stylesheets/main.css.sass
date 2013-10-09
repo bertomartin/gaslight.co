@@ -302,12 +302,13 @@
 
 
 ul.photos li
-  height: 170px
-  width: 126px
+  width: 18%
   list-style: none
   float: left
-  margin: 0 8px 0 0
+  margin: 0 2% 15px 0
   position: relative
+  &:last-child
+    margin: 0 0 0 0
   h3
     line-height: 1.1em
   .photo
@@ -316,12 +317,13 @@ ul.photos li
     margin-bottom: 8px
     img
       vertical-align: bottom
+      width: 100%
     .overlay
       position: absolute
       width: 100%
       height: 100%
       top: 100%
-      background: rgba(87, 192, 232, 0.7)
+      background: transparentize($brand2, 0.25)
       @include transition-property(top)
       @include transition-duration(0.5s)
     .links
@@ -337,11 +339,13 @@ ul.photos li
 
   &:hover .overlay
     top: 0
-
-  h3
-    text-align: center
-    font-size: 14px
+  .subheader
+    color: #fff
     margin: 0
+    font-weight: 600
+  .subtitle
+    color: #fff
+    font-weight: 300
 
 // .skillList
 //   li

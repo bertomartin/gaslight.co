@@ -2,13 +2,13 @@
 = render partial: 'application/nav'
 
 #main.landing-page
-  %section.landing__about
+  %section.header--about
     .row
       .large-12.columns.large-centered
         %h1.title--light Let’s Keep in Touch
     .row
       .large-8.columns.large-centered
-        %h3.subheader We’re big on community and love to connect with new people. Say hello.
+        %h3.subheader--light We’re big on community and love to connect with new people. Say hello.
         .underline--red
   %section.row
     .large-4.columns
@@ -16,23 +16,32 @@
       %a{target: "_blank", href: "http://goo.gl/maps/aNb8r", rel: "Contact Header Google Map"}
     .large-8.columns
       %h3.subheader Kick Off a Project
-      %p Ready to work together? Just answer a 
-      %a{href: "#", rel: "Project Form"}few quick questions. 
+      %p 
+        Ready to work together? Just answer a 
+        %a.brand3{href: "#", rel: "Project Form"}few quick questions. 
+
       %h3.subheader Say Hello
-      %address
-      %a{href: "tel:8885073430", rel: "Contact Header"} 1-888-507-3430
-      %address
-      %a{href: "mailto:hello@gaslight.co", rel: "Contact Header"} hello@gaslight.co
+      %p 
+        Drop us a line by email 
+        %a.brand3{href: "mailto:hello@gaslight.co", rel: "Contact Header"} hello@gaslight.co
+        or give us a ring at
+        %a.brand3{href: "tel:8885073430", rel: "Contact Header"} 1-888-507-3430
+      
+
       %h3.subheader Have Coffee with Gaslight 
-      %p We open our office every Friday morning at 8 a.m. for free lattes and good conversation. Stop by and 
-      %a{ href: page_path('coffee') }join us. 
+      %p 
+        We open our office every Friday morning at 8 a.m. for free lattes and good conversation. Stop by and 
+        %a.brand3{ href: page_path('coffee') }join us.
+
       %h3.subheader Careers
-      %p We’re always scouting talent. Send work samples to: 
-      %a{href: "mailto:careers@gaslight.co", rel: "Contact Career"} careers@gaslight.co
+      %p 
+        We’re always scouting talent. Send work samples to: 
+        %a.brand3{href: "mailto:careers@gaslight.co", rel: "Contact Career"} careers@gaslight.co
 
   %section.section--contrast
     .row
-      %h2.header.underline--red Places You’ll Find Us
+      %h2.header Places You’ll Find Us
+      .underline--red
     .row
       .large-8.columns.large-centered
         %p.lead

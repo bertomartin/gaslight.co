@@ -1,6 +1,18 @@
 ActiveAdmin.register TrainingApp::Course do
   menu label: 'Courses', parent: 'Training'
 
+  controller do
+    def permitted_params
+      params.permit(training_app_course: [:venue_id, :parent_course_id, :title,
+                                          :description_main, :synopsis,
+                                          :start_date, :end_date, :price,
+                                          :image_url, :registration_link,
+                                          :color_primary, :color_secondary,
+                                          :active, :online, :featured,
+                                          :instructors])
+    end
+  end
+
   index do
     column :title
     column :parent_course

@@ -19,9 +19,16 @@
         = render child_course
 
       .request
+        %h4 Can't make this date or location?
         %p
-          We can bring this workshop to your location for private training as well.
-        %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Request it!
+          We’d love to set up a private training session for your group or team.
+        %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now
+
+      .newsletter
+        %h4 Want to know about future workshops?
+        %p
+          Sign-up for our monthly e-mail newsletter:
+          = render partial: 'application/newsletter'
 
       - course.instructors.each do |instructor|
         .instructor

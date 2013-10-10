@@ -22,6 +22,9 @@ body.active_admin {
       }
     }
   }
+  table pre {
+    white-space: pre-wrap;
+  }
 }
 
 #editor { 

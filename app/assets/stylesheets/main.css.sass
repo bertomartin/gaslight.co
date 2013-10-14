@@ -29,15 +29,30 @@
   margin-bottom: 150px
   padding: 10px 0
 
+#main.landing
+  padding: 0
+
 .section--contrast
   background-color: $section-contrast
 
-  
+img
+  background-color: #f7f7f7
+  width: 9em
+  +border-radius(50%)
+  text-align: center
+  margin: 10px auto
+  display: block
+
+.icons--homepage
+  margin-bottom: 30px
+
 // ------  Landing Page ------ //
 .landingpage
   position: relative
   margin-top: 100px + $topbar-height
   padding: 10px 0
+  margin-bottom: 100px
+  background: rgba(244,244,244,0.8)
 
 .landingpage__tagline
   text-align: center
@@ -62,17 +77,13 @@
     margin-bottom: 30px
 .landing-page__contact p
   margin-bottom: 5px
-.lbs
+.overview--home
   text-align: center
   display: inline-block
   p
     color: #222
     font-size: 15px
     margin: 10px 0
-  .button--large
-    width: 100%
-    text-transform: uppercase
-    margin-top: 10px
 
 .iconTile
   text-align: center
@@ -200,41 +211,41 @@
 //   i[class^="icon"]
 //     display: inline-block
 
-  %landing-page__sidebar
-    border-top-width: 8px
-    border-top-style: solid
-    padding-top: 10px
+  // %landing-page__sidebar
+  //   border-top-width: 8px
+  //   border-top-style: solid
+  //   padding-top: 10px
 
-  .landing-page__sidebar--about
-    @extend %landing-page__sidebar
-    border-top-color: $brand1
-    color: #fff
+  // .landing-page__sidebar--about
+  //   @extend %landing-page__sidebar
+  //   border-top-color: $brand1
+  //   color: #fff
 
-  .landing-page__sidebar--contact
-    @extend %landing-page__sidebar
-    border-top-color: $brand2
-    color: #fff
+  // .landing-page__sidebar--contact
+  //   @extend %landing-page__sidebar
+  //   border-top-color: $brand2
+  //   color: #fff
 
-  .landing-page__sidebar--process
-    @extend %landing-page__sidebar
-    border-top-color: $brand3
+  // .landing-page__sidebar--process
+  //   @extend %landing-page__sidebar
+  //   border-top-color: $brand3
 
-  h4.landing-page__subheading
-    color: $brand3
-    font-size: 18px
-    margin-top: 0
-    margin-bottom: 10px
+  // h4.landing-page__subheading
+  //   color: $brand3
+  //   font-size: 18px
+  //   margin-top: 0
+  //   margin-bottom: 10px
 
-  .landing-page__heading
-    color: $brandBase
-    font-size: 18px
-    text-transform: uppercase
-    font-weight: bolder
-    margin-top: 10px
-    margin-bottom: 5px
-  .hero--process
-    p
-      color: lighten($brandBase,30)
+  // .landing-page__heading
+  //   color: $brandBase
+  //   font-size: 18px
+  //   text-transform: uppercase
+  //   font-weight: bolder
+  //   margin-top: 10px
+  //   margin-bottom: 5px
+  // .hero--process
+  //   p
+  //     color: lighten($brandBase,30)
 
   ul.landing-page__contact
     margin-top: 5px

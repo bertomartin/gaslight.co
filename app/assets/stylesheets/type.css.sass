@@ -8,27 +8,41 @@ a:hover, a:active, a:focus
   outline: none
   color: darken($brand1,10)
 
-%body
-  font-family: inherit
-  font-size: 18px
+
+.body
+  // font-size: 18px
   line-height: 1.4
   margin-bottom: 20px
-  text-rendering: optimizeLegibility
-  &.lead
-    font-weight: normal
-    font-size: 1.3em
-    line-height: 1.5em
-    margin-bottom: 35px
-  &.lead--light
-    @extend .lead
-    color: #fff
 
+%lead-paragraph
+  font-weight: 400
+  font-size: 1.2em
+  line-height: 1.45em
+  margin-bottom: 30px
+
+p.lead
+  @extend %lead-paragraph
+
+
+p.lead--light
+  @extend %lead-paragraph
+  color: #fff
+
+p.standalone
+  font-weight: 400
+  font-size: 1.7em
+  line-height: 1.4em
+  text-align: center
+  margin-bottom: 30px
+  margin-top: 15px
+.center
+  text-align: center
 //---------------//
 //     Type     //
 //-------------//
 
 %title
-  font-size: 4em
+  font-size: 4.4em
   display: block
   text-align: center
   text-rendering: optimizeLegibility
@@ -65,11 +79,12 @@ a:hover, a:active, a:focus
 
 .subheader
   @extend %header
-  font-size: 1.5em
+  font-size: 1.2em
+  font-weight: 700
 
 .subheader--light
   @extend %header
-  font-size: 1.5em
+  font-size: 1.2em
   color: #fff
   font-weight: 400
 
@@ -116,6 +131,7 @@ a:hover, a:active, a:focus
 
 p
   @extend %body
+  line-height: 1.4em
 
 aside p 
   @extend %body
@@ -137,7 +153,7 @@ aside p
 h1 
   @extend %headline
   font-weight: bolder
-  line-height: 1.3em
+  line-height: 1.1em
 h2  
   @extend %headline
   font-weight: bold

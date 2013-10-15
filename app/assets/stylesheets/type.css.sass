@@ -38,6 +38,7 @@ p.standalone
   
 .center
   text-align: center
+
 //---------------//
 //     Type     //
 //-------------//
@@ -56,6 +57,12 @@ p.standalone
   @extend %title
   color: #fff
   font-weight: 600
+
+@media only screen and (max-width: 767px)
+  .title--light, .title
+    font-size: 2.2em
+  p.standalone
+    font-size: 1.3em
 
 %header
   display: block

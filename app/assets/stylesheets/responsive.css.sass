@@ -19,6 +19,13 @@
       border-bottom: 2px solid #fff
       font-weight: lighter
       font-size: 24px
+  #footer .socialLinks--footer
+    float: none
+
+  #main section
+    padding: 2em 0 3em 0
+    &:last-child
+      padding-bottom: 20px + $footerHeight
 
   #guides
   .sidebar
@@ -40,22 +47,6 @@
   hr.divider
     margin-bottom: 40px
 
-  h2.title
-    margin-right: 0
-    margin-left: 0
-    margin-bottom: 30px
-    font-size: 24px
-    &:before, &:after
-      margin: 0 10px
-    &.brand1
-      &:before, &:after
-        // @include icon-sprite(diamond-small-blue)
-    &.brand2
-      &:before, &:after
-        // @include icon-sprite(diamond-small-yellow)
-    &.brand3
-      &:before, &:after
-        // @include icon-sprite(diamond-small-red)
   .landingpage
     margin-top: 15px + $topbar-height
     margin-bottom: 15px
@@ -73,16 +64,8 @@
       display: none
     > .columns
       padding: 0
+
   #main.landing-page
-    .hero--weare, .hero--worktogether
-      padding: 40px 0
-      height: 100%
-      .button
-        width: 100%
-    .hero--process
-      padding: 40px 0
-      .button
-        width: 100%
 
   .post__title
     font-size: 20px
@@ -124,6 +107,8 @@
 
   .hero--featured
     height: 100%
+
+
 //iPad and down
 @media only screen and (max-width : 1024px)
   .post__avatar

@@ -9,7 +9,7 @@
 
 .row--lg-margin-bottom
   @extend .row
-  margin-bottom: 70px
+  // margin-bottom: 70px
 
 #guides
   @include clearfix()
@@ -21,12 +21,14 @@
     top: 0px
 
 #main section
-  padding: 5em 0 7em 0
+  padding: 4em 0 5em 0
+  &:last-child
+    padding-bottom: 80px + $footerHeight
 
 #main section.header
   position: relative
   margin-top: 100px + $topbar-height
-  margin-bottom: 150px
+  // margin-bottom: 150px
   padding: 10px 0
 
 #main.landing
@@ -35,7 +37,7 @@
 .section--contrast
   background-color: $section-contrast
 
-img
+img.icon
   background-color: #f7f7f7
   width: 9em
   +border-radius(50%)
@@ -88,6 +90,38 @@ img
 .iconTile
   text-align: center
   margin-bottom: 20px
+
+.upcoming-events
+  border: 1px solid #eee
+  background-color: #fff
+  +border-radius(2px)
+
+.upcoming-events h3
+  background-color: $brand2
+  text-align: center
+  color: #fff
+  font-weight: 400
+  padding: 9px 0 6px
+
+.avatar
+  display: block
+  height: 100%
+  width: 100%
+  margin: 10px auto
+  +border-radius(50%)
+  overflow: hidden
+
+.upcoming-events__info
+  margin-top: 4%
+
+#activities
+  padding: 15px 20px 0
+  a
+    color: $brand2
+    &:hover
+      color: darken($brand2, 10)
+
+
 
 #main
   background: #fff
@@ -370,27 +404,27 @@ ul.photos li
 //       background: $brand1
 //       color: #fff
 
-.socialLinks--footer
-  margin: 0 0 0 -20px
-  li
-    list-style: none
-    display: inline-block
+// .socialLinks--footer
+//   margin: 0 0 0 -20px
+//   li
+//     list-style: none
+//     display: inline-block
 
-.socialLinks
-  li
-    list-style: none
-    display: inline-block
-    margin-top: 10px
-    a
-      color: $brandBase
-      font-weight: bold
-      border: 1px solid $brandBase
-      padding: 10px 20px
-      margin: 0 5px
-      &:hover
-        color: #fff
-        background-color: $brandBase
-        border: 1px solid $brandBase
+// .socialLinks
+//   li
+//     list-style: none
+//     display: inline-block
+//     margin-top: 10px
+//     a
+//       color: $brandBase
+//       font-weight: bold
+//       border: 1px solid $brandBase
+//       padding: 10px 20px
+//       margin: 0 5px
+//       &:hover
+//         color: #fff
+//         background-color: $brandBase
+//         border: 1px solid $brandBase
 
 .clientsList
   text-align: center

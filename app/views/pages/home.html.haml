@@ -60,21 +60,21 @@
       .underline--red
     .row.icons--homepage
       .large-3.columns
-        =image_tag "icons/home-ignite.svg"
+        =image_tag "icons/home-ignite.svg", :class => "icon"
         %h3.subheader.center Idea Igniter
-        %p.center Turn your big idea into an actionable plan with The Igniter.    
+        %p.center Turn your big idea into an <a class="brand3--link" href="services" rel="Igniter">actionable plan </a> with The Igniter.    
       .large-3.columns
-        =image_tag "icons/home-develop.svg"
+        =image_tag "icons/home-develop.svg", :class => "icon" 
         %h3.subheader.center Custom Software Development 
-        %p.center Boost profits and productivity with a new or upgraded app.
+        %p.center Boost profits and productivity with a <a class="brand3--link" href="services" rel="CustomSoftware">new or upgraded app.</a>
       .large-3.columns
-        =image_tag "icons/home-design.svg"
+        =image_tag "icons/home-design.svg", :class => "icon"
         %h3.subheader.center Design and User Experience
-        %p.center Create on-brand tools that are easy to use and easy on the eyes. 
+        %p.center Create <a class="brand3--link" href="services" rel="Design">on-brand tools</a> that are easy to use and easy on the eyes. 
       .large-3.columns
-        =image_tag "icons/home-learning.svg"
+        =image_tag "icons/home-learning.svg", :class => "icon"
         %h3.subheader.center Online and In-Person Training
-        %p.center Learn the latest development tools to work smarter and faster.
+        %p.center Learn the latest development tools to <a class="brand3--link" href="training" rel="Learning">work smarter and faster</a>.
     .row
       .large-3.columns.large-centered
         %a.button--full-width.button--brand3{href: '/services'} See our skills
@@ -84,9 +84,8 @@
       %h2.header--light Latest Work
       .underline--blue 
     .row
-      .large-8.columns.large-centered
-        %a{href: '/case-studies/lumbee'}
-          %h3.subheader.brand1 Lumbee Enterprises
+      .large-7.columns.large-centered
+        %h3.brand1 Lumbee Enterprises
         %p.lead--light
           A software overhaul for the automotive industry that drives real business results.
     .row
@@ -94,7 +93,7 @@
         %a.button--full-width.button--brand1{href: '/case-studies/lumbee'} Read the case study
 
      
-  %section
+  %section.section--contrast
     .row
       %h2.header Let's Keep in Touch
       .underline--yellow 
@@ -104,24 +103,23 @@
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
           = render partial: 'application/newsletter'
       .large-6.columns
-        %table
-          %thead.table__header--brand2
-            %h3.subheader{name:"events"} Upcoming Events
-          %tbody
-            #activities
-              .events.inactive
-              .spinner
-                / %h4 Loading
-                / %img{src: image_path('loading.gif')}
+        .upcoming-events
+          %table
+            %thead.table__header--brand2
+              %h3.subheader{name:"events"} Upcoming Gaslight Events
+            %tbody
+              #activities
+                .events.inactive
+
 
 = render partial: 'application/footer'
 
 :plain
   <script type="text/template" id="eventTemplate">
-    <div class="columns large-1 small-1">
+    <div class="columns large-2 small-2 upcoming-events__author">
       <img src="<%- person.gravatar_url %>" class="avatar" />
     </div>
-    <div class="columns large-11 small-3">
+    <div class="columns large-10 small-10 upcoming-events__info">
       <span class="person"><a href="https://twitter.com/<%- person.twitter %>"><%- person.firstName %></a></span>
       is <span class="verb"><%- verb %></span>
       <span class="event"><a href="<%- url %>"><%- name %></a></span>

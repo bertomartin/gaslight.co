@@ -10,10 +10,30 @@
       .large-8.columns.large-centered
         %h3.subheader--light We’re big on community and love to connect with new people. Say hello.
         .underline--red
+    / .buttonLinks.show-for-small
+    /   %a.button.button--brand1{href: "tel:8885073430", rel: "Mobile contact button"} Call
+    /   %a.button.button--brand2{href: "mailto:hello@gaslight.co", rel: "Mobile contact button"} Email
+    /   %a.button.button--brand3{href: "http://goo.gl/maps/aNb8r", rel: "Mobile contact button"} Maps
+
+  / %section.row.contact
+  /   .large-11.columns.centered
+  /     %h2.title.brand3 Work With Us
+  /   .row
+  /     .large-4.columns.sidebar
+  /       %h5.brand3 The New Project Form
+  /       .content
+  /         %p <strong>Have an idea that’s ready for design and development?</strong> Kick things off by filling out our new project form. It helps us get to know you and your idea a little better. 
+
+  /         %p We’ll follow-up within three business days to talk about how we might be able to help.
+  /     .large-8.columns.sidebar
+  /       #contact 
+  /         = render partial: 'form' 
+
   %section.row
     .large-4.columns
-      %h2.subheader Visit our Cincinnati office. 
       %a{target: "_blank", href: "http://goo.gl/maps/aNb8r", rel: "Contact Header Google Map"}
+        =image_tag "icons/contact-us.svg", :class => "icon--link--large" 
+      %h2.subheader.center Visit our Cincinnati office. 
     .large-8.columns
       %h3.subheader Kick Off a Project
       %p 
@@ -44,35 +64,25 @@
       .underline--red
     .row
       .large-8.columns.large-centered
-        %p.lead
+        %p.lead.center
           Try one of these local events we founded, host or both. Oh, and there’s usually beer, too.
     .row
       .large-3.columns
-        %h3.subheader QC Merge
+        %a{target: "_blank", href: "http://qcmerge.com/", rel: "QCMerge"}
+          =image_tag "icons/contact-qcmerge.svg", :class => "icon--link" 
+        %h3.subheader.center QC Merge
       .large-3.columns
-        %h3.subheader Web/Tech Drinkup
+        %a{target: "_blank", href: "http://www.meetup.com/Cincinnati-Web-Tech-Drinkup/", rel: "Webtech"}
+          =image_tag "icons/contact-drinkup.svg", :class => "icon--link" 
+        %h3.subheader.center Web/Tech Drinkup
       .large-3.columns
-        %h3.subheader Cincy RB
+        %a{target: "_blank", href: "http://cincyrb.com/", rel: "Cincyrb"}
+          =image_tag "icons/contact-cincirb.svg", :class => "icon--link" 
+        %h3.subheader.center Cincy RB
       .large-3.columns
-        %h3.subheader EmberNati
+        %a{target: "_blank", href: "http://www.meetup.com/EmberNati/", rel: "Embernati"}
+          =image_tag "icons/contact-embernati.svg", :class => "icon--link" 
+        %h3.subheader.center EmberNati
 
-  .buttonLinks.show-for-small
-    %a.button.brand3{href: "tel:8885073430", rel: "Mobile contact button"} Call
-    %a.button.brand3{href: "mailto:hello@gaslight.co", rel: "Mobile contact button"} Email
-    %a.button.brand3{href: "http://goo.gl/maps/aNb8r", rel: "Mobile contact button"} Maps
-
-  / %section.row.contact
-  /   .large-11.columns.centered
-  /     %h2.title.brand3 Work With Us
-  /   .row
-  /     .large-4.columns.sidebar
-  /       %h5.brand3 The New Project Form
-  /       .content
-  /         %p <strong>Have an idea that’s ready for design and development?</strong> Kick things off by filling out our new project form. It helps us get to know you and your idea a little better. 
-
-  /         %p We’ll follow-up within three business days to talk about how we might be able to help.
-  /     .large-8.columns.sidebar
-  /       #contact 
-  /         = render partial: 'form'
 
 = render partial: 'application/footer'

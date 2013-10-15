@@ -5,14 +5,20 @@
   padding: 15px
   margin-bottom: 10px
 
-.latest-post__author-photo
+%post-author
   display: block
   height: 55px
   width: 55px
-  margin: 10px auto
   +border-radius(50%)
-  border: 2px solid $brand2
   overflow: hidden
+
+.upcoming-events__author
+  @extend post-author
+
+.latest-post__author-photo
+  @extend post-author
+  margin: 10px auto
+  border: 2px solid $brand2
 
 .latest-post__title
   font-weight: 600

@@ -14,12 +14,21 @@
   +border-radius(50%)
   text-align: center
   display: block
+  @include transition-duration(0.5s)
 
 img.icon
   @extend %icon
   background-color: #f7f7f7
   width: 9em
   margin: 10px auto
+
+img.icon--link
+  @extend %icon
+  background-color: #f7f7f7
+  width: 9em
+  margin: 10px auto
+  &:hover
+    background-color: #eeeeee
 
 %icon--footer
   @extend %icon

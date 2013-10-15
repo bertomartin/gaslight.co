@@ -12,10 +12,10 @@
       - if course.online?
         = render course
 
-      - course.sibling_courses.each do |sibling_course|
+      - course.sibling_courses.active.each do |sibling_course|
         = render sibling_course
 
-      - course.child_courses.each do |child_course|
+      - course.child_courses.active.each do |child_course|
         = render child_course
 
       .request

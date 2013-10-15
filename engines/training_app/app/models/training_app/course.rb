@@ -61,7 +61,7 @@ module TrainingApp
     end
 
     def sibling_courses
-      parent_course.present? ? parent_course.child_courses : []
+      parent_course.present? ? parent_course.child_courses : self.class.none
     end
 
     def to_s

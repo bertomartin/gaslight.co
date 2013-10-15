@@ -6,5 +6,6 @@ FactoryGirl.define do
     end_date { Date.today + 1.month }
     price 199
     featured false
+    active true
   end
 end

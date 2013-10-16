@@ -1,8 +1,8 @@
 .columns.large-3.prepend-1.sidebar--blog
   = render partial: 'search_form'
-  = link_to "Learn Angular!", training_app.course_path(TrainingApp::Course.first), class: "brand1 button--bloglink"
-  %a.button.brand3.button--bloglink{href: "/coffee", rel: "Coffee Friday"} Get Coffee With Us
-  %a.button.button--bloglink{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
+  = link_to "Learn Angular!", training_app.course_path(TrainingApp::Course.first), class: "button button--brand2"
+  %a.button.button--brand3{href: "/coffee", rel: "Coffee Friday"} Get Coffee With Us
+  %a.button.button--black{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
   = link_to_unless_current('Recent Posts', posts_path)
   |
   = link_to_unless_current('Archive', archive_posts_path)

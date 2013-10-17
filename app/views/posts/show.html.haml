@@ -3,7 +3,8 @@
 
 = render partial: 'application/nav'
 #main.blog
-  .container.row
+  .container
+.row--lg-margin-bottom
     .columns.large-8
       = render post
       .comments#disqus_thread

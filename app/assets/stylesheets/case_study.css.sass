@@ -54,9 +54,9 @@
 // .case-study__buzzword
 //   font-size: 50px
 
-// .hero__header--brand1
-//   @extend %hero__header
-//   background-color: rgba(87,192,232,0.9)
+.hero__header--brand1
+  @extend %hero__header
+  background-color: rgba(87,192,232,0.9)
 
 
 %hero
@@ -103,21 +103,6 @@
   @extend %hero
   min-height: 350px
   background-image: image-url("casestudy/lumbee_ba.jpg")
-
-.case-study--ipc--first
-  @extend %hero--top
-  @extend %case-study--featured
-  background-image: image-url("casestudy/ipc_hero.jpg")
-.case-study--ipc--second
-  @extend %hero
-  min-height: 300px
-  background-image: image-url("casestudy/ipc--2.jpg")
-  background-color: #000
-
-.case-study--ipc--third
-  @extend %hero
-  min-height: 300px
-  background-image: image-url("casestudy/ipc--1.jpg")
 
 .case-study__design .row
   margin-bottom: $sectionMargin

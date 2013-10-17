@@ -5,10 +5,10 @@
   background-size: cover
   background-repeat: no-repeat
   background-position: top center
-  padding: 125px 0
 
 %landing-header
   text-align: center
+  padding: 125px 0
   h3[class*="subheader"]
     margin-top: 15px
     margin-bottom: 40px 
@@ -42,6 +42,20 @@
   @extend %image--full-width
   @extend %landing-header
   background-image: image-url("landing/training.jpg")
+
+.case-study--ipc--first
+  @extend %image--full-width
+  background-image: image-url("casestudy/ipc_hero.jpg")
+  min-height: 350px
+
+.case-study--ipc--second
+  @extend %image--full-width
+  background-image: image-url("casestudy/ipc--2.jpg")
+
+.case-study--ipc--third
+  @extend %image--full-width
+  background-image: image-url("casestudy/ipc--1.jpg")
+
 
 
 

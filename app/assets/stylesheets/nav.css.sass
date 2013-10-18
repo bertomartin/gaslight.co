@@ -1,69 +1,49 @@
 .top-bar
-  height: 58px 
+  background: $brandBase
 
-#nav
-  position: fixed
-  top: 0
-  z-index: 100
-  width: 100%
-  .row
-    max-width: 1024px
-  .brand
-    display: inline
-    float: left
-    line-height: 1
-    margin-top: 18px 
-  .logo
-    height: 23px
-    width: 140px
-    background: image-url("logoSmall.png")
-    background-size: 100%
-    background-repeat: no-repeat
-    margin: auto
+.top-bar__logo
+  display: block
+  float: left
+  line-height: $topbar-height
 
-  ul.title-area
-    display: inline
-    li.name
-      display: inline
+.top-bar__nav
+  display: block
+  float: right
+  overflow: hidden
+  li
+    list-style: none
+    display: inline-block
+  a
+    display: block
+    color: #eee
+    line-height: $topbar-height
+    padding: 0 10px
+    &:hover
+      color: #fff
 
-  ul.links 
-    display: inline
-    width: auto
-    background: transparent
-    & > li 
-      display: inline
-      line-height: $topbar-height
-      a
-        color: #ddd
-        display: inline-block
-        font-size: 0.8em
-        font-weight: 500
-        padding: 0 $topbar-height / 4
-        height: $topbar-height - 10px
-        line-height: $topbar-height - 20px
-        border-top: 10px solid transparent
-        &.active
-          color: #fff
-          font-weight: 600
-        &:hover
-          color: #fff
+.top-bar__expand
+  display: none
+  float: right
+  background: #fff
+  margin: 10px
+  height: 40px
+  width: 40px
 
-  .top-bar-section ul li > a
-    width: auto
-    background: transparent
-
-  .mobile
-    display: none
-    position: absolute
-    top: 0
-    margin: 18px
-    &.toggle
-      left: 0
-    &.mail
-      right: 0
+@media only screen and (max-width: 767px)
+  .top-bar__expand
+    display: block
 
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) 
-  
-  .logo
-    background-image: image-url("logoSmall.svg") !important
+  .top-bar__nav
+    float: none
+    height: 0
+    @include transition(height 0.2s)
+    li
+      display: block
+      border-bottom: 1px solid #fff
+      &:last-child
+        border-bottom: none
+
+  .top-bar__nav--expanded
+    height: 100%
+

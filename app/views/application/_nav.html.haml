@@ -1,26 +1,22 @@
-%nav#nav.top-bar
+%nav.top-bar
   .row
     .large-12.columns
-      %ul.title-area
-        / Title Area
-        %li.name
-          %a.brand{href: main_app.root_path, rel: "Main Navigation"}
-            .logo
-        / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
-        %li.toggle-topbar.menu-icon
-          %a{href: "#"}
-            %span
-      %section.top-bar-section
-        %ul.right.links
-          %li
-            %a.brand1{href: main_app.page_path("about"), rel: "Main Navigation", class: active_page_class(main_app.page_path("about"))} About
-          %li
-            %a.brand3{href: main_app.page_path("services"), rel: "Main Navigation", class: active_page_class(main_app.page_path("services"))} Services
-          %li
-            %a.brand2{href: main_app.page_path("work"), rel: "Main Navigation", class: active_page_class(main_app.page_path("work")) || active_page_class(main_app.page_path("case-studies/lumbee")) || active_page_class(main_app.page_path("case-studies/ipc"))} Work
-          %li
-            %a.brand2{href: main_app.posts_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
-          %li
-            %a.brand1{href: "/training", rel: "Main Navigation", class: viewing_training? ? 'active' : nil} Training
-          %li
-            %a.brand3{href: main_app.page_path("contact"), rel: "Main Navigation", class: active_page_class(main_app.page_path("contact"))} Contact
+      %a.top-bar__logo{href: main_app.root_path, rel: "Main Navigation"}
+        %img{src: image_path("logoSmall.svg")}
+
+      %a.top-bar__expand
+        %i.icon--hamburger
+
+      %ul.top-bar__nav
+        %li
+          %a{href: main_app.page_path("about"), rel: "Main Navigation", class: active_page_class(main_app.page_path("about"))} About
+        %li
+          %a{href: main_app.page_path("services"), rel: "Main Navigation", class: active_page_class(main_app.page_path("services"))} Services
+        %li
+          %a{href: main_app.page_path("work"), rel: "Main Navigation", class: (viewing_case_study? ? 'active' : nil)} Work
+        %li
+          %a{href: main_app.posts_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
+        %li
+          %a{href: "/training", rel: "Main Navigation", class: viewing_training? ? 'active' : nil} Training
+        %li
+          %a{href: main_app.page_path("contact"), rel: "Main Navigation", class: active_page_class(main_app.page_path("contact"))} Contact

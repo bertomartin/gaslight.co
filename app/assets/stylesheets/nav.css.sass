@@ -1,4 +1,9 @@
 .top-bar
+  position: fixed
+  width: 100%
+  top: 0
+  z-index: 10
+  overflow: hidden
   background: $brandBase
 
 .top-bar__logo
@@ -9,7 +14,6 @@
 .top-bar__nav
   display: block
   float: right
-  overflow: hidden
   li
     list-style: none
     display: inline-block
@@ -24,26 +28,25 @@
 .top-bar__expand
   display: none
   float: right
-  background: #fff
-  margin: 10px
-  height: 40px
-  width: 40px
 
 @media only screen and (max-width: 767px)
+  .top-bar
+    height: $topbar-height
+    @include transition(height 0.25s)
+
+  .top-bar--expanded
+    height: 100%
+
   .top-bar__expand
     display: block
 
-
   .top-bar__nav
     float: none
-    height: 0
-    @include transition(height 0.2s)
+    clear: both
+    width: 100%
     li
       display: block
       border-bottom: 1px solid #fff
       &:last-child
         border-bottom: none
-
-  .top-bar__nav--expanded
-    height: 100%
 

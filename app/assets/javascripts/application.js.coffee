@@ -32,10 +32,9 @@ $(document).ready ->
 
 
 $ ->
-  $('#nav .toggle').on 'click touchstart', (event)->
-    event.preventDefault()
-    track("Mobile Navigation", "Open")
-    $('#nav').toggleClass('expanded')
+  $('.top-bar__expand').on 'click touchstart', (event)->
+    $('.top-bar').toggleClass('top-bar--expanded')
+    
 
   $("meta[property='og:article:tag']").each ->
     track('Blog', 'Tag', $(this).attr('content'))

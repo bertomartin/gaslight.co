@@ -15,17 +15,16 @@
     /   %a.button.button--brand2{href: "mailto:hello@gaslight.co", rel: "Mobile contact button"} Email
     /   %a.button.button--brand3{href: "http://goo.gl/maps/aNb8r", rel: "Mobile contact button"} Maps
 
-  / %section.row.contact
-  /   .large-11.columns.centered
-  /     %h2.title.brand3 Work With Us
+  / %section
+  /   .row.large-centered
+  /     %h2.header Work With Us
+  /     .underline--red
   /   .row
-  /     .large-4.columns.sidebar
-  /       %h5.brand3 The New Project Form
-  /       .content
-  /         %p <strong>Have an idea that’s ready for design and development?</strong> Kick things off by filling out our new project form. It helps us get to know you and your idea a little better. 
-
-  /         %p We’ll follow-up within three business days to talk about how we might be able to help.
-  /     .large-8.columns.sidebar
+  /     .large-9.columns.large-centered
+  /       %p.lead.center
+  /         Have an idea that’s ready for design and development? Kick things off by filling out our new project form. It helps us get to know you and your idea a little better. We’ll follow-up within three business days to talk about how we might be able to help.
+  /   .row
+  /     .large-8.columns.large-centered
   /       #contact 
   /         = render partial: 'form' 
 

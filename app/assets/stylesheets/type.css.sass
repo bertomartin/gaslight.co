@@ -18,7 +18,8 @@ a:hover, a:active, a:focus
   font-weight: 400
   font-size: 1.2em
   line-height: 1.6em
-  margin-bottom: 30px
+  margin-bottom: 20px
+
 
 p.lead
   @extend %lead-paragraph
@@ -106,6 +107,19 @@ p.standalone
   color: #fff
   font-weight: 400
 
+.sidebar--header
+  font-size: 1em
+  color: $brand1
+  font-weight: 700
+  line-height: 1.4em
+
+.sidebar--subheader
+  font-size: 1em
+  color: #aaa
+  font-weight: 700
+  line-height: 1.4em
+
+
 %underline
   display: block
   margin: auto
@@ -128,6 +142,10 @@ p.standalone
 
 .underline--header
   border-bottom-width: 9px
+
+.underline--case-study
+  margin-bottom: 0.75em
+  border-bottom: 5px solid $brand1
 
 %subtitle
   font-size: 1.2
@@ -152,7 +170,7 @@ p.standalone
 
 p
   @extend %body
-  line-height: 1.4em
+  line-height: 1.5em
   margin-bottom: 10px
 
 aside p 

@@ -69,29 +69,22 @@
   @extend %icon--team
 
 %horizontal-line
-  position: relative
   border-radius: 2px
   display: block
 
 .icon--hamburger
   @extend %horizontal-line
+  width: 35px
+  position: relative
+  
+.line--horizontal
+  display: block
   height: 5px
-  width: 30px
+  width: 100%
+  border-radius: 2px
+  margin: 4px 0
   background: $brand1
-  top: 9px
-  &:after
-    @extend %horizontal-line
-    content: ""
-    width: 100%
-    height: 100%
-    top: 15px
+  &:first-child
     background: $brand2
-  &:before
-    @extend %horizontal-line
-    content: ""
-    width: 100%
-    height: 100%
-    top: 10px
+  &:last-child
     background: $brand3
-
-

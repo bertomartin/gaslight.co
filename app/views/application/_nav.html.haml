@@ -16,7 +16,7 @@
         %li
           %a{href: main_app.page_path("services"), rel: "Main Navigation", class: active_page_class(main_app.page_path("services"))} Services
         %li
-          %a{href: main_app.page_path("work"), rel: "Main Navigation", class: (viewing_case_study? ? 'active' : nil)} Work
+          %a{href: main_app.page_path("work/index"), rel: "Main Navigation", class: (viewing_work? ? 'active' : nil)} Work
         %li
           %a{href: main_app.posts_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
         %li

@@ -23,8 +23,8 @@ module ApplicationHelper
     request.fullpath =~ /training/
   end
 
-  def viewing_case_study?
-    request.fullpath =~ /case-studies/
+  def viewing_work?
+    request.fullpath =~ /work/
   end
 
   def tag_list(tags)

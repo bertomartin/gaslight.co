@@ -8,7 +8,7 @@
 
   .row
     .large-8.columns
-      %p= markdown(course.description_main)
+      %p.course__description= markdown(course.description_main)
 
     .columns.large-4
       - if course.online?
@@ -26,11 +26,11 @@
           We’d love to set up a private training session for your group or team.
         %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now
 
-      .newsletter
-        %h4 Want to know about future workshops?
-        %p
-          Sign-up for our monthly e-mail newsletter:
-          = render partial: 'application/newsletter'
+      / .newsletter
+      /   %h4 Want to know about future workshops?
+      /   %p
+      /     Sign-up for our monthly e-mail newsletter:
+      /     = render partial: 'application/newsletter'
 
       - course.instructors.each do |instructor|
         .instructor

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131003132522) do
+ActiveRecord::Schema.define(version: 20131021205126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20131003132522) do
     t.datetime "early_bird_end_date"
     t.string   "registration_link"
     t.integer  "parent_course_id"
-    t.boolean  "online"
+    t.boolean  "online",              default: false
     t.string   "color_primary"
     t.string   "color_secondary"
     t.boolean  "active",              default: true

@@ -100,6 +100,14 @@ module TrainingApp
     def self.active
       where(active: true)
     end
+
+    def self.online
+      where(online: true)
+    end
+
+    def self.in_person
+      where(online: false)
+    end
   end
 end
 

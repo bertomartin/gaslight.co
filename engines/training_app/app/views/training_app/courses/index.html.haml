@@ -9,15 +9,15 @@
     .row
       .large-12.columns
         %h3.subheader--light Master the latest tools for developers with in-person and online training.
-        .underline--blue.underline--header 
+        .underline--blue.underline--header
 
   %section
     .row
       %h2.header Upcoming Workshops
       .underline--blue
     .row
-      - courses.each do |course|
-        .large-6.columns.large-centered
+      - in_person_courses.each do |course|
+        .large-6.columns.course.course--in-person
           %img{src: course.image_url}
           %h3.subheader= course.title
           %p= course.meta
@@ -29,8 +29,8 @@
       %h2.header Online Classes
       .underline--blue
     .row
-      - courses.each do |course|
-        .large-6.columns.large-centered
+      - online_courses.each do |course|
+        .large-6.columns.course.course--online
           %img{src: course.image_url}
           %h3.subheader= course.title
           %p= course.synopsis

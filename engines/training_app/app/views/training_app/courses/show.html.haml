@@ -1,14 +1,16 @@
 - content_for(:title) { "#{course.title} | Cincinnati, OH" }
 = render partial: 'application/nav'
 
-#main.container.row.training
-  %h1.course__title= course.title
+#main.content.course
   .row
-    .columns.eight.trainingcourse__content
-      .course
-        .course__description= markdown(course.description_main)
+    .large-12.columns
+      %h1.course__title= course.title
 
-    .columns.four.sidebar--training
+  .row
+    .large-8.columns
+      %p= markdown(course.description_main)
+
+    .columns.large-4
       - if course.online?
         = render course
 

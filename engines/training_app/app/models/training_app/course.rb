@@ -77,10 +77,6 @@ module TrainingApp
       upcoming.first
     end
 
-    def self.featured
-      where(featured: true).limit(2)
-    end
-
     def self.by_slug(id)
       where(id: id.split('-').first).first
     end

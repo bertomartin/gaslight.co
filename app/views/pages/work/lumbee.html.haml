@@ -1,0 +1,117 @@
+- content_for(:title) { "Gaslight: A Software Overhaul That Drives Business Results" }
+= render partial: 'application/nav'
+
+#main.content
+  .case-study--lumbee--first
+    .hero__header--brand1
+      .row
+        .large-11.columns
+          %h1.header--case-study A Software Overhaul That Drives Business Results
+          %h2.subheader--light Lumbee Enterprises
+  %section.row
+    .large-3.columns
+      .underline--case-study   
+      %h3.sidebar--header Client
+      %p Lumbee Enterprises
+      %h3.sidebar--header Engagement
+      %p 12 Weeks
+      %h3.sidebar--header Technology
+      %ul.case-study__sidebar
+        %li Backbone
+        %li Ruby on Rails
+        %li HTML/CSS
+        %li Heroku
+    .large-8.large-offeset-1.columns
+      %p.lead Lumbee Enterprises specializes in quality control for the automotive manufacturing industry. The company works with such clients as BMW, Volkswagen, Caterpillar and Volvo Truck to inspect or re-work 20 million parts a year. We partnered with Lumbee to overhaul a web-based software application that runs the entire business. This software follows every single project from kick-off to status reports to the ﬁnal invoice. 
+      %hr
+      %h2.subheader The Power of Team Development
+      %p Lumbee worked with a solo developer to build this app over four years. With a team of developers and designers, Gaslight made signiﬁcant improvements in just 12 weeks. These software upgrades improved Lumbee’s productivity, proﬁts and client relationships.
+
+  .case-study--lumbee--second
+    .row.hero__header
+      .large-7.columns
+        .flex-video
+          %iframe{ id: "ytplayer", type: "text/html", src: "//www.youtube.com/embed/hfrcN7UptYw?rel=0", frameborder: "0", allowfullscreen: "allowfullscreen"}
+      .case-study__quote--full.large-5.columns
+        %p.small “Gaslight is a partner because they really, truly understand the issues we’re trying to overcome to help our customers.” 
+        %h4 Fran Coughlin
+        %h4.case-study__quote--title Partner at Lumbee Enterprises
+
+  %section
+    .row
+      .large-3.columns
+        .underline--case-study
+        %h3.sidebar--header User Interface
+        %h4.sidebar--subheader Polishing Up a Dashboard
+        %p A new at-a-glance dashboard pulls together all the most important statistics on one screen.
+      .large-8.large-offset-1.columns
+        %img{src: image_path("casestudy/chrome.png"), alt: "dashboard" }
+
+    .row--lg-margin-top
+      .large-3.columns
+        .underline--case-study
+        %h3.sidebar--header Responsive Web
+        %h4.sidebar--subheader Mobile Friendly
+        %p We made the app mobile-friendly, so employees and clients can track projects on the factory ﬂoor. 
+      .large-3.large-offset-1.columns
+        %img{src: image_path("casestudy/mobile.png"), alt: "mobile" }
+      .large-5.columns
+        %img{src: image_path("casestudy/context.png"), alt: "context" }
+  
+  %section.case-study--lumbee--third
+    .row
+      .large-4.large-offset-2.columns
+        %table
+          %thead.table__header
+            %tr
+              %th Lumbee App Before
+          %tbody.table__body
+            %tr
+              %td Data took days to appear in the app
+            %tr
+              %td Available only to Lumbee employees
+            %tr
+              %td Slow page load times hurt productivity
+            %tr
+              %td Only ran on desktop or laptop computers
+            %tr
+              %td Out-of-date code
+
+      .large-4.columns.end
+        %table
+          %thead.table__header
+            %tr
+              %th Lumbee App After
+          %tbody.table__body
+            %tr
+              %td Real-time business results available 24/7
+            %tr
+              %td Enabled client access for better workﬂow
+            %tr
+              %td A 75% improvement in page load times
+            %tr
+              %td Mobile friendly for on-the-go access
+            %tr
+              %td Updated code = increased security
+
+  %section.row
+    .case-study__sidebar.large-3.columns
+      .underline--case-study
+      %h3.sidebar--header Does Your Software Need a Makeover? 
+      %p Let’s talk. We know how to upgrade technology, so it upgrades your business results, too.
+      %a.button.button--brand1{href: page_path("contact"), rel: "Case Study Lets Talk button" } Contact Us
+    .large-8.large-offset-1.columns
+      %h2.subheader Spending a Development Budget Where It Counts Most
+      %p Gaslight builds custom software, but we know that custom isn’t always the best—or only—solution. For this app, we leveraged open-source code to create off-the-shelf solutions for certain parts of the software. This allowed us to create bigger business results with less time and money. Before writing a line of code, we took the time to learn how Lumbee works and what business goals the company wanted to accomplish. Then we focused our custom development time on the features that mattered most. 
+      %hr
+      %h2.subheader The Technology
+      %p We built this Web-based application with <a href="http://gaslight.co/about"  rel="Ruby on Rails">Ruby on Rails</a> and Backbone.js. Plus, we moved the app from a single server in the client’s ofﬁce to Heroku. This cloud-based platform allows the app to scale with business demands. It also eliminates the headaches of server maintenance.
+
+  %hr
+  .row--lg-margin-bottom
+    .large-3.columns
+      %a.button.button--quiet{href: page_path("work/index"), rel: "Work" } &#171; Work Page
+    .large-3.columns.large-offset-6
+      %a.button.button--quiet{href: page_path("work/ipc"), rel: "IPC Case Study" } IPC Case Study &#187; 
+
+= render partial: 'application/footer'

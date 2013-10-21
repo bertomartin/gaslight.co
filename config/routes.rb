@@ -25,6 +25,7 @@ Gaslight::Application.routes.draw do
 
   get 'sitemap.xml' => 'sitemaps#index', as: 'sitemap', defaults: { format: "xml" }
 
+  get 'about', to: 'pages#about'
   root to: 'high_voltage/pages#show', id: 'home'
 
   get "/404", to: "errors#not_found"

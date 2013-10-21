@@ -1,0 +1,85 @@
+- content_for(:title) { "Gaslight: Recent Work" }
+= render partial: 'application/nav'
+
+#main.content
+  %section.section--contrast.header--work
+    .row
+      .large-12.columns.large-centered
+        %h1.title--light A Great App Takes Your Business To New Places
+    .row
+      .large-12.columns.large-centered
+        %h3.subheader--light See how we’ve given our clients a boost with custom software. 
+        .underline--blue.underline--header 
+
+  %section.section--contrast
+    .row.large-centered
+      %h2.header Case Studies
+      .underline--blue
+    .row
+      .large-6.columns
+        %a.case-study__link{ href: page_path('work/ipc') }
+          .case-study--ipc
+            .hero__header--animated
+              .row
+                .large-11.columns
+                  %h3.subheader--light View Case Study
+                  %h2.header--case-study Independent Purchasing Cooperative
+                  %h3.subheader--light JRuby Project
+      .large-6.columns
+        %a.case-study__link{ href: page_path('work/lumbee') }
+          .case-study--lumbee
+            .hero__header--animated
+              .row
+                .large-11.columns
+                  %h3.subheader--light View Case Study
+                  %h2.header--case-study Lumbee Enterprises
+                  %h3.subheader--light Update Legacy App
+    
+
+  %section.clients
+    %a.anchor{name:"clients"}
+    .row
+      %h2.header Our Clients
+      .underline--blue
+    .row
+      .large-9.columns.large-centered
+        %p.lead.center We partner with everyone from start-ups to Fortune 500s in a range of industries. 
+        %ul.clientsList.row
+          %li.brand-pg
+            = link_to('http://www.pg.com/en_US/') do
+              .brand-pg
+          %li.brand-outright
+            = link_to('http://outright.com/') do
+              .brand-outright
+          %li.brand-eta
+            = link_to('http://enjoythearts.org/') do
+              .brand-eta
+          %li.brand-sharethrough
+            = link_to('http://www.sharethrough.com/') do
+              .brand-sharethrough
+          %li.brand-agsync
+            = link_to('http://agrisiteipm.com/') do
+              .brand-agsync
+          %li.brand-roadtripper
+            = link_to('http://roadtrippers.com/') do
+              .brand-roadtripper
+          %li.brand-apex
+            = link_to('http://www.apexindustrial.com/') do
+              .brand-apex
+          %li.brand-lumbee
+            = link_to('http://www.lumbeena.com/') do
+              .brand-lumbee
+          %li.brand-ccl
+            = link_to('http://www.ccli.org/') do
+              .brand-ccl
+          %li.brand-hyperquake
+            = link_to('http://www.hyperquake.com/') do
+              .brand-hyperquake
+          %li.brand-renewfund
+            = link_to('https://renewfund.com/overview') do
+              .brand-renewfund
+          %li.brand-vendor
+            = link_to('https://www.vendorwizard.com/') do
+              .brand-vendor
+
+= render partial: 'application/footer'

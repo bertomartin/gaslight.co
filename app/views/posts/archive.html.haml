@@ -1,8 +1,8 @@
 - content_for(:title) { "Gaslight Blog: Archive" }
 
 = render partial: 'application/nav'
-#main.container.row
-  .columns.eight
+#main.landing.container.row
+  .columns.large-8
     - posts.each do |month, posts|
       %h3
         = l(month.to_date, format: :year_and_month)

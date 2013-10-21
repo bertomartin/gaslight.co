@@ -1,40 +1,64 @@
 @import "variables"
-@import "foundation_overrides"
+@import compass
 
-@import "fonts"
+// Global Foundation Settings
+@import foundation_overrides
 
-@import "compass/css3"
-@import "modular-scale"
-@import "foundation/functions/all"
-@import "foundation/settings"
-@import "foundation/mixins/all"
-@import "foundation/common/ratios"
-@import "foundation/common/globals"
-// @import "foundation/common/typography"
-// @import "foundation/common/forms"
-@import "foundation/components/grid"
-// @import "foundation/components/modules/buttons"
-// @import "foundation/components/modules/navbar"
-@import "foundation/components/modules/topbar"
-@import "foundation/components/modules/orbit"
-// @import "foundation/components/modules/reveal"
-// @import "foundation/components/modules/joyride"
-// @import "foundation/components/modules/clearing"
-// @import "foundation/components/modules/tabs"
-// @import "foundation/components/modules/ui"
-@import "foundation/components/modules/mqueries"
-@import "foundation/components/modules/ui"
+@import normalize
+
+// Import specific parts of Foundation by commenting the import foundation
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+@import foundation/components/global
+@import foundation/components/grid
+
+@import foundation/components/visibility
+@import foundation/components/block-grid
+@import foundation/components/type
+// @import foundation/components/buttons
+// @import foundation/components/forms // *requires components/buttons
+// @import foundation/components/custom-forms // *requires components/buttons, components/forms
+// @import foundation/components/button-groups // *requires components/buttons
+// @import foundation/components/dropdown-buttons // *requires components/buttons
+// @import foundation/components/split-buttons // *requires components/buttons
+// @import foundation/components/flex-video
+// @import foundation/components/section
+// @import foundation/components/top-bar  
+/* *requires components/grid */
+// @import foundation/components/orbit
+// @import foundation/components/reveal
+// @import foundation/components/joyride
+// @import foundation/components/clearing
+// @import foundation/components/alert-boxes
+// @import foundation/components/breadcrumbs
+// @import foundation/components/keystrokes
+// @import foundation/components/labels
+// @import foundation/components/inline-lists
+@import foundation/components/pagination
+// @import foundation/components/panels
+// @import foundation/components/pricing-tables
+// @import foundation/components/progress-bars
+// @import foundation/components/side-nav
+// @import foundation/components/sub-nav
+// @import foundation/components/switch
+// @import foundation/components/magellan
+@import foundation/components/tables
+// @import foundation/components/thumbs
+// @import foundation/components/tooltips
+// @import foundation/components/dropdown
 
 @import "mixins"
-
+@import "fonts"
 @import "layout"
 @import "type"
 @import "forms"
 @import "sprites"
 @import "buttons"
+@import "modals"
 @import "video"
 @import "table"
 @import "mediaelementplayer"
+@import "styleguide"
 
 @import "nav"
 @import "main"

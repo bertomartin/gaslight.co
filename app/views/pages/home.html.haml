@@ -7,108 +7,135 @@
 #guides
   %section.landingpage
     .row
-      .twelve.columns.centered
-        %h1.landingpage__tagline We build apps that build businesses.
+      .large-12.columns.large-centered
+        %h1.title We build apps that build businesses.
     .row
-      .six.columns.centered
-        %p.landingpage__paragraph
+      .large-7.small-9.small-centered.columns.large-centered
+        %p.standalone
           Gaslight is a design and development shop based around three driving principles.
     .row
-      .eight.column.centered.lbs.hide-for-small
+      .large-8.columns.large-centered.overview--home.hide-for-small
         .row
-          .four.columns
-            %a.button--large.brand1{href: page_path('about')} Learn
+          .large-4.columns
+            %a.button--full-width.button--brand1{href: page_path('about')} Learn
             %p
               Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you. 
           
-          .four.columns
-            %a.button--large.brand2{href: page_path('case-studies/ipc')} Build
+          .large-4.columns
+            %a.button--full-width.button--brand2{href: page_path('work/ipc')} Build
             %p
-              We wield our coding, design and UX chops to create custom software or super-charge existing software. See our <a class="brand2--link" href="case-studies/ipc" rel="Case Study">latest work.</a>
-          .four.columns
-            %a.button--large.brand3{href: page_path('blog')} Share
+              We wield our coding, design and UX chops to create custom software or super-charge existing software. See our <a class="brand2--link" href="work/ipc" rel="Case Study">latest work.</a>
+          .large-4.columns
+            %a.button--full-width.button--brand3{href: page_path('blog')} Share
             %p
-              We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, podcast and training classes
+              We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, <a class="brand3--link" href="blog?tagged=podcast" rel="Podcast">podcast</a> and <a class="brand3--link" href="training" rel="Training">training classes</a>. 
     .row
-      .eight.column.centered.lbs.show-for-small
+      .large-8.column.large-centered.overview--home.show-for-small
         .row
-          .four.columns
-            %a.button--large.brand1{href: page_path('about')} Learn
+          .large-4.columns
+            %a.button--full-width.button--brand1{href: page_path('about')} Learn
            
-          .four.columns
-            %a.button--large.brand2{href: page_path('case-studies/ipc')} Build
+          .large-4.columns
+            %a.button--full-width.button--brand2{href: page_path('work/ipc')} Build
             
-          .four.columns
-            %a.button--large.brand3{href: page_path('blog')} Share
-           
-#main.landing-page
-  %section.hero--weare
+          .large-4.columns
+            %a.button--full-width.button--brand3{href: page_path('blog')} Share
+             
+#main.content.landing
+  %section.header--about
     .row
-      .three.columns.landing-page__sidebar--about
-        %h2 We Are
-      .eight.columns.offset-by-one.landing-page__info
-        %p.lead
-          We are a group of developers, designers and project guides passionate about building things. We want to solve hard problems and add the kind of value that makes your business more competitive and profitable. We want to be a trusted partner, not just a service provider. Learn more about how we partner with clients.
+      %h2.header--light We Are
+      .underline--blue 
     .row
-      .three.columns.offset-by-four
-        %a.button--large.brand1{href: '/about'} See Who We Are
+      .large-9.columns.large-centered
+        %p.lead--light
+          We are a group of designers, developers and project guides passionate about revving up your business. We love to create technology tools that solve hard problems. And make your company faster and more profitable. 
+    .row
+      .large-3.columns.large-centered
+        %a.button--full-width.button--brand1{href: page_path('about')} Learn how we work
 
-  %section.hero--process
+  %section
     .row
-      .three.columns.landing-page__sidebar--process
-        %h2 Our Process
-      .one.column.hide-for-small.landing-page__info
-        .arrow-right
-      .six.columns.end.landing-page__info
-        .landing-page__heading The igniter
-        %h4.landing-page__subheading Turning big ideas into successful projects
-        %p
-          You have a great idea. But throwing developers at a project doesn’t always get it off on the right foot. Every vision needs an actionable plan to become reality.          
-          %a.brand3--link{href: '/Gaslight_Igniter_2013.pdf'} Learn how we can ignite your best ideas.
+      %h2.header What We Do
+      .underline--red
+    .row.icons--homepage
+      .large-3.columns
+        %a{href: page_path('services'), rel: "Landing Igniter"}
+          =image_tag "icons/home-ignite.svg", :class => "icon--link"
+        %h3.subheader.center Idea Igniter
+        %p.center Turn your big idea into an actionable plan with The Igniter.    
+      .large-3.columns
+        %a{href: page_path('services'), rel: "Landing CustomSoftware"}
+          =image_tag "icons/home-develop.svg", :class => "icon--link" 
+        %h3.subheader.center Custom Software Development 
+        %p.center Boost profits and productivity with a new or upgraded app.
+      .large-3.columns
+        %a{href: page_path('services'), rel: "Landing Design"}
+          =image_tag "icons/home-design.svg", :class => "icon--link"
+        %h3.subheader.center Design and User Experience
+        %p.center Create on-brand tools that are easy to use and easy on the eyes. 
+      .large-3.columns
+        %a{href: page_path('training'), rel: "Landing Training"}
+          =image_tag "icons/home-learning.svg", :class => "icon--link"
+        %h3.subheader.center Online and In-Person Training
+        %p.center Learn the latest development tools to work smarter and faster.
+    .row
+      .large-3.columns.large-centered
+        %a.button--full-width.button--brand3{href: '/services'} See our skills
 
+  %section.case-study--home
     .row
-      .one.column.offset-by-three.hide-for-small
-        .arrow-right
-      .six.columns.end
-        .landing-page__heading Team approach
-        %h4.landing-page__subheading Becoming part of your team
-        %p
-          Need a dedicated team to work on your project? We have one. We love partnering with business owners and key stakeholders. During a project, you can expect to hear from us nearly everyday.
-          %a.brand3--link{href: '/about'} Find out more about how we partner with clients.
+      %h2.header--light Latest Work
+      .underline--blue 
     .row
-      .one.column.offset-by-three.hide-for-small
-        .arrow-right
-      .six.columns.end
-        .landing-page__heading Best in technology
-        %h4.landing-page__subheading Bringing start-up technology to established businesses
-        %p
-          We’re constantly trying out the latest technology so you don’t have
-          to. Then we put the best solutions to work for our clients. Discover
-          the technology we’re using right now and how it can make your
-          business better.
+      .large-7.columns.large-centered
+        %h3.brand1 Lumbee Enterprises
+        %p.lead--light
+          A software overhaul for the automotive industry that drives real business results.
+    .row
+      .large-3.columns.large-centered
+        %a.button--full-width.button--brand1{href: '/work/lumbee'} Read the case study
 
-  %section.hero--worktogether
+     
+  %section.section--contrast
     .row
-      .three.columns.landing-page__sidebar--contact
-        %h2 Let's Keep in Touch
-      .four.columns.offset-by-one.landing-page__info
+      %h2.header Let's Keep in Touch
+      .underline--yellow 
+    .row
+      .large-5.columns
         %p
           Sign-up for our email newsletter to receive monthly tech tips, news and events:
           = render partial: 'application/newsletter'
-      .three.columns.offset-by-one.landing-page__contact
-        %p Start a conversation:
-        %ul.landing-page__contact
-          %li
-            %a{href: "mailto:hello@gaslight.co", rel: "Footer Contact", target: "_blank"}
-              %i.icon-social-mail
-          %li
-            %a{href: "http://twitter.com/teamgaslight", rel: "Footer Social", target: "_blank"}
-              %i.icon-social-twitter
-          %li
-            %a{href: "http://facebook.com/teamgaslight", rel: "Footer Social", target: "_blank"}
-              %i.icon-social-facebook
-          %li
-            %a{href: "http://github.com/gaslight", rel: "Footer Social", target: "_blank"}
-              %i.icon-social-github
-          %li.justifylist--last
+      .large-6.columns.hide-for-small
+        .upcoming-events
+          %table
+            %thead.table__header--brand2
+              %h3.subheader{name:"events"} Upcoming Gaslight Events
+            %tbody
+              #activities
+                .events.inactive
+                  .spinner
+                    / %h4 Loading
+                    / %img{src: image_path('loading.gif')}
+
+= render partial: 'application/footer'
+
+:plain
+  <script type="text/template" id="eventTemplate">
+    <div class="columns large-2 small-2 upcoming-events__author">
+      <img src="<%- person.gravatar_url %>" class="avatar" />
+    </div>
+    <div class="columns large-10 small-10 upcoming-events__info">
+      <span class="person"><a href="https://twitter.com/<%- person.twitter %>"><%- person.firstName %></a></span>
+      is <span class="verb"><%- verb %></span>
+      <span class="event"><a href="<%- url %>"><%- name %></a></span>
+      in
+      <span class="location"><%- location %></span> on <%- occursOn %>.
+    </div>
+  </script>
+
+- content_for(:javascript) do
+  :javascript
+    jQuery(function() { var activityView = new Gaslight.Views.ActivityView; });
+
 

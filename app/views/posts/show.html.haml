@@ -2,14 +2,16 @@
 = render(partial: 'meta')
 
 = render partial: 'application/nav'
-#main.container.row
-  .columns.eight
-    = render post
-    .comments#disqus_thread
-    %noscript
-      Please enable JavaScript to view the
-      %a{href: "http://disqus.com/?ref_noscript"} comments powered by Disqus
-  = render partial: 'posts/show_sidebar'
+#main.blog
+  .container
+.row--lg-margin-bottom
+    .columns.large-8
+      = render post
+      .comments#disqus_thread
+      %noscript
+        Please enable JavaScript to view the
+        %a{href: "http://disqus.com/?ref_noscript"} comments powered by Disqus
+    = render partial: 'posts/show_sidebar'
 
 = render partial: 'application/footer'
 

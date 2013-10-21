@@ -1,18 +1,19 @@
 - content_for(:title) { "Gaslight Blog: Archive " }
 = render partial: 'application/nav'
-#main.container.row
-  .columns.eight
-    %h1
-      #{pluralize(posts.count, 'post')} written
-      - if params[:day].present?
-        on
-        = l(search_date, format: :nice)
-      - elsif params[:month].present?
-        in
-        = l(search_date, format: :year_and_month)
-      - else
-        in
-        = l(search_date, format: :year)
-    = render partial: 'post_list', locals: { posts: posts }
-  = render partial: 'index_sidebar'
+#main.landing
+  .container.row
+    .columns.large-8
+      %h1
+        #{pluralize(posts.count, 'post')} written
+        - if params[:day].present?
+          on
+          = l(search_date, format: :nice)
+        - elsif params[:month].present?
+          in
+          = l(search_date, format: :year_and_month)
+        - else
+          in
+          = l(search_date, format: :year)
+      = render partial: 'post_list', locals: { posts: posts }
+    = render partial: 'index_sidebar'
 = render partial: 'application/footer'

@@ -1,47 +1,58 @@
 .top-bar
-  height: 58px 
-
-#nav
   position: fixed
+  width: 100%
   top: 0
-  z-index: 100
-  .brand
+  z-index: 10
+  overflow: hidden
+  background: $brandBase
+
+.top-bar__logo
+  display: block
+  float: left
+  line-height: $topbar-height
+
+.top-bar__nav
+  display: block
+  float: right
+  li
+    list-style: none
+    display: inline-block
+  a
     display: block
-    float: left
-    line-height: 1
-    margin-top: 18px 
-  .logo
-    height: 23px
-    width: 140px
-    background: image-url("logoSmall.png")
-    background-size: 100%
-    background-repeat: no-repeat
-    margin: auto
-        
-  ul.links > li a
-    color: $topBarLinkColor
+    color: #dedede
+    font-size: 14px
+    line-height: $topbar-height
+    padding: 0 10px
+    &:hover
+      color: #fff
+  a.active
+    color: #fff
+    font-weight: 600
+
+
+.top-bar__expand
+  display: none
+  padding: 12px 0
+  float: right
+
+@media only screen and (max-width: 767px)
+  .top-bar
+    height: $topbar-height
+    @include transition(height 0.25s)
+
+  .top-bar--expanded
+    height: 100%
+
+  .top-bar__expand
     display: block
-    font-size: $topBarLinkSize
-    font-weight: $topBarLinkWeight
-    padding: 0 $topBarHeight / 3
-    height: $topBarHeight - 10px
-    line-height: $topBarHeight - 20px
-    border-top: 10px solid transparent
-    &.active
-      @include brandColors(border-color)
 
-  .mobile
-    display: none
-    position: absolute
-    top: 0
-    margin: 18px
-    &.toggle
-      left: 0
-    &.mail
-      right: 0
+  .top-bar__nav
+    float: none
+    clear: both
+    width: 100%
+    li
+      display: block
+      border-bottom: 1px solid #fff
+      &:last-child
+        border-bottom: none
 
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx) 
-  
-  .logo
-    background-image: image-url("logoSmall.svg") !important

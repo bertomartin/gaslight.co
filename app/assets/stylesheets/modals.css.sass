@@ -1,0 +1,27 @@
+.modal__backdrop
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  z-index: 100
+  background: #000
+  display: none
+  @include opacity(0.8)
+
+.modal__content
+  position: absolute
+  width: $modal-width
+  margin-left: - $modal-width / 2
+  top: -2000px
+  left: 50%
+  z-index: 101
+  background: #fff
+  padding: 20px 0
+  @include transition(top 0.2s)
+
+.modal--active
+  .modal__backdrop
+    display: block
+
+  .modal__content
+    top: 50px

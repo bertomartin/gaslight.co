@@ -31,30 +31,19 @@
     .row
       .large-8.columns.large-centered
         .row
-          .large-6.columns
-            .latest-post
-              .latest-post__author-photo
-                %img{src: image_path("team/joel.jpg"), alt: "Joel Turnbull" }
-              %p.latest-post__title Six Ways To Remove Pain From Feature Testing In Ruby On Rails
-              .latest-post__meta
-                %p.meta__author Joel Turnbull 
-                %p -
-                %p.meta__date October 2,  2013
-              %p.latest-post__description
-                Writing feature tests in Ruby on Rails used to be the most painful part of my development work flow. Now I kind of like it.
-              %a.button--full-width.button--brand2.latest-post__link Read Full Post
-          .large-6.columns
-            .latest-post
-              .latest-post__author-photo
-                %img{src: image_path("team/joel.jpg"), alt: "Joel Turnbull" }
-              %p.latest-post__title Six Ways To Remove Pain From Feature Testing In Ruby On Rails
-              .latest-post__meta
-                %p.meta__author Joel Turnbull 
-                %p -
-                %p.meta__date October 2,  2013
-              %p.latest-post__description
-                Writing feature tests in Ruby on Rails used to be the most painful part of my development work flow. Now I kind of like it.
-              %a.button--full-width.button--brand2.latest-post__link Read Full Post
+          - @featured_posts.each do |post|
+            .large-6.columns             
+              .latest-post
+                .latest-post__avatar.avatar.avatar--small.avatar--brand2
+                  %img{src: gravatar_url(post.author_email, '51x51'), alt: "Joel Turnbull" }
+                %p.latest-post__title= post.title
+                %p.latest-post__meta
+                  %span.meta__author= post.author_name
+                  \-
+                  %span.meta__date= post.published_at.strftime("%B %e, %Y")
+                %p.latest-post__description= truncate(post.generated_description, length: 130, omission: '...') 
+                  
+                %a.button--full-width.button--brand2{href: post_path(post)} Read Full Post
 
   %section.row.team.hide-for-small
     %a.anchor{name:"team"}

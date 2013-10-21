@@ -8,7 +8,7 @@
 
   .row
     .large-8.columns
-      %p.course__description= markdown(course.description_main)
+      .course__description= markdown(course.description_main)
 
     .columns.large-4
       - if course.online?

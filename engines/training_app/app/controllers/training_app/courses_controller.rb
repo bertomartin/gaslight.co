@@ -3,7 +3,8 @@ module TrainingApp
 
     respond_to :html
 
-    expose(:courses) { Course.active.top_level }
+    expose(:online_courses) { Course.active.online }
+    expose(:in_person_courses) { Course.active.in_person }
     expose(:course)
   end
 end

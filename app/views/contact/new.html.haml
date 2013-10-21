@@ -15,19 +15,6 @@
     /   %a.button.button--brand2{href: "mailto:hello@gaslight.co", rel: "Mobile contact button"} Email
     /   %a.button.button--brand3{href: "http://goo.gl/maps/aNb8r", rel: "Mobile contact button"} Maps
 
-  / %section
-  /   .row.large-centered
-  /     %h2.header Work With Us
-  /     .underline--red
-  /   .row
-  /     .large-9.columns.large-centered
-  /       %p.lead.center
-  /         Have an idea that’s ready for design and development? Kick things off by filling out our new project form. It helps us get to know you and your idea a little better. We’ll follow-up within three business days to talk about how we might be able to help.
-  /   .row
-  /     .large-8.columns.large-centered
-  /       #contact 
-  /         = render partial: 'form' 
-
   %section.row
     .large-4.columns
       %a{target: "_blank", href: "http://goo.gl/maps/aNb8r", rel: "Contact Header Google Map"}
@@ -37,7 +24,7 @@
       %h3.subheader Kick Off a Project
       %p 
         Ready to work together? Just answer a 
-        %a.brand3--link{href: "#", rel: "Project Form"}few quick questions. 
+        %a.activate-modal.brand3--link{href: "#", rel: "Project Form"}few quick questions. 
 
       %h3.subheader Say Hello
       %p 
@@ -83,5 +70,19 @@
           =image_tag "icons/contact-embernati.svg", :class => "icon--link" 
         %h3.subheader.center EmberNati
 
-
 = render partial: 'application/footer'
+
+.modal
+  .modal__backdrop
+  .modal__content
+    .row.large-centered
+      %h2.header Work With Us
+      .underline--red
+    .row
+      .large-10.columns.large-centered
+        %p.lead.center
+          Have an idea that’s ready for design and development? Kick things off by filling out our new project form. It helps us get to know you and your idea a little better. We’ll follow-up within three business days to talk about how we might be able to help.
+    .row
+      .large-10.columns.large-centered
+        #contact 
+          = render partial: 'form' 

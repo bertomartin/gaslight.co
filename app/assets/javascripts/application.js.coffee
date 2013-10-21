@@ -16,6 +16,9 @@ $ ->
   $('.top-bar__expand').on 'click touchstart', (event)->
     $('.top-bar').toggleClass('top-bar--expanded')
 
+  $('.activate-modal, .modal__backdrop').on 'click touchstart', (event)->
+    $('.modal').toggleClass('modal--active')
+
   $("meta[property='og:article:tag']").each ->
     track('Blog', 'Tag', $(this).attr('content'))
 

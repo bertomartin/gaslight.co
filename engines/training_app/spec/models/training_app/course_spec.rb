@@ -139,6 +139,19 @@ module TrainingApp
       end
     end
 
+    describe ".online, .in_person" do
+      let(:online_course) { FactoryGirl.create(:course, online: true) }
+      let(:in_person_course) { FactoryGirl.create(:course, online: false) }
+      it "includes online courses" do
+        expect(Course.online).to include(online_course)
+        expect(Course.online).to_not include(in_person_course)
+      end
+      it "includes in_person courses" do
+        expect(Course.in_person).to_not include(online_course)
+        expect(Course.in_person).to include(in_person_course)
+      end
+    end
+
     describe ".active" do
       let(:active_course) { FactoryGirl.create(:course) }
       let(:inactive_course) { FactoryGirl.create(:course, active: false) }

@@ -2,13 +2,14 @@
 = render(partial: 'meta')
 
 #main.no-photo
-  .columns.large-8
-    = render post
-    .comments#disqus_thread
-    %noscript
-      Please enable JavaScript to view the
-      %a{href: "http://disqus.com/?ref_noscript"} comments powered by Disqus
-  = render partial: 'posts/show_sidebar'
+  .row
+    .columns.large-8
+      = render post
+      .comments#disqus_thread
+      %noscript
+        Please enable JavaScript to view the
+        %a{href: "http://disqus.com/?ref_noscript"} comments powered by Disqus
+    = render partial: 'posts/show_sidebar'
 
 - content_for(:javascript) do
   :javascript

@@ -16,12 +16,13 @@
       .underline--blue
     .row
       - in_person_courses.each do |course|
-        .large-6.column.center
-          %img.course__img{src: course.image_url}
-          %h2.subheader= course.title
-          %p= course.meta
-          %p= course.synopsis
-          %a.button.button--brand1{href: course_path(course)} Learn more about the class.
+        .large-6.columns
+          .course.course--in-person
+            %img.course__img{src: course.image_url}
+            %h2.course__title.subheader= course.title
+            %p= course.meta
+            %p= course.synopsis
+            %a.button.button--brand1{href: course_path(course)} Learn more about the class.
 
   %section.section--contrast
     .row
@@ -30,13 +31,14 @@
     .row
       - online_courses.each do |course|
         .large-6.columns.center
-          %img.course__img{src: course.image_url}
-          %h2.subheader= course.title
-          %p= course.synopsis
-          %a.brand1--link.element--sm-margin-bottom{href: course_path(course)} Learn more about the class.
-          .row
-            %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
-            %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
+          .course.course--online
+            %img.course__img{src: course.image_url}
+            %h2.course__title.subheader= course.title
+            %p= course.synopsis
+            %a.brand1--link.element--sm-margin-bottom{href: course_path(course)} Learn more about the class.
+            .row
+              %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
+              %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
 
   %section
     .row

@@ -10,9 +10,6 @@ module TrainingApp
     has_many :child_courses, class_name: 'TrainingApp::Course', foreign_key: :parent_course_id
     belongs_to :parent_course, class_name: 'TrainingApp::Course'
 
-    validate :start_date, :uniqueness => { :scope => :venue_id },
-        :message => "One course at a time per venue, please."
-
     delegate :price, :title, :description_main, :synopsis, to: :parent_course, prefix: true, allow_nil: true
     delegate :name, :city, :address, to: :venue, prefix: true, allow_nil: true
 

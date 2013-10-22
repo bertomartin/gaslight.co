@@ -1,4 +1,4 @@
-- content_for(:title) { "#{course.title} | Cincinnati, OH" }
+underline--bluecontent_for(:title) { "#{course.title} | Cincinnati, OH" }
 
 #main.no-photo
   .row
@@ -12,10 +12,12 @@
 
       - course.instructors.each do |instructor|
         %hr
-        .instructor
-          %h5= instructor.name
-          %img{src: instructor.image_url }
-          %p= instructor.bio
+        .instructor.row
+          .large-4.columns
+            %img{src: instructor.image_url }
+          .large-8.columns
+            %h5= instructor.name
+            %p= instructor.bio
 
     .columns.large-4.sidebar--training.center
       .purchase-panel
@@ -37,5 +39,7 @@
         %p
           We’d love to set up a private training session for your group or team.
         %a.brand1--link{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now
-
-      = render "training_app/application/newsletter"
+      %hr
+        %p
+          Stay up to date on all of our training offerings.
+        = render "training_app/application/newsletter"

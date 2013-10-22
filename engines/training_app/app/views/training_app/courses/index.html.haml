@@ -16,9 +16,9 @@
       .underline--blue
     .row
       - in_person_courses.each do |course|
-        .large-6.columns.course.course--in-person
-          %img{src: course.image_url}
-          %h3.subheader= course.title
+        .large-6.column.center
+          %img.course__img{src: course.image_url}
+          %h2.subheader= course.title
           %p= course.meta
           %p= course.synopsis
           %a.button.button--brand1{href: course_path(course)} Learn more about the class.
@@ -29,19 +29,20 @@
       .underline--blue
     .row
       - online_courses.each do |course|
-        .large-6.columns.course.course--online
-          %img{src: course.image_url}
-          %h3.subheader= course.title
+        .large-6.columns.center
+          %img.course__img{src: course.image_url}
+          %h2.subheader= course.title
           %p= course.synopsis
-          %a.button.button--brand1{href: course_path(course)} Learn more about the class.
-          %a.button.button--brand1{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now!
-          %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now!
+          %a.brand1--link.element--sm-margin-bottom{href: course_path(course)} Learn more about the class.
+          .row
+            %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
+            %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
 
   %section
     .row
       %h2.header Custom Training Sessions
       .underline--blue
-    .row
-      .large-8.columns
-        %p We can bring any workshop or class listed above right to your door. Or create a custom, hands-on training session tailored to your needs.
+    .row.center
+      .large-8.columns.large-centered
+        %p.lead We can bring any workshop or class listed above right to your door. Or create a custom, hands-on training session tailored to your needs.
         %a{href: "mailto:training@gaslight.co", rel: "Training Contact"} Let’s talk about a training session to move your team forward.

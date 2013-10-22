@@ -22,7 +22,8 @@
             %h2.course__title.subheader= course.title
             %p= course.meta
             %p= course.synopsis
-            %a.button.button--brand1{href: course_path(course)} Learn more about the class.
+            .course__actions
+              %a.button.button--brand1{href: course_path(course)} Learn more about the class.
 
   %section.section--contrast
     .row
@@ -36,7 +37,7 @@
             %h2.course__title.subheader= course.title
             %p= course.synopsis
             %a.brand1--link.element--sm-margin-bottom{href: course_path(course)} Learn more about the class.
-            .row
+            .course__actions
               %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
               %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
 

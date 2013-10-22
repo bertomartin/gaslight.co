@@ -17,7 +17,7 @@
           .large-4.columns
             %a.button--full-width.button--brand1{href: page_path('about')} Learn
             %p
-              Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you.
+              Think of us as early, early adopters. We find and explore new tech first. Then put the best tools and practices <a class="brand1--link", href="about", rel="About Us">to work for you.</a>
 
           .large-4.columns
             %a.button--full-width.button--brand2{href: page_path('work/ipc')} Build
@@ -119,7 +119,7 @@
 :plain
   <script type="text/template" id="eventTemplate">
     <div class="columns large-2 small-2 upcoming-events__author">
-      <img src="<%- person.gravatar_url %>" class="avatar" />
+      <img src="<%- person.gravatar_url %>" class="avatar avatar--small" />
     </div>
     <div class="columns large-10 small-10 upcoming-events__info">
       <span class="person"><a href="https://twitter.com/<%- person.twitter %>"><%- person.firstName %></a></span>

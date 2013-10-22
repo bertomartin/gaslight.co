@@ -3,29 +3,31 @@
 @media only screen and (max-width: 767px)
   .row .row .row
     margin: 0 -10px
-  #nav
-    background: #000
-    text-align: center
-    .mobile
-      display: block
-    .brand
-      float: none
-      text-align: center
-    ul.links > li a
-      text-align: left
-      height: 62px
-      line-height: 62px
-      border-top: none
-      border-bottom: 2px solid #fff
-      font-weight: lighter
-      font-size: 24px
+  // #nav
+  //   background: #000
+  //   text-align: center
+  //   .mobile
+  //     display: block
+  //   .brand
+  //     float: none
+  //     text-align: center
+    // ul.links > li a
+    //   text-align: left
+    //   height: 62px
+    //   line-height: 62px
+    //   border-top: none
+    //   border-bottom: 2px solid #fff
+    //   font-weight: lighter
+    //   font-size: 32px
+  .top-bar__nav a
+    font-size: 24px
 
-  #main section
-    padding: 2em 0 3em 0
+  #main.content section
+    padding: 2em 0 1em 0
     &:last-child
       padding-bottom: 20px + $footerHeight
 
-  #guides
+  // #guides
   .sidebar
     margin-bottom: 40px
     border-left: none
@@ -46,28 +48,26 @@
     margin-bottom: 40px
 
   .landingpage
-    margin-top: 15px + $topbar-height
+    margin-top: 30px
     margin-bottom: 15px
-  .landingpage__tagline
-    font-size: 28px
-  .landingpage__subheading
-    margin-bottom: 0
-  .landing-page__info
-    margin-top: 0
-
+  // .landingpage__tagline
+  //   font-size: 28px
+  // .landingpage__subheading
+  //   margin-bottom: 0
+  // .landing-page__info
+  //   margin-top: 0
+  %underline
+    margin-top: 10px
 
   #main 
-    padding: 75px 0
     > header
       display: none
     > .columns
       padding: 0
-
-  #main.landing-page
-
   .post__title
     font-size: 20px
-
+  .post
+    margin-bottom: 2em
   .post__body
     h1
       font-size: $blog-mobile-heading-font-size

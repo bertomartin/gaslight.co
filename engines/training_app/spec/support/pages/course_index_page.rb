@@ -6,15 +6,15 @@ class CourseIndexPage
   end
 
   def course_titles
-    all(".course h3").collect(&:text)
+    all(".course .course__title").collect(&:text)
   end
 
   def online_course_titles
-    all(".course--online h3").collect(&:text)
+    all(".course--online .course__title").collect(&:text)
   end
 
   def in_person_course_titles
-    all(".course--in-person h3").collect(&:text)
+    all(".course--in-person .course__title").collect(&:text)
   end
 end
 

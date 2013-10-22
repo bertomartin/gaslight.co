@@ -70,10 +70,6 @@ module TrainingApp
       "#{start_date.strftime("%B %d, %Y") if start_date.present?} - #{venue_city}"
     end
 
-    def self.current
-      upcoming.first
-    end
-
     def self.by_slug(id)
       where(id: id.split('-').first).first
     end

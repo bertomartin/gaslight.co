@@ -2,8 +2,16 @@ FactoryGirl.define do
   factory :course, class: TrainingApp::Course do
     title "My Awesome Class"
     description_main "A great technology to learn with!"
-    start_date { 1.day.ago }
-    end_date { Date.today + 1.month }
+    active true
     price 199
+
+    factory :online_course do
+      online true
+    end
+
+    factory :in_person_course do
+      start_date { 1.day.from_now }
+      end_date { 1.day.from_now }
+    end
   end
 end

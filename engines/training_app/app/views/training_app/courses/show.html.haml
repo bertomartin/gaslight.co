@@ -1,15 +1,23 @@
 - content_for(:title) { "#{course.title} | Cincinnati, OH" }
 
-#main.content.course
+#main.no-photo
   .row
     .large-12.columns
-      %h1.course__title= course.title
+      %h1.header= course.title
+      .underline--blue
 
   .row
-    .large-8.columns
+    .large-7.columns
       .course__description= markdown(course.description_main)
 
-    .columns.large-4
+      - course.instructors.each do |instructor|
+        %hr
+        .instructor
+          %h5= instructor.name
+          %img{src: instructor.image_url }
+          %p= instructor.bio
+
+    .columns.large-4.sidebar--training.center
       - if course.online?
         = render course
 
@@ -20,27 +28,8 @@
         = render child_course
 
       .request
+        %hr
         %h4 Can't make this date or location?
         %p
           We’d love to set up a private training session for your group or team.
-        %a.button.button--request{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now
-
-      / .newsletter
-      /   %h4 Want to know about future workshops?
-      /   %p
-      /     Sign-up for our monthly e-mail newsletter:
-      /     = render partial: 'application/newsletter'
-
-      - course.instructors.each do |instructor|
-        .instructor
-          %h5= instructor.name
-          %img{src: instructor.image_url }
-          %p= instructor.bio
-
-      .testimonial
-        %h5 Testimonials
-        %p
-          "What I've seen so far is pretty freaking amazing. I love the rhythm
-          of showing the students a little bit and then forcing them to type in
-          order to make it work. The lesson sizes are perfect, very small and
-          digestible."
+        %a.brand1--link{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now

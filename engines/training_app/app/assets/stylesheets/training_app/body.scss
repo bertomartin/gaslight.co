@@ -18,3 +18,48 @@
   max-width: 100%;
   padding: 10px;
 }
+
+.purchase-panel {
+  background-color: #ccc;
+}
+
+
+//Stripe Form//
+
+.element--sm-margin-bottom {
+  margin-bottom: 10px;
+}
+
+.stripe--form{
+  padding: 25px 30px;
+}
+
+.stripe__container{
+  margin-bottom: 30px;
+}
+
+.errors{
+  color: $brand3;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.purchase-form__header{
+  padding: 15px;
+  background-color: $brand1;
+  margin-bottom: 10px;
+}
+
+.purchase_form{
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.purchase_intro{
+  text-align: center;
+  a{
+    color: darken($brand1, 30);
+  }
+}

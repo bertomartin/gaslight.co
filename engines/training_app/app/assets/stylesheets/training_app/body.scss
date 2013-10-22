@@ -1,6 +1,32 @@
 .course__img {
-  height: 100px;
+  display: block;
+  height: 200px;
+  margin: 0 auto;
 }
+
+.sidebar--training{
+  padding: 20px 18px;
+  background-color: #eee;
+}
+
+.purchase-panel__price{
+  font-size: 2em;
+  text-align: center;
+  color: $brand1;
+  margin: 20px 0;
+}
+
+.request{
+  margin-top: 20px;
+  h4{
+    font-size: 1em;
+    font-weight: 600;
+  }
+}
+// .course__image {
+//   max-width: 100%;
+//   padding: 10px;
+// }
 
 // this is rendered via markdown, so we cant use  class names
 .course__description{
@@ -12,17 +38,16 @@
     text-align: center;
     margin-top: 60px;
   }
-}
+  h2{
+    margin: 10px 0;
+    font-size: 1.5em;
+  }
 
-.course__image {
-  max-width: 100%;
-  padding: 10px;
+  h3{
+    color: $brand1;
+    margin: 10px 0;
+  }
 }
-
-.purchase-panel {
-  background-color: #ccc;
-}
-
 
 //Stripe Form//
 

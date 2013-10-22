@@ -5,36 +5,16 @@ class CourseIndexPage
     visit "/training/courses"
   end
 
-  def featured_course_title
-    first(".featured-card__title").text
-  end
-
-  def featured_course_synopsis
-    first(".featured-card__synopsis").text
-  end
-
-  def featured_course_location
-    first(".featured-card__location").text
-  end
-
-  def featured_course_meta
-    first(".featured-card__meta").text
-  end
-
-  def featured_course_button
-    first(".featured-card__button").text
-  end
-
-  def course_list_size
-    all(".course-list__course").size
-  end
-
-  def course_children_size
-    all(".course__child").size
-  end
-
   def course_titles
-    all(".course__heading").collect(&:text)
+    all(".course .course__title").collect(&:text)
+  end
+
+  def online_course_titles
+    all(".course--online .course__title").collect(&:text)
+  end
+
+  def in_person_course_titles
+    all(".course--in-person .course__title").collect(&:text)
   end
 end
 

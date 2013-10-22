@@ -1,26 +1,33 @@
 //iPhone
 
 @media only screen and (max-width: 767px)
-  // .row .row .row
-  //   margin: 0 -10px
-  #nav
-    background: #000
-    text-align: center
-    .mobile
-      display: block
-    .brand
-      float: none
-      text-align: center
-    ul.links > li a
-      text-align: left
-      height: 62px
-      line-height: 62px
-      border-top: none
-      border-bottom: 2px solid #fff
-      font-weight: lighter
-      font-size: 24px
+  .row .row .row
+    margin: 0 -10px
+  // #nav
+  //   background: #000
+  //   text-align: center
+  //   .mobile
+  //     display: block
+  //   .brand
+  //     float: none
+  //     text-align: center
+    // ul.links > li a
+    //   text-align: left
+    //   height: 62px
+    //   line-height: 62px
+    //   border-top: none
+    //   border-bottom: 2px solid #fff
+    //   font-weight: lighter
+    //   font-size: 32px
+  .top-bar__nav a
+    font-size: 24px
 
-  #guides
+  #main.content section
+    padding: 2em 0 1em 0
+    &:last-child
+      padding-bottom: 20px + $footerHeight
+
+  // #guides
   .sidebar
     margin-bottom: 40px
     border-left: none
@@ -40,53 +47,27 @@
   hr.divider
     margin-bottom: 40px
 
-  h2.title
-    margin-right: 0
-    margin-left: 0
-    margin-bottom: 30px
-    font-size: 24px
-    &:before, &:after
-      margin: 0 10px
-    &.brand1
-      &:before, &:after
-        @include icon-sprite(diamond-small-blue)
-    &.brand2
-      &:before, &:after
-        @include icon-sprite(diamond-small-yellow)
-    &.brand3
-      &:before, &:after
-        @include icon-sprite(diamond-small-red)
   .landingpage
-    margin-top: 15px + $topBarHeight
+    margin-top: 30px
     margin-bottom: 15px
-  .landingpage__tagline
-    font-size: 28px
-  .landingpage__subheading
-    margin-bottom: 0
-  .landing-page__info
-    margin-top: 0
-
+  // .landingpage__tagline
+  //   font-size: 28px
+  // .landingpage__subheading
+  //   margin-bottom: 0
+  // .landing-page__info
+  //   margin-top: 0
+  %underline
+    margin-top: 10px
 
   #main 
-    padding: 75px 25px
     > header
       display: none
     > .columns
       padding: 0
-  #main.landing-page
-    .hero--weare, .hero--worktogether
-      padding: 40px 0
-      height: 100%
-      .button
-        width: 100%
-    .hero--process
-      padding: 40px 0
-      .button
-        width: 100%
-
   .post__title
     font-size: 20px
-
+  .post
+    margin-bottom: 2em
   .post__body
     h1
       font-size: $blog-mobile-heading-font-size
@@ -113,17 +94,19 @@
   .footer__contact
     margin-bottom: 5px
 
-  .headline__buzzword--casestudy
-    line-height: 1em
-    font-size: 40px
+  // .headline__buzzword--casestudy
+  //   line-height: 1em
+  //   font-size: 40px
 
-  .headline__buzzword
-    padding-top: 20px
-  .hero__header--animated, .hero__header--brand1
-    margin: 0 -6px
+  // .headline__buzzword
+  //   padding-top: 20px
+  // .hero__header--animated, .hero__header--brand1
+  //   margin: 0 -6px
 
-  .hero--featured
-    height: 100%
+  // .hero--featured
+  //   height: 100%
+
+
 //iPad and down
 @media only screen and (max-width : 1024px)
   .post__avatar

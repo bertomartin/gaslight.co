@@ -10,9 +10,6 @@ module TrainingApp
     has_many :child_courses, class_name: 'TrainingApp::Course', foreign_key: :parent_course_id
     belongs_to :parent_course, class_name: 'TrainingApp::Course'
 
-    validate :start_date, :uniqueness => { :scope => :venue_id },
-        :message => "One course at a time per venue, please."
-
     delegate :price, :title, :description_main, :synopsis, to: :parent_course, prefix: true, allow_nil: true
     delegate :name, :city, :address, to: :venue, prefix: true, allow_nil: true
 
@@ -73,14 +70,6 @@ module TrainingApp
       "#{start_date.strftime("%B %d, %Y") if start_date.present?} - #{venue_city}"
     end
 
-    def self.current
-      upcoming.first
-    end
-
-    def self.featured
-      where(featured: true).limit(2)
-    end
-
     def self.by_slug(id)
       where(id: id.split('-').first).first
     end
@@ -99,6 +88,14 @@ module TrainingApp
 
     def self.active
       where(active: true)
+    end
+
+    def self.online
+      where(online: true)
+    end
+
+    def self.in_person
+      where(online: false)
     end
   end
 end

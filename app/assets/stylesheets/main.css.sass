@@ -1,5 +1,27 @@
+.brand1
+  color: $brand1
+
+.brand2
+  color: $brand2
+
+.brand3
+  color: $brand3
+
+.row--lg-margin-bottom
+  @extend .row
+  margin-bottom: 70px
+
+.row--lg-margin-top
+  @extend .row
+  margin-top: 50px
+  
+.element--sm-margin-bottom
+  margin-bottom: 10px
+
 #guides
   @include clearfix()
+  position: relative
+  margin-top: $topbar-height
   overflow: hidden
   width: 100%
   background: #f4f4f4
@@ -7,26 +29,54 @@
     position: absolute !important
     top: 0px
 
+#main.content section
+  padding: 4em 0 4.5em 0
+  &:last-child
+    padding-bottom: 80px + $footerHeight
+
+#main section.header
+  position: relative
+  margin-top: 100px + $topbar-height
+  // margin-bottom: 150px
+  padding: 10px 0
+
+#main.landing
+  padding: 0
+
+#main.no-photo
+  padding-top: $topbar-height * 2
+  margin-bottom: 35px
+
+.section--contrast
+  background-color: $section-contrast
+
+.icons--homepage
+  margin-bottom: 30px
+
+// ------  Landing Page ------ //
 .landingpage
   position: relative
-  margin-top: 100px + $topBarHeight
-  margin-bottom: 150px
+  margin-top: 100px + $topbar-height
   padding: 10px 0
-  background: rgba(244, 244, 244, 0.8)
+  margin-bottom: 100px
+  background: rgba(244,244,244,0.8)
 
-.landingpage__tagline
-  text-align: center
-  font-size: 500%
+// .landingpage__tagline
+//   text-align: center
+//   font-size: 500%
 
-.landingpage__paragraph
-  text-align: center
-  font-size: 20px
+// .landingpage__paragraph
+//   text-align: center
+//   font-size: 20px
 
-.landingpage__subheading
+// .landingpage__subheading
+//   text-align: center
+//   margin-bottom: 15px
+//   font-size: 24px
+//   font-weight: normal
+
+.landingpage .lead
   text-align: center
-  margin-bottom: 15px
-  font-size: 24px
-  font-weight: normal
 
 .landing-page__info
   margin-top: 5px
@@ -34,96 +84,98 @@
     margin-bottom: 30px
 .landing-page__contact p
   margin-bottom: 5px
-.lbs
-  width: 100%
+.overview--home
   text-align: center
   display: inline-block
   p
     color: #222
-    font-size: 14px
+    font-size: 15px
     margin: 10px 0
-  .button--large
-    width: 100%
-    text-transform: uppercase
-    margin-top: 10px
-  a
-    font-weight: bold
-    text-align: center
-.brand1--link
-  color: $brand1
-  &:hover
-    color: darken($brand1,20)
-.brand2--link
-  color: $brand2
-  &:hover
-    color: darken($brand2,10)
-.brand3--link
-  color: $brand3
-  &:hover
-    color: darken($brand3,10)
 
 .iconTile
   text-align: center
   margin-bottom: 20px
 
+.upcoming-events
+  border: 1px solid #eee
+  background-color: #fff
+  +border-radius(2px)
+
+.upcoming-events h3
+  background-color: $brand2
+  text-align: center
+  color: #fff
+  font-weight: 400
+  padding: 9px 0 6px
+
+.upcoming-events__info
+  margin-top: 2%
+
+#activities
+  padding: 15px 20px 0
+  a
+    color: $brand2
+    &:hover
+      color: darken($brand2, 10)
+
 #main
   background: #fff
-  padding: 100px 50px 100px 50px
+  padding: $topbar-height 0 0 0
   min-height: 100%
   margin-bottom: - $footerHeight
-  > header
-    margin: 0px -75px $sectionMargin -75px
-    height: 370px
-    overflow: hidden
-    background-repeat: no-repeat
-    background-image: image-url("header0.jpg")
-    border-right: 6px solid #2b2b2b
-    &.brand1
-      background-image: image-url("header1.jpg")
-      border-color: $brand1
-      .intro
-        padding-top: 60px
-        height: 100%
-    &.brand2
-      background-image: image-url("header2.jpg")
-      border-color: $brand2
-      .intro
-        padding-top: 50px
-    &.brand3
-      background-image: image-url("header3.jpg")
-      border-color: $brand3
-    .headline
-      a
-        color: #fff
-        &:hover
-          color: darken(#fff, 10)
-      .map
-        h3
-          width: 226px
-          height: 221px
-          margin: 65px 0 20px 44px
-          padding: 65px 42px
-          line-height: 1.1em
-          text-align: center
-          background: image-url("ohio.png") no-repeat
-          color: #000
-          &:hover
-            color: $brand3
-        h4
-          &:hover
-            color: #000
-      .headline__buzzword, .headline__buzzword--casestudy
-        font-size: 50px
-        margin: 122px 0 0 25px
-      .headline__buzzword--3lines
-        font-size: 50px
-        margin: 100px 0 0 25px
-        color: #fff
-        line-height: 1.2em
-      h4
-        text-align: center
-      &.brandBase .headline__buzzword, h4
-        color: #fff
+  // > header
+  //   margin: 0px -75px $sectionMargin -75px
+  //   height: 370px
+  //   overflow: hidden
+  //   background-repeat: no-repeat
+  //   background-image: image-url("header0.jpg")
+  //   border-right: 6px solid #2b2b2b
+    // &.brand1
+    //   background-image: image-url("header1.jpg")
+    //   border-color: $brand1
+    //   .intro
+    //     padding-top: 60px
+    //     height: 100%
+    // &.brand2
+    //   background-image: image-url("header2.jpg")
+    //   border-color: $brand2
+    //   .intro
+    //     padding-top: 50px
+    // &.brand3
+    //   background-image: image-url("header3.jpg")
+    //   border-color: $brand3
+    // .headline
+    //   a
+    //     color: #fff
+    //     &:hover
+    //       color: darken(#fff, 10)
+    //   .map
+    //     h3
+    //       width: 226px
+    //       height: 221px
+    //       margin: 65px 0 20px 44px
+    //       padding: 65px 42px
+    //       line-height: 1.1em
+    //       text-align: center
+    //       background: image-url("ohio.png") no-repeat
+    //       color: #000
+    //       &:hover
+    //         color: $brand3
+    //     h4
+    //       &:hover
+    //         color: #000
+    //   .headline__buzzword, .headline__buzzword--casestudy
+    //     font-size: 50px
+    //     margin: 122px 0 0 25px
+    //   .headline__buzzword--3lines
+    //     font-size: 50px
+    //     margin: 100px 0 0 25px
+    //     color: #fff
+    //     line-height: 1.2em
+    //   h4
+    //     text-align: center
+    //   &.brandBase .headline__buzzword, h4
+    //     color: #fff
     .intro
       padding: 20px 45px 20px 55px
     .socialLinks
@@ -143,107 +195,106 @@
         &:hover
           color: darken($brand3, 30%)
 
-  section.row
-    margin-bottom: $sectionMargin
-    p.emphasize
-      margin-bottom: 40px
+  // section.row
+  //   margin-bottom: $sectionMargin
+  //   p.emphasize
+  //     margin-bottom: 40px
 
-%hero--full-width
-  background-color: $brandBase
-  background-size: cover
-  background-repeat: no-repeat
-  background-position: top center
-  padding: 125px 0
-  color: #fff
+// %hero--full-width
+//   background-color: $brandBase
+//   background-size: cover
+//   background-repeat: no-repeat
+//   background-position: top center
+//   color: #fff
 
 // Landing Page
-#main.landing-page
-  padding: 0
-  .arrow-right
-    width: 0
-    height: 0
-    border-top: 10px solid transparent
-    border-bottom: 10px solid transparent
-    border-left: 10px solid $brand3
-    float: right
-    margin-top: 5px
-  .hero--weare
-    @extend %hero--full-width
-    background-image: image-url("landing/group.jpg")
-  .hero--process
-    padding: 100px 0
-    a
-      margin-bottom: 40px
-  .hero--worktogether
-    @extend %hero--full-width
-    background-image: image-url("landing/contact.jpg")
-    li
-      list-style: none
-      display: inline-block
-    ul
-      text-align: justify
-    .justifylist--last
-      width: 100%
-      height: 0
-  i[class^="icon"]
-    display: inline-block
+// #main.landing-page
+//   padding: 0
+//   .arrow-right
+//     width: 0
+//     height: 0
+//     border-top: 10px solid transparent
+//     border-bottom: 10px solid transparent
+//     border-left: 10px solid $brand3
+//     float: right
+//     margin-top: 5px
+//   .hero--weare
+//     @extend %hero--full-width
+//     background-image: image-url("landing/group.jpg")
+//   .hero--process
+//     padding: 100px 0
+//     a
+//       margin-bottom: 40px
+//   .hero--worktogether
+//     @extend %hero--full-width
+//     background-image: image-url("landing/contact.jpg")
+//     li
+//       list-style: none
+//       display: inline-block
+//     ul
+//       text-align: justify
+//     .justifylist--last
+//       width: 100%
+//       height: 0
+//   i[class^="icon"]
+//     display: inline-block
 
-  %landing-page__sidebar
-    border-top-width: 8px
-    border-top-style: solid
-    padding-top: 10px
+  // %landing-page__sidebar
+  //   border-top-width: 8px
+  //   border-top-style: solid
+  //   padding-top: 10px
 
-  .landing-page__sidebar--about
-    @extend %landing-page__sidebar
-    border-top-color: $brand1
-    color: #fff
+  // .landing-page__sidebar--about
+  //   @extend %landing-page__sidebar
+  //   border-top-color: $brand1
+  //   color: #fff
 
-  .landing-page__sidebar--contact
-    @extend %landing-page__sidebar
-    border-top-color: $brand2
-    color: #fff
+  // .landing-page__sidebar--contact
+  //   @extend %landing-page__sidebar
+  //   border-top-color: $brand2
+  //   color: #fff
 
-  .landing-page__sidebar--process
-    @extend %landing-page__sidebar
-    border-top-color: $brand3
+  // .landing-page__sidebar--process
+  //   @extend %landing-page__sidebar
+  //   border-top-color: $brand3
 
-  h4.landing-page__subheading
-    color: $brand3
-    font-size: 18px
-    margin-top: 0
-    margin-bottom: 10px
+  // h4.landing-page__subheading
+  //   color: $brand3
+  //   font-size: 18px
+  //   margin-top: 0
+  //   margin-bottom: 10px
 
-  .landing-page__heading
-    color: $brandBase
-    font-size: 18px
-    text-transform: uppercase
-    font-weight: bolder
-    margin-top: 10px
-    margin-bottom: 5px
-  .hero--process
-    p
-      color: lighten($brandBase,30)
+  // .landing-page__heading
+  //   color: $brandBase
+  //   font-size: 18px
+  //   text-transform: uppercase
+  //   font-weight: bolder
+  //   margin-top: 10px
+  //   margin-bottom: 5px
+  // .hero--process
+  //   p
+  //     color: lighten($brandBase,30)
 
   ul.landing-page__contact
     margin-top: 5px
 
-h2.title
-  text-align: center
-  border-top: 2px solid $headerFontColor
-  border-bottom: 2px solid $headerFontColor
-  margin: 0 100px $sectionMargin 100px
-  padding: 20px 0 15px 0
-  &:before, &:after
-    @include icon-sprite(diamond-grey)
-    content: ""
-    display: inline-block
-    margin: 0 15px
-  &.brand1:before, &.brand1:after
-    @include icon-sprite(diamond-blue)
-  &.brand2:before, &.brand2:after
-    @include icon-sprite(diamond-yellow)
-  &.brand3:before, &.brand3:after
-    @include icon-sprite(diamond-red)
+// h2.title
+//   text-align: center
+//   border-top: 2px solid $header-font-color
+//   border-bottom: 2px solid $header-font-color
+//   margin: 0 100px $sectionMargin 100px
+//   padding: 20px 0 15px 0
+//   &:before, &:after
+//     // @include icon-sprite(diamond-grey)
+//     content: ""
+//     display: inline-block
+//     margin: 0 15px
+//   &.brand1:before, &.brand1:after
+//     // @include icon-sprite(diamond-blue)
+//   &.brand2:before, &.brand2:after
+//     // @include icon-sprite(diamond-yellow)
+//   &.brand3:before, &.brand3:after
+//     // @include icon-sprite(diamond-red)
 
 .row.expertise
   p
@@ -264,14 +315,14 @@ h2.title
 hr.divider
   border: 1px solid #c1c1c1
   text-align: center
-  &.columns
-    margin-top: 10px
-    margin-bottom: $sectionMargin
-  &:before
-    @include icon-sprite(diamond-grey)
-    content: ""
-    display: inline-block
-    margin: -12px 15px 0 15px
+//   &.columns
+//     margin-top: 10px
+//     margin-bottom: $sectionMargin
+//   &:before
+//     // @include icon-sprite(diamond-grey)
+//     content: ""
+//     display: inline-block
+//     margin: -12px 15px 0 15px
 
 .flex-video
   margin: 0
@@ -282,6 +333,7 @@ hr.divider
 
 .buttonLinks
   width: 100%
+  height: 100%
   padding: 0 20px
   .button
     width: 100%
@@ -290,12 +342,13 @@ hr.divider
 
 
 ul.photos li
-  height: 170px
-  width: 126px
+  width: 18%
   list-style: none
   float: left
-  margin: 0 20px 20px 0
+  margin: 0 2% 15px 0
   position: relative
+  &:last-child
+    margin: 0 0 0 0
   h3
     line-height: 1.1em
   .photo
@@ -304,78 +357,153 @@ ul.photos li
     margin-bottom: 8px
     img
       vertical-align: bottom
+      display: inline-block
     .overlay
       position: absolute
       width: 100%
       height: 100%
       top: 100%
-      background: rgba(87, 192, 232, 0.7)
+      background: transparentize($brand2, 0.25)
       @include transition-property(top)
       @include transition-duration(0.5s)
     .links
       position: absolute
-      top: 45px
+      top: 40px
       width: 100%
       text-align: center
       a
         color: #fff
         font-size: 2em
-        &:hover
-          @include opacity(0.7)
+        // &:hover
+        //   @include opacity(0.7)
 
   &:hover .overlay
     top: 0
-
-  h3
-    text-align: center
-    font-size: 18px
+  .subheader
+    color: #fff
     margin: 0
+    font-weight: 600
+  .subtitle
+    color: #fff
+    font-weight: 300
 
-.skillList
-  li
-    list-style: none
-    font-size: 19px
-    padding: 2px 10px
-    @include border-radius(5px)
-    float: left
-    clear: both
-    &:hover
-      background: $brand1
-      color: #fff
+// .skillList
+//   li
+//     list-style: none
+//     font-size: 19px
+//     padding: 2px 10px
+//     @include border-radius(5px)
+//     float: left
+//     clear: both
+//     &:hover
+//       background: $brand1
+//       color: #fff
 
-.socialLinks--footer
-  margin: 0 0 0 -20px
-  li
-    list-style: none
-    display: inline-block
+// .socialLinks--footer
+//   margin: 0 0 0 -20px
+//   li
+//     list-style: none
+//     display: inline-block
 
-.socialLinks
-  li
-    list-style: none
-    display: inline-block
-    margin-top: 10px
-    a
-      color: $brandBase
-      font-weight: bold
-      border: 1px solid $brandBase
-      padding: 10px 20px
-      margin: 0 5px
-      &:hover
-        color: #fff
-        background-color: $brandBase
-        border: 1px solid $brandBase
+// .socialLinks
+//   li
+//     list-style: none
+//     display: inline-block
+//     margin-top: 10px
+//     a
+//       color: $brandBase
+//       font-weight: bold
+//       border: 1px solid $brandBase
+//       padding: 10px 20px
+//       margin: 0 5px
+//       &:hover
+//         color: #fff
+//         background-color: $brandBase
+//         border: 1px solid $brandBase
 
 .clientsList
   text-align: center
   li
     display: inline-block
-    margin: 0 20px 0 0
-    width: 30%
+    background: $sprite--brand
+    margin: 2% 3%
+    width: 18%
     height: 100px
     list-style: none
     a
       max-width: 100%
-
+  .brand-pg
+    background-position: 0 -1600px
+    width: 118px
+    height: 51px
+    &:hover
+      background-position:  0 -1701px
+  .brand-outright
+    background-position: 0 -1380px
+    width: 164px
+    height: 60px
+    &:hover
+      background-position:   0 -1490px
+  .brand-eta
+    background-position: 0 -732px
+    width: 164px
+    height: 82px
+    &:hover
+      background-position:  0 -864px
+  .brand-sharethrough
+    background-position: -315px -260px
+    width: 270px
+    height: 51px
+    &:hover
+      background-position: -315px -361px
+  .brand-agsync
+    background-position: 0 0
+    width: 183px
+    height: 78px
+    &:hover
+      background-position: 0 -128px
+  .brand-roadtripper
+    background-position: -315px 0
+    width: 150px
+    height: 80px
+    &:hover
+      background-position: -315px -130px
+  .brand-apex
+    background-position: 0 -256px
+    width: 192px
+    height: 41px
+    &:hover
+      background-position: 0 -347px
+  .brand-lumbee
+    background-position: 0 -1188px
+    width: 147px
+    height: 46px
+    &:hover
+      background-position: 0 -1284px
+  .brand-ccl
+    background-position: 0 -438px
+    width: 97px
+    height: 97px
+    &:hover
+      background-position: 0 -585px
+  .brand-hyperquake
+    background-position: 0 -996px
+    width: 192px
+    height: 46px
+    &:hover
+      background-position: 0 -1092px
+  .brand-renewfund
+    background-position: 0 -1802px
+    width: 265px
+    height: 34px
+    &:hover
+      background-position:  0 -1886px
+  .brand-vendor
+    background-position: -315px -462px
+    width: 238px
+    height: 39px
+    &:hover
+      background-position: -315px -551px
 #slideshow
   margin-bottom: $sectionMargin
   h3
@@ -409,7 +537,7 @@ ul.photos li
 a.anchor
   display: block
   position: relative
-  top: -$topBarHeight - 10
+  top: -$topbar-height - 10
 
 .error-page
   background-color: #222
@@ -435,3 +563,41 @@ a.anchor
 
   .wendell
     margin-top: 100px
+
+.avatar--small
+  +border-radius(50%)
+  overflow: hidden
+  // height: 55px
+  width: 55px
+
+.avatar--brand2
+  border: 2px solid $brand2
+
+.latest-post__avatar
+  margin: 10px auto
+
+.latest-post
+  +border-radius(2px)
+  background-color: #fff
+  border: 1px solid #E1E1E1
+  padding: 15px
+  margin-bottom: 10px
+
+.upcoming-events__author
+  height: 75px
+  width: 75px
+
+.latest-post__title
+  font-weight: 600
+  display: block
+  text-align: center
+  margin: 0
+
+.latest-post__meta
+  text-align: center
+  color: #BBBBBB
+  margin: 0 0 12px
+
+.latest-post__description
+  @extend %caption
+  margin: 0 0 12px

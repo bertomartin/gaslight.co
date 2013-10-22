@@ -4,8 +4,7 @@
 %html{lang: 'en', xmlns: "http://www.w3.org/1999/xhtml", 'xmlns:og' => "http://ogp.me/ns#", 'xmlns:fb' => "http://www.facebook.com/2008/fbml"}
   <!--<![endif]-->
   %head
-    /[if lt IE 9]
-      = javascript_include_tag "html5shiv"
+
     %title= content_for(:title) || "Gaslight: Ruby on Rails, iOS and JavaScript Consultants | Cincinnati, OH"
     %meta{charset: "utf-8"}/
     %meta{content: "width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no", name: "viewport"}/
@@ -16,10 +15,13 @@
     = auto_discovery_link_tag(:rss, main_app.posts_url(format: :rss))
     = favicon_link_tag "32x32icon.png"
     = stylesheet_link_tag "application"
+    = javascript_include_tag "modernizr"
     = yield :head
     = csrf_meta_tags
   %body{class: "#{controller.controller_name} #{controller.action_name}"}
+    = render partial: 'application/nav'
     = yield
+    = render partial: 'application/footer'
     = javascript_include_tag "application"
     = yield :javascript
 

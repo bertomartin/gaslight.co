@@ -2,19 +2,17 @@
 <% content_for(:head) { stylesheet_link_tag "coffee" } %>
 <% content_for(:javascript) { javascript_include_tag "coffee" } %>
 
-<%= render partial: 'application/nav' %>
-
 <div class="row content" id="main">
-  <div class="seven column">
+  <div class="large-7 column">
     <img class="coffeeMachine" src="<%= image_path('machine.png') %>" alt="coffeemachine"/>
   </div>
-  <div class="five column info">
+  <div class="large-5 column info">
     <div id="headings">
       <h1 class="brand3 first">Come</h1>
       <h1 class="brand2 second">Drink Coffee</h1>
       <h1 class="brand1 thrid">Be Cool</h1>
     </div>
-    <p>We all have a morning routine. Let’s break it for just one morning each week. Come start your Friday off slow with awesome coffee and fun conversation. There’s no agenda, no slides, no topic, just coffee.</p> 
+    <p>We all have a morning routine. Let’s break it for just one morning each week. Come start your Friday off slow with awesome coffee and fun conversation. There’s no agenda, no slides, no topic, just coffee.</p>
     <p>When: Every Friday at 8 am</p>
     <p>Where: Gaslight<br/>
      11126 Kenwood Rd. Suite C<br/>
@@ -22,5 +20,3 @@
     <p>Why: Why not?</p>
   </div>
 </div>
-
-<%= render partial: 'application/footer' %>

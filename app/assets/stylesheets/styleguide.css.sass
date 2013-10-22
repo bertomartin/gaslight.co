@@ -1,0 +1,124 @@
+// ------  Full-Image Header  ------ //
+
+%image--full-width
+  background-color: $brandBase
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+
+%landing-header
+  text-align: center
+  padding: 125px 0
+  h3[class*="subheader"]
+    margin-top: 15px
+    margin-bottom: 40px 
+
+.case-study--home
+  @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/lumbee.jpg")
+
+.header--about
+  @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/group.jpg")
+
+.header--work
+  @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/postit.jpg")
+
+.header--services
+  @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/services.jpg")
+
+.header--contact
+  @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/contact.jpg")
+
+.header--training
+  @extend %image--full-width
+  @extend %landing-header
+  background-image: image-url("landing/training.jpg")
+
+.case-study--ipc--first
+  @extend %image--full-width
+  background-image: image-url("casestudy/ipc_hero.jpg")
+  min-height: 350px
+
+.case-study--ipc--second
+  @extend %image--full-width
+  background-image: image-url("casestudy/ipc--2.jpg")
+
+.case-study--ipc--third
+  @extend %image--full-width
+  background-image: image-url("casestudy/ipc--1.jpg")
+
+.case-study--lumbee--first
+  @extend %image--full-width
+  background-image: image-url("casestudy/lumbee_hero.jpg")
+  min-height: 350px
+
+.case-study--lumbee--second
+  @extend %image--full-width
+  background-image: image-url("casestudy/lumbee_video.jpg")
+
+.case-study--lumbee--third
+  @extend %image--full-width
+  background-image: image-url("casestudy/lumbee_ba.jpg")
+
+
+
+
+//---------------//
+//   SWATCHES   //
+//-------------//
+
+%caption
+  margin: 0
+  font-size: 14px
+
+%swatch
+  display: block
+  height: 55px
+  margin-bottom: 10px
+
+.color
+  @extend %color-card
+  width: 70px
+
+.swatch--brand1
+  @extend %swatch
+  background: $brand1
+
+.swatch--brand2
+  @extend %swatch
+  background: $brand2
+
+.swatch--brand3
+  @extend %swatch
+  background: $brand3
+
+.swatch--brandBase
+  @extend %swatch
+  background: $brandBase
+
+.swatch--lightgrey
+  @extend %swatch
+  background: #ccc
+
+.swatch--darkgrey
+  @extend %swatch
+  background: #666
+
+.swatch--white
+  @extend %swatch
+  background: #fff
+  border: 1px solid #ccc
+
+.swatch__caption
+  @extend %caption
+  text-align: center
+  color: #fff

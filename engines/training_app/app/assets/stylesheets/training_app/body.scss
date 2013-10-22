@@ -1,73 +1,27 @@
-.trainingcourse__content{
-  padding-right: 35px;
-  li {
-  font-size: 18px;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
+.course__img {
+  display: block;
+  max-height: 200px;
+  margin: 0 auto;
 }
 
 .sidebar--training{
-  padding: 5px 30px;
-  border-left: 1px solid #eee
+  padding: 20px 18px;
+  background-color: #eee;
 }
 
-.purchase-panel {
-  border: 1px solid #eee;
-  background-color: #f5f3f3;
-  padding: 0.5em 1em;
-  margin-bottom: 40px;
+.purchase-panel__price{
+  font-size: 2em;
   text-align: center;
+  color: $brand1;
+  margin: 30px 0 5px;
 }
 
-.button {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-%sidebar__block {
-  img {
-    width: 100%;
+.request{
+  margin-top: 20px;
+  h4{
+    font-size: 1em;
+    font-weight: 600;
   }
-  h5 {
-    @extend .brand3;
-    background-color: $brandBase;
-    padding: 10px 0;
-    color: #fff;
-    text-align: center;
-  }
-  p {
-    border: 1px solid #eee;
-    border-top: none;
-    padding: .75em;
-    font-size: 14px;
-  }
-}
-
-.instructor, .testimonial {
-  @extend %sidebar__block;
-}
-
-blockquote {
-  border: 1px solid #eee;
-  margin-bottom: 20px;
-  min-height: 300px;
-  padding: 0.25em 0.5em;
-}
-
-
-.course__title{
-  color: #fff;
-  margin-top: 0px;
-  background: $brand1;
-  padding: 10px 20px;
-  text-align: center;
-}
-
-.course__img {
-  height: 100px;
 }
 
 // this is rendered via markdown, so we cant use  class names
@@ -80,171 +34,54 @@ blockquote {
     text-align: center;
     margin-top: 60px;
   }
-}
+  h2{
+    margin: 10px 0;
+    font-size: 1.5em;
+  }
 
-.request{
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.course__image {
-  max-width: 100%;
-  padding: 10px;
-}
-
-.button--request{
-  background-color: #fff;
-  color: $brandBase;
-  border: 2px solid #999;
-  text-align: center;
-  &:hover{
-    color: #fff;
+  h3{
+    color: $brand1;
+    margin: 10px 0;
   }
 }
 
-@media only screen and (max-width: 767px){
-  .sidebar--training{
-    padding: 0;
-    border-left: 0px solid #fff;
-  }
+//Stripe Form//
+
+.element--sm-margin-bottom {
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
-//--------------------------------//
-//     FEATURED COURSE CARD       //
-//--------------------------------//
+.stripe--form{
+  padding: 25px 30px;
+}
 
-.featured-card{
-  border: 1px solid #ccc;
+.stripe__container{
+  margin-bottom: 30px;
+}
+
+.errors{
+  color: $brand3;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.purchase-form__header{
   padding: 15px;
-  @include border-radius(4px);
+  background-color: $brand1;
+  margin-bottom: 10px;
 }
 
-.featured-card__meta{
-  font-size: 16px;
-  text-transform: uppercase;
-  color: grey;
-  margin: 0
+.purchase_form{
+  color: #fff;
+  font-size: 2.2em;
+  font-weight: 500;
+  text-align: center;
 }
 
-.featured-card__title h1{
-  @extend %headline;
-  display: inline-block;
-  line-height: 1.2em;
-  color: #000;
-  &:hover{
-    color: inherit;
-  }
-}
-
-.featured-card__synopsis{
-  min-height: 110px;
-}
-
-
-%more-info-link{
-  float: right;
-  position: relative;
-  text-transform: uppercase;
-  margin-right: 10px;
-  &:hover{
-    text-decoration: underline;
-  }
-  &::after{
-    content: "";
-    display: block;
-    height: 0;
-    width: 0;
-    border: 5px solid;
-    border-color: transparent transparent transparent $brand1;
-    position: absolute;
-    top: 1px;
-    right: -15px;
-  }
-}
-
-.featured-card__more-link{
-  @extend %more-info-link;
-  top: -15px;
-}
-
-.featured-card .button{
-  margin-top: 20px;
-  margin-bottom: 0;
-}
-
-
-//--------------------------------//
-//         COURSE LISTING         //
-//--------------------------------//
-
-.course-list__course{
-  border-bottom: 1px solid #DDD;
-  margin-bottom: 22px;
-  padding-bottom: 22px;
-}
-
-.course-list__course:last-child{
-  border-bottom: none
-}
-
-.course-list__course:hover .course__more-link{
-  display: block;
-}
-
-.course__more-link{
-  @extend %more-info-link;
-  top: 10px;
-  display: none;
-}
-
-.course__heading{
-  display: inline-block;
-  color: #000;
-  margin-top: 0;
-  &:hover{
-    color: inherit;
-  }
-}
-
-.course__description{
-  margin-bottom: 25px;
-}
-
-.course__children-list{
-  list-style: none;
-  font-size: 16px;
-  text-transform: uppercase;
-  margin-bottom: 25px;
+.purchase_intro{
+  text-align: center;
   a{
-    position: relative;
-    color: #999;
-    &::after{
-      content: "";
-      display: none;
-      height: 0;
-      width: 0;
-      border: 5px solid;
-      border-color: transparent transparent transparent $brand1;
-      position: absolute;
-      top: 1px;
-      right: -15px;
-    }
-    &:hover{
-      color: $brand1;
-      text-decoration: underline;
-      &::after{
-        display: block;
-      }
-    }
+    color: darken($brand1, 30);
   }
 }
-
-.course__actions{
-  display: inline-block;
-  float: right;
-  width: 50%;
-  .button{
-    display: block;
-  }
-}
-

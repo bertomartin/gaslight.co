@@ -36,14 +36,6 @@ module TrainingApp
       end
     end
 
-    describe "current" do
-      let!(:old_course) { FactoryGirl.create(:course, start_date: Date.today - 5.days)}
-      let!(:current_course) { FactoryGirl.create(:course, start_date: Date.today + 30.days)}
-      it "should return the current course" do
-        Course.current.should == current_course
-      end
-    end
-
     describe "#dates" do
       let(:course) { FactoryGirl.create(:course) }
       context "in the same month" do
@@ -139,6 +131,19 @@ module TrainingApp
       end
     end
 
+    describe ".online, .in_person" do
+      let(:online_course) { FactoryGirl.create(:course, online: true) }
+      let(:in_person_course) { FactoryGirl.create(:course, online: false) }
+      it "includes online courses" do
+        expect(Course.online).to include(online_course)
+        expect(Course.online).to_not include(in_person_course)
+      end
+      it "includes in_person courses" do
+        expect(Course.in_person).to_not include(online_course)
+        expect(Course.in_person).to include(in_person_course)
+      end
+    end
+
     describe ".active" do
       let(:active_course) { FactoryGirl.create(:course) }
       let(:inactive_course) { FactoryGirl.create(:course, active: false) }
@@ -179,6 +184,26 @@ module TrainingApp
         it "returns the date city" do
           expect(course.meta).to eq("January 01, 2025 - Seoul")
         end
+      end
+    end
+
+    describe ".upcoming" do
+      let(:upcoming_course){ FactoryGirl.create(:course, start_date: 1.week.from_now) }
+      let(:past_course){ FactoryGirl.create(:course, start_date: 1.week.ago) }
+      let(:online_course){ FactoryGirl.create(:course, start_date: nil, online: true) }
+      it "returns active upcoming in person courses" do
+        expect(Course.upcoming).to include(upcoming_course)
+        expect(Course.upcoming).to_not include(past_course)
+        expect(Course.upcoming).to_not include(online_course)
+      end
+    end
+
+    describe ".past" do
+      let(:upcoming_course){ FactoryGirl.create(:course, start_date: 1.week.from_now) }
+      let(:past_course){ FactoryGirl.create(:course, start_date: 1.week.ago) }
+      it "returns active courses" do
+        expect(Course.upcoming).to include(upcoming_course)
+        expect(Course.upcoming).to_not include(past_course)
       end
     end
   end

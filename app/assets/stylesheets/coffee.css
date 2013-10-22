@@ -19,12 +19,15 @@
 
 #headings h1.brand1{
   background-color: #57c0e8;
+  color: #fff;
 }
 #headings h1.brand2{
-  background-color: #efc703
+  background-color: #efc703;
+  color: #fff;
 }
 #headings h1.brand3{
-  background-color: #e53c2e
+  color: #fff;
+  background-color: #e53c2e;
 }
 .coffeeMachine{
   margin-bottom: 40px;
@@ -73,7 +76,6 @@ p{
     font-size: 40px;
   }
 }
-
 
 
 

@@ -1,26 +1,25 @@
 - content_for(:title) { "Gaslight Blog" }
 - content_for(:description) { "We blog about technical, business and community topics." }
 
-= render partial: 'application/nav'
-#main.container.row
-  .columns.eight
-    - if params[:tagged].present?
-      %h2 Posts tagged with #{params[:tagged]}
-      = page_entries_info posts
-      = render partial: 'post_list', locals: { posts: posts }
-      = paginate posts
-    - elsif request.fullpath =~ /#{search_posts_path}/
-      %h2 All posts containing '#{params[:q]}'
-      = page_entries_info posts
-      = render partial: 'post_list', locals: { posts: posts }
-      = paginate posts
-    - elsif author.present?
-      %h2 #{author[:name]}'s Posts
-      = page_entries_info posts
-      = render partial: 'post_list', locals: { posts: posts }
-      = paginate posts
-    - else
-      = render posts
-      = paginate posts
-  = render partial: 'posts/index_sidebar'
-= render partial: 'application/footer'
+#main.no-photo
+  .container.row
+    .columns.large-8
+      - if params[:tagged].present?
+        %h2 Posts tagged with #{params[:tagged]}
+        = page_entries_info posts
+        = render partial: 'post_list', locals: { posts: posts }
+        = paginate posts
+      - elsif request.fullpath =~ /#{search_posts_path}/
+        %h2 All posts containing '#{params[:q]}'
+        = page_entries_info posts
+        = render partial: 'post_list', locals: { posts: posts }
+        = paginate posts
+      - elsif author.present?
+        %h2 #{author[:name]}'s Posts
+        = page_entries_info posts
+        = render partial: 'post_list', locals: { posts: posts }
+        = paginate posts
+      - else
+        = render posts
+        = paginate posts
+    = render partial: 'posts/index_sidebar'

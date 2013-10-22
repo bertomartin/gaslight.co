@@ -1,7 +1,8 @@
 - content_for(:title) { "Gaslight Blog" }
 - content_for(:description) { "We blog about technical, business and community topics." }
 
-#main.blog
+= render partial: 'application/nav'
+#main.no-photo
   .container.row
     .columns.large-8
       - if params[:tagged].present?
@@ -23,3 +24,4 @@
         = render posts
         = paginate posts
     = render partial: 'posts/index_sidebar'
+= render partial: 'application/footer'

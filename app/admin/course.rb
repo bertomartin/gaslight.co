@@ -8,8 +8,7 @@ ActiveAdmin.register TrainingApp::Course do
                                           :start_date, :end_date, :price,
                                           :image_url, :registration_link,
                                           :color_primary, :color_secondary,
-                                          :active, :online, :featured,
-                                          :instructors])
+                                          :active, :online, :instructors])
     end
   end
 
@@ -20,7 +19,6 @@ ActiveAdmin.register TrainingApp::Course do
     column :end_date
     column :price
     column :active
-    column :featured
     column :online
 
     default_actions
@@ -38,7 +36,6 @@ ActiveAdmin.register TrainingApp::Course do
       row :price
       row :venue
       row(:image) { image_tag(course.image_url) }
-      row :featured
       row :capacity
       row :early_bird_price
       row :early_bird_end_date
@@ -69,7 +66,6 @@ ActiveAdmin.register TrainingApp::Course do
       f.input :color_secondary
       f.input :active
       f.input :online
-      f.input :featured
       f.input :instructors, as: :check_boxes
     end
     f.actions

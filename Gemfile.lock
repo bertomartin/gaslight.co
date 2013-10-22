@@ -78,6 +78,7 @@ PATH
       redcarpet
       sass-rails (~> 4.0.0)
       stripe
+      zurb-foundation (~> 4.0)
 
 GEM
   remote: https://rubygems.org/

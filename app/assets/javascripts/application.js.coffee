@@ -13,7 +13,7 @@ track = (category, action, value = "") ->
   _gaq.push(['_trackEvent', category, action, value])
 
 $ ->
-  $('.top-bar__expand').on 'click touchstart', (event)->
+  $('.top-bar__expand').on 'click', (event)->
     $('.top-bar').toggleClass('top-bar--expanded')
 
   $('.activate-modal, .modal__backdrop').on 'click touchstart', (event)->

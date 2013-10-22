@@ -7,6 +7,7 @@ require "sass-rails"
 require "compass-rails"
 require "font-awesome-rails"
 require "ember-rails"
+require "zurb-foundation"
 
 module TrainingApp
   class Engine < ::Rails::Engine

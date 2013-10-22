@@ -1,7 +1,6 @@
 - content_for(:title) { "Gaslight Blog" }
 - content_for(:description) { "We blog about technical, business and community topics." }
 
-= render partial: 'application/nav'
 #main.blog
   .container.row
     .columns.large-8
@@ -24,4 +23,3 @@
         = render posts
         = paginate posts
     = render partial: 'posts/index_sidebar'
-= render partial: 'application/footer'

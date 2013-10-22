@@ -1,6 +1,6 @@
 .course__img {
   display: block;
-  height: 200px;
+  max-height: 200px;
   margin: 0 auto;
 }
 
@@ -23,10 +23,6 @@
     font-weight: 600;
   }
 }
-// .course__image {
-//   max-width: 100%;
-//   padding: 10px;
-// }
 
 // this is rendered via markdown, so we cant use  class names
 .course__description{

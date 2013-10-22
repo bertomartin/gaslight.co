@@ -1,7 +1,6 @@
 - content_for(:title) { post.title }
 = render(partial: 'meta')
 
-= render partial: 'application/nav'
 #main.blog
   .container
 .row--lg-margin-bottom
@@ -12,8 +11,6 @@
         Please enable JavaScript to view the
         %a{href: "http://disqus.com/?ref_noscript"} comments powered by Disqus
     = render partial: 'posts/show_sidebar'
-
-= render partial: 'application/footer'
 
 - content_for(:javascript) do
   :javascript

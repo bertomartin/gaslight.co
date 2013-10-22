@@ -1,6 +1,5 @@
 - content_for(:title) { "Gaslight Blog: Archive" }
 
-= render partial: 'application/nav'
 #main.landing.container.row
   .columns.large-8
     - posts.each do |month, posts|
@@ -10,4 +9,3 @@
           (#{pluralize(posts.count, 'post')})
       = render partial: 'post_list', locals: { posts: posts }
   = render partial: 'index_sidebar'
-= render partial: 'application/footer'

@@ -1,5 +1,4 @@
 - content_for(:title) { "Gaslight: About Us" }
-= render partial: 'application/nav'
 
 #main.content
   %section.header--about
@@ -8,9 +7,9 @@
         %h1.title--light We’re Better Together
     .row
       .large-12.columns.large-centered
-        %h3.subheader--light 
+        %h3.subheader--light
           Our secret weapon? Collaboration.
-        .underline--yellow.underline--header 
+        .underline--yellow.underline--header
 
 
   %section
@@ -22,17 +21,17 @@
         =image_tag "icons/about-happy.svg", :class => "icon"
       .large-5.columns
         %h2.subheader It Is About the People
-        %p Achieving measurable business results means building deep partnerships. We assign a dedicated team to each project. And keep in touch just about every day during design and development. We’ll even invite you into our office to work side-by-side. 
+        %p Achieving measurable business results means building deep partnerships. We assign a dedicated team to each project. And keep in touch just about every day during design and development. We’ll even invite you into our office to work side-by-side.
 
   %section.section--contrast
     .row
-      %h2.header Latest Ideas 
+      %h2.header Latest Ideas
       .underline--yellow
     .row
       .large-8.columns.large-centered
         .row
           - @featured_posts.each do |post|
-            .large-6.columns             
+            .large-6.columns
               .latest-post
                 .latest-post__avatar.avatar.avatar--small.avatar--brand2
                   %img{src: gravatar_url(post.author_email, '51x51'), alt: "Joel Turnbull" }
@@ -41,8 +40,8 @@
                   %span.meta__author= post.author_name
                   \-
                   %span.meta__date= post.published_at.strftime("%B %e, %Y")
-                %p.latest-post__description= truncate(post.generated_description, length: 130, omission: '...') 
-                  
+                %p.latest-post__description= truncate(post.generated_description, length: 130, omission: '...')
+
                 %a.button--full-width.button--brand2{href: post_path(post)} Read Full Post
 
   %section.row.team.hide-for-small
@@ -56,9 +55,9 @@
               %h3.subheader--light Doug Alcorn
               %p.subtitle Developer
               %a{target: "_blank", href: "http://twitter.com/dougalcorn", rel: "Team Social"}
-                =image_tag "icons/twitter-07.svg", :class => "icon--team" 
+                =image_tag "icons/twitter-07.svg", :class => "icon--team"
               %a{target: "_blank", href: "http://github.com/dougalcorn", rel: "Team Social"}
-                =image_tag "icons/github-05.svg", :class => "icon--team" 
+                =image_tag "icons/github-05.svg", :class => "icon--team"
       %li
         .photo
           %img{src: image_path("team/ryan.jpg"), alt: "Ryan Arthur" }
@@ -67,7 +66,7 @@
               %h3.subheader--light Ryan Arthur
               %p.subtitle Designer
               %a{target: "_blank", href: "http://github.com/arthurra", rel: "Team Social"}
-                =image_tag "icons/github-05.svg", :class => "icon--team" 
+                =image_tag "icons/github-05.svg", :class => "icon--team"
       %li
         .photo
           %img{src: image_path("team/bill.jpg"), alt: "Bill Barnett" }
@@ -76,9 +75,9 @@
               %h3.subheader--light Bill Barnett
               %p.subtitle Developer
               %a{target: "_blank", href: "http://twitter.com/agilous", rel: "Team Social"}
-                =image_tag "icons/twitter-07.svg", :class => "icon--team" 
+                =image_tag "icons/twitter-07.svg", :class => "icon--team"
               %a{target: "_blank", href: "http://github.com/agilous", rel: "Team Social"}
-                =image_tag "icons/github-05.svg", :class => "icon--team" 
+                =image_tag "icons/github-05.svg", :class => "icon--team"
       %li
         .photo
           %img{src: image_path("team/tammy.jpg"), alt: "Tammy Gambrel" }
@@ -198,5 +197,3 @@
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
               %a{target: "_blank", href: "http://github.com/joelturnbull", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-
-= render partial: 'application/footer'

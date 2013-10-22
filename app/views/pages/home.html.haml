@@ -2,8 +2,6 @@
   :javascript
     new Gaslight.Views.SvgView({el: "#guides"}).render()
 
-= render partial: 'application/nav'
-
 #guides
   %section.landingpage
     .row
@@ -19,8 +17,8 @@
           .large-4.columns
             %a.button--full-width.button--brand1{href: page_path('about')} Learn
             %p
-              Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you. 
-          
+              Think of us as early, early adopters. We find and explore new tech first. Then put the <a class="brand1--link" href="about" rel="About Us">best tools and practices</a> to work for you.
+
           .large-4.columns
             %a.button--full-width.button--brand2{href: page_path('work/ipc')} Build
             %p
@@ -28,28 +26,28 @@
           .large-4.columns
             %a.button--full-width.button--brand3{href: page_path('blog')} Share
             %p
-              We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, <a class="brand3--link" href="blog?tagged=podcast" rel="Podcast">podcast</a> and <a class="brand3--link" href="training" rel="Training">training classes</a>. 
+              We’re open source all the way. Sharing everything we learn through our <a class="brand3--link" href="blog" rel="Blog">blog</a>, <a class="brand3--link" href="blog?tagged=podcast" rel="Podcast">podcast</a> and <a class="brand3--link" href="training" rel="Training">training classes</a>.
     .row
       .large-8.column.large-centered.overview--home.show-for-small
         .row
           .large-4.columns
             %a.button--full-width.button--brand1{href: page_path('about')} Learn
-           
+
           .large-4.columns
             %a.button--full-width.button--brand2{href: page_path('work/ipc')} Build
-            
+
           .large-4.columns
             %a.button--full-width.button--brand3{href: page_path('blog')} Share
-             
+
 #main.content.landing
   %section.header--about
     .row
       %h2.header--light We Are
-      .underline--blue 
+      .underline--blue
     .row
       .large-9.columns.large-centered
         %p.lead--light
-          We are a group of designers, developers and project guides passionate about revving up your business. We love to create technology tools that solve hard problems. And make your company faster and more profitable. 
+          We are a group of designers, developers and project guides passionate about revving up your business. We love to create technology tools that solve hard problems. And make your company faster and more profitable.
     .row
       .large-3.columns.large-centered
         %a.button--full-width.button--brand1{href: page_path('about')} Learn how we work
@@ -63,17 +61,17 @@
         %a{href: page_path('services'), rel: "Landing Igniter"}
           =image_tag "icons/home-ignite.svg", :class => "icon--link"
         %h3.subheader.center Idea Igniter
-        %p.center Turn your big idea into an actionable plan with The Igniter.    
+        %p.center Turn your big idea into an actionable plan with The Igniter.
       .large-3.columns
         %a{href: page_path('services'), rel: "Landing CustomSoftware"}
-          =image_tag "icons/home-develop.svg", :class => "icon--link" 
-        %h3.subheader.center Custom Software Development 
+          =image_tag "icons/home-develop.svg", :class => "icon--link"
+        %h3.subheader.center Custom Software Development
         %p.center Boost profits and productivity with a new or upgraded app.
       .large-3.columns
         %a{href: page_path('services'), rel: "Landing Design"}
           =image_tag "icons/home-design.svg", :class => "icon--link"
         %h3.subheader.center Design and User Experience
-        %p.center Create on-brand tools that are easy to use and easy on the eyes. 
+        %p.center Create on-brand tools that are easy to use and easy on the eyes.
       .large-3.columns
         %a{href: page_path('training'), rel: "Landing Training"}
           =image_tag "icons/home-learning.svg", :class => "icon--link"
@@ -86,7 +84,7 @@
   %section.case-study--home
     .row
       %h2.header--light Latest Work
-      .underline--blue 
+      .underline--blue
     .row
       .large-7.columns.large-centered
         %h3.brand1 Lumbee Enterprises
@@ -96,11 +94,11 @@
       .large-3.columns.large-centered
         %a.button--full-width.button--brand1{href: '/work/lumbee'} Read the case study
 
-     
+
   %section.section--contrast
     .row
       %h2.header Let's Keep in Touch
-      .underline--yellow 
+      .underline--yellow
     .row
       .large-5.columns
         %p
@@ -117,8 +115,6 @@
                   .spinner
                     / %h4 Loading
                     / %img{src: image_path('loading.gif')}
-
-= render partial: 'application/footer'
 
 :plain
   <script type="text/template" id="eventTemplate">

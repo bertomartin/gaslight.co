@@ -1,5 +1,4 @@
 - content_for(:title) { "Gaslight Blog: Archive " }
-= render partial: 'application/nav'
 #main.landing
   .container.row
     .columns.large-8
@@ -16,4 +15,3 @@
           = l(search_date, format: :year)
       = render partial: 'post_list', locals: { posts: posts }
     = render partial: 'index_sidebar'
-= render partial: 'application/footer'

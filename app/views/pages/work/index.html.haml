@@ -1,5 +1,4 @@
 - content_for(:title) { "Gaslight: Recent Work" }
-= render partial: 'application/nav'
 
 #main.content
   %section.section--contrast.header--work
@@ -8,8 +7,8 @@
         %h1.title--light A Great App Takes Your Business To New Places
     .row
       .large-12.columns.large-centered
-        %h3.subheader--light See how we’ve given our clients a boost with custom software. 
-        .underline--blue.underline--header 
+        %h3.subheader--light See how we’ve given our clients a boost with custom software.
+        .underline--blue.underline--header
 
   %section.section--contrast
     .row.large-centered
@@ -34,7 +33,7 @@
                   %h3.subheader--light View Case Study
                   %h2.header--case-study Lumbee Enterprises
                   %h3.subheader--light Update Legacy App
-    
+
 
   %section.clients
     %a.anchor{name:"clients"}
@@ -43,7 +42,7 @@
       .underline--blue
     .row
       .large-9.columns.large-centered
-        %p.lead.center We partner with everyone from start-ups to Fortune 500s in a range of industries. 
+        %p.lead.center We partner with everyone from start-ups to Fortune 500s in a range of industries.
         %ul.clientsList.row
           %li.brand-pg
             = link_to('http://www.pg.com/en_US/') do
@@ -81,5 +80,3 @@
           %li.brand-vendor
             = link_to('https://www.vendorwizard.com/') do
               .brand-vendor
-
-= render partial: 'application/footer'

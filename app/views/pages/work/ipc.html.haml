@@ -1,42 +1,45 @@
 - content_for(:title) { "Gaslight: Custom Software to Manage the SUBWAY® Card Program" }
 
 #main.content
-  .case-study--ipc--first
-    .hero__header--brand1
+  .hero.hero--ipc--first
+    .hero__header.hero__header--brand1
       .row
         .large-11.columns
-          %h1.header--case-study Custom Software to Manage the SUBWAY® Card Program
-          %h2.subheader--light Independent Purchasing Cooperative
+          %h1 Custom Software to Manage the SUBWAY® Card Program
+          %h2 Independent Purchasing Cooperative
 
   %section.row
-    .large-3.columns
-      .underline--case-study
-      %h3.sidebar--header Client
+    .large-3.columns.hide-for-small.sidebar
+      .underline.underline--blue
+      %h3.sidebar__header Client
       %p IPC
-      %h3.sidebar--header Engagement
+      %h3.sidebar__header Engagement
       %p 12 Weeks
-      %h3.sidebar--header Technology
-      %ul.case-study__sidebar
+      %h3.sidebar__header Technology
+      %ul.sidebar__list
         %li JRuby
         %li Ruby on Rails
     .large-8.large-offeset-1.columns
       %p.lead IPC is an independent purchasing cooperative owned by SUBWAY® franchisees. The company does everything from negotiate lower prices for goods and services to improve quality and competitiveness for SUBWAY® franchisee members.
       %p We teamed up with IPC to create a custom web-based software application that manages the creation of more than 182 million SUBWAY® spending/gifting cards each year. The new BIN Management Software automatically generates card and pin numbers for pre-loaded gift cards, as well as stored value cards that allow consumers to add more money.
 
-  .case-study--ipc--second
-    .row.hero__header
-      .case-study__quote--full.large-9.columns.large-centered
-        %p “We can now accomplish in two days what used to take twelve.”
-        %h4 Erin Wood
-        %h4.case-study__quote--title SUBWAY® Card Program Manager, IPC
+  .hero.hero--ipc--second
+    .hero__content
+      .row
+        .large-9.columns.large-centered
+          .hero__quote
+            %h2 “We can now accomplish in two days what used to take twelve.”
+            %h4 Erin Wood
+            %h4.case-study__quote--title SUBWAY® Card Program Manager, IPC
 
   %section.row
-    .large-3.columns
-      .underline--case-study
-      %h3.sidebar--header Improving Data Integrity
+    .large-3.columns.sidebar
+      .underline.underline--blue.hide-for-small
+      %h3.sidebar__header Improving Data Integrity
       %p The new automated system for creating card and pin numbers helps guarantee that every card works, every time a customer hands it over at a register.
-      %h3.sidebar--header Increasing Productivity
+      %h3.sidebar__header Increasing Productivity
       %p The BIN management software directly connects to IPC’s payment processing system. It also allows staff to automatically transfer new card orders to printers.
+      %hr.show-for-small
     .large-8.columns.large-offset-1
       %h2.subheader A Team Effort for Real Business Results
       %p Before the new system, IPC created card and pin numbers manually. We worked side-by-side with IPC’s existing development team to create custom software that saves countless staff hours and protects data.
@@ -46,7 +49,7 @@
       %p JRuby essentially black boxes the Ruby code, so from the outside, the BIN Management software really is a web-based Java application with the JRuby interpreter and all the Ruby libraries packaged within it. This allows for faster development with no costly infrastructure changes.
       %p This also allowed the team to leverage Ruby on Rails, a framework for building web-based applications in Ruby.
 
-  %section.case-study--ipc--third
+  %section.hero.hero--ipc--third
     .row
       .large-4.large-offset-2.columns
         %table
@@ -71,18 +74,19 @@
               %td Individual software features created as quickly as a few hours
 
   %section.row
-    .large-3.columns
-      .underline--case-study
-      %h3.sidebar--header Wish your software development moved faster?
+    .large-3.columns.sidebar
+      .underline.underline--blue.hide-for-small
+      %h3.sidebar__header Wish your software development moved faster?
       %p Let’s talk. We know how to bring the speed and flexibility of the start-up world to enterprise environments.
-      %a.button.button--brand1{href: page_path("contact"), rel: "Case Study Lets Talk button" } Contact Us
+      %a.button--full-width.button--brand1{href: page_path("contact"), rel: "Case Study Lets Talk button" } Contact Us
+    %hr.show-for-small
     .large-8.large-offset-1.columns
       %h2.subheader Teaching While Building
       %p.lead Since we worked directly with IPC’s internal development team, we were able to provide training in Ruby, Ruby on Rails and JRuby as we developed the software. This provides lasting benefits for IPC’s future development projects.
-      %p We also conducted a separate one-day training session to give the IPC development team a more in-depth understanding of Ruby on Rails. In addition to custom training sessions like these, we offer <a class="brand1--link" href="/training" rel="Training">online courses in Backbone and Ember. </a>
+      %p We also conducted a separate one-day training session to give the IPC development team a more in-depth understanding of Ruby on Rails. In addition to custom training sessions like these, we offer <a class="brand1--link" href="#{training_app_path}" rel="Training">online courses in Backbone and Ember. </a>
   %hr
-  .row--lg-margin-bottom
-    .large-3.columns
-      %a.button.button--quiet{href: page_path("work/index"), rel: "Work" } &#171; Work Page
-    .large-3.columns.large-offset-6
-      %a.button.button--quiet{href: page_path("work/lumbee"), rel: "Lumbee Case Study" } Lumbee Case Study &#187;
+  .row.page
+    .large-6.columns
+      %a.button.button--quiet.page__prev{href: page_path("work/index"), rel: "Work" } &#171; Work Page
+    .large-6.columns
+      %a.button.button--quiet.page__next{href: page_path("work/lumbee"), rel: "Lumbee Case Study" } Lumbee Case Study &#187;

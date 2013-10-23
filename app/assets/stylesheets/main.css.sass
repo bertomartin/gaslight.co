@@ -120,9 +120,8 @@
 
 #main
   background: #fff
-  padding: $topbar-height 0 0 0
+  padding: $topbar-height 0 12px 0
   min-height: 100%
-  margin-bottom: - $footerHeight
   // > header
   //   margin: 0px -75px $sectionMargin -75px
   //   height: 370px
@@ -323,9 +322,6 @@ hr.divider
 //     content: ""
 //     display: inline-block
 //     margin: -12px 15px 0 15px
-
-.flex-video
-  margin: 0
 
 .contact .button
   margin-top: 24px
@@ -601,3 +597,24 @@ a.anchor
 .latest-post__description
   @extend %caption
   margin: 0 0 12px
+
+// Bounce House!!!
+
+.bounce-house
+  display: block
+  position: relative
+  max-height: 350px
+  overflow: hidden
+  margin-bottom: 20px
+
+.bounce-house__content
+  padding: 20px
+  background-color: rgba(0,0,0,0.65)
+  position: absolute
+  top: 0
+  width: 100%
+  @include transition(all 0.5s)
+  &:hover
+    padding-top: 82px
+    padding-bottom: 150px
+    background: transparentize($brand1, 0.15)

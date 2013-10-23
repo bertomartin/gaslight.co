@@ -5,21 +5,26 @@
   text-align: center
   color: #fff
 
-  .socialLinks--footer
-    margin: 0 0 0 -20px
-    float: right
-    li
-      list-style: none
-      display: inline-block
+.footer__contact
+  float: left
+  p
+    font-size: 14px
+    font-weight: 700
+    margin-bottom: 0
+  a
+    color: #ddd
+    font-size: 14px
+    font-weight: 500
+    &:hover
+      color: $brand1
 
-  .footer__contact
-    p
-      font-size: 14px
-      font-weight: 700
-      margin-bottom: 0
-    a
-      color: #ddd
-      font-size: 14px
-      font-weight: 500
-      &:hover
-        color: $brand1
+.footer__socialLinks
+  float: right
+  li
+    list-style: none
+    display: inline-block
+
+@media only screen and (max-width: 767px)
+  .footer__socialLinks
+    float: none
+    text-align: center

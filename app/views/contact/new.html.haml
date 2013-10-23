@@ -1,11 +1,11 @@
 - content_for(:title) { "Contact Us" }
 
 #main.content
-  .row.show-for-small.header--contact
-    .buttonLinks
-      %a.button.button--brand1{href: "tel:8885073430", rel: "Mobile contact button"} Call
-      %a.button.button--brand2{href: "mailto:hello@gaslight.co", rel: "Mobile contact button"} Email
-      %a.button.button--brand3{href: "http://goo.gl/maps/aNb8r", rel: "Mobile contact button"} Maps
+  .mobile-links.show-for-small
+    %a.button.button--brand1{href: "tel:8885073430", rel: "Mobile contact button"} Call
+    %a.button.button--brand2{href: "mailto:hello@gaslight.co", rel: "Mobile contact button"} Email
+    %a.button.button--brand3{href: "http://goo.gl/maps/aNb8r", rel: "Mobile contact button"} Maps
+  
   %section.header--contact.hide-for-small
     .row.hide-for-small
       .large-12.columns.large-centered
@@ -70,7 +70,7 @@
           =image_tag "icons/contact-embernati.svg", :class => "icon--link"
         %h3.subheader.center EmberNati
 
-.modal
+.modal.hide-for-small
   .modal__backdrop
   .modal__content
     .row.large-centered

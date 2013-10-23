@@ -1,0 +1,499 @@
+// ------------------------------------
+// Avatars
+// ------------------------------------
+
+.avatar--small
+  +border-radius(50%)
+  overflow: hidden
+  // height: 55px
+  width: 55px
+
+.avatar--brand2
+  border: 2px solid $brand2
+
+// ------------------------------------
+// Upcoming Events
+// ------------------------------------
+
+#activities
+  font-size: 1.0em
+  line-height: 1.5em
+  .spinner
+    min-height: 161px
+    text-align: center
+    img
+      width: 200px
+  .avatar
+    @include border-radius(50%)
+  .inactive
+    display: none
+
+#activities
+  padding: 15px 20px 0
+  a
+    color: $brand2
+    &:hover
+      color: darken($brand2, 10)
+
+.upcoming-events
+  border: 1px solid #eee
+  background-color: #fff
+  +border-radius(2px)
+
+.upcoming-events h3
+  background-color: $brand2
+  text-align: center
+  color: #fff
+  font-weight: 400
+  padding: 9px 0 6px
+
+.upcoming-events__info
+  margin-top: 2%
+
+.upcoming-events__author
+  height: 75px
+  width: 75px
+
+// ------------------------------------
+// Post Tile
+// ------------------------------------
+
+.latest-post__avatar
+  margin: 10px auto
+
+.latest-post
+  +border-radius(2px)
+  background-color: #fff
+  border: 1px solid #E1E1E1
+  padding: 15px
+  margin-bottom: 10px
+
+.latest-post__title
+  font-weight: 600
+  display: block
+  text-align: center
+  margin: 0
+  min-height: 50px
+
+.latest-post__meta
+  text-align: center
+  color: #BBBBBB
+  margin: 0 0 12px
+
+.latest-post__description
+  font-size: 14px
+  margin: 0 0 12px
+  min-height: 65px
+
+
+// ------------------------------------
+// Bounce House!!!
+// ------------------------------------
+
+.bounce-house
+  display: block
+  position: relative
+  max-height: 350px
+  overflow: hidden
+  margin-bottom: 20px
+
+.bounce-house__content
+  padding: 20px
+  background-color: rgba(0,0,0,0.65)
+  position: absolute
+  top: 0
+  width: 100%
+  @include transition(all 0.5s)
+  &:hover
+    padding-top: 82px
+    padding-bottom: 150px
+    background: transparentize($brand1, 0.15)
+
+// ------------------------------------
+// Client list
+// ------------------------------------
+
+.clientsList
+  text-align: center
+  li
+    display: inline-block
+    background: $sprite--brand
+    margin: 2% 3%
+    width: 18%
+    height: 100px
+    list-style: none
+    a
+      max-width: 100%
+  .brand-pg
+    background-position: 0 -1600px
+    width: 118px
+    height: 51px
+    &:hover
+      background-position:  0 -1701px
+  .brand-outright
+    background-position: 0 -1380px
+    width: 164px
+    height: 60px
+    &:hover
+      background-position:   0 -1490px
+  .brand-eta
+    background-position: 0 -732px
+    width: 164px
+    height: 82px
+    &:hover
+      background-position:  0 -864px
+  .brand-sharethrough
+    background-position: -315px -260px
+    width: 270px
+    height: 51px
+    &:hover
+      background-position: -315px -361px
+  .brand-agsync
+    background-position: 0 0
+    width: 183px
+    height: 78px
+    &:hover
+      background-position: 0 -128px
+  .brand-roadtripper
+    background-position: -315px 0
+    width: 150px
+    height: 80px
+    &:hover
+      background-position: -315px -130px
+  .brand-apex
+    background-position: 0 -256px
+    width: 192px
+    height: 41px
+    &:hover
+      background-position: 0 -347px
+  .brand-lumbee
+    background-position: 0 -1188px
+    width: 147px
+    height: 46px
+    &:hover
+      background-position: 0 -1284px
+  .brand-ccl
+    background-position: 0 -438px
+    width: 97px
+    height: 97px
+    &:hover
+      background-position: 0 -585px
+  .brand-hyperquake
+    background-position: 0 -996px
+    width: 192px
+    height: 46px
+    &:hover
+      background-position: 0 -1092px
+  .brand-renewfund
+    background-position: 0 -1802px
+    width: 265px
+    height: 34px
+    &:hover
+      background-position:  0 -1886px
+  .brand-vendor
+    background-position: -315px -462px
+    width: 238px
+    height: 39px
+    &:hover
+      background-position: -315px -551px
+
+
+
+// ------------------------------------
+// Gaslighter Thumbnails
+// ------------------------------------
+
+ul.photos li
+  width: 18%
+  list-style: none
+  float: left
+  margin: 0 2% 15px 0
+  position: relative
+  &:last-child
+    margin: 0 0 0 0
+  h3
+    line-height: 1.1em
+  .photo
+    overflow: hidden
+    position: relative
+    margin-bottom: 8px
+    img
+      vertical-align: bottom
+      display: inline-block
+    .overlay
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 100%
+      background: transparentize($brand2, 0.25)
+      @include transition-property(top)
+      @include transition-duration(0.5s)
+    .links
+      position: absolute
+      top: 40px
+      width: 100%
+      text-align: center
+      a
+        color: #fff
+        font-size: 2em
+
+  &:hover .overlay
+    top: 0
+  .subheader
+    color: #fff
+    margin: 0
+    font-weight: 600
+  .subtitle
+    color: #fff
+    font-weight: 300
+
+// ------------------------------------
+// Guides
+// ------------------------------------
+
+#guides
+  @include clearfix()
+  position: relative
+  margin-top: $topbar-height
+  overflow: hidden
+  width: 100%
+  background: #f4f4f4
+  svg, > div
+    position: absolute !important
+    top: 0px
+
+
+// ------------------------------------
+// Hero
+// ------------------------------------
+
+.hero
+  background-color: $brandBase
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: top center
+  table
+    min-height: 120px
+
+.hero__header
+  padding: 25px 0
+  h1 
+    font-size: 2.2em
+    font-weight: 600
+    line-height: 1.2em
+    color: #fff
+  h2
+    font-size: 1.2em
+    color: white
+    font-weight: 400
+
+.hero__quote
+  text-align: center
+  h2
+    font-size: 50px
+    color: #fff
+    line-height: 1.2em
+    font-weight: normal
+    margin-bottom: 20px
+  h3
+    font-size: 24px
+    color: #fff
+    line-height: 1.2em
+    font-weight: normal
+    margin-bottom: 20px
+
+  h4
+    color: $brand1
+    font-weight: normal
+    font-size: 1.2em
+
+.hero__content
+  padding: 80px 0
+
+.hero__header--brand1
+  background-color: rgba(87,192,232,0.9)
+
+.hero--ipc--first
+  background-image: image-url("casestudy/ipc_hero.jpg")
+  min-height: 350px
+
+.hero--ipc--second
+  background-image: image-url("casestudy/ipc--2.jpg")
+
+.hero--ipc--third
+  background-image: image-url("casestudy/ipc--1.jpg")
+
+.hero--lumbee--first
+  background-image: image-url("casestudy/lumbee_hero.jpg")
+  min-height: 350px
+
+.hero--lumbee--second
+  background-image: image-url("casestudy/lumbee_video.jpg")
+
+.hero--lumbee--third
+  background-image: image-url("casestudy/lumbee_ba.jpg")
+
+@media only screen and (min-width : 320px) and (max-width: 767px)
+  .hero__header
+    h1
+      font-size: 1.5em
+      line-height: 1.2em
+    .header--case-study
+      font-size: 1.5em
+      font-weight: 700
+
+  .hero__quote
+    h2
+      font-size: 1.5em
+
+// ------------------------------------
+// Modals
+// ------------------------------------
+
+.modal__backdrop
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  z-index: 100
+  background: #000
+  display: none
+  @include opacity(0.8)
+
+.modal__content
+  position: absolute
+  width: $modal-width
+  margin-left: - $modal-width / 2
+  top: -2000px
+  left: 50%
+  z-index: 101
+  background: #fff
+  padding: 20px 0
+  @include transition(top 0.2s)
+
+.modal__content form
+  .flash
+    position: absolute
+    bottom: 0
+    @extend .button
+    &.success
+      background: $brand1
+
+.modal--active
+  .modal__backdrop
+    display: block
+
+  .modal__content
+    top: 50px
+
+// ------------------------------------
+// Share popup
+// ------------------------------------
+
+.share
+  position: fixed
+  bottom: -500px
+  right: 20px
+  border: 1px solid #ddd
+  overflow: hidden
+  opacity: 0
+  @include transition(all 0.3s)
+  @include border-radius(5px)
+
+.share--active
+  bottom: 20px
+  opacity: 1
+
+.share__header
+  position: relative
+  padding: 15px 20px
+  overflow: auto
+  background: $brand1
+  h4
+    color: #fff
+    font-size: 17px
+    line-height: 0.5em
+    padding-top: 3px
+
+.share__deactivate
+  position: absolute
+  display: block
+  top: 6px
+  right: 10px
+  background: #ddd
+  height: 26px
+  width: 26px
+  font-size: 24px
+  line-height: 26px
+  color: #000
+  text-align: center
+  cursor: pointer
+  @include border-radius(50%)
+  &:hover
+    background: #ccc
+
+.share__body
+  background: #fff
+  padding: 20px
+
+%share__frame
+  width: 300px
+  height: 30px
+  overflow: hidden
+  border: none
+
+.share__frame--twitter
+  @extend %share__frame
+
+.share__frame--facebook
+  @extend %share__frame
+
+// ------------------------------------
+// Video
+// ------------------------------------
+
+.flex-video 
+  position: relative
+  padding-top: 25px
+  padding-bottom: 67.5%
+  height: 0
+  margin-bottom: 16px
+  overflow: hidden
+
+  &.widescreen
+    padding-bottom: 57.25%
+  &.vimeo
+    padding-top: 0
+
+  iframe, object, embed, video 
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+
+// ------------------------------------
+// Sidebar
+// ------------------------------------
+
+.sidebar__header
+  font-size: 1em
+  color: $brand1
+  font-weight: 700
+  line-height: 1.4em
+
+.sidebar__subheader
+  font-size: 1em
+  color: #aaa
+  font-weight: 700
+  line-height: 1.4em
+
+.sidebar__list
+  list-style: none
+
+.sidebar .underline
+  margin-bottom: 0.5em
+
+@media only screen and (max-width: 767px)
+  .sidebar
+    margin-bottom: 20px

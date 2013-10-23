@@ -18,16 +18,30 @@
 .element--sm-margin-bottom
   margin-bottom: 10px
 
-#guides
-  @include clearfix()
-  position: relative
-  margin-top: $topbar-height
-  overflow: hidden
-  width: 100%
-  background: #f4f4f4
-  svg, > div
-    position: absolute !important
-    top: 0px
+#main
+  background: #fff
+  padding: $topbar-height 0 0 0
+  min-height: 100%
+  .intro
+    padding: 20px 45px 20px 55px
+  .item
+    margin: 20px 0
+    h3
+      margin: 0
+    p
+      font-size: 1.25em
+      margin: 0
+    address a
+      color: $brand3
+      font-style: normal
+      font-size: 1.5em
+      font-weight: bold
+      &:hover
+        color: darken($brand3, 30%)
+
+  ul.landing-page__contact
+    margin-top: 5px
+
 
 #main.content section
   padding: 4em 0 4.5em 0
@@ -82,233 +96,23 @@
   text-align: center
   margin-bottom: 20px
 
-.upcoming-events
-  border: 1px solid #eee
-  background-color: #fff
-  +border-radius(2px)
-
-.upcoming-events h3
-  background-color: $brand2
-  text-align: center
-  color: #fff
-  font-weight: 400
-  padding: 9px 0 6px
-
-.upcoming-events__info
-  margin-top: 2%
-
-#activities
-  padding: 15px 20px 0
-  a
-    color: $brand2
-    &:hover
-      color: darken($brand2, 10)
-
-#main
-  background: #fff
-  padding: $topbar-height 0 12px 0
-  min-height: 100%
-  .intro
-    padding: 20px 45px 20px 55px
-  .socialLinks
-    margin-top: 6px
-  .item
-    margin: 20px 0
-    h3
-      margin: 0
-    p
-      font-size: 1.25em
-      margin: 0
-    address a
-      color: $brand3
-      font-style: normal
-      font-size: 1.5em
-      font-weight: bold
-      &:hover
-        color: darken($brand3, 30%)
-
-  ul.landing-page__contact
-    margin-top: 5px
-
 .row.expertise
   p
     margin-bottom: 40px
-
-.descriptions__icon
-  text-align: center
-  &.last
-    margin-bottom: 0
-  i
-    clear: both
-    margin-bottom: 10px
-  strong
-    font-size: 20px
-    display: inline-block
-    width: 100%
 
 hr.divider
   border: 1px solid #c1c1c1
   text-align: center
 
-.contact .button
-  margin-top: 24px
-  float: right
-
-.buttonLinks
+.mobile-links
+  padding: 160px 20px
   width: 100%
-  height: 100%
-  padding: 0 20px
+  background: image-url('landing/contact.jpg') center
+  background-size: cover
   .button
     width: 100%
     display: block
     margin-bottom: 20px
-
-
-ul.photos li
-  width: 18%
-  list-style: none
-  float: left
-  margin: 0 2% 15px 0
-  position: relative
-  &:last-child
-    margin: 0 0 0 0
-  h3
-    line-height: 1.1em
-  .photo
-    overflow: hidden
-    position: relative
-    margin-bottom: 8px
-    img
-      vertical-align: bottom
-      display: inline-block
-    .overlay
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 100%
-      background: transparentize($brand2, 0.25)
-      @include transition-property(top)
-      @include transition-duration(0.5s)
-    .links
-      position: absolute
-      top: 40px
-      width: 100%
-      text-align: center
-      a
-        color: #fff
-        font-size: 2em
-
-  &:hover .overlay
-    top: 0
-  .subheader
-    color: #fff
-    margin: 0
-    font-weight: 600
-  .subtitle
-    color: #fff
-    font-weight: 300
-
-.clientsList
-  text-align: center
-  li
-    display: inline-block
-    background: $sprite--brand
-    margin: 2% 3%
-    width: 18%
-    height: 100px
-    list-style: none
-    a
-      max-width: 100%
-  .brand-pg
-    background-position: 0 -1600px
-    width: 118px
-    height: 51px
-    &:hover
-      background-position:  0 -1701px
-  .brand-outright
-    background-position: 0 -1380px
-    width: 164px
-    height: 60px
-    &:hover
-      background-position:   0 -1490px
-  .brand-eta
-    background-position: 0 -732px
-    width: 164px
-    height: 82px
-    &:hover
-      background-position:  0 -864px
-  .brand-sharethrough
-    background-position: -315px -260px
-    width: 270px
-    height: 51px
-    &:hover
-      background-position: -315px -361px
-  .brand-agsync
-    background-position: 0 0
-    width: 183px
-    height: 78px
-    &:hover
-      background-position: 0 -128px
-  .brand-roadtripper
-    background-position: -315px 0
-    width: 150px
-    height: 80px
-    &:hover
-      background-position: -315px -130px
-  .brand-apex
-    background-position: 0 -256px
-    width: 192px
-    height: 41px
-    &:hover
-      background-position: 0 -347px
-  .brand-lumbee
-    background-position: 0 -1188px
-    width: 147px
-    height: 46px
-    &:hover
-      background-position: 0 -1284px
-  .brand-ccl
-    background-position: 0 -438px
-    width: 97px
-    height: 97px
-    &:hover
-      background-position: 0 -585px
-  .brand-hyperquake
-    background-position: 0 -996px
-    width: 192px
-    height: 46px
-    &:hover
-      background-position: 0 -1092px
-  .brand-renewfund
-    background-position: 0 -1802px
-    width: 265px
-    height: 34px
-    &:hover
-      background-position:  0 -1886px
-  .brand-vendor
-    background-position: -315px -462px
-    width: 238px
-    height: 39px
-    &:hover
-      background-position: -315px -551px
-#slideshow
-  margin-bottom: $sectionMargin
-  h3
-    margin: 0
-    background: #000
-    color: #fff
-    text-align: center
-    line-height: 2em
-  .timer
-    display: none
-
-.contact form
-  .flash
-    position: absolute
-    bottom: 0
-    @extend .button
-    &.success
-      background: $brand1
 
 .sidebar
   h5
@@ -350,64 +154,4 @@ a.anchor
 
   .wendell
     margin-top: 100px
-
-.avatar--small
-  +border-radius(50%)
-  overflow: hidden
-  // height: 55px
-  width: 55px
-
-.avatar--brand2
-  border: 2px solid $brand2
-
-.latest-post__avatar
-  margin: 10px auto
-
-.latest-post
-  +border-radius(2px)
-  background-color: #fff
-  border: 1px solid #E1E1E1
-  padding: 15px
-  margin-bottom: 10px
-
-.upcoming-events__author
-  height: 75px
-  width: 75px
-
-.latest-post__title
-  font-weight: 600
-  display: block
-  text-align: center
-  margin: 0
-
-.latest-post__meta
-  text-align: center
-  color: #BBBBBB
-  margin: 0 0 12px
-
-.latest-post__description
-  @extend %caption
-  margin: 0 0 12px
-
-// Bounce House!!!
-
-.bounce-house
-  display: block
-  position: relative
-  max-height: 350px
-  overflow: hidden
-  margin-bottom: 20px
-
-.bounce-house__content
-  padding: 20px
-  background-color: rgba(0,0,0,0.65)
-  position: absolute
-  top: 0
-  width: 100%
-  @include transition(all 0.5s)
-  &:hover
-    padding-top: 82px
-    padding-bottom: 150px
-    background: transparentize($brand1, 0.15)
-
 

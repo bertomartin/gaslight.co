@@ -3,9 +3,9 @@
     .columns.large-12
       %img.wendell{ src: image_path('wendell-lost.png') }
 
-  .intro
-    %h1.hide-for-small
-      What? Where'd it go??
+  .error-page__message
+    %h2.hide-for-small
+      What? Where'd it go?
     %p.hide-for-small
       Uh oh. Whatever you were looking for seems to have gone missing.
       I'm not sure how it happened, but it did. Now we have to deal with it.
@@ -16,12 +16,12 @@
       %strong What? Where'd it go??
       %br/
       Whatever you were looking for doesn't seem to be here anymore ;(
-    %a.button.brand3.hide-for-small{href: page_path("contact"), rel: "Homepage Lets Talk button" } Let's Talk
+    %a.button.button--brand3.hide-for-small{href: page_path("contact"), rel: "Homepage Lets Talk button" } Let's Talk
 
     .buttonLinks.show-for-small
-      %a.button.brand1{href: page_path("about"), rel: "Homepage mobile button" } About
-      %a.button.brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
-      %a.button.brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
+      %a.button.button--brand1{href: page_path("about"), rel: "Homepage mobile button" } About
+      %a.button.button--brand2{href: page_path("work"), rel: "Homepage mobile button" } Work
+      %a.button.button--brand3{href: page_path("contact"), rel: "Homepage mobile button" } Contact
 
 
 

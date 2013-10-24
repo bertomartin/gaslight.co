@@ -7,42 +7,41 @@
         %h1.title--light Build Great Things Faster
     .row
       .large-12.columns
-        %h3.subheader--light Master the latest tools for developers with in-person and online training.
+        %h3.subheading--light Master the latest tools for developers with in-person and online training.
         .underline--blue.underline--header
 
   %section
     .row
-      %h2.header Upcoming Workshops
+      %h2.heading Upcoming Workshops
       .underline--blue
     .row
       - in_person_courses.each do |course|
         .large-6.columns.large-centered
           .course.course--in-person.center
             %img.course__img{src: course.image_url}
-            %h2.course__title.subheader= course.title
+            %h2.course__title.subheading= course.title
             %p= course.meta
             .course__actions
               %a.button.button--quiet{href: course_path(course)} Learn more about the class.
               %a.button.button--brand1{href: new_course_registration_path(course)} Save Your Spot
   %section.section--contrast
     .row
-      %h2.header Online Classes
+      %h2.heading Online Classes
       .underline--blue
     .row
       - online_courses.each do |course|
         .large-6.columns.large-centered
           .course.course--online.center
             %img.course__img{src: course.image_url}
-            %h2.course__title.subheader= course.title
-            %p= course.synopsis
-            %a.brand1--link.element--sm-margin-bottom{href: course_path(course)} Learn more about the class.
+            %h2.course__title.subheading= course.title
+            %a.brand1--link.element--sm-margin-bottom.element--sm-margin-bottom{href: course_path(course)} Learn more about the class.
             .course__actions
               %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
               %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
 
   %section
     .row
-      %h2.header Custom Training Sessions
+      %h2.heading Custom Training Sessions
       .underline--blue
     .row.center
       .large-8.columns.large-centered

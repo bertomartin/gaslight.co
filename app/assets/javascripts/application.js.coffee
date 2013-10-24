@@ -1,5 +1,6 @@
 #= require jquery
 #= require jquery_ujs
+#= require jquery.placeholder
 #= require ./analytics
 #= require raphael
 #= require mediaelement-and-player

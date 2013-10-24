@@ -6,80 +6,63 @@
     font-family: helvetica
   .hide-unless-crappy-browser
     display: block
+  .top-bar__logo
+    margin-top: 15px
+  #mc_embed_signup form label
+    color: #000
+  .footer
+    padding-bottom: 10px
+  ul.photos li
+    .photo
+      img
+      .overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        top: 100%
+        background: transparentize($brand2, 0.25)
+        @include transition-property(top)
+        @include transition-duration(0.5s)
+
+  .bounce-house
+    img
+      width: 100%
+
+  .bounce-house__content
+    background-color: #000
+
+  .bounce-house:hover .bounce-house__content
+    padding: 20px
+    background: #666
+  .hero__header--brand1
+    background-color: $brand1
 
 .no-svg
-  //Nav//
+  .icon--link, .icon, .icon--link--large, .icon--team
+    display: none
+
   .top-bar__logo
+    img
+      display: none
     background: image-url("logoSmall.png") no-repeat
-    width: 150px
-  //Home//
-  .icon--ignite
-    background: image-url("icons/fallback/home-ignite.png") no-repeat
-    width: 128px
-  .icon--design
-    background: image-url("icons/fallback/home-design.png") no-repeat
-    width: 128px
-  .icon--develop
-    background: image-url("icons/fallback/home-develop.png") no-repeat
-    width: 128px
-  .icon--learning
-    background: image-url("icons/fallback/home-learning.png") no-repeat
-    width: 128px
-  //About//
-  .icon--happy
-    background: image-url("icons/fallback/about-happy.png") no-repeat
-    width: 128px
-  .icon--twitter
-    background: image-url("icons/fallback/twitter-07.png") no-repeat
-    width: 40px
-  .icon--github
-    background: image-url("icons/fallback/github-05.png") no-repeat
-    width: 40px
-  .icon--mail
-    background: image-url("icons/fallback/about-mail-01.png") no-repeat
-    width: 40px
-  //Services//
-  .icon--angular
-    background: image-url("icons/fallback/service-angular.png") no-repeat
-    width: 128px
-  .icon--ember
-    background: image-url("icons/fallback/service-ember.png") no-repeat
-    width: 128px
-  .icon--future
-    background: image-url("icons/fallback/service-future.png") no-repeat
-    width: 128px
-  .icon--ios
-    background: image-url("icons/fallback/service-ios.png") no-repeat
-    width: 128px
-  .icon--jruby
-    background: image-url("icons/fallback/service-jruby.png") no-repeat
-    width: 128px
-  .icon--ruby
-    background: image-url("icons/fallback/service-ruby.png") no-repeat
-    width: 128px
-  //Contact//
-  .icon--map
-    background: image-url("icons/fallback/contact-us.png") no-repeat
-    width: 192px
-  .icon--cincyrb
-    background: image-url("icons/fallback/contact-cincirb.png") no-repeat
-    width: 128px
-  .icon--drinkup
-    background: image-url("icons/fallback/contact-drinkup.png") no-repeat
-    width: 128px
-  .icon--embernati
-    background: image-url("icons/fallback/contact-embernati.png") no-repeat
-    width: 128px
-  .icon--qcmerge
-    background: image-url("icons/fallback/contact-qcmerge.png") no-repeat
-    width: 128px
-  //Footer//
-  .icon--twitter--footer
-    background: image-url("icons/fallback/twitter-07.png") no-repeat
-    width: 36px
-  .icon--github--footer
-    background: image-url("icons/fallback/github-05.png") no-repeat
-    width: 36px
-  .icon--facebook
-    background: image-url("icons/fallback/facebook.png") no-repeat
-    width: 36px
+    width: 155px
+    height: 25px
+  .footer__socialLinks
+    .icon--twitter--footer
+      img
+        display: none
+      background: image-url("icons/fallback/twitter-07.png") no-repeat
+      width: 36px
+      height: 36px
+    img.icon--github--footer
+      background: image-url("icons/fallback/github-05.png") no-repeat
+      width: 36px
+    img.icon--facebook
+      background: image-url("icons/fallback/facebook.png") no-repeat
+      width: 36px
+
+.crappy-browser .show-for-small
+  display: none !important
+
+.crappy-browser .hide-for-small
+  display: inherit !important  

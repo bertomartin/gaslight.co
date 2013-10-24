@@ -52,7 +52,7 @@
       .large-8.columns.large-centered
         %p.lead.center
           Try one of these local events we founded, host or both. Oh, and there’s usually beer, too.
-    .row
+    .row.icons--margin
       .large-3.columns
         %a.icon--qcmerge{target: "_blank", href: "http://qcmerge.com/", rel: "QCMerge"}
           =image_tag "icons/contact-qcmerge.svg", :class => "icon--link"
@@ -69,6 +69,11 @@
         %a.icon--embernati{target: "_blank", href: "http://www.meetup.com/EmberNati/", rel: "Embernati"}
           =image_tag "icons/contact-embernati.svg", :class => "icon--link"
         %h3.subheading.center EmberNati
+    .row
+      .large-3.columns
+        %a{target: "_blank", href: "http://blog.cincijs.com/", rel: "Cincijs"}
+          =image_tag "icons/contact--cincijs.png", :class => "icon--link"
+        %h3.subheading.center Cincijs
 
 .modal.hide-for-small
   .modal__backdrop

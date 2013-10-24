@@ -8,6 +8,7 @@
 #= require backbone
 #= require backbone/gaslight
 #= require training_app/registrations
+#= require ./coffee
 
 track = (category, action, value = "") ->
   _gaq.push(['_trackEvent', category, action, value])

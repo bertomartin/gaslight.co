@@ -1,12 +1,9 @@
-#= require jquery.easing.1.3.js
-
 class Gaslight.Views.TaglineView extends Backbone.View
 
   animation:
     interval: 3000
-    duration: 800
+    duration: 600
     delay: 200
-    easing: 'easeInOutExpo'
 
   activeBrand: 1
 

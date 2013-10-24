@@ -38,7 +38,7 @@
 #main.content.landing
   %section.header--about
     .row
-      %h2.header--light We Are
+      %h2.header--light Who We Are
       .underline--blue
     .row
       .large-9.columns.large-centered
@@ -54,17 +54,17 @@
       .underline--red
     .row.icons--homepage
       .large-3.columns
-        %a.home--ignite{href: page_path('services'), rel: "Landing Igniter"}
+        %a.home--ignite{href: page_path('services', anchor: "ignite"), rel: "Landing Igniter"}
           =image_tag "icons/home-ignite.svg", :class => "icon--link"
         %h3.subheader.center Idea Igniter
         %p.center Turn your big idea into an actionable plan with The Igniter.
       .large-3.columns
-        %a.home--develop{href: page_path('services'), rel: "Landing CustomSoftware"}
+        %a.home--develop{href: page_path('services', anchor: "develop"), rel: "Landing CustomSoftware"}
           =image_tag "icons/home-develop.svg", :class => "icon--link"
         %h3.subheader.center Custom Software Development
         %p.center Boost profits and productivity with a new or upgraded app.
       .large-3.columns
-        %a.home--design{href: page_path('services'), rel: "Landing Design"}
+        %a.home--design{href: page_path('services', anchor: "design"), rel: "Landing Design"}
           =image_tag "icons/home-design.svg", :class => "icon--link"
         %h3.subheader.center Design and User Experience
         %p.center Create on-brand tools that are easy to use and easy on the eyes.
@@ -98,7 +98,7 @@
     .row
       .large-5.columns
         %p
-          Sign-up for our email newsletter to receive monthly tech tips, news and events:
+          Sign up for monthly tech tips, news and events:
           = render partial: 'application/newsletter'
       .large-6.columns.hide-for-small
         .upcoming-events

@@ -21,10 +21,9 @@
             %img.course__img{src: course.image_url}
             %h2.course__title.subheader= course.title
             %p= course.meta
-            %p= course.synopsis
             .course__actions
-              %a.button.button--brand1{href: course_path(course)} Learn more about the class.
-
+              %a.button.button--quiet{href: course_path(course)} Learn more about the class.
+              %a.button.button--brand1{href: new_course_registration_path(course)} Save Your Spot
   %section.section--contrast
     .row
       %h2.header Online Classes

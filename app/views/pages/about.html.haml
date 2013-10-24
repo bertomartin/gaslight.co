@@ -18,7 +18,8 @@
         %h2.subheader It’s Not About the Code
         %p Sure, we love to geek out over technology and design. But it’s all for a bigger purpose: Boosting your business. We build apps that radically improve productivity, profits, client relationships and more.
       .large-2.columns.hide-for-small
-        =image_tag "icons/about-happy.svg", :class => "icon"
+        .about--happy
+          =image_tag "icons/about-happy.svg", :class => "icon"
       .large-5.columns.center
         %h2.subheader It Is About the People
         %p Achieving measurable business results means building deep partnerships. We assign a dedicated team to each project. And keep in touch just about every day during design and development. We’ll even invite you into our office to work side-by-side.
@@ -54,11 +55,11 @@
             .links
               %h3.subheader--light Doug Alcorn
               %p.subtitle Co-founder, Developer
-              %a{target: "_blank", href: "http://twitter.com/dougalcorn", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/dougalcorn", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/dougalcorn", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/dougalcorn", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team" 
-              %a{href: "mailto:doug@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:doug@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -67,9 +68,9 @@
             .links
               %h3.subheader--light Ryan Arthur
               %p.subtitle Designer
-              %a{target: "_blank", href: "http://github.com/arthurra", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/arthurra", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team" 
-              %a{href: "mailto:ryan@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:ryan@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -78,11 +79,11 @@
             .links
               %h3.subheader--light Bill Barnett
               %p.subtitle Co-founder, Developer
-              %a{target: "_blank", href: "http://twitter.com/agilous", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/agilous", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/agilous", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/agilous", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team" 
-              %a{href: "mailto:bill@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:bill@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"  
       %li
         .photo
@@ -91,11 +92,11 @@
             .links
               %h3.subheader--light Tammy Gambrel
               %p.subtitle Designer
-              %a{target: "_blank", href: "http://twitter.com/SilversunTammy", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/SilversunTammy", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/tammygambrel", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/tammygambrel", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:tammy@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:tammy@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -104,9 +105,9 @@
             .links
               %h3.subheader--light Dewayne Greenwood
               %p.subtitle Co-founder, COO
-              %a{target: "_blank", href: "http://twitter.com/xero6", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/xero6", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{href: "mailto:dewayne@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:dewayne@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -115,11 +116,11 @@
             .links
               %h3.subheader--light Michael Guterl
               %p.subtitle Developer
-              %a{target: "_blank", href: "http://twitter.com/mguterl", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/mguterl", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/mguterl", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/mguterl", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:michael@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:michael@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -128,11 +129,11 @@
             .links
               %h3.subheader--light Peter Kananen
               %p.subtitle Partner, Project Manager
-              %a{target: "_blank", href: "http://twitter.com/pkananen", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/pkananen", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/pkananen", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/pkananen", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:peter@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:peter@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -141,11 +142,11 @@
             .links
               %h3.subheader--light Kristin Lasita
               %p.subtitle Designer
-              %a{target: "_blank", href: "http://twitter.com/kclasita", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/kclasita", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/kclasita", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/kclasita", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:kristin@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:kristin@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -154,11 +155,11 @@
             .links
               %h3.subheader--light Mitch Lloyd
               %p.subtitle Developer
-              %a{target: "_blank", href: "http://twitter.com/too_mitch", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/too_mitch", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/mitchlloyd", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/mitchlloyd", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:mitch@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:mitch@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -167,11 +168,11 @@
             .links
               %h3.subheader--light Chris Moore
               %p.subtitle Partner, CEO
-              %a{target: "_blank", href: "http://twitter.com/cdmwebs", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/cdmwebs", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/cdmwebs", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/cdmwebs", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:chrism@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:chrism@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -180,11 +181,11 @@
             .links
               %h3.subheader--light Chris Nelson
               %p.subtitle Co-founder, Developer
-              %a{target: "_blank", href: "http://twitter.com/superchris", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/superchris", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/superchris", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/superchris", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:chris@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:chris@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -193,11 +194,11 @@
             .links
               %h3.subheader--light Kevin Rockwood
               %p.subtitle Developer
-              %a{target: "_blank", href: "http://twitter.com/kevinrockwood", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/kevinrockwood", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/rockwood", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/rockwood", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:kevin@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:kevin@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -206,11 +207,11 @@
             .links
               %h3.subheader--light James Smith
               %p.subtitle Developer
-              %a{target: "_blank", href: "http://twitter.com/st23am", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/st23am", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/st23am", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/st23am", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:james@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:james@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
@@ -219,9 +220,9 @@
             .links
               %h3.subheader--light Joel Turnbull
               %p.subtitle Developer
-              %a{target: "_blank", href: "http://twitter.com/joelturnbull", rel: "Team Social"}
+              %a.icon--twitter{target: "_blank", href: "http://twitter.com/joelturnbull", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
-              %a{target: "_blank", href: "http://github.com/joelturnbull", rel: "Team Social"}
+              %a.icon--github{target: "_blank", href: "http://github.com/joelturnbull", rel: "Team Social"}
                 =image_tag "icons/github-05.svg", :class => "icon--team"
-              %a{href: "mailto:joel@gaslight.co", rel: "Team Social"}
+              %a.icon--mail{href: "mailto:joel@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"

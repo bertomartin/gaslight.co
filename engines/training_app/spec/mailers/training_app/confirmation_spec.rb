@@ -7,10 +7,12 @@ module TrainingApp
       TrainingApp::Registration.any_instance.stub(:charge_stripe).and_return(true)
     end
 
-    Given(:registration) { FactoryGirl.create(:registration) }
-    When(:registration_mail) { TrainingApp::Confirmation.registered(registration) }
-    Then { expect(registration_mail.body).to match registration.course.title }
-    Then { expect(registration_mail.body).to match "code=#{registration.code}#/courses/#{registration.course.id}" }
+    let(:registration) { FactoryGirl.create(:registration) }
+    let(:registration_mail) { TrainingApp::Confirmation.registered(registration) }
+    it "renders the email" do
+      expect(registration_mail.body).to match registration.course.title
+      expect(registration_mail.body).to match "code=#{registration.code}#/courses/#{registration.course.id}"
+    end
   end
 end
 

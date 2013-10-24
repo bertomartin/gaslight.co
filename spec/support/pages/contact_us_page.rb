@@ -5,6 +5,10 @@ class ContactUsPage
     visit '/contact'
   end
 
+  def open_modal
+    click_on("few quick questions")
+  end
+
   def complete_form
     fill_in 'Name', with: 'Chris Moore'
     fill_in 'Email', with: 'chris@cdmwebs.com'
@@ -15,7 +19,7 @@ class ContactUsPage
   def submit
     click_button 'Send it!'
   end
-  
+
   def successful?
     page.current_path == '/contact' && page.has_content?("got it!")
   end

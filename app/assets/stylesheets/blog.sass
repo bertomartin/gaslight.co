@@ -81,7 +81,7 @@ li.related-post__list
     border-bottom: none
 
 .post
-  margin-bottom: 10em
+  margin-bottom: 6em
   &:last-of-type
     margin-bottom: 0
 
@@ -144,25 +144,33 @@ li.related-post__list
       width: 100%
       margin-bottom: 1em
   h1
-    font-size: $blog-mobile-heading-font-size
-    font-weight: 600
+    font-size: 2em
+    font-weight: 700
     color: #333
+    margin: 30px 0 5px
   h2
-    font-size: $blog-mobile-heading-font-size * .875
+    font-size: 1.8em
+    font-weight: 700
+    color: #333
+    margin: 30px 0 5px
   h3
-    font-size: $blog-mobile-heading-font-size * .75
+    font-size: 1.4em
+    font-weight: 700
+    margin: 30px 0 5px
   h4
-    font-size: $blog-mobile-heading-font-size * .625
-  h5
-    font-size: $blog-mobile-heading-font-size * .5
-  h6
-    font-size: $blog-mobile-heading-font-size * .4
-  ul, ol,
-    margin-left: 20px
-    li
-      font-size: 18px
-    a
-      font-size: 18px
+    font-size: 1.2em
+    font-weight: 700
+    margin: 30px 0 5px
+  // h5
+  //   font-size: $blog-mobile-heading-font-size * .5
+  // h6
+  //   font-size: $blog-mobile-heading-font-size * .4
+  // ul, ol,
+    // margin-left: 20px
+    // li
+    //   font-size: 18px
+    // a
+    //   font-size: 18px
   pre
     @include border-radius(5px)
     background-color: #fafafa
@@ -175,14 +183,11 @@ li.related-post__list
     font-size: 14px
     background-color: transparent
   blockquote
-    clear: both
-    min-height: 75px
-    @include border-radius(5px)
-    background-color: #fafafa
-    padding: 0.25em 0.5em 0.25em 3em
-    background-image: image-url('bg-quote.png')
-    background-repeat: no-repeat
+    padding: 20px 40px
+    font-size: 1em
+    margin: 25px 0
     p:last-child
+      color: rgba(77, 77, 77, 0.75)
       margin-bottom: 0
     cite:before
       content: "\2014"

@@ -11,7 +11,7 @@ class TrainingApp.Views.NewRegistrationView extends TrainingApp.Views.TrainingAp
 
   register: (event) ->
     event.preventDefault()
-    @$(".accept").val("Purchasing...").attr("disabled", "disabled")
+    @$("input[type=submit]").val("Purchasing...").attr("disabled", "disabled")
     @model.set $(event.target).serializeObject()
     @model.createToken()
 
@@ -25,4 +25,4 @@ class TrainingApp.Views.NewRegistrationView extends TrainingApp.Views.TrainingAp
     super
     if @model.get("errors")
       for field, error of @model.get("errors")
-        @$("input[name=#{field}]").after("<span class='errors'>#{error}</span>")
+        @$("label[for=#{field}]").append("<span class='errors'>(#{error})</span>")

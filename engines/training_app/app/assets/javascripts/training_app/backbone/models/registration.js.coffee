@@ -40,7 +40,7 @@ class TrainingApp.Models.Registration extends Backbone.Model
       success(model, response) if success
     error = options.error
     options.error = (model, response)=>
-      errors = JSON.parse response.responseText
+      errors = JSON.parse(response.responseText).errors
       @set errors: errors
       @trigger("error")
     super(args, options)

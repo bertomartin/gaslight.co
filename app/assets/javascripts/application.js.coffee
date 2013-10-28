@@ -31,3 +31,6 @@ $ ->
     new MediaElementPlayer this,
       pluginPath: '/assets/'
       audioWidth: '100%'
+
+  # Fix ie placeholders
+  $('input, textarea').placeholder()

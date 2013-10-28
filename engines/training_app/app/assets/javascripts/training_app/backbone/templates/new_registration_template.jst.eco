@@ -97,7 +97,7 @@
           <a href="/registrations" class="button cancel button--quiet">Cancel Purchase</a>
         </div>
         <div class="large-4 columns">
-          <input type="submit" class="button button--brand1" value="Purchase Training">
+          <input type="submit" class="button button--brand1 accept" value="Purchase Training">
         </div>
       </div>
     </fieldset>

@@ -7,9 +7,8 @@ class ClassroomPage
   end
 
   def visit_chapter(chapter, code=nil)
-    # Going directly to a restricted chapter will fail unless your go to the course first
-    visit_course(chapter.section.course, code)
-    visit "/training/classroom/?code=#{code}#/courses/#{chapter.section.course.id}/chapters/#{chapter.id}"
+    visit "/training/classroom/?code=#{code}#/courses/#{chapter.course.id}/chapters/#{chapter.id}"
+    find('.ember-application') # wait for ember to initialize
   end
 
   def title

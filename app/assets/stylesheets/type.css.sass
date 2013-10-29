@@ -131,7 +131,7 @@ p.standalone
   border-bottom-width: 9px
 
 %subtitle
-  font-size: 1.2
+  font-size: 1.2em
   font-weight: 600
   text-rendering: optimizeLegibility
 
@@ -158,7 +158,8 @@ p
 
 aside p 
   @extend %body
-  font-size: ms(0) - 1 
+  font-size: 1em
+  color: #333
   line-height: 1.35 
   font-style: italic
 
@@ -167,8 +168,6 @@ aside p
   text-rendering: optimizeLegibility
   line-height: 1.1em
   color: $brandBase
-  margin-bottom: ms(0)
-  margin-top: ms(0)
   small 
     font-size: 100%
     line-height: 0
@@ -201,27 +200,6 @@ hr
   margin: 22px 0 21px
   height: 0
 
-// .subheading
-//   line-height: 1.3
-//   color: lighten($input-font-color, 30%)
-//   font-weight: 300
-//   margin-bottom: ms(1)
-
-%buzzword
-  font-size: ms(6)
-  color: #fff
-
-.headline__buzzword
-  @extend %headline
-  @extend %buzzword
-  line-height: 1.2em
-  font-weight: normal
-
-.case-study__buzzword
-  @extend %headline
-  @extend %buzzword
-  line-height: .85em
-  font-weight: bold
 i 
   font-style: italic
   line-height: inherit 
@@ -247,9 +225,7 @@ h2.title--expertise
 
 /* Lists ---------------------- */
 ul, ol, dl
-  font-size: ms(0)
-  line-height: 1.6
-  margin-bottom: ms(1)
+  font-size: 1em
   list-style-position: inside
   
 ul
@@ -258,7 +234,7 @@ ul
       margin: 20px
       margin-bottom: 0
   &.square, &.circle, &.disc 
-    margin: 1
+    margin: 1em
   &.square 
     list-style-type: square
     li ul 
@@ -288,7 +264,7 @@ blockquote, blockquote p
   color: lighten($input-font-color, 30%) 
 
 blockquote 
-  margin: 0 0 ms(1)
+  margin: 0 0 1em
   padding: 100px
   font-size: 14px
   color: #000

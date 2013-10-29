@@ -66,13 +66,17 @@ PATH
   remote: engines/blog_app
   specs:
     blog_app (0.0.1)
+      acts-as-taggable-on
       compass-rails (~> 2.0.alpha.0)
       decent_exposure
       haml (~> 4.0)
       haml-rails
+      htmlentities
+      pygments.rb
       rails (~> 4.0.0)
       redcarpet
       sass-rails (~> 4.0.0)
+      stringex
 
 PATH
   remote: engines/training_app

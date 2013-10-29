@@ -23,6 +23,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'sass-rails', '~> 4.0.0'
   s.add_dependency 'compass-rails', '~> 2.0.alpha.0'
   s.add_dependency 'redcarpet'
+  s.add_dependency 'htmlentities'
+  s.add_dependency 'acts-as-taggable-on'
+  s.add_dependency 'stringex'
+  s.add_dependency 'pygments.rb'
 
   s.add_development_dependency 'pg'
   s.add_development_dependency 'rspec-rails'

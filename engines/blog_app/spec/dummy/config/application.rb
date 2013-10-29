@@ -2,6 +2,8 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+require "pry"
+
 Bundler.require(*Rails.groups)
 require "blog_app"
 

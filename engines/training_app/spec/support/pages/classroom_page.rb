@@ -15,8 +15,8 @@ class ClassroomPage
     find('.info-bar__title').text
   end
 
-  def has_theme_for_course?(course)
-    find('.theme-link', visible: false)[:href] == "/training/courses/#{course.id}/theme.css"
+  def theme_url
+    find('.theme-link', visible: false)[:href]
   end
 
   def chapters

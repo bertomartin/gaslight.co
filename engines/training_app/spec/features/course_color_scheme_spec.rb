@@ -5,6 +5,6 @@ feature "Course color theme", js: true do
   let(:classroom_page) { ClassroomPage.new }
   scenario "load the proper theme file" do
     classroom_page.visit_course(course)
-    expect(classroom_page).to have_theme_for_course(course)
+    expect(classroom_page.theme_url).to match("training/courses/#{course.id}/theme.css")
   end
 end

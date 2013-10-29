@@ -2,7 +2,6 @@ require 'spec_helper'
 
 feature "Demoing a course", js: true do
   let(:classroom_page) { ClassroomPage.new }
-
   let(:course) { FactoryGirl.create(:course, online: true) }
   let!(:section) { FactoryGirl.create(:section, course: course) }
 

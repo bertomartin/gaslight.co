@@ -16,6 +16,7 @@ gem 'stringex'
 gem 'htmlentities'
 gem 'rack-cors', require: 'rack/cors'
 gem 'training_app', path: 'engines/training_app'
+gem 'blog_app', path: 'engines/blog_app'
 
 gem 'redcarpet', require: false
 gem 'pygments.rb', require: false

@@ -63,6 +63,18 @@ GIT
       uuidtools
 
 PATH
+  remote: engines/blog_app
+  specs:
+    blog_app (0.0.1)
+      compass-rails (~> 2.0.alpha.0)
+      decent_exposure
+      haml (~> 4.0)
+      haml-rails
+      rails (~> 4.0.0)
+      redcarpet
+      sass-rails (~> 4.0.0)
+
+PATH
   remote: engines/training_app
   specs:
     training_app (0.0.1)
@@ -412,6 +424,7 @@ DEPENDENCIES
   activeadmin!
   acts-as-taggable-on!
   asset_sync
+  blog_app!
   coffee-rails (~> 4.0.0)
   compass-rails (= 2.0.alpha.0)
   database_cleaner

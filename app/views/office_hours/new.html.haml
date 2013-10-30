@@ -1,0 +1,34 @@
+- content_for(:title) { "Gaslight: Office Hours" }
+
+#main.content
+  %section.header--about
+    .row
+      .large-12.columns.large-centered
+        %h1.title--light Office Hours
+    .row
+      .large-12.columns.large-centered
+        %h3.subheading--light
+          We’re big on community and love to connect with new people. Say hello.
+        .underline--blue.underline--heading
+
+
+  %section
+    .row
+      .large-5.columns.center
+        %h2.subheading Got Questions or Ideas?
+        %p  Maybe you are a business owner who wants to know how software development and design can help their business grow. Maybe you are a developer who is hacking on a big project. Maybe you're a manager who wants to learn how we run our development culture. 
+      .large-2.columns.hide-for-small
+        .icon.officehours--1to1 
+          %span#openhouse-1 1
+          %span#openhouse-colon :
+          %span#openhouse-1 1
+      .large-5.columns.center
+        %h2.subheading Let's Explore Together
+        %p We want to help you explore your options. Come in for an hour and we will discuss your ideas or help you troubleshoot your problems 1-on-1. We are proud to be a part of this community and want to help others grow as businesses and individuals.
+
+  %section.section--contrast
+    %h2.heading#heading-openhouse
+      Fridays, 9-11AM
+    %p.center Request a meeting with this form. We will email you to confirm your time.
+
+    =render partial: 'form'

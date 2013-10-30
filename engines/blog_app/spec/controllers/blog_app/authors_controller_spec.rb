@@ -7,7 +7,6 @@ module BlogApp
       it 'returns a collection of all authors as JSON' do
         get :index, format: 'json', use_route: :blog
         json = JSON.parse(response.body)
-        binding.pry
         json['authors'].size.should == Author.all.size
       end
     end

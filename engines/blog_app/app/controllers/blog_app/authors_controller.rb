@@ -4,7 +4,7 @@ module BlogApp
     respond_to :json
 
     def index
-      render :json => Author.all
+      render json: { authors: Author.all }
     end
 
   end

@@ -7,6 +7,8 @@ require "acts-as-taggable-on"
 require "stringex"
 require "pygments"
 require "kaminari"
+require "jquery-rails"
+require "backbone-rails"
 
 module BlogApp
   class Engine < ::Rails::Engine

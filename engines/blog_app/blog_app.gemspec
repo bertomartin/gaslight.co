@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'haml', '~> 4.0'
   s.add_dependency 'haml-rails'
   s.add_dependency 'sass-rails', '~> 4.0.0'
+  s.add_dependency 'jquery-rails'
+  s.add_dependency 'rails-backbone'
   s.add_dependency 'compass-rails', '~> 2.0.alpha.0'
   s.add_dependency 'redcarpet'
   s.add_dependency 'htmlentities'

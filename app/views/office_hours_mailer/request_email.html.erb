@@ -1,0 +1,11 @@
+<p>
+	<%= @message.name %> has requested office hours for <%= @message.date %>
+at <%= @message.timeslot %>. Here's their description:</p>
+
+<blockquote><%= @message.description %></blockquote>
+
+<ul>
+<li><%= @message.name %></li>
+<li><%= @message.email %></li>
+<li><%= @message.company %></li>
+</ul>

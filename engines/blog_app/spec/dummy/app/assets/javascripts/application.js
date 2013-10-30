@@ -1,1 +1,1 @@
-//= require_tree blog_app/application
+//= require blog_app/application

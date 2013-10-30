@@ -1,6 +1,7 @@
 Gaslight::Application.routes.draw do
   mount TrainingApp::Engine, at: 'training'
   mount BlogApp::Engine, at: 'blog'
+  get 'authors', to: redirect('/blog/authors')
 
   ActiveAdmin.routes(self)
   devise_for :admin_users, ActiveAdmin::Devise.config

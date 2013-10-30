@@ -3,7 +3,6 @@
 #= require jquery.placeholder
 #= require ./analytics
 #= require raphael
-#= require mediaelement-and-player
 #= require underscore
 #= require moment
 #= require backbone
@@ -27,11 +26,6 @@ $ ->
 
   $("meta[property='author']").each ->
     track('Blog', 'Author', $(this).attr('content'))
-
-  $('audio').each ->
-    new MediaElementPlayer this,
-      pluginPath: '/assets/'
-      audioWidth: '100%'
 
   # Fix ie placeholders
   $('input, textarea').placeholder()

@@ -59,7 +59,7 @@ module BlogApp
     acts_as_ordered_taggable
     acts_as_url :title, url_attribute: :slug, sync_url: true
 
-    include Rails.application.routes.url_helpers
+    include BlogApp::Engine.routes.url_helpers
     self.default_url_options = {
       :host => 'gaslight.co'
     }

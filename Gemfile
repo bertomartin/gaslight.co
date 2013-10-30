@@ -22,8 +22,6 @@ gem 'sentry-raven', git: 'https://github.com/getsentry/raven-ruby.git'
 gem 'compass-rails', '2.0.alpha.0'
 gem 'activeadmin',         github: 'gregbell/active_admin'
 
-gem 'engagement',          github: 'gaslight/engagement', ref:'de1d7f0', require: false
-
 # Gems used only for assets and not required
 # in production environments by default.
 gem 'coffee-rails', '~> 4.0.0'

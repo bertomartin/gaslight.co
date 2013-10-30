@@ -1,15 +1,4 @@
 GIT
-  remote: git://github.com/gaslight/engagement.git
-  revision: de1d7f0efa1c7cc04bd2f57964783cfcb232f54b
-  ref: de1d7f0
-  specs:
-    engagement (1.0.0)
-      disqus
-      hacker_news_search (~> 0.0.6)
-      snoo
-      twitter
-
-GIT
   remote: git://github.com/gregbell/active_admin.git
   revision: 1f4f90c6a0b5c078bdad03d0d4024da6da5476d5
   specs:
@@ -61,6 +50,7 @@ PATH
       acts-as-taggable-on
       compass-rails (~> 2.0.alpha.0)
       decent_exposure
+      engagement
       haml (~> 4.0)
       haml-rails
       htmlentities
@@ -197,6 +187,11 @@ GEM
       railties (>= 3.1)
     ember-source (1.0.0)
       handlebars-source (= 1.0.12)
+    engagement (1.1.0)
+      disqus
+      hacker_news_search (~> 0.0.6)
+      snoo
+      twitter
     erubis (2.7.0)
     eventmachine (1.0.0)
     excon (0.25.3)
@@ -252,8 +247,8 @@ GEM
     hike (1.2.3)
     htmlentities (4.3.1)
     http_parser.rb (0.5.3)
-    httparty (0.11.0)
-      multi_json (~> 1.0)
+    httparty (0.12.0)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.4)
     inherited_resources (1.4.1)
@@ -264,7 +259,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (4.0.5)
       railties (>= 3.1.0)
-    json (1.8.0)
+    json (1.8.1)
     kaminari (0.14.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -309,7 +304,7 @@ GEM
       slop (~> 3.4)
     puma (2.3.2)
       rack (>= 1.1, < 2.0)
-    pygments.rb (0.5.1)
+    pygments.rb (0.5.2)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
@@ -389,7 +384,7 @@ GEM
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
-    stringex (2.0.3)
+    stringex (2.1.0)
     stripe (1.8.6)
       multi_json (>= 1.0.4, < 2)
       rest-client (~> 1.4)
@@ -431,7 +426,6 @@ DEPENDENCIES
   database_cleaner
   decent_exposure
   dotenv-rails
-  engagement!
   factory_girl_rails
   foundation_rails_helper!
   haml (~> 4.0)

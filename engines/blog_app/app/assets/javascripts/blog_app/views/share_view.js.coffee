@@ -1,6 +1,6 @@
 class Blog.Views.ShareView extends Backbone.View
   className: "share"
-  template: JST["backbone/templates/share"]
+  template: JST["blog_app/templates/share"]
   active: true
   mobileWidth: 768
   targetScrollRatio: 0.75

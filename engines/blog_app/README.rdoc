@@ -1,3 +1,7 @@
 = BlogApp
 
 This project rocks and uses MIT-LICENSE.
+
+Remove:
+
+* lib/super_struct

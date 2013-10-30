@@ -1,0 +1,16 @@
+.columns.large-3.prepend-1.sidebar--blog
+  = render partial: 'search_form'
+  %a.button.button--brand3{href: "/coffee", rel: "Coffee Friday"} Get Coffee With Us
+  %a.button.button--black{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
+  = link_to_unless_current('Recent Posts', posts_path)
+  |
+  = link_to_unless_current('Archive', archive_posts_path)
+  %h3.sidebar__heading Tags
+  .tag-container
+    = popular_tag_links(popular_tags)
+  %h3.sidebar__heading Authors
+  %ul
+    - authors.each do |post|
+      %li
+        = link_to(post.author_name || "Other", posts_path(author: post.author))
+        (#{pluralize(post.post_count, 'post')})

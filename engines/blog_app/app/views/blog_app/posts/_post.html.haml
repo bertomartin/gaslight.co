@@ -1,0 +1,14 @@
+%article.post{itemscope: true, itemtype: 'http://schema.org/BlogPosting'}
+  %header.post__header.instapaper_title
+    %h2.post__title
+      = link_to(post_url(post), itemprop: 'url') do
+        %span{itemprop: 'name headline'}= post.title
+      = image_tag(gravatar_url(post.author_email, '70x70'), class: 'post__avatar')
+    %span.post__author{itemtype: 'http://schema.org/Person', itemscope: true}
+      by
+      = link_to(post.author_name, posts_path(author: post.author), rel: "author", itemprop: 'name')
+    %time.post__time{pubdate: true, datetime: post.published_at.iso8601, itemprop: 'datePublished'}
+      = link_to(l(post.published_on, format: :nice), post)
+  %section.post__body.instapaper_body{itemprop: 'articleBody'}
+    = render(partial: 'player', locals: { post: post })
+    = raw(post.html)

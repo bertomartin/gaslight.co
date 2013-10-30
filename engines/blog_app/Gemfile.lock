@@ -8,7 +8,9 @@ PATH
       haml (~> 4.0)
       haml-rails
       htmlentities
+      kaminari
       pygments.rb
+      rack-rewrite
       rails (~> 4.0.0)
       redcarpet
       sass-rails (~> 4.0.0)
@@ -87,6 +89,9 @@ GEM
     hike (1.2.3)
     htmlentities (4.3.1)
     i18n (0.6.5)
+    kaminari (0.14.1)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -113,6 +118,7 @@ GEM
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
+    rack-rewrite (1.4.01)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.0)

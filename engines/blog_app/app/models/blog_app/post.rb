@@ -43,7 +43,7 @@ module BlogApp
     end
 
     def self.authors
-      published.select('posts.author, count(posts.id) as post_count').group('posts.author').order('post_count desc')
+      published.select('author, count(id) as post_count').group('author').order('post_count desc')
     end
 
     def self.slugged(slug)

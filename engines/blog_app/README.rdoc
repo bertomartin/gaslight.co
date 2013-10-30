@@ -5,3 +5,8 @@ This project rocks and uses MIT-LICENSE.
 Remove:
 
 * lib/super_struct
+* rack_rewrite
+* application helpers
+  * gravatar_url
+  * tag_list
+  * popular_tag_links

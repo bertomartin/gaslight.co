@@ -72,7 +72,9 @@ PATH
       haml (~> 4.0)
       haml-rails
       htmlentities
+      kaminari
       pygments.rb
+      rack-rewrite
       rails (~> 4.0.0)
       redcarpet
       sass-rails (~> 4.0.0)

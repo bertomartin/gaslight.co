@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'acts-as-taggable-on'
   s.add_dependency 'stringex'
   s.add_dependency 'pygments.rb'
+  s.add_dependency 'rack-rewrite'
+  s.add_dependency 'kaminari'
 
   s.add_development_dependency 'pg'
   s.add_development_dependency 'rspec-rails'

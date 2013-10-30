@@ -1,0 +1,17 @@
+.columns.large-3.prepend-1.sidebar--blog
+  = render partial: 'search_form'
+  %a.button.button--brand3{href: "/coffee", rel: "Coffee Friday"} Get Coffee With Us
+  %a.button.button--black{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
+  %h3.sidebar__heading Tags
+  .tag-container
+    = popular_tag_links(post.tag_counts)
+  %h3.sidebar__heading More
+  - if post.previous
+    %p.sidebar__nav Previous: #{link_to(post.previous.title, post.previous)}
+  - if post.next
+    %p.sidebar__nav Next: #{link_to(post.next.title, post.next)}
+  - if post.related.any?
+    %h3.sidebar__heading More Like This
+    %ul
+      - post.related.each do |post|
+        %li.related-post__list= link_to(post.title, post)

@@ -6,6 +6,7 @@ require "compass-rails"
 require "acts-as-taggable-on"
 require "stringex"
 require "pygments"
+require "kaminari"
 
 module BlogApp
   class Engine < ::Rails::Engine

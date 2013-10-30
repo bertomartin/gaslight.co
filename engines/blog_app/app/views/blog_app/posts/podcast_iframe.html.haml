@@ -1,0 +1,13 @@
+!!!5
+%html
+  %head
+    %meta{name: "robots", content: "noindex,nofollow"}
+    = javascript_include_tag 'application'
+    = stylesheet_link_tag 'application'
+  %body
+    = render partial: 'player'
+    :javascript
+      $('audio').mediaelementplayer({
+        pluginPath: '/assets/',
+        audioWidth: '100%'
+      });

@@ -1,0 +1,9 @@
+%ol.post__list
+  - posts.each do |post|
+    %li
+      .post__list__information.row
+        .column.large-12.small-4
+          = link_to post.title, post, :class => "post__list__link"
+        .column.large-12.small-4
+          = link_to post.author_name, posts_path(author: post.author), rel: "author", itemprop: 'name', :class => "post__author"
+          = link_to l(post.published_on, format: :nice), post, :class => "post__time"

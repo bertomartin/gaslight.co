@@ -102,9 +102,9 @@ class Post < ActiveRecord::Base
   end
 
   def related(limit = 10)
-    related_posts = [] | 
-      Post.tagged_with(tags, match_all: true) | 
-      Post.tagged_with([tags.first]) | 
+    related_posts = [] |
+      Post.tagged_with(tags, match_all: true) |
+      Post.tagged_with([tags.first]) |
       find_related_tags
 
     related_posts.reject!{|p| p == self}.slice(0,limit)

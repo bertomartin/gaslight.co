@@ -1,4 +1,5 @@
 Gaslight::Application.routes.draw do
+  get "office_hours/create"
   mount TrainingApp::Engine, at: 'training'
 
   ActiveAdmin.routes(self)
@@ -6,6 +7,9 @@ Gaslight::Application.routes.draw do
 
   get '/contact', to: 'contact#new'
   resource :contact, controller: :contact, only: :create
+
+  get '/office-hours', to: "office_hours#new"
+  resource :office_hours, controller: :office_hours, path: '/office-hours', only: [:create, :new]
 
   resources :authors, only: :index
   resources :posts, path: '/blog', except: :show do

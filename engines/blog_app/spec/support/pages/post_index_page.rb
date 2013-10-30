@@ -1,4 +1,4 @@
-class BlogIndexPage
+class PostIndexPage
   include Capybara::DSL
 
   def visit_page

@@ -107,8 +107,8 @@ module BlogApp
         Post.tagged_with(tags, match_all: true) |
         Post.tagged_with([tags.first]) |
         find_related_tags
-
-      related_posts.reject!{|p| p == self}.slice(0,limit)
+      related_posts.delete(self)
+      related_posts.slice(0,limit)
     end
 
     def author_info

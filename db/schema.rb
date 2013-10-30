@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20131030172438) do
   end
 
   add_index "blog_app_taggings", ["tag_id"], name: "index_blog_app_taggings_on_tag_id", using: :btree
-  add_index "blog_app_taggings", ["taggable_id", "taggable_type", "context"], name: "index_blog_app_taggings_on_taggable_id_and_type_and_context", using: :btree
+  add_index "blog_app_taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_type_and_context", using: :btree
 
   create_table "blog_app_tags", force: true do |t|
     t.string "name"

@@ -11,6 +11,7 @@ module BlogApp
         link_to(t.name, posts_path(tagged: t.name), class: 'tag', data:{ count: t.count })
       end.join(" ").html_safe
     end
+
     def gravatar_url(email, size = "32x32")
       return "" if email.nil?
       hash = Digest::MD5.hexdigest(email)

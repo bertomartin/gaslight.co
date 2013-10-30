@@ -1,4 +1,4 @@
-ActiveAdmin.register Post do
+ActiveAdmin.register BlogApp::Post do
   menu label: 'Posts', parent: 'Blog'
   config.sort_order = 'published_at_desc'
 

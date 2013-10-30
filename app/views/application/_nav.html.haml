@@ -18,7 +18,7 @@
         %li
           %a{href: main_app.page_path("work/index"), rel: "Main Navigation", class: (viewing_work? ? 'active' : nil)} Work
         %li
-          %a{href: main_app.posts_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
+          %a{href: blog_app.root_path, rel: "Main Navigation", class: (viewing_blog? ? 'active' : nil)} Blog
         %li
           %a{href: training_app.root_path, rel: "Main Navigation", class: viewing_training? ? 'active' : nil} Training
         %li

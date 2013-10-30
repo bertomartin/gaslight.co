@@ -2,7 +2,6 @@ require 'rewrite'
 
 module BlogApp
   class PostsController < ApplicationController
-
     respond_to :html, :rss, :json
 
     before_filter :old_post?, only: :show

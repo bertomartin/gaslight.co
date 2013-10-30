@@ -1,4 +1,3 @@
-module BlogApp
-  class ApplicationController < ActionController::Base
-  end
+class BlogApp::ApplicationController < ApplicationController
+
 end

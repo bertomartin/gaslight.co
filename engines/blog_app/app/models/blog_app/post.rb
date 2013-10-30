@@ -36,9 +36,9 @@ module BlogApp
 
     def self.posted_on(year = nil, month = nil, day = nil)
       posts = published
-      posts = posts.where('extract(year  from posts.published_at) = ?', year) unless year.nil?
-      posts = posts.where('extract(month from posts.published_at) = ?', month) unless month.nil?
-      posts = posts.where('extract(day   from posts.published_at) = ?', day) unless day.nil?
+      posts = posts.where('extract(year  from published_at) = ?', year) unless year.nil?
+      posts = posts.where('extract(month from published_at) = ?', month) unless month.nil?
+      posts = posts.where('extract(day   from published_at) = ?', day) unless day.nil?
       posts
     end
 

@@ -72,10 +72,12 @@ PATH
       haml (~> 4.0)
       haml-rails
       htmlentities
+      jquery-rails
       kaminari
       pygments.rb
       rack-rewrite
       rails (~> 4.0.0)
+      rails-backbone
       redcarpet
       sass-rails (~> 4.0.0)
       stringex

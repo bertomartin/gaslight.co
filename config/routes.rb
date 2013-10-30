@@ -13,6 +13,8 @@ Gaslight::Application.routes.draw do
   get 'about', to: 'pages#about'
   root to: 'high_voltage/pages#show', id: 'home'
 
+  get 'post/:id(/:slug)', to: 'blog_app/posts#old' # handle old tumblr urls
+
   get "/404", to: "errors#not_found"
   get "/500", to: "errors#server_error"
 end

@@ -14,7 +14,6 @@ BlogApp::Engine.routes.draw do
   resources :authors, only: :index
 
   get ':slug', to: 'posts#show'
-  get 'post/:id(/:slug)', to: 'posts#old' # handle old tumblr urls
 
   root to: 'posts#index'
 end

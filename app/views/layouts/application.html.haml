@@ -12,7 +12,7 @@
     %meta{content: 'Gaslight LLC', name: 'author'}
     = content_for(:meta)
 
-    = auto_discovery_link_tag(:rss, main_app.posts_url(format: :rss))
+    = auto_discovery_link_tag(:rss, blog_app.posts_url(format: :rss))
     = favicon_link_tag "32x32icon.png"
     = stylesheet_link_tag "application"
     = javascript_include_tag "modernizr"

@@ -9,7 +9,7 @@ xml.urlset(xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9") do
 
   posts.each do |post|
     xml.url do
-      xml.loc post_url(post)
+      xml.loc blog_app.post_url(post)
       xml.lastmod post.updated_at.strftime("%F")
       xml.changefreq("monthly")
     end

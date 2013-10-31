@@ -7,11 +7,11 @@ require "training_app/version"
 Gem::Specification.new do |s|
   s.name        = "training_app"
   s.version     = TrainingApp::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TrainingApp."
-  s.description = "TODO: Description of TrainingApp."
+  s.authors     = ["Gaslight"]
+  s.email       = ["hello@gaslight.co"]
+  s.homepage    = "http://gaslight.co"
+  s.summary     = "The Gaslight training app!"
+  s.description = "Rails engine powering Gaslight training"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'poltergeist'
   s.add_development_dependency 'factory_girl_rails'
-  s.add_development_dependency "shoulda-matchers", "~> 2.4.0.rc1"
+  s.add_development_dependency "shoulda-matchers", "~> 2.4.0"
   s.add_development_dependency "pry"
   s.add_development_dependency "database_cleaner", "1.0.1"
   s.add_development_dependency "dotenv-rails"

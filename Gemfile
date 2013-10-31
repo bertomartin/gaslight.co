@@ -12,22 +12,15 @@ gem 'rails-backbone'
 gem 'rack-rewrite'
 gem 'pg'
 gem 'decent_exposure'
-gem 'stringex'
-gem 'htmlentities'
 gem 'rack-cors', require: 'rack/cors'
 gem 'training_app', path: 'engines/training_app'
-
-gem 'redcarpet', require: false
-gem 'pygments.rb', require: false
+gem 'blog_app', path: 'engines/blog_app'
 
 gem 'foundation_rails_helper', github: 'sgruhier/foundation_rails_helper', ref: 'ed5b2903'
 gem 'sentry-raven', git: 'https://github.com/getsentry/raven-ruby.git'
 
 gem 'compass-rails', '2.0.alpha.0'
 gem 'activeadmin',         github: 'gregbell/active_admin'
-
-gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on', ref: '2f2768f8'
-gem 'engagement',          github: 'gaslight/engagement', ref:'de1d7f0', require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -47,7 +40,7 @@ group :test do
   gem 'poltergeist'
   gem 'factory_girl_rails'
   gem 'timecop'
-  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers' , branch: 'dp-rails-four'
+  gem 'shoulda-matchers'
   gem 'launchy'
   gem 'database_cleaner'
 end

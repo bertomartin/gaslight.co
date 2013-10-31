@@ -15,7 +15,7 @@ describe "URL Rewriting" do
       it "redirects unknown posts to /blog" do
         get "http://#{host}/post/i-made-this-up"
         response.response_code.should == 301
-        response.location.should eq('http://gaslight.co/blog')
+        response.location.should eq('http://gaslight.co/blog/')
       end
 
       it "rewrites root requests to the new blog" do
@@ -97,6 +97,14 @@ describe "URL Rewriting" do
       get 'http://www.gaslightsoftware.com/something'
       response.response_code.should == 301
       response.location.should == 'http://gaslight.co/something'
+    end
+  end
+
+  context "authors" do
+    it "redirects old authors new blog engine" do
+      get 'http://gaslight.co/authors'
+      response.response_code.should == 301
+      response.location.should == 'http://gaslight.co/blog/authors'
     end
   end
 end

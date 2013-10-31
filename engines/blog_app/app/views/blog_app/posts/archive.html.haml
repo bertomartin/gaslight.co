@@ -1,0 +1,12 @@
+- content_for(:title) { "Gaslight Blog: Archive" }
+
+#main.no-photo
+  .row
+    .columns.large-8
+      - posts.each do |month, posts|
+        %h3
+          = l(month.to_date, format: :year_and_month)
+          %span
+            (#{pluralize(posts.count, 'post')})
+        = render partial: 'post_list', locals: { posts: posts }
+    = render partial: 'index_sidebar'

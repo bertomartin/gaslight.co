@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe TrainingApp::ApplicationHelper do
+describe TrainingApp::CoursesHelper do
   describe "#markdown" do
     let(:text) { "## Some Text" }
     it "renders text to markdown" do

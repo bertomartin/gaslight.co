@@ -47,34 +47,33 @@
       .underline--yellow
     .row
       .large-3.columns
-        .icon--ruby
-          =image_tag "icons/service-ruby.svg", :class => "icon"
-          %h1.subheading.center Ruby on Rails
-          %p.center Bring start-up speed to enterprise software development
+        %a{href: page_path('blog?tagged=ruby+on+rails'), rel: "Tools"}
+          =image_tag "icons/service-ruby.svg", :class => "icon--link"
+        %h1.subheading.center Ruby on Rails
+        %p.center Bring start-up speed to enterprise software development
       .large-3.columns
-        .icon--jruby
-          =image_tag "icons/service-jruby.svg", :class => "icon"
-          %h1.subheading.center JRuby
-          %p.center Introduce Ruby into a Java environment
+        %a{href: page_path('blog/search?utf8=✓&q=jruby'), rel: "Tools"}
+          =image_tag "icons/service-jruby.svg", :class => "icon--link"
+        %h1.subheading.center JRuby
+        %p.center Introduce Ruby into a Java environment
       .large-3.columns
-        .icon--angular
-          =image_tag "icons/service-angular.svg", :class => "icon"
-          %h1.subheading.center AngularJS
+        %a{href: page_path('blog/search?utf8=✓&q=angular'), rel: "Tools"}
+          =image_tag "icons/service-angular.svg", :class => "icon--link"
+        %h1.subheading.center AngularJS
         %p.center Develop rich Web applications at lightning speed
       .large-3.columns
-        .icon--ember
-          =image_tag "icons/service-ember.svg", :class => "icon"
-          %h1.subheading.center Ember.js
-          %p.center Build rich Web applications faster than ever.
+        %a{href: page_path('blog?tagged=ember.js'), rel: "Tools"}
+          =image_tag "icons/service-ember.svg", :class => "icon--link"
+        %h1.subheading.center Ember.js
+        %p.center Build rich Web applications faster than ever.
     .row
       .large-3.columns
-        .icon--ios
-          =image_tag "icons/service-ios.svg", :class => "icon"
-          %h1.subheading.center iOS
-          %p.center Access your app on-the-go with mobile development
+        %a{href: page_path('blog?tagged=ios'), rel: "Tools"}
+          =image_tag "icons/service-ios.svg", :class => "icon--link"
+        %h1.subheading.center iOS
+        %p.center Access your app on-the-go with mobile development
       .large-3.columns.end
-        .icon--future
-          =image_tag "icons/service-future.svg", :class => "icon"
-          %h2.subheading.center Eyes on the Future
-          %p.center
-            Technology changes fast. That’s why we’re always trying out—and even developing—the newest tools and methods.
+        =image_tag "icons/service-future.svg", :class => "icon"
+        %h2.subheading.center Eyes on the Future
+        %p.center
+          Technology changes fast. That’s why we’re always trying out—and even developing—the newest tools and methods.

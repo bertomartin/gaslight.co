@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20131030190158) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 20131030190158) do
     t.text     "body"
     t.text     "html"
     t.datetime "published_at"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "audio_url"
     t.text     "description"
     t.integer  "external_comments_count", default: 0
@@ -80,7 +80,7 @@ ActiveRecord::Schema.define(version: 20131030190158) do
   end
 
   add_index "blog_app_taggings", ["tag_id"], name: "index_blog_app_taggings_on_tag_id", using: :btree
-  add_index "blog_app_taggings", ["taggable_id", "taggable_type", "context"], name: "index_blog_app_taggings_on_taggable_id_and_type_and_context", using: :btree
+  add_index "blog_app_taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_type_and_context", using: :btree
 
   create_table "blog_app_tags", force: true do |t|
     t.string "name"

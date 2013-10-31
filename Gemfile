@@ -40,7 +40,7 @@ group :test do
   gem 'poltergeist'
   gem 'factory_girl_rails'
   gem 'timecop'
-  gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers' , branch: 'dp-rails-four'
+  gem 'shoulda-matchers'
   gem 'launchy'
   gem 'database_cleaner'
 end

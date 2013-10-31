@@ -23,4 +23,10 @@ module ApplicationHelper
   def player_iframe(source)
     %Q{<iframe src="#{source}" frameborder="0" allowtransparency="true" scrolling="no" width="500" height="30"></iframe>}
   end
+
+  def gravatar_url(email, size = "32x32")
+    return "" if email.nil?
+    hash = Digest::MD5.hexdigest(email)
+    "http://www.gravatar.com/avatar/#{hash}?s=#{size}"
+  end
 end

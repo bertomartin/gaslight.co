@@ -43,7 +43,7 @@
                   %span.meta__date= post.published_at.strftime("%B %e, %Y")
                 %p.latest-post__description= truncate(post.generated_description, length: 130, omission: '...')
 
-                %a.button--full-width.button--brand2{href: post_path(post)} Read Full Post
+                %a.button--full-width.button--brand2{href: blog_app.post_path(post)} Read Full Post
 
   %section.row.team.hide-for-small
     %a.anchor{name:"team"}
@@ -58,7 +58,7 @@
               %a.icon--twitter{target: "_blank", href: "http://twitter.com/dougalcorn", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
               %a.icon--github{target: "_blank", href: "http://github.com/dougalcorn", rel: "Team Social"}
-                =image_tag "icons/github-05.svg", :class => "icon--team" 
+                =image_tag "icons/github-05.svg", :class => "icon--team"
               %a.icon--mail{href: "mailto:doug@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
@@ -69,7 +69,7 @@
               %h3.subheading--light Ryan Arthur
               %p.subtitle Designer
               %a.icon--github{target: "_blank", href: "http://github.com/arthurra", rel: "Team Social"}
-                =image_tag "icons/github-05.svg", :class => "icon--team" 
+                =image_tag "icons/github-05.svg", :class => "icon--team"
               %a.icon--mail{href: "mailto:ryan@gaslight.co", rel: "Team Social"}
                 =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
@@ -82,9 +82,9 @@
               %a.icon--twitter{target: "_blank", href: "http://twitter.com/agilous", rel: "Team Social"}
                 =image_tag "icons/twitter-07.svg", :class => "icon--team"
               %a.icon--github{target: "_blank", href: "http://github.com/agilous", rel: "Team Social"}
-                =image_tag "icons/github-05.svg", :class => "icon--team" 
+                =image_tag "icons/github-05.svg", :class => "icon--team"
               %a.icon--mail{href: "mailto:bill@gaslight.co", rel: "Team Social"}
-                =image_tag "icons/about-mail-01.svg", :class => "icon--team"  
+                =image_tag "icons/about-mail-01.svg", :class => "icon--team"
       %li
         .photo
           %img{src: image_path("team/tammy.jpg"), alt: "Tammy Gambrel" }

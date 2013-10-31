@@ -6,7 +6,7 @@ $ ->
   if $('#editor').length > 0
     opts =
       container: 'editor'
-      textarea: 'post_body'
+      textarea: 'blog_app_post_body'
       basePath: '/assets/epiceditor'
       clientSideStorage: false
 

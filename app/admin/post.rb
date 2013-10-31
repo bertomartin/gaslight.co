@@ -6,7 +6,7 @@ ActiveAdmin.register BlogApp::Post do
     defaults finder: :find_by_slug
 
     def new
-      @post = Post.new(published_at: Time.now)
+      @blog_app_post = BlogApp::Post.new(published_at: Time.now)
       new!
     end
 
@@ -21,18 +21,18 @@ ActiveAdmin.register BlogApp::Post do
     end
 
     def munge_tag_list
-      params[:post][:tag_list] = params[:tag_list_string]
+      params[:blog_app_post][:tag_list] = params[:tag_list_string]
     end
 
     def permitted_params
-      params.permit(post: [:title, :body, :author, :audio_url, :slug, :tag_list, :published_at, :description])
+      params.permit(blog_app_post: [:title, :body, :author, :audio_url, :slug, :tag_list, :published_at, :description])
     end
   end
 
   index do
     selectable_column
     column :id
-    column(:title) { |p| link_to(p.title, p) }
+    column(:title) { |p| link_to(p.title, blog_app.post_path(p)) }
     column :author
     column('Published?') { |p| p.published? ? 'Yes' : 'No' }
     column(:published_at, sortable: :published_at) { |p| l(p.published_at, format: :nice) unless p.published_at.nil? }
@@ -54,7 +54,7 @@ ActiveAdmin.register BlogApp::Post do
     end
   end
 
-  form partial: 'posts/form'
+  form partial: 'blog_app/posts/form'
 
 end
 

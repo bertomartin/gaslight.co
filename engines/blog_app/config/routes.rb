@@ -13,7 +13,9 @@ BlogApp::Engine.routes.draw do
 
   resources :authors, only: :index
 
+  get '/rss', to: 'posts#index', format: "rss"
   get ':slug', to: 'posts#show'
+
 
   root to: 'posts#index'
 end

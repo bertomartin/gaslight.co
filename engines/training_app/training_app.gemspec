@@ -7,11 +7,11 @@ require "training_app/version"
 Gem::Specification.new do |s|
   s.name        = "training_app"
   s.version     = TrainingApp::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of TrainingApp."
-  s.description = "TODO: Description of TrainingApp."
+  s.authors     = ["Gaslight"]
+  s.email       = ["hello@gaslight.co"]
+  s.homepage    = "http://gaslight.co"
+  s.summary     = "The Gaslight training app!"
+  s.description = "Rails engine powering Gaslight training"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["spec/**/*"]

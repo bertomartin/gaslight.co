@@ -3,7 +3,7 @@ Gaslight::Application.routes.draw do
 
   mount BlogApp::Engine, at: 'blog'
   get 'authors', to: redirect('/blog/authors')
-  get 'blog.rss', to: redirect('/blog/rss')
+  get 'blog.rss', to: 'blog_app/posts#index', format: "rss"
   get 'post/:id(/:slug)', to: 'blog_app/posts#old' # handle old tumblr urls
 
   ActiveAdmin.routes(self)

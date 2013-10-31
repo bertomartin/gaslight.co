@@ -1,17 +1,3 @@
 = BlogApp
 
 This project rocks and uses MIT-LICENSE.
-
-Fix:
-
-* lib/super_struct
-* rack_rewrite
-* application helpers
-  * gravatar_url
-  * tag_list
-  * popular_tag_links
-* rename related post css (related-post__item to related-post)
-* move post_comment_counter
-* fix layout
-* remove g.assets false, g.helper false from training_app/engine.rb
-* fix engine gemspec TODOs

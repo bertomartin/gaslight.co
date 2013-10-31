@@ -38,7 +38,7 @@ module BlogApp
 
     def search
       self.posts = Post.search(params[:q]).page(params[:page]).per(items_per_page)
-      respond_with posts, template: 'posts/index'
+      respond_with posts, template: 'blog_app/posts/index'
     end
 
     def old

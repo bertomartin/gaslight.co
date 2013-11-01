@@ -1,0 +1,106 @@
+- content_for(:title) { "Gaslight: Reinventing Arts Engagement for the Tech Generation" }
+
+#main.content
+  .hero.hero--eta--hero
+    .hero__header.hero__header--brand1
+      .row
+        .large-11.columns
+          %h1 Reinventing Arts Engagement for the Tech Generation
+          %h2 Enjoy the Arts
+
+  %section.row
+    .large-3.columns.hide-for-small.sidebar
+      .underline.underline--blue
+      %h3.sidebar__heading--case-study Client
+      %p Enjoy the Arts
+      %h3.sidebar__heading--case-study Engagement
+      %p 3 Weeks
+      %h3.sidebar__heading--case-study Technology
+      %ul.sidebar__list
+        %li JavaScript
+        %li Ruby on Rails
+        %li HTML/CSS
+      %a.button.button--brand1.element--sm-margin-top{href: "http://enjoythearts.org", rel: "ETA Case Study", target: "_blank"} Visit the Website
+    .large-8.columns
+      %p.lead Enjoy the Arts introduces young people to the vibrant arts scene in Cincinnati with free and discounted event tickets. But the organization’s paper vouchers and membership cards no longer resonated with their tech-savvy target audience.
+      %p.lead We worked with Enjoy the Arts to engage the tech generation with a brand new website. It promotes arts events to the entire community with a stunning visual calendar and brings the membership and ticketing process online.
+
+  .hero.hero--eta--second
+    .hero__content
+      .row
+        .large-7.columns
+          .flex-video
+            %iframe{ id: "ytplayer", type: "text/html", src: "//www.youtube.com/embed/5A5vwhUQdtw", frameborder: "0", allowfullscreen: "allowfullscreen"}
+        .large-5.columns
+          .hero__quote
+            %h3 "Gaslight really takes the time to understand the story that you want to tell with your product."
+            %h4 Jennifer Leigh Foster
+            %h4.case-study__quote--title Director, Enjoy the Arts
+
+  %section
+    .row
+      .large-3.columns.sidebar
+        .underline.underline--blue.hide-for-small
+        %h3.sidebar__heading--case-study A Rebrand Comes Alive
+        %p The new site introduces Enjoy the Art’s updated branding, created by <a href="http://wehavebecomevikings.com/" rel="Vikings" target="_blank">We Have Become Vikings,</a>  through a fresh bold digital design. It feels young and unexpected.
+      .large-8.large-offset-1.columns
+        %img{src: image_path("casestudy/eta--content__homepage.jpg"), alt: "eta-homepage" }
+
+    .row--lg-margin-top
+      .large-3.columns.sidebar
+        .underline.underline--blue.hide-for-small
+        %h3.sidebar__heading--case-study Tech-Savvy Ticketing
+        %h4.sidebar__subheading--case-study No More Paper Coupons
+        %p We built an online visual dashboard that allows Enjoy the Arts members to claim free tickets on their laptops and smartphones. It’s a win-win: The system matches empty seats with budding arts supporters.
+      .large-8.large-offset-1.columns
+        %img{src: image_path("casestudy/eta--content__dashboard.jpg"), alt: "eta-dashboard" }
+
+    .row--lg-margin-top
+      .large-3.columns.sidebar
+        .underline.underline--blue.hide-for-small
+        %h3.sidebar__heading--case-study A Visual Calendar
+        %h4.sidebar__subheading--case-study Bringing the Arts to Everyone
+        %p You don’t have to be an Enjoy the Arts member to find upcoming events with this visual calendar. Icons allow you to filter by event type and crowns highlight featured events.
+      .large-8.large-offset-1.columns
+        %img{src: image_path("casestudy/eta--content__events.jpg"), alt: "eta-events" }
+
+  %section.section--contrast
+    .row
+      .large-8.large-centered.columns
+        %h2.center The New Site By the Numbers
+        %h3.subheading.center Since May 2013
+    .row
+      .underline--blue.element--sm-margin-top
+    .row.center
+      .large-2.large-offset-2.columns
+        .icon--up
+          =image_tag "icons/casestudy__up.svg", :class => "icon"
+      .large-2.columns
+        %h3.subheading--case-study Site Visits
+        %h2.brand1 Up 158%
+      .large-2.columns
+        %h3.subheading--case-study Page Views
+        %h2.brand1 Up 329%
+      .large-2.columns.end
+        %h3.subheading--case-study Current Online Members
+        %h2.brand1 741
+
+  %section.row
+    .large-3.columns.sidebar
+      .underline.underline--blue.hide-for-small
+      %h3.sidebar__heading--case-study Need your website to work harder? 
+      %p Let’s talk. We can build a site that matches your business goals.
+      %a.button--full-width.button--brand1{href: page_path("contact"), rel: "Case Study Lets Talk button" } Contact Us
+      %hr.show-for-small
+    .large-8.large-offset-1.columns
+      %h2.subheading Three Weeks From Start to Finish 
+      %p How do you build a database driven website so fast? We invited Jennifer Leigh Foster, Director of Enjoy the Arts, into our Cincinnati offices to work side-by-side. This allowed us to carry on an open conversation during the entire rapid-fire development process. 
+      %p We started by mapping out the user experience: what we wanted people to think, feel and do as they moved through the Enjoy the Arts site. Then we prioritized the most important features as we built them in real time with JavaScript and Ruby on Rails. We created the design right alongside the code to arrive at an elegant user-friendly site. One that’s receiving rave reviews from partner arts organizations and young tech-savvy users.
+ 
+
+  %hr
+  .row.pagination
+    .large-6.columns
+      %a.button.button--quiet.pagination__prev{href: page_path("work/index"), rel: "Work" } &#171; Work Page
+    .large-3.columns
+      %a.button.button--quiet.pagination__next{href: page_path("work/ipc"), rel: "IPC Case Study" } IPC Case Study &#187;

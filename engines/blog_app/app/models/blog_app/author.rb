@@ -213,6 +213,17 @@ module BlogApp
             "tumblr": "nockitoff",
             "google_plus": "https://plus.google.com/101218977426849961413",
             "email": "nockll@ucmail.uc.edu"
+          },
+          {
+            "id": 30,
+            "name": "Ryan Finke",
+            "first_name": "Ryan",
+            "github": "ryanfinke",
+            "twitter": "ryanfinke",
+            "avatar": "",
+            "tumblr": "ryanfinke",
+            "google_plus": "https://plus.google.com/+RyanFinke",
+            "email": "finke@gaslight.co"
           }
         ]
       }').with_indifferent_access

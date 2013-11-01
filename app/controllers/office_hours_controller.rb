@@ -1,6 +1,6 @@
 class OfficeHoursController < ApplicationController
   def create
-  	respond_to do |format|
+    respond_to do |format|
       if message.process
         flash[:success] = "Ok, we've got it! You'll hear from us soon."
         @message = OfficeHoursMessage.new
@@ -25,21 +25,21 @@ class OfficeHoursController < ApplicationController
   helper_method :message
 
   def dates_for_select
-  	next_friday = Date.today.end_of_week - 2
-  	options = []
-  	8.times do |i|
-  		date = next_friday + i.weeks
-  		options << [date.strftime("%a, %b %d"), ""]
-  	end
-  	options
+    next_friday = Date.today.end_of_week - 2
+    options = []
+    8.times do |i|
+      date = next_friday + i.weeks
+      options << [date.strftime("%a, %b %d"), date.strftime("%a, %b %d")]
+    end
+    options
   end
   helper_method :dates_for_select
 
   def timeslots_for_select
-  	[
-  		["9:00 - 10:00AM", ""],
-  		["10:00 - 11:00AM", ""]
-  	]
+    [
+     ["9:00 - 10:00AM", "9:00 - 10:00AM"],
+     ["10:00 - 11:00AM", "10:00 - 11:00AM"]
+    ]
   end
   helper_method :timeslots_for_select
 end

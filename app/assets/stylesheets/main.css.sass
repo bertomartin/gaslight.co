@@ -23,7 +23,7 @@
 
 #main
   background: #fff
-  padding: $topbar-height 0 0 0
+  padding: $topbar-height * 1.5 0 2em 0
   min-height: 100%
   .intro
     padding: 20px 45px 20px 55px
@@ -45,6 +45,8 @@
   ul.landing-page__contact
     margin-top: 5px
 
+#main.with-photo
+  padding: $topbar-height 0 0 0
 
 #main.content section
   padding: 4em 0 4.5em 0
@@ -54,15 +56,10 @@
 #main section.header
   position: relative
   margin-top: 100px + $topbar-height
-  // margin-bottom: 150px
   padding: 10px 0
 
 #main.landing
   padding: 0
-
-#main.no-photo
-  padding-top: $topbar-height * 2
-  margin-bottom: 35px
 
 .section--contrast
   background-color: $section-contrast
@@ -73,7 +70,7 @@
 // ------  Landing Page ------ //
 .landingpage
   position: relative
-  margin-top: 75px + $topbar-height
+  margin-top: 50px + $topbar-height
   padding: 10px 0
   margin-bottom: 100px
   background: rgba(244,244,244,0.8)

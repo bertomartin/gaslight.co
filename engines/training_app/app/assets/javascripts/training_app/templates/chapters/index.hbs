@@ -1,23 +1,34 @@
-<h1>Welcome to {{controllers.course.title}}</h1>
-<p> This ?-hour course acts as an introduction to Ember.js by the creators of the framework.</p>
-<hr>
+<div class="intro">
+  <h1 class="intro__heading">Welcome to {{controllers.course.title}}</h1>
 
-<div>
-  <img src="/assets/training_app/ember-intro--video.jpg" alt="Ember Video">
-  <p> Each chapter will have a video of the lesson being taught.
+  <hr>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <img class="intro__image" src="/assets/training_app/intro--video.jpg" alt="Ember Video">
+    </div>
+    <div class="large-6 columns">
+      <p> Each chapter will have a video of the lesson being taught.
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="large-6 columns">
+      <img class="intro__image" src="/assets/training_app/intro--jsbin.jpg" alt="Ember Video">
+    </div>
+    <div class="large-6 columns">
+      <p> JSBin is embedded underneath each video so you can follow along without having to switch to your editor.
+    </div>
+  </div>
+
+  <div class="row"  >
+    <div class="large-6 columns">
+      <img class="intro__image" src="/assets/training_app/intro--github.jpg" alt="Ember Video">
+    </div>
+    <div class="large-6 columns">
+      <p> Get confused? No problem, just pull the branch of the lesson you are working on to get up to speed.
+    </div>
+  </div>
+
+  <hr>
 </div>
-
-<div>
-  <img src="/assets/training_app/ember-intro--jsbin.jpg" alt="Ember Video">
-  <p> JSBin is embedded underneath each video so you can follow along without having to switch to your editor. 
-</div>
-
-<div>
-  <img src="/assets/training_app/ember-intro--github.jpg" alt="Ember Video">
-  <p> Get confused? No problem, just pull the branch of the lesson you are working on to get up to speed.
-</div>
-
-<hr>
-
-<span class="button button--primary">View Sample Chapter</span>
-<span class="button button--secondary">Purchase Full Course</span>

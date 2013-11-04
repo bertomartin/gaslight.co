@@ -18,6 +18,10 @@
   {{/if}}
 </div>
 
+<div class="chapter__description">
+  {{markdown description}}
+</div>
+
 {{#if codeUrl}}
   <iframe class="chapter__code" {{bindAttr src=codeUrl}}></iframe>
 {{/if}}

@@ -29,7 +29,6 @@ ActiveAdmin.register TrainingApp::Course do
       row :id
       row :title
       row(:description_main) { pre course.description_main }
-      row(:description_html) { raw Renderer.render(course.description_main) }
       row :synopsis
       row :start_date
       row :end_date

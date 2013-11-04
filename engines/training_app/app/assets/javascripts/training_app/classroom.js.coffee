@@ -4,6 +4,7 @@
 #= require ember-data
 #= require training_app/video-js
 #= require training_app/moment
+#= require training_app/showdown
 #= require_self
 #= require ./store
 #= require_tree ./helpers

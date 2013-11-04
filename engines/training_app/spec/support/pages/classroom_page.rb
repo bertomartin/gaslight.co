@@ -35,6 +35,10 @@ class ClassroomPage
     find('iframe')[:src]
   end
 
+  def description
+    page.find('.chapter__description').text
+  end
+
   def showing_purchase_modal?
     has_css?('.modal.modal--active')
   end

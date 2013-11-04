@@ -23,5 +23,8 @@
 </nav>
 
 <section {{bindAttr class=":main isSidebarActive:main--pushed"}}>
-  {{outlet}}
+  <i {{action 'toggleSidebar'}} {{bindAttr class=":main__sidebar-toggler isSidebarActive:fa-chevron-left:fa-chevron-right"}}></i>
+  <div class="main__content">
+    {{outlet}}
+  </div>
 </section>

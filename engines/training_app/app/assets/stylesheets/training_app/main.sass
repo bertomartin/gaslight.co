@@ -1,15 +1,29 @@
 .main
   position: relative
-  min-height: 100%
   float: right
-  background: #fff
   width: 100%
-  padding: 50px
-  padding-top: 50px + $bar-height
+  height: 100%
+  background: #fff
+  padding-top: $bar-height
   +transition(width 0.4s ease-out)
 
 .main--pushed
   width: 100% - $sidebar-width
+
+.main__content
+  height: 100%
+  overflow-y: scroll
+  padding: 50px
+
+.main__sidebar-toggler
+  position: absolute
+  left: 0
+  margin-top: 20px
+  background: $light-gray
+  padding: 10px 14px
+  display: inline-block
+  &:hover
+    color: #fff
 
 .chapter__video
   position: relative

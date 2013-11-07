@@ -1,5 +1,5 @@
 Training.VideoPlayerComponent = Ember.Component.extend
-  classNameBindings: ['class']
+  classNameBindings: [':video-player']
 
   playerOptions:
     width: false

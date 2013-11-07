@@ -10,6 +10,7 @@ ActiveAdmin.register TrainingApp::Chapter do
   form do |f|
     f.inputs "Chapter Details" do
       f.input :title
+      f.input :section, collection: Hash[TrainingApp::Section.all.map {|s| ["#{s.course.title} - #{s.title}", s.id] }]
       f.input :description, as: :text
       f.input :video_url
       f.input :code_url

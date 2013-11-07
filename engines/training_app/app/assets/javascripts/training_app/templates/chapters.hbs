@@ -14,6 +14,12 @@
                 <span class="left">{{title}}</span>
                 <span class="right">{{time duration}}</span>
               {{/linkTo}}
+
+              {{#if videoUrl}}
+                <a class="subnav__icon" {{bindAttr href=videoUrl}} target="_blank"><i class="right fa fa-cloud-download"></i></a>
+              {{else}}
+                {{#link-to 'chapter' this class="subnav__icon"}}<i class="right fa fa-cloud-download"></i>{{/link-to}}
+              {{/if}}
             </li>
           {{/each}}
         </ul>

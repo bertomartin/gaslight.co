@@ -6,7 +6,7 @@
     position: relative //* Create a positioning context */
     //margin: 0 0 6px 2em //* Give each list item a left margin to make room for the numbers */
     margin-left: 2em
-    padding: 0px 8px //* Add some spacing around the content */
+    padding-left: 8px //* Add some spacing around the content */
     list-style: none //* Disable the normal item numbering */
   & > li:before
     content: ""
@@ -81,8 +81,14 @@
   background: $dark-gray !important
   color: #fff
   .subnav__item
-    height: 25px
     opacity: 1
+  .subnav__item:after
+    border-color: transparent transparent transparent $dark-gray
+  .subnav__item--complete
+    &:before
+      border-color: transparent transparent transparent $light-gray !important
+    &:after
+      border-color: transparent transparent transparent transparent
 
 .nav__heading
   position: relative
@@ -103,14 +109,6 @@
   margin-left: -0.65em
   margin-bottom: 10px
 
-.subnav__link
-  display: block
-  overflow: auto
-  .left
-    float: left
-  .right
-    float: right
-
 .subnav__item
   a
     display: block
@@ -124,7 +122,6 @@
     //background-position: center !important
     border-color: transparent transparent transparent $dark-gray !important
 
-
 .subnav__item--active
   &:after
     border-color: transparent transparent transparent transparent !important
@@ -134,11 +131,18 @@
 .subnav__item--disabled
   color: #999
 
-.nav__item--active
-  .subnav__item:after
-    border-color: transparent transparent transparent $dark-gray
-  .subnav__item--complete
-    &:before
-      border-color: transparent transparent transparent $light-gray !important
-    &:after
-      border-color: transparent transparent transparent transparent
+.subnav__link
+  display: block
+  position: relative
+  overflow: auto
+  margin-right: 24px
+  .left
+    float: left
+  .right
+    float: right
+
+.subnav__icon
+  position: absolute
+  top: 0
+  right: 0
+  padding: 6px 0

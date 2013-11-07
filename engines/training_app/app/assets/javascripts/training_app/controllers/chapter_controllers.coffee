@@ -1,8 +1,5 @@
 Training.ChapterController = Ember.ObjectController.extend()
 
-Training.ChaptersIndexController = Ember.ObjectController.extend
-  needs: ['course']
-
 Training.ChaptersController = Ember.ArrayController.extend
   needs: ['course']
   sectionsBinding: 'controllers.course.sections'
@@ -13,4 +10,8 @@ Training.ChaptersIndexController = Ember.ArrayController.extend
 
   courseTitle: (->
     @get('controllers.course.title')
+  ).property('controllers.course')
+
+  firstChapter: (->
+    @get('controllers.course.sections.firstObject.chapters.firstObject')
   ).property('controllers.course')

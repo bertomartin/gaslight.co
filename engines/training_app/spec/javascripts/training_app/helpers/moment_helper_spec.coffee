@@ -1,4 +1,4 @@
-describe "time", ->
+describe "time helper", ->
   beforeEach ->
     @view = Ember.View.create
       time: null

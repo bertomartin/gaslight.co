@@ -1,13 +1,10 @@
-describe "markdown", ->
+describe "markdown helper", ->
   beforeEach ->
     @view = Ember.View.create
-      description: null
+      description: "## Description"
       template: Ember.Handlebars.compile("{{markdown view.description}}")
+    Ember.run =>
+      @view.appendTo(Training.rootElement)
 
-  describe "less than an hour", ->
-    beforeEach ->
-      @view.description = "## Description"
-      Ember.run =>
-        @view.appendTo(Training.rootElement)
-    it "Pretty formats the time", ->
-      expect(@view.$('h2').text()).toEqual 'Description'
+  it "to html", ->
+    expect(@view.$('h2').text()).toEqual 'Description'

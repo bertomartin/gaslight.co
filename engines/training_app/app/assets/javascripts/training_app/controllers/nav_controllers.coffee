@@ -11,6 +11,10 @@ Training.NavSectionController = Ember.ObjectController.extend
     position
   ).property('currentIndex')
 
+  currentChapterPosition: (->
+    @get('model.chapters').indexOf(@get('controllers.chapter.model')) + 1
+  ).property('controllers.chapter.model')
+
 Training.NavChapterController = Ember.ObjectController.extend
   needs: 'chapter'
 

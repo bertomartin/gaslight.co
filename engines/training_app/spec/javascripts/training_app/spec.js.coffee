@@ -10,6 +10,8 @@ Training.injectTestHelpers()
 
 beforeEach ->
   Training.reset()
+  this.container = Training.__container__
+  this.store = Training.__container__.lookup('store:main')
 
 afterEach ->
   $(Training.rootElement).empty()

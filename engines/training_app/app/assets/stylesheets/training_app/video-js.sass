@@ -757,13 +757,19 @@ body.vjs-full-window
   .vjs-progress-control
     position: absolute
     width: 76%
-    top: 18px
+    top: 20px
     left: 8%
     height: 10px
-    div
-      border-radius: 10px
-  .vjs-progress-holder
+
+  .vjs-slider
+    border-radius: 10px
     .vjs-play-progress, .vjs-load-progress
+      border-radius: 10px
+    .vjs-play-progress
+      min-width: 1%
       background-color: #fff
+    .vjs-load-progress
+      background-color: #ddd
+
   .vjs-seek-handle
     display: none

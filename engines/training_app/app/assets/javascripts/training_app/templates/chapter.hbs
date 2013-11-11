@@ -2,25 +2,26 @@
   {{markdown description}}
 </div>
 
-<div class="chapter">
-  {{#if previousChapter}}
-    {{#linkTo 'chapter' previousChapter class="nav-button nav-button--left"}}
-      <i class="fa fa-angle-left nav-button__icon"></i>
-      <span class="nav-button__text">Previous</span>
-    {{/linkTo}}
-  {{/if}}
+{{#if videoUrl}}
+  {{#video-player src=videoUrl poster=posterUrl class="chapter__video"}}
 
-  {{#if videoUrl}}
-    {{video-player src=videoUrl poster=posterUrl class="chapter__video"}}
-  {{/if}}
+    <div class="pagers">
+      {{#if previousChapter}}
+        {{#linkTo 'chapter' previousChapter class="pager pager--previous"}}
+          <i class="fa fa-angle-left pager__icon"></i>
+          <span class="pager__text">{{previousChapter.title}}</span>
+        {{/linkTo}}
+      {{/if}}
 
-  {{#if nextChapter}}
-    {{#linkTo 'chapter' nextChapter class="nav-button nav-button--right"}}
-      <span class="nav-button__text">Next</span>
-      <i class="fa fa-angle-right nav-button__icon"></i>
-    {{/linkTo}}
-  {{/if}}
-</div>
+      {{#if nextChapter}}
+        {{#linkTo 'chapter' nextChapter class="pager pager--next"}}
+          <span class="pager__text">{{nextChapter.title}}</span>
+          <i class="fa fa-angle-right pager__icon"></i>
+        {{/linkTo}}
+      {{/if}}
+    </div>
+  {{/video-player}}
+{{/if}}
 
 {{#if codeUrl}}
   <iframe class="chapter__code" {{bindAttr src=codeUrl}}></iframe>

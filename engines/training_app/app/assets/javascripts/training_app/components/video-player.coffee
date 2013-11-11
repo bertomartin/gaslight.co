@@ -1,5 +1,7 @@
 Training.VideoPlayerComponent = Ember.Component.extend
-  classNameBindings: [':video-player']
+  classNames: ['video-player']
+  classNameBindings: ['isPlaying:video-player--playing:video-player--paused']
+  isPlaying: false
 
   playerOptions:
     width: false
@@ -10,9 +12,10 @@ Training.VideoPlayerComponent = Ember.Component.extend
       swf: "http://assets1.gaslight.co/javascripts/video-js.swf"
 
   didInsertElement: ->
-    self = this
-    videojs('player', @playerOptions).ready ->
-      self.player = this
+    @player = videojs('player', @playerOptions)
+    @player.on "play", => @set("isPlaying", true)
+    @player.on "pause", => @set("isPlaying", false)
+    @player.on "ended", => @set("isPlaying", false)
 
   willDestroyElement: ->
     @player.dispose()

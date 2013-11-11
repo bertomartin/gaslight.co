@@ -1,55 +1,3 @@
-%list-reset
-  counter-reset: li
-  margin-left: 0
-  padding-left: 0
-  & > li
-    position: relative
-    margin-left: 2em
-    padding-left: 8px
-    list-style: none
-  & > li:before
-    content: ""
-    position: absolute
-    top: -2px
-    left: -2em
-    width: 2em
-    margin-right: 8px
-    font-weight: bold
-    text-align: center
-  & > li:after
-    content: ""
-    position: absolute
-    top: -2px
-    left: -2em
-    width: 2em
-    margin-right: 8px
-    font-weight: bold
-    text-align: center
-
-%list-reset--triangles
-  @extend %list-reset
-  & > li:before
-    display: block
-    height: 0px
-    width: 0px
-    top: -4px
-    border-style: solid
-    border-width: 6px 12px
-    border-color: transparent transparent transparent $light-gray
-    margin: 10px 0 0 15px
-    +transition(all 0.25s ease-out)
-  & > li:after
-    display: block
-    top: -2px
-    left: -1.9em
-    height: 0px
-    width: 0px
-    border-style: solid
-    border-width: 4px 9px
-    border-color: transparent transparent transparent transparent
-    margin: 10px 0 0 15px
-    +transition(all 0.25s ease-out)
-
 .nav
   height: 100%
   overflow: auto
@@ -69,13 +17,6 @@
   color: #fff
   .subnav__item
     opacity: 1
-  .subnav__item:after
-    border-color: transparent transparent transparent $dark-gray
-  .subnav__item--complete
-    &:before
-      border-color: transparent transparent transparent $light-gray !important
-    &:after
-      border-color: transparent transparent transparent transparent
 
 .nav__heading
   position: relative
@@ -93,25 +34,15 @@
 
 .subnav
   @extend %list-reset--triangles
-  margin-left: -0.65em
   margin-bottom: 10px
+  margin-left: 0
 
 .subnav__item
-  a
-    display: block
-  &:hover:before
-    left: -1.75em
-  &:hover:after
-    left: -1.65em
-
-.subnav__item--complete
-  &:before
-    border-color: transparent transparent transparent $dark-gray !important
+  position: relative
+  list-style: none
 
 .subnav__item--active
-  &:after
-    border-color: transparent transparent transparent transparent !important
-  a
+  .subnav__link
     font-weight: bold
 
 .subnav__item--disabled
@@ -122,10 +53,27 @@
   position: relative
   overflow: auto
   margin-right: 24px
+  margin-left: 5px
+  padding-left: 25px
   .left
     float: left
   .right
     float: right
+  &:before
+    content: ""
+    position: absolute
+    height: 0px
+    width: 0px
+    left: 0
+    top: 0
+    margin: 6px 0
+    border-style: solid
+    border-width: 6px 12px
+    border-color: transparent transparent transparent $light-gray
+    +transition(all 0.25s ease-out)
+  &:hover:before
+    border-color: transparent transparent transparent inherit
+    left: 6px
 
 .subnav__icon
   position: absolute

@@ -32,22 +32,18 @@
   background-color: <%= course.color_primary %>;
 }
 
-.mejs-container .mejs-controls{
-  background-color: <%= course.color_primary %>;
-}
-
-.subnav__item:hover::before{
+.subnav__link:hover::before{
   border-color: transparent transparent transparent <%= course.color_primary %>;
 }
 
-.subnav__item:hover::after{
-  border-color: transparent transparent transparent transparent !important;
-}
-
-.subnav__item a:hover{
+.subnav__link:hover{
   color: <%= course.color_primary %>;
 }
 
-.subnav__item--active:before{
+.subnav__icon:hover{
+  color: <%= course.color_primary %>;
+}
+
+.subnav__item--active .subnav__link:before{
   border-color: transparent transparent transparent <%= course.color_primary %> !important;
 }

@@ -1,2 +1,4 @@
-<a class="video-player__download" {{bindAttr href=src}} target="_blank"><i class="right fa fa-cloud-download"></i></a>
-<video id="player" class="video-js vjs-default-skin" {{bindAttr poster=poster src=src}} type="video/mp4"></video>
+<a class="video-player__download" {{bind-attr href=src}} target="_blank"><i class="right fa fa-cloud-download"></i></a>
+
+<video id="player" class="video-js vjs-default-skin" {{bind-attr poster=poster}} src={{unbound src}} type="video/mp4">
+</video>

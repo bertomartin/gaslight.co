@@ -7,19 +7,24 @@ Training.VideoPlayerComponent = Ember.Component.extend
     controls: true
     preload: "auto"
     flash:
-      swf: "/assets/training_app/video-js.swf"
+      swf: "http://assets1.gaslight.co/javascripts/video-js.swf"
 
   didInsertElement: ->
-    @createPlayer()
+    self = this
+    videojs('player', @playerOptions).ready ->
+      self.player = this
 
-  willDestroy: ->
+  willDestroyElement: ->
     @player.dispose()
 
-  createPlayer: ->
-    @player = videojs('player', @playerOptions)
-
-  loadVideo: ( ->
+  updateSrc: ->
+    return unless this.player?
+    @player.currentTime(0)
     @player.pause()
-    @player.src(@get('src'))
-    @player.load()
+    Ember.run.next =>
+      @player.src(@get('src'))
+      @player.load()
+
+  srcDidChange: (->
+    @updateSrc()
   ).observes('src')

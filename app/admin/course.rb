@@ -3,12 +3,7 @@ ActiveAdmin.register TrainingApp::Course do
 
   controller do
     def permitted_params
-      params.permit(training_app_course: [:venue_id, :parent_course_id, :title,
-                                          :description_main, :introduction, :synopsis,
-                                          :start_date, :end_date, :price,
-                                          :image_url, :registration_link,
-                                          :color_primary, :color_secondary,
-                                          :active, :online, :instructors])
+      params.permit!
     end
   end
 

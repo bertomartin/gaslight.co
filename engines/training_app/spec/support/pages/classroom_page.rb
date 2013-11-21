@@ -36,7 +36,7 @@ class ClassroomPage
   end
 
   def course_introduction
-    find('.intro').text
+    find('.course__intro').text
   end
 
   def chapter_description

@@ -10,34 +10,37 @@
         %h3.subheading--light Master the latest tools for developers with in-person and online training.
         .underline--blue.underline--header
 
-  %section
-    .row
-      %h2.heading Upcoming Workshops
-      .underline--blue
-    .row
-      - in_person_courses.each do |course|
-        .large-6.columns.large-centered
-          .course.course--in-person.center
-            %img.course__img{src: course.image_url}
-            %h2.course__title.subheading= course.title
-            %p= course.meta
-            .course__actions
-              %a.button.button--quiet{href: course_path(course)} Learn more about the class.
-              %a.button.button--brand1{href: course.registration_link} Save Your Spot
-  %section.section--contrast
-    .row
-      %h2.heading Online Classes
-      .underline--blue
-    .row
-      - online_courses.each do |course|
-        .large-6.columns.large-centered
-          .course.course--online.center
-            %img.course__img{src: course.image_url}
-            %h2.course__title.subheading= course.title
-            %a.brand1--link.element--sm-margin-bottom.element--sm-margin-top{href: course_path(course)} Learn more about the class.
-            .course__actions
-              %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
-              %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
+  - if in_person_courses.present?
+    %section
+      .row
+        %h2.heading Upcoming Workshops
+        .underline--blue
+      .row
+        - in_person_courses.each do |course|
+          .large-6.columns.large-centered
+            .course.course--in-person.center
+              %img.course__img{src: course.image_url}
+              %h2.course__title.subheading= course.title
+              %p= course.meta
+              .course__actions
+                %a.button.button--quiet{href: course_path(course)} Learn more about the class.
+                %a.button.button--brand1{href: course.registration_link} Save Your Spot
+
+  - if online_courses.present?
+    %section.section--contrast
+      .row
+        %h2.heading Online Classes
+        .underline--blue
+      .row
+        - online_courses.each do |course|
+          .large-6.columns.large-centered
+            .course.course--online.center
+              %img.course__img{src: course.image_url}
+              %h2.course__title.subheading= course.title
+              %a.brand1--link.element--sm-margin-bottom.element--sm-margin-top{href: course_path(course)} Learn more about the class.
+              .course__actions
+                %a.button.button--quiet{href: classroom_index_path(anchor: "/courses/#{course.id}")} Try Now
+                %a.button.button--brand1{href: new_course_registration_path(course)} Buy Now
 
   %section
     .row

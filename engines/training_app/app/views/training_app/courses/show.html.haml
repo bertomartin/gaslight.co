@@ -9,15 +9,14 @@ underline--bluecontent_for(:title) { "#{course.title} | Cincinnati, OH" }
   .row
     .large-7.columns
       .course__description= markdown(course.description_main)
-
-      - course.instructors.each do |instructor|
-        %hr
-        .instructor.row
-          .large-4.columns
-            %img{src: instructor.image_url }
-          .large-8.columns
-            %h5= instructor.name
-            %p= instructor.bio
+      %hr
+      - if course.instructors.present?
+        %h2.heading Instructors
+        - course.instructors.each do |instructor|
+          .instructor
+            %img.instructor__image{src: instructor.image_url }
+            %h5.instructor__name= instructor.name
+            %p.instructor__bio= instructor.bio
 
     .columns.large-4.sidebar--training.center
       .purchase-panel
@@ -33,12 +32,14 @@ underline--bluecontent_for(:title) { "#{course.title} | Cincinnati, OH" }
           %p.purchase-panel__description We're doing a one day workshop in #{course.venue_city}. Come learn with us.
           %a.purchase-panel__buy.button.button--brand1{href: course.registration_link} Register Now
 
-      .request
-        %hr
-        %h4 Can't make this date or location?
-        %p
-          We’d love to set up a private training session for your group or team.
-        %a.brand1--link{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now
+      - if course.in_person?
+        .request
+          %hr
+          %h4 Can't make this date or location?
+          %p
+            We’d love to set up a private training session for your group or team.
+          %a.brand1--link{href: 'mailto:hello@gaslight.co?subject=Private Training'} Contact Us Now
+
       %hr
         %p
           Stay up to date on all of our training offerings.

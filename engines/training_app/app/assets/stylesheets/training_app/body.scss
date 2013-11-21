@@ -87,3 +87,19 @@
     color: darken($brand1, 30);
   }
 }
+
+.instructor{
+  width: 50%;
+  float: left;
+}
+
+.instructor__image{
+  display: block;
+  width: 90%;
+  margin: 0 auto 20px auto;
+}
+
+.instructor__name{
+  text-align: center;
+  margin-bottom: 20px;
+}

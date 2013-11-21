@@ -4,6 +4,7 @@ FactoryGirl.define do
     description_main "A great technology to learn with!"
     active true
     price 199
+    introduction "get started with this awesome class"
 
     factory :online_course do
       online true

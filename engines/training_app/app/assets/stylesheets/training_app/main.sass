@@ -74,10 +74,24 @@ iframe
   margin-left: -25%
   left: 50%
 
-.intro__heading
+.course__title
   text-align: center
+  padding-bottom: 10px
+  border-bottom: 1px solid #ddd
 
-.intro__image
-  margin-bottom: 20px
-  border: 2px solid $gray
-  @include box-shadow(0 0 1px $gray)
+.course__intro
+  @include clearfix
+  img
+    margin-bottom: 20px
+    margin-right: 20px
+    border: 2px solid $gray
+    @include box-shadow(0 0 1px $gray)
+    max-width: 600px
+    float: left
+  p
+    float: left
+
+.course__actions
+  @include clearfix
+  .button
+    float: right

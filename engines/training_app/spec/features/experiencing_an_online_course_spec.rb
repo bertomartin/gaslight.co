@@ -56,15 +56,25 @@ feature "Experiencing an online course", js: true do
     end
   end
 
+  describe "course introduction" do
+    let(:course_introduction) { "## Test Introduction" }
+    let!(:course) { FactoryGirl.create(:course, introduction: course_introduction) }
+
+    scenario "converts markdown to html" do
+      classroom_page.visit_course(course)
+      expect(classroom_page.course_introduction).to eq("Test Introduction")
+    end
+  end
+
   describe "chapter description" do
-    let(:description) { "## Test Description" }
+    let(:chapter_description) { "## Test Description" }
     let(:section) { FactoryGirl.create(:section, course: course) }
-    let!(:chapter) { FactoryGirl.create(:chapter, description: description, section: section, demo: true) }
+    let!(:chapter) { FactoryGirl.create(:chapter, description: chapter_description, section: section, demo: true) }
 
     scenario "converts markdown to html" do
       classroom_page.visit_course(course)
       classroom_page.visit_chapter(chapter)
-      expect(classroom_page.description).to eq("Test Description")
+      expect(classroom_page.chapter_description).to eq("Test Description")
     end
   end
 end

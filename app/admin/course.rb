@@ -4,7 +4,7 @@ ActiveAdmin.register TrainingApp::Course do
   controller do
     def permitted_params
       params.permit(training_app_course: [:venue_id, :parent_course_id, :title,
-                                          :description_main, :synopsis,
+                                          :description_main, :introduction, :synopsis,
                                           :start_date, :end_date, :price,
                                           :image_url, :registration_link,
                                           :color_primary, :color_secondary,
@@ -29,6 +29,7 @@ ActiveAdmin.register TrainingApp::Course do
       row :id
       row :title
       row(:description_main) { pre course.description_main }
+      row(:introduction) { pre course.introduction }
       row :synopsis
       row :start_date
       row :end_date
@@ -55,6 +56,7 @@ ActiveAdmin.register TrainingApp::Course do
       f.input :parent_course, collection: TrainingApp::Course.top_level
       f.input :title
       f.input :description_main
+      f.input :introduction
       f.input :synopsis
       f.input :start_date
       f.input :end_date

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131104161823) do
+ActiveRecord::Schema.define(version: 20131121164419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20131104161823) do
     t.string   "color_primary"
     t.string   "color_secondary"
     t.boolean  "active",              default: true
+    t.text     "introduction"
   end
 
   create_table "training_app_courses_instructors", id: false, force: true do |t|

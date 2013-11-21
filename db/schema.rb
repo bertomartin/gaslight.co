@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131104161823) do
+ActiveRecord::Schema.define(version: 20131121164419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,8 @@ ActiveRecord::Schema.define(version: 20131104161823) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
@@ -60,8 +60,8 @@ ActiveRecord::Schema.define(version: 20131104161823) do
     t.text     "body"
     t.text     "html"
     t.datetime "published_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
     t.string   "audio_url"
     t.text     "description"
     t.integer  "external_comments_count", default: 0
@@ -118,6 +118,7 @@ ActiveRecord::Schema.define(version: 20131104161823) do
     t.string   "color_primary"
     t.string   "color_secondary"
     t.boolean  "active",              default: true
+    t.text     "introduction"
   end
 
   create_table "training_app_courses_instructors", id: false, force: true do |t|

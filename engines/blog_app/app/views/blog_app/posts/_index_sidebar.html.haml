@@ -1,10 +1,10 @@
 .columns.large-3.prepend-1.sidebar--blog
   = render partial: 'search_form'
-  .sidebar__newsletter
-    %p
-      Sign up for monthly tech tips, news and events:
-      = render partial: 'application/newsletter'
   %a.button.button--black.button--full-width{href: posts_path(tagged: 'podcast'), rel: "Podcast"} Check Out Our Podcast
+  %hr
+  %p
+    Sign up for monthly tech tips, news and events:
+    = render partial: 'application/newsletter'
   %hr
   = link_to_unless_current('Recent Posts', posts_path)
   |

@@ -3,6 +3,9 @@ Training.ChaptersRoute = Ember.Route.extend
     toggleSidebar: ->
       @controller.toggleProperty('isSidebarActive')
 
+Training.ChaptersIndexRoute = Ember.Route.extend
+  needs: ['course']
+
 Training.ChapterRoute = Ember.Route.extend
   afterModel: (model, transition) ->
     if model.get('isRestricted')

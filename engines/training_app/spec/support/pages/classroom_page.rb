@@ -35,8 +35,12 @@ class ClassroomPage
     find('iframe')[:src]
   end
 
+  def course_introduction
+    find('.intro').text
+  end
+
   def chapter_description
-    page.find('.chapter__description').text
+    find('.chapter__description').text
   end
 
   def showing_purchase_modal?

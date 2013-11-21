@@ -1,6 +1,6 @@
 module TrainingApp
   class CourseSerializer < ActiveModel::Serializer
-    attributes :id, :title
+    attributes :id, :title, :introduction
 
     has_many :sections
     embed :ids, include: true

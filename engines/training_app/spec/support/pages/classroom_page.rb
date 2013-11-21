@@ -35,7 +35,7 @@ class ClassroomPage
     find('iframe')[:src]
   end
 
-  def description
+  def chapter_description
     page.find('.chapter__description').text
   end
 

@@ -16,6 +16,13 @@ Training.VideoPlayerComponent = Ember.Component.extend
     @player.on "play", => @set("isPlaying", true)
     @player.on "pause", => @set("isPlaying", false)
     @player.on "ended", => @set("isPlaying", false)
+    @setupFlashPlayer() if @player.techName == "Flash"
+
+  setupFlashPlayer: ->
+    # need to set static size when using flash player
+    width = @$().width()
+    @player.width(width)
+    @player.height(width * (9/16))
 
   willDestroyElement: ->
     @player.dispose()
@@ -25,7 +32,8 @@ Training.VideoPlayerComponent = Ember.Component.extend
     @player.currentTime(0)
     @player.pause()
     Ember.run.next =>
-      @player.src(@get('src'))
+      @player.src(@get('src')) id @get('src')?
+      @player.src(@get('poster')) if @get('poster')?
       @player.load()
 
   srcDidChange: (->

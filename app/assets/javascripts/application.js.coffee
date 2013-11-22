@@ -27,5 +27,9 @@ $ ->
   $("meta[property='author']").each ->
     track('Blog', 'Author', $(this).attr('content'))
 
+  $('#mc-embedded-subscribe').on 'click', (event) ->
+    url = $("meta[property='og:url']").attr('content') or location.href
+    track('Blog', 'Newsletter Signup', url)
+
   # Fix ie placeholders
   $('input, textarea').placeholder()

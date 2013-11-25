@@ -28,14 +28,13 @@ Training.VideoPlayerComponent = Ember.Component.extend
     @player.dispose()
 
   updateSrc: ->
+    @player.src(@get('src')) if @get('src')?
+    @player.poster(@get('poster')) if @get('poster')?
+    @player.load()
+
+  srcDidChange: (->
     return unless this.player?
     @player.currentTime(0)
     @player.pause()
-    Ember.run.next =>
-      @player.src(@get('src')) id @get('src')?
-      @player.src(@get('poster')) if @get('poster')?
-      @player.load()
-
-  srcDidChange: (->
-    @updateSrc()
+    Ember.run.scheduleOnce('afterRender', this, 'updateSrc');
   ).observes('src')

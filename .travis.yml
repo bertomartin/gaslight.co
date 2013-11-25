@@ -6,7 +6,6 @@ script:
   - bundle exec rake db:setup
   - bundle exec rake db:test:prepare
   - bundle exec rspec -fd spec
-  - bundle exec rake konacha:run
 before_script:
   - cp .env.sample .env.test
   - cp config/database.sample.yml config/database.yml

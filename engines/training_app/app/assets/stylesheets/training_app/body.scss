@@ -33,16 +33,18 @@
   h1{
     font-size: 24px;
     margin-top: 30px;
+    margin-bottom: 20px;
     padding-top: 30px;
     border-top: 1px solid #ccc;
+    text-align: center
   }
   h2{
-    margin: 10px 0;
+    margin: 20px 0;
     font-size: 1.5em;
+    text-align: center;
   }
 
   h3{
-    color: $brand1;
     margin: 10px 0;
   }
 }
@@ -101,5 +103,10 @@
 
 .instructor__name{
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px;
+}
+
+.instructor__bio{
+  width: 90%;
+  margin: 0 auto 20px auto;
 }

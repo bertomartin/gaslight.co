@@ -19,7 +19,8 @@
         - in_person_courses.each do |course|
           .large-6.columns.large-centered
             .course.course--in-person.center
-              %img.course__img{src: course.image_url}
+              %a{href: course_path(course)}
+                %img.course__img{src: course.image_url}
               %h2.course__title.subheading= course.title
               %p= course.meta
               .course__actions
@@ -35,7 +36,8 @@
         - online_courses.each do |course|
           .large-6.columns.large-centered
             .course.course--online.center
-              %img.course__img{src: course.image_url}
+              %a{href: course_path(course)}
+                %img.course__img{src: course.image_url}
               %h2.course__title.subheading= course.title
               %a.brand1--link.element--sm-margin-bottom.element--sm-margin-top{href: course_path(course)} Learn more about the class.
               .course__actions

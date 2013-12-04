@@ -49,14 +49,6 @@ module TrainingApp
       registrations.count >= capacity
     end
 
-    def dates
-      if start_date.month == end_date.month
-        "#{start_date.strftime('%B %e')} - #{end_date.strftime('%e, %Y')}"
-      else
-        "#{start_date.strftime('%B %e')} - #{end_date.strftime('%B %e, %Y')}"
-      end
-    end
-
     def sibling_courses
       parent_course.present? ? parent_course.child_courses : []
     end

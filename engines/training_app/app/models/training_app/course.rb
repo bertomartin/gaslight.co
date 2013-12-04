@@ -97,6 +97,10 @@ module TrainingApp
     def self.in_person
       where(online: false)
     end
+
+    def date_range
+      DateRange.new(start_date, end_date)
+    end
   end
 end
 

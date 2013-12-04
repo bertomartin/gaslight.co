@@ -36,29 +36,6 @@ module TrainingApp
       end
     end
 
-    describe "#dates" do
-      let(:course) { FactoryGirl.create(:course) }
-      context "in the same month" do
-        before do
-          course.start_date = Date.new(2012, 7, 1)
-          course.end_date = Date.new(2012, 7, 3)
-        end
-        it "returns a single months dates" do
-          expect(course.dates).to eq("July  1 -  3, 2012")
-        end
-      end
-
-      context "in a different month" do
-        before do
-          course.start_date = Date.new(2012, 7, 29)
-          course.end_date = Date.new(2012, 8, 1)
-        end
-        it "returns multiple month dates" do
-          expect(course.dates).to eq("July 29 - August  1, 2012")
-        end
-      end
-    end
-
     describe "#price" do
       let(:parent_course) { FactoryGirl.build(:course, price: nil) }
       let(:course) { FactoryGirl.build(:course, price: nil, parent_course: parent_course) }

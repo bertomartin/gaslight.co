@@ -5,8 +5,8 @@ module TrainingApp
       @end_date = end_date
     end
 
-
     def to_s
+      return "" if @start_date.nil?
       if @end_date.nil? || @start_date == @end_date
         date = @start_date.strftime('%B %e, %Y')
       else

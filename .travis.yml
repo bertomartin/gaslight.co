@@ -9,7 +9,7 @@ script:
 before_script:
   - cp .env.sample .env.test
   - cp config/database.sample.yml config/database.yml
-  - psql -c 'create database gaslight_test;' -U postgres
+  - psql -c 'create database gaslight_test; create database blog_app_test; create database training_app_test;' -U postgres
 notifications:
   email:
     - chrism@gaslight.co

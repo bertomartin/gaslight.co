@@ -5,7 +5,7 @@ set -e
 #
 # Set up the test database
 #
-bundle exec rake db:test:prepare
+bundle exec rake db:setup RAILS_ENV=test
 
 #
 # Rspec
@@ -13,20 +13,15 @@ bundle exec rake db:test:prepare
 bundle exec rspec --format documentation spec
 
 #
-# Konacha
-#
-bundle exec rake konacha:run
-
-#
 # Engines
 #
 cd engines/blog_app
 bundle install
 bundle exec rake db:setup RAILS_ENV=test
-bundle exec rspec spec
+bundle exec rspec --format documentation spec
 
 cd engines/training_app
 bundle install
 bundle exec rake db:setup RAILS_ENV=test
-bundle exec rspec spec
+bundle exec rspec --format documentation spec
 
